@@ -1,0 +1,1430 @@
+{
+  "date": "2026-06-05",
+  "crawled_at": "2026-06-05T05:01:59.608822Z",
+  "stats": {
+    "sources": {
+      "huggingface": 0,
+      "arxiv_cs.CL": 80,
+      "arxiv_cs.SD": 0,
+      "arxiv_cs.AI": 0,
+      "arxiv_eess.AS": 0,
+      "arxiv_keyword": 0,
+      "semantic_scholar": 3,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 83,
+    "after_dedup": 83,
+    "keyword_matched": 59
+  },
+  "papers": [
+    {
+      "id": "2606.05889",
+      "title": "GLASS: GRPO-Trained LoRA for Acoustic Style Steering in Zero-Shot Text-to-Speech",
+      "authors": [
+        "Jaehoon Kang",
+        "Yejin Lee",
+        "Kyuhong Shim"
+      ],
+      "abstract": "We propose GLASS, a framework for composable acoustic style control in zero-shot autoregressive text-to-speech (TTS) that learns controls from post-generation rewards rather than style labels. In zero-shot TTS, a speaker prompt often entangles speaker identity with prosodic attributes such as speaking rate and pitch, making it difficult to change style without changing the prompt itself. GLASS instead treats each acoustic attribute as a reward-defined control direction. For each control axis, GLASS freezes the TTS backbone and trains one lightweight LoRA adapter with Group Relative Policy Opti",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05889",
+      "keyword_hits": 4,
+      "priority": 40.0
+    },
+    {
+      "id": "2606.06492",
+      "title": "Code2LoRA: Hypernetwork-Generated Adapters for Code Language Models under Software Evolution",
+      "authors": [
+        "Liliana Hotsko",
+        "Yinxi Li",
+        "Yuntian Deng",
+        "Pengyu Nie"
+      ],
+      "abstract": "Code language models need repository-level context to resolve imports, APIs, and project conventions. Existing methods inject this knowledge as long inputs (retrieved through RAG or dependency analysis) or through per-repository fine-tuning and LoRA -- costly at repository scale and brittle to evolving codebases. We introduce Code2LoRA, a hypernetwork framework that generates repository-specific LoRA adapters, effectively injecting repository knowledge with zero inference-time token overhead. Code2LoRA supports two usage scenarios: Code2LoRA-Static converts a single repository snapshot into an",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06492",
+      "keyword_hits": 3,
+      "priority": 30.0
+    },
+    {
+      "id": "2606.06473",
+      "title": "MLEvolve: A Self-Evolving Framework for Automated Machine Learning Algorithm Discovery",
+      "authors": [
+        "Shangheng Du",
+        "Xiangchao Yan",
+        "Jinxin Shi",
+        "Zongsheng Cao",
+        "Shiyang Feng"
+      ],
+      "abstract": "Large language model (LLM) agents are increasingly applied to long-horizon tasks such as scientific discovery and machine learning engineering (MLE), where sustained self-evolution becomes a key capability. However, existing MLE agents suffer from inter-branch information isolation, memoryless search, and lack of hierarchical control, which together hinder long-horizon optimization. We present MLEvolve, an LLM-based self-evolving multi-agent framework for end-to-end machine learning algorithm discovery. By extending tree search to Progressive MCGS, MLEvolve enables cross-branch information flo",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06473",
+      "keyword_hits": 3,
+      "priority": 30.0
+    },
+    {
+      "id": "2606.06087",
+      "title": "LatentSkill: From In-Context Textual Skills to In-Weight Latent Skills for LLM Agents",
+      "authors": [
+        "Aofan Yu",
+        "Chenyu Zhou",
+        "Tianyi Xu",
+        "Zihan Guo",
+        "Rong Shan"
+      ],
+      "abstract": "Agent systems increasingly use textual skills to encode reusable task procedures, but injecting these skills into the prompt at every step incurs substantial context overhead and exposes skill content as plaintext. We present LatentSkill, a framework that converts textual skills into plug-and-play LoRA adapters through a pretrained hypernetwork. LatentSkill stores skill knowledge in weight space rather than context space, removing per-step skill tokens while preserving modular loading, scaling, and composition. On ALFWorld and Search-QA, LatentSkill outperforms the corresponding in-context ski",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06087",
+      "keyword_hits": 3,
+      "priority": 30.0
+    },
+    {
+      "id": "",
+      "title": "Exploring Vector-Based Methods for Effective Document Retrieval",
+      "authors": [
+        "X. Zhang"
+      ],
+      "abstract": "With the development of online storage services and the internet, people, especially students, often collect numerous documents from the servers. Searching from abundant documents can become a difficult task. With the rapid development of the LLM (Large Language Model) and word embedding technique, people should have the chance to find the information in a new way, which is much more effective. In this paper, with the vectorization of documents and users’ questions with different models, they can somehow understand the words of users and find the correspond documents which the users want. And ",
+      "sources": [
+        "semantic_scholar"
+      ],
+      "url": "",
+      "keyword_hits": 1,
+      "tracked_author": "Kaiming He",
+      "priority": 30.0
+    },
+    {
+      "id": "2606.06464",
+      "title": "Human Adults and LLMs as Scientists: Who Benefits from Active Exploration?",
+      "authors": [
+        "Mandana Samiei",
+        "Eunice Yiu",
+        "Anthony GX-Chen",
+        "Dongyan Lin",
+        "Jocelyn Shen"
+      ],
+      "abstract": "A long-standing finding in the causal learning literature is that adults struggle to identify conjunctive causal rules, where an effect requires the simultaneous presence of multiple causes, while performing better in disjunctive settings. However, most demonstrations of this ``conjunctive handicap'' rely on passive observation paradigms with limited evidence, where learners have no control over evidence generation. This paper asks whether this bias persists when adults are granted agency through active exploration. Using a modified ``blicket detector'' task, adult participants freely interven",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06464",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06443",
+      "title": "Revising Context, Shifting Simulated Stance: Auditing LLM-Based Stance Simulation in Online Discussions",
+      "authors": [
+        "Xinnong Zhang",
+        "Wanting Shan",
+        "Hanjia Lyu",
+        "Zhongyu Wei",
+        "Jiebo Luo"
+      ],
+      "abstract": "Large language models are increasingly used to simulate social media users and infer how individuals may respond to online discussions. However, it remains unclear whether these simulations reflect precise user-specific beliefs or whether they are highly sensitive to semantically independent changes in conversational contexts. In this work, we study counterfactual context revision as a framework for auditing LLM-based stance simulation. Given an original online conversation, we first infer a target user's stance toward a specific topic. We then apply controlled revision strategies to the conve",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06443",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06416",
+      "title": "Unsupervised Skill Discovery for Agentic Data Analysis",
+      "authors": [
+        "Zhisong Qiu",
+        "Kangqi Song",
+        "Shengwei Tang",
+        "Shuofei Qiao",
+        "Lei Liang"
+      ],
+      "abstract": "Inference-time skill augmentation provides a lightweight way to improve data-analytic agents by injecting reusable procedural knowledge without updating model parameters. However, discovering effective skills for data analysis remains challenging, as reliable supervision is expensive and success criteria vary across analytical formats. This raises the key question of how to discover reusable data-analysis skills from unlabeled exploration alone. We propose DataCOPE, an unsupervised verifier-guided skill discovery framework for data-analytic agents. DataCOPE derives verifier signals from the ex",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06416",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06399",
+      "title": "CollabSim: A CSCW-Grounded Methodology for Investigating Collaborative Competence of LLM Agents through Controlled Multi-Agent Experiments",
+      "authors": [
+        "Jiaju Chen",
+        "Bo Sun",
+        "Yuxuan Lu",
+        "Yun Wang",
+        "Dakuo Wang"
+      ],
+      "abstract": "Multi-agent systems (MAS) built on large language models have shown growing promise, with their effectiveness resting on agents' ability to coordinate through text-based channels much as human teams do. Yet recent study suggests that MAS often falter not because agents lack individual task-solving ability, but because they lack collaborative competence: the capacity to establish common ground, maintain shared task understanding, balance individual and collective incentives, and repair misalignment as interaction unfolds. Decades of research in Computer-Supported Cooperative Work have character",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06399",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06211",
+      "title": "FiLM-Based Speaker Conditioning of a SpeechLLM for Pathological Speech Recognition",
+      "authors": [
+        "Fernando López",
+        "Santosh Kesiraju",
+        "Jordi Luque"
+      ],
+      "abstract": "Automatic speech recognition (ASR) has advanced remarkably for standard speech; however, pathological speech from neurological conditions remains a significant challenge. We investigate speaker conditioning via Feature-wise Linear Modulation (FiLM), injecting x-vector-derived information into each transformer layer of a frozen ASR encoder to adapt internal representations to individual pathological speakers without modifying base model weights. We benchmark this for the ASR task against standard and parameter-efficient fine-tuning baselines, complemented by post-processing, on Spanish and Engl",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06211",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06027",
+      "title": "RedditPersona: A Modular Framework for Community-Conditioned LLM Adaptation from Reddit",
+      "authors": [
+        "Amirhossein Ghaffari",
+        "Ali Goodarzi",
+        "Huong Nguyen",
+        "Simo Hosio",
+        "Lauri Lovén"
+      ],
+      "abstract": "Community-conditioned language model adaptation requires choices about data collection, community definition, and evaluation that are currently made independently in each study, making it hard to compare assumptions or reuse artifacts. We present RedditPersona, a modular framework that standardizes these choices: it collects Reddit posts and comments, profiles active users, partitions them under five grouping strategies (subreddit-based, graph-structural, semantic, hybrid, and interaction-based), trains a parameter-efficient adapter per strategy via QLoRA, and evaluates them under a shared met",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06027",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06025",
+      "title": "EGTR-Review: Efficient Evidence-Grounded Scientific Peer Review Generation via Multi-Agent Teacher Distillation",
+      "authors": [
+        "Xinpeng Qiu",
+        "Wang Yihu",
+        "Zhifeng Liu",
+        "Xiaochen Wang",
+        "Jimin Wang"
+      ],
+      "abstract": "Scientific peer review generation has attracted increasing attention for reducing reviewing burdens and providing timely feedback. However, existing Large Language Model (LLM)-based methods often produce generic comments with insufficient evidence support and weak source traceability, while complex multi-agent systems incur high inference costs. To address these challenges, we propose EGTR-Review, an Evidence-Grounded and Traceable Review Generation framework via Multi-Agent Teacher Distillation. EGTR-Review first constructs a multi-agent teacher that performs structure-aware paper decompositi",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06025",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05931",
+      "title": "To Be Multimodal or Not to Be: Query-Adaptive Audio-Visual Person Retrieval via Active Modality Detection",
+      "authors": [
+        "Erfan Loweimi",
+        "Mengjie Qian",
+        "Kate Knill",
+        "Guanfeng Wu",
+        "Chi-Ho Chan"
+      ],
+      "abstract": "When retrieving a person from a video archive by voice and face, should the system be multimodal or not? In real-world broadcast archives, unlike curated benchmarks, a target may be heard but unseen, seen but unheard, or both. Fusing scores from an absent modality injects noise, degrading precision below the best unimodal system. We propose a query-adaptive framework that detects active modalities via cross-modal score consistency: when both modalities are active, files retrieved by one also score highly on the other; this agreement breaks down when a modality is absent. Classifiers driven by ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05931",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05924",
+      "title": "Better Literary Translation: A Multi-Aspect Data Generation and LLM Training Approach",
+      "authors": [
+        "Zhihao Lin",
+        "Ziqi Zhu",
+        "Hao Huang",
+        "Guanghui Wang",
+        "Peiyang He"
+      ],
+      "abstract": "Literary translation poses unique challenges due to the scarcity of high-quality annotated data and the need to balance expression fluency with literary effect. We present a multi-aspect iterative refinement framework that generates high-quality translation references and preference data through specialized LLM translators, each targeting a distinct quality dimension. We leverage the generated data for supervised fine-tuning and reinforcement learning. Experiments show that our generated references outperform the original ground truth for SFT by 8.65 CEA100 points. For reinforcement learning, ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05924",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05901",
+      "title": "Reducing Hallucinations in Complex Question Answering using Simple Graph-based Retrieval-Augmented Generation (long version)",
+      "authors": [
+        "Christopher J. Wedge",
+        "Joshua Stutter",
+        "Danny Dixon",
+        "Jacek Cała"
+      ],
+      "abstract": "Large language models (LLMs) have fundamentally transformed the landscape of Natural Language Processing. Despite these advances, LLMs and LLM-based systems remain prone to a variety of failure modes. Retrieval-augmented generation (RAG) systems have emerged as a common deployment scenario seeking to both avoid the well known risk of the LLM \"hallucinating\" information, and to enable reasoning and question answering over proprietary information that the LLM did not have access to during training without resorting to expensive model fine-tuning.   In this work, we explore the idea of using a li",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05901",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05874",
+      "title": "Evaluating Stochastic Collapse and Implicit Bias in Multimodal Large Language Models",
+      "authors": [
+        "Huiyuan Zheng",
+        "Houtao Zhang",
+        "Boyang Wang",
+        "Qingyi Si",
+        "Hongcheng Guo"
+      ],
+      "abstract": "Current evaluations for Multimodal Large Language Models (MLLMs) overwhelmingly focus on utility-driven objectives, leaving model behavior under logic-neutral scenarios largely underexplored. Stochasticity is essential in scenarios where multiple actions are equally valid, such as recommending travel itineraries or daily schedules where multiple options have similar utility. In such settings, deterministic policies may lead to repetitive behaviors and reduced coverage of valid alternatives. To bridge this gap, we propose RandomBench, a benchmark designed to evaluate whether MLLMs can maintain ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05874",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05859",
+      "title": "TARPO: Token-Wise Latent-Explicit Reasoning via Action-Routing Policy Optimization",
+      "authors": [
+        "Liting Zhang",
+        "Shiwan Zhao",
+        "Xuyang Zhao",
+        "Zichen Xu",
+        "Jianye Wang"
+      ],
+      "abstract": "Latent reasoning has emerged as a promising alternative to discrete Chain-of-Thought (CoT) in large language models (LLMs), enabling more expressive reasoning by operating over continuous representations. However, the inherently deterministic nature of continuous representations limits policy exploration in reinforcement learning (RL). To address this, we propose TARPO (Token-Wise Latent-Explicit Reasoning via Action-Routing Policy Optimization), a pure RL framework that adaptively switches between discrete token generation and continuous latent reasoning at each step. TARPO introduces a light",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05859",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05858",
+      "title": "ReverseEOL: Improving Training-free Text Embeddings via Text Reversal in Decoder-only LLMs",
+      "authors": [
+        "Ailiang Lin",
+        "Zhuoyun Li",
+        "Yusong Wang",
+        "Keyu Mao",
+        "Kotaro Funakoshi"
+      ],
+      "abstract": "Recent advances in Large Language Models (LLMs) have opened new avenues for generating training-free text embeddings. However, the causal attention in decoder-only LLMs prevents earlier tokens from attending to future context, leading to biased contextualized representations. In this work, we propose Reverse prompting with Explicit One-word Limitation (ReverseEOL), a simple yet effective method for enhancing the representational capability of frozen LLMs. ReverseEOL augments the standard forward embedding with an additional reversed embedding derived from the reversed input text. Since reversi",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05858",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05846",
+      "title": "Towards Truly Multilingual ASR: Generalizing Code-Switching ASR to Unseen Language Pairs",
+      "authors": [
+        "Gio Paik",
+        "Hyunseo Shin",
+        "Soungmin Lee"
+      ],
+      "abstract": "Automatic Speech Recognition (ASR) has become a key technology for human--AI interaction. However, code-switching ASR (CS-ASR) remains particularly challenging due to the severe scarcity of multilingual CS speech resources across diverse language pairs. Existing approaches primarily improve CS-ASR performance through synthetic CS speech generation or pair-specific fine-tuning on limited bilingual datasets. Nevertheless, these approaches face an inherent scalability limitation, as support for CS must be developed separately for language pairs whose number grows combinatorially with the number o",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05846",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05843",
+      "title": "Mechanistic Insights into Functional Sparsity in Multimodal LLMs via CoRe Heads",
+      "authors": [
+        "Ruoxi Sun",
+        "Quantong Qiu",
+        "Juntao Li",
+        "Zecheng Tang",
+        "Yihang Lou"
+      ],
+      "abstract": "While Multimodal Large Language Models (MLLMs) demonstrate remarkable proficiency on complex vision-language tasks, the mechanisms by which they extract query-relevant visual features from complex, noisy contexts remain opaque. In this paper, we present an in-depth interpretability study that uncovers a profound structural property within MLLMs: functional sparsity in cross-modal retrieval. Leveraging a token-level metric termed Retrieval Attention Mass (RAM), we identify and characterize a highly specialized subset of attention heads, referred to as Context-aware Retrieval (CoRe) heads. Acros",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05843",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05836",
+      "title": "ProSPy: A Profiling-Driven SQL-Python Agentic Framework for Enterprise Text-to-SQL",
+      "authors": [
+        "Zhaorui Yang",
+        "Huawei Zheng",
+        "Sen Yang",
+        "Yuhui Zhang",
+        "Haoxuan Li"
+      ],
+      "abstract": "Large language models have substantially advanced Text-to-SQL systems, yet applying them to enterprise-scale databases remains challenging. Real-world databases often contain large and heterogeneous schemas, incomplete metadata, dialect-specific SQL syntax, and complex analytical questions that are difficult to solve with a single SQL query. To address these challenges, we propose ProSPy, a Profiling-driven SQL--Python agentic framework for enterprise-scale Text-to-SQL. ProSPy structures the reasoning process into four stages: it first extracts fine-grained data evidence through automatic prof",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05836",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.05828",
+      "title": "Statistical Priors for Implicit Preferences: Decoupling Skill Selection as a Local Harness in Personal Agents",
+      "authors": [
+        "Zeyu Gan",
+        "Huayi Tang",
+        "Yong Liu"
+      ],
+      "abstract": "As Large Language Model (LLM) capabilities advance, locally deployed personal agents relying on API-based remote models and external skills have emerged as a novel paradigm. With the rapid expansion of available skills, enabling personal agents to learn and adapt to implicit user preferences becomes a critical challenge. However, local deployment constraints preclude complex centralized selection algorithms, creating an urgent need for a lightweight local preference harness. This paper explores the implementation of such a harness through a novel architecture that strictly decouples statistica",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05828",
+      "keyword_hits": 2,
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06481",
+      "title": "Operation-Guided Progressive Human-to-AI Text Transformation Benchmark for Multi-Granularity AI-Text Detection",
+      "authors": [
+        "Sondos Mahmoud Bsharat",
+        "Jiacheng Liu",
+        "Xiaohan Zhao",
+        "Tianjun Yao",
+        "Xinyi Shang"
+      ],
+      "abstract": "As AI writing assistants become increasingly integrated into real-world drafting and revision workflows, many documents are no longer purely human-written or AI-generated, but instead result from progressive human-AI co-editing. However, existing AI-text detection benchmarks largely focus on final outputs and provide limited understanding of how AI authorship signals emerge, accumulate, or disappear throughout the revision process. We introduce OpAI-Bench, an operation-guided benchmark for studying progressive human-to-AI text transformation across document, sentence, token, and span granulari",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06481",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06474",
+      "title": "Self-Augmenting Retrieval for Diffusion Language Models",
+      "authors": [
+        "Paul Jünger",
+        "Justin Lovelace",
+        "Linxi Zhao",
+        "Dongyoung Go",
+        "Kilian Q. Weinberger"
+      ],
+      "abstract": "Discrete diffusion language models generate text by iteratively denoising an entire response in parallel. At each step, they predict tentative tokens for every masked position, committing the confident predictions to the output and discarding the unconfident ones. We show that the discarded tokens are in fact a useful lookahead signal for retrieval-augmented generation: even low-confidence tokens often surface salient entities early in the denoising trajectory, enabling retrieval of stronger evidence before the output is finalized. We exploit this through Self-Augmenting Retrieval for Diffusio",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06474",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06454",
+      "title": "Scaffold, Not Vocabulary? A Controlled, Two-Tier, Pre-Registered Study of a Popperian Code-Generation Skill",
+      "authors": [
+        "Mehmet Iscan"
+      ],
+      "abstract": "Large language models increasingly write, review, and judge code, and a fast-growing practice equips them with prompt 'skills' that ask the model to reason like a scientist. A prominent example tells the model to act as a Popperian falsificationist, and such skills are reported to improve generated code. But these gains are almost always read off an LLM-as-a-judge, an instrument with documented positional, self-preference, and stylistic biases. We ask: if it appears to help, is the gain from the skill's Popperian content, or from the structure any scaffold imposes? We pre-register a two-tier a",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06454",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06447",
+      "title": "Latent Reasoning with Normalizing Flows",
+      "authors": [
+        "Guancheng Tu",
+        "Xiangjun Fu",
+        "Suhao Yu",
+        "Yao Tang",
+        "Haoqiang Kang"
+      ],
+      "abstract": "Large language models often improve reasoning by generating explicit chain-of-thought (CoT), demonstrating the importance of intermediate computation. However, textual CoT forces this computation through a discrete, serial, and communication-oriented token stream: each reasoning step must be verbalized before the model can proceed, even when the underlying update is semantic, uncertain, or only partially formed. Latent reasoning offers a higher-bandwidth alternative by performing intermediate computation in compact continuous states before committing to text. Yet existing latent-reasoning meth",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06447",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06444",
+      "title": "USAD 2.0: Scaling Representation Distillation for Universal Audio Understanding",
+      "authors": [
+        "Heng-Jui Chang",
+        "Alexander H. Liu",
+        "Saurabhchand Bhati",
+        "Mrudula Athi",
+        "Anton Ratnarajah"
+      ],
+      "abstract": "Audio encoders are critical to modern audio applications as large language models (LLMs) increasingly rely on a single encoder for diverse inputs. While self-supervised learning (SSL) has yielded strong domain-specific encoders like speech or music experts, multi-domain approaches like USAD and SPEAR remain limited in coverage and evaluation. Recent studies also suggest supervised encoders align better with audio LLMs. We present USAD 2.0, a universal encoder integrating knowledge from both SSL and supervised foundation models. USAD 2.0 introduces domain-aware distillation to address teacher m",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06444",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06428",
+      "title": "Reinforcement Learning Elicits Contextual Learning of Unseen Language Translation",
+      "authors": [
+        "Hanxu Hu",
+        "Zdeněk Šnajdr",
+        "Pinzhen Chen",
+        "Jannis Vamvas",
+        "Rico Sennrich"
+      ],
+      "abstract": "Prior work has shown that large language models (LLMs) can translate unseen or low-resource languages by undergoing continued training or even by encoding a grammar book in their context. However, both methods typically overfit specific languages, with limited zero-shot transfer at test time. To translate extremely low-resource languages at scale, we argue that LLMs must acquire the meta-skill of utilizing in-context linguistic knowledge rather than memorizing specific languages. In this paper, we propose a reinforcement learning (RL) approach to unseen language translation given rich linguist",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06428",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06420",
+      "title": "A Komi-Yazva--Russian Parallel Corpus and Evaluation Protocol for Zero- and Few-Shot LLM Translation",
+      "authors": [
+        "Petr Parshakov"
+      ],
+      "abstract": "We present the first Komi-Yazva--Russian parallel corpus together with an explicit evaluation protocol for studying LLM translation in an endangered, extremely low-resource setting. The dataset contains 457 aligned sentence pairs from 74 narrative texts and is accompanied by documented provenance, sentence-level alignment, and story identifiers that enable leakage-aware evaluation. We use this setup to compare modern large language models on Komi-Yazva-to-Russian translation under severe parallel-data scarcity in zero-shot and retrieval-based few-shot regimes. The protocol includes story-level",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06420",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06388",
+      "title": "Humans' ALMANAC: A Human Collaboration Dataset of Action-Level Mental Model Annotations for Agent Collaboration",
+      "authors": [
+        "Jiaju Chen",
+        "Yuxuan Lu",
+        "Jiayi Su",
+        "Chaoran Chen",
+        "Songlin Xiao"
+      ],
+      "abstract": "Recent advances in LLM agents have enabled complex cognitive capabilities, such as multi-step reasoning, planning, and tool use, that increasingly position these agents as human collaborators. Effective collaboration, however, requires collaborators to continuously maintain and align mental models of their own reasoning,partners' intentions, and shared goals during the collaborative process. Today's agents rarely develop such capabilities since they are primarily optimized for task completion, and the community lacks authentic human collaboration data with action-level mental model annotations",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06388",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06380",
+      "title": "Emergent Language as an Approach to Conscious AI",
+      "authors": [
+        "Zengqing Wu",
+        "Chuan Xiao"
+      ],
+      "abstract": "The question of whether artificial systems can be conscious remains open, in part because existing approaches either evaluate systems against theory-derived checklists (discriminative) or engineer consciousness-inspired modules directly (architectural); both leave open whether observed structures are artifacts of human language priors. We propose a generative methodology: emergent language (EL) in multi-agent reinforcement learning, where agents start from minimal (no language, no concept of self, minimal exposure to human text) and develop communication under task pressure alone, ensuring cau",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06380",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06350",
+      "title": "EDIT: Evidence-Diagnosed Intervention Training for Rule-Faithful LLM Grading",
+      "authors": [
+        "Zhihao Wu",
+        "Linhai Zhang",
+        "Taiyi Wang",
+        "Runcong Zhao",
+        "Peter Andrews"
+      ],
+      "abstract": "Reliable rubric grading requires more than accurate score prediction. Each judgement must be grounded in the mark scheme and evidence from the student answer. Existing credit-assignment and intervention methods, primarily designed for self-contained reasoning tasks such as mathematics reasoning, struggle in this setting because they do not identify where grading reasoning goes wrong or how the model's belief about the final mark changes during reasoning. We propose Evidence-Diagnosed Intervention Training (EDIT), a two-phase framework for training more rubric-faithful LLM graders. First, EDIT-",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06350",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06286",
+      "title": "LLMs Can Leak Training Data But Do They Want To? A Propensity-Aware Evaluation of Memorization in LLMs",
+      "authors": [
+        "Gianluca Barmina",
+        "Peter Schneider-Kamp",
+        "Lukas Galke Poech"
+      ],
+      "abstract": "Large language models can reproduce training data, but existing memorization evaluations mostly measure whether models can be forced to do so, rather than whether they do so under ordinary use. We introduce PropMe, a propensity-aware framework for memorization evaluation that contrasts prefix-based capability attacks with non-adversarial evaluations. We propose a metric transformation that, applied to existing functions, allows to create propensity metrics. We further introduce SimpleTrace, a lightweight tracing pipeline built on infini-gram that deterministically attributes model generations ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06286",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06271",
+      "title": "FOXGLOVE: Understanding Goal-Oriented and Anchored Writing Feedback from Experts and LLMs on Argumentative Essays",
+      "authors": [
+        "Yijun Liu",
+        "Yifan Song",
+        "John Gallagher",
+        "Sarah Sterman",
+        "Tal August"
+      ],
+      "abstract": "While large language models (LLMs) are increasingly used to generate writing feedback, there remains no systematic comparison of LLM and expert feedback on the dimensions that writing research identifies as central to revision: goal-orientation, anchoring to specific sentences, and prioritization. We introduce FOXGLOVE, a dataset of 696 feedback comments written by trained writing instructors on 69 twelfth-grade argumentative essays, paired with 1,644 comments generated from four frontier LLMs under a shared protocol, totaling 2,340 comments. We provide expert quality ratings on a subset of bo",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06271",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06266",
+      "title": "From Self to Other: Evaluating Demographic Perspective-Taking in LLM Hate Speech Annotation",
+      "authors": [
+        "Paloma Piot",
+        "Javier Parapar"
+      ],
+      "abstract": "Hate speech detection is inherently subjective: people from different demographic groups perceive the same content very differently. Collecting enough annotations from multiple demographic groups is costly and difficult to scale. Persona-conditioned Large Language Models (models prompted to adopt a specific demographic identity) have been proposed as a way to simulate diverse perspectives at scale. But do they actually reflect how different groups disagree? We evaluate three aspects of human social judgement: (i) whether personas from different groups disagree in human-like ways (inter-group d",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06266",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06197",
+      "title": "Improving Answer Extraction in Context-based Question Answering Systems Using LLMs",
+      "authors": [
+        "Hafez Abdelghaffar",
+        "Ahmed Alansary",
+        "Ali Hamdi"
+      ],
+      "abstract": "Question answering (QA) systems have achieved notable progress with the advent of large language models (LLMs). However, they still face challenges in accurately extracting and generating precise answers from given contexts, particularly when dealing with complex or ambiguous queries. Existing approaches often struggle with contextual understanding, answer consistency, and generalization across diverse domains. In this work, we propose a question answering system based on large language models, where the input consists of a textual context and a corresponding question, and the output is a conc",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06197",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06188",
+      "title": "The Tell-Tale Norm: $\\ell_2$ Magnitude as a Signal for Reasoning Dynamics in Large Language Models",
+      "authors": [
+        "Jinyang Zhang",
+        "Hongxin Ding",
+        "Yue Fang",
+        "Weibin Liao",
+        "Muyang Ye"
+      ],
+      "abstract": "Recent work has sought to understand Large Language Models (LLMs) reasoning, yet a principled, model-intrinsic signal that captures its layer-wise reasoning dynamics remains underexplored. We bridge this gap by demonstrating that the l2 norm of hidden states serves as an endogenous signal of the model's reasoning intensity. Using Sparse Autoencoders (SAEs) as a diagnostic probe, we observe that LLMs' internal reasoning is marked by a sharp increase in reasoning feature activations concentrated in late layers. Motivated by this pattern, we establish a formal link between reasoning intensity and",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06188",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06178",
+      "title": "Learning to Route LLMs from Implicit Cost-Performance Preferences via Meta-Learning",
+      "authors": [
+        "Jiahao Zeng",
+        "Ming Tang",
+        "Ningning Ding"
+      ],
+      "abstract": "Large language models (LLMs) present a trade-off between performance and cost, where more powerful models incur greater expense. LLM routing aims to mitigate expenses while maintaining performance by sending queries to the most suitable model. However, existing methods cannot perform well for different user cost-performance preferences. To address this gap, we introduce a novel perceptive LLM routing paradigm for personalized and user-centric cost-performance optimization, which efficiently learns users' implicit preferences through little interaction. To handle the challenge of heterogeneous ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06178",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06098",
+      "title": "IR3DE: A Linear Router for Large Language Models",
+      "authors": [
+        "Eros Fanì",
+        "Oğuzhan Ersoy"
+      ],
+      "abstract": "Foundational Large Language Models (LLMs) demonstrate proficiency on a wide range of general tasks, and achieve remarkable results on various specialized tasks via domain-expert LLMs. With the ever-growing list of available LLMs, inference routers are being proposed to select the most appropriate LLM for each prompt. However, existing routing methods either optimize cost across weak-to-strong generalist LLMs or require substantial training to support domain-expertise routing. In this paper, we propose IR3DE, a Ridge Regression-based Router for Domain Experts that provides cheap and fast routin",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06098",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06096",
+      "title": "OrderGrad: Optimizing Beyond the Mean with Order-Statistic Policy Gradient Estimation",
+      "authors": [
+        "Paavo Parmas",
+        "Yongmin Kim",
+        "Kohsei Matsutani",
+        "Shota Takashiro",
+        "Soichiro Nishimori"
+      ],
+      "abstract": "Policy-gradient methods usually optimize expected return, but many real world applications care about distributional properties of returns: tail risk, outlier robustness, or best-of-K discovery. We introduce OrderGrad, a family of likelihood-ratio and reparameterization gradient estimators for order-statistic objectives. OrderGrad optimizes finite-sample L-statistics, i.e., weighted averages of sorted rewards or costs, recovering objectives such as VaR, CVaR, trimmed means, medians, and top-m/best-of-K criteria by changing only the rank weights. For any fixed sample size and rank-weight vector",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06096",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06080",
+      "title": "On Advantage Estimates for Max@K Policy Gradients",
+      "authors": [
+        "Shota Takashiro",
+        "Soichiro Nishimori",
+        "Paavo Parmas",
+        "Yongmin Kim",
+        "Kohsei Matsutani"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards is widely used for post-training reasoning models, but sparse outcome rewards make exploration difficult. A complementary approach is to optimize inference-time objectives such as pass@K and max@K directly, yet existing policy-gradient estimators for these objectives use different signals, baselines, and normalizations, making their relationships unclear. We study this issue through baseline design and advantage centering. Starting from the advantage estimator of a leading method in the field, we show that it is policy-gradient unbiased but yields",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06080",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06079",
+      "title": "SkillComposer: Learning to Evolve Agent Skills for Specification and Generalization",
+      "authors": [
+        "Qi Zhang",
+        "Zhaopeng Feng",
+        "Xiaonan Shi",
+        "Xiaomeng Hu",
+        "Chu Liu"
+      ],
+      "abstract": "Agent skills, which consist of reusable strategies that guide agent reasoning and action, have shown strong potential for improving model capability at inference time. However, current skill construction methods treat the problem as one-shot extraction, overlooking a fundamental tension: a skill tailored to the specific task fails to transfer, while the abstracted skill often provides insufficient guidance. We attribute this fragility to the absence of explicit mechanisms for skill specification and generalization. To address this gap, we introduce SkillComposer, a framework that decomposes sk",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06079",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06065",
+      "title": "Multi-task Learning is Not Enough: Representational Entanglement in Dual-output Second Language Speech Recognition",
+      "authors": [
+        "Seung Hwan Cho",
+        "Young-Min Kim"
+      ],
+      "abstract": "Second-language (L2) speech recognition often requires transcriptions of pronunciations and intended meanings. Multi-task learning (MTL) is a natural approach because it assumes that shared representations benefit both outputs. However, this paper shows that this assumption does not hold across Korean and English. MTL improves meaning but degrades surface transcription, especially in English, where the degradation scales with surface-meaning divergence measured by Levenshtein edit distance.Encoder analysis links these patterns to encoder-level entanglement, with Korean preserving distinct task",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06065",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06047",
+      "title": "Automatic Labelling of Speech Translation Errors",
+      "authors": [
+        "Dominik Macháček",
+        "Maike Züfle",
+        "Ondrej Klejch"
+      ],
+      "abstract": "Errors in speech translations reduce trustworthiness of Speech Translation (ST) systems and can have serious consequences. Yet currently there is no established methodology for evaluating confidence and quality estimation of speech translations. To initiate progress in this direction, we propose Speech Translation Error Labelling (STEL). We create an annotation protocol, a small authentic end-to-end evaluation dataset, and we analyse how existing text-only and speech-processing systems perform the STEL task. Our results show that text-only XCOMET and multimodal LLM Qwen2.5-Omni are able to per",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06047",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06044",
+      "title": "IA-RAG: Interval-Algebra-Driven Temporal Reasoning for Dynamic Knowledge Retrieval",
+      "authors": [
+        "Xiaoman Wang",
+        "Yaoze Zhang",
+        "Wenzhuo Fan",
+        "Hongwei Zhang",
+        "Ding Wang"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) has shown strong effectiveness in grounding Large Language Models (LLMs) with external knowledge. However, existing RAG and Graph RAG frameworks largely treat knowledge as static or associate time with coarse-grained timestamps or metadata, failing to capture rich temporal structures such as duration, overlap, and containment. We propose IA-RAG, a hierarchical temporal RAG framework that models knowledge as time intervals and performs retrieval under formal temporal constraints. IA-RAG represents facts as Interval Event Units (IEUs) and organizes them into ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06044",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06038",
+      "title": "English-to-Prakrit Machine Translation via Multilingual Transfer Learning",
+      "authors": [
+        "Om Choksi",
+        "Smit Kareliya",
+        "Shrikant Malviya",
+        "Pruthwik Mishra"
+      ],
+      "abstract": "We study English-to-Prakrit machine translation in a low-resource setting where the target language is unsupported by IndicTrans2. We adapt the multilingual model by mapping Prakrit to the Hindi language tag (hin_Deva) without modifying the tokenizer, vocabulary, or architecture. Using a 1,474-pair Maharashtri Prakrit parallel corpus and evaluation on a 20-sample Ardhamagadhi test set, we report corpus BLEU improvements over an untuned baseline. The results indicate that script-compatible language routing can enable feasible transfer to unsupported classical languages, while highlighting limit",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06038",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06022",
+      "title": "Contextualized Prompting For Stance Detection On Social Media",
+      "authors": [
+        "Tilman Beck",
+        "Shakib Yazdani",
+        "Simon Kruschinski",
+        "Marcus Maurer",
+        "Iryna Gurevych"
+      ],
+      "abstract": "Stance detection on social media is challenging due to short, noisy, and context-dependent language. While large language models (LLMs) show zero-shot generalization, they are typically prompted without contextual information, which limits their ability to interpret ambiguous posts. In this work, we systematically investigate the impact of incorporating real-world (e.g., user biographies), derived (e.g., political party), and LLM-generated (e.g., target descriptions) contextual features into zero-shot prompting for stance detection on Twitter. Our evaluation spans four benchmark datasets, incl",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06022",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.06004",
+      "title": "The Generator-Eraser Paradox: Community Guidelines for Responsible LLM-Assisted Dialect Resource Creation",
+      "authors": [
+        "Wajdi Zaghouani"
+      ],
+      "abstract": "Dialect resources occupy a unique position at the intersection of scientific description, cultural preservation, and computational infrastructure. Large language models offer powerful capabilities for accelerating dialect resource development through retrieval-grounded drafting, corpus navigation, metadata enrichment, and annotation workflow support. However, the same systems pose substantial risks: they can contribute to dialect erasure by privileging prestige varieties, homogenizing orthography, and enabling synthetic feedback loops that reduce linguistic diversity over time. These risks are",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06004",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05988",
+      "title": "Compress-Distill: Reasoning Trace Compression for Efficient Knowledge Distillation",
+      "authors": [
+        "Maxime Griot",
+        "Paul Steven Scotti",
+        "Tanishq Mathew Abraham"
+      ],
+      "abstract": "Reasoning models produce long chain-of-thought traces that are costly to distill and encourage verbose student outputs. We study post-hoc compression of such traces before knowledge distillation. Two teachers, Qwen3.5-397B-A17B and gpt-oss-120B, generate about 283k correct traces each; two instruction-tuned models then compress them to 8.6-21.0% of their original character length. Across a 48-run main grid plus seven Qwen-teacher truncation ablations, compressed traces reduce training tokens to 12-30% of raw, speed up training by 2.0-7.6x, and shorten inference outputs by 3-19x with smaller re",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05988",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05985",
+      "title": "Beyond Alignment: Value Diversity as a Collective Property in Multicultural Agent Systems",
+      "authors": [
+        "Shaoyang Xu",
+        "Jingshen Zhang",
+        "Long P. Hoang",
+        "Jinyuan Li",
+        "Wenxuan Zhang"
+      ],
+      "abstract": "Multicultural multi-agent systems are increasingly deployed in globally diverse settings, where different agents are grounded in different cultural backgrounds. Existing cultural evaluation focuses on value alignment: how closely a single agent matches a target culture. Yet alignment is a per-agent property and cannot reveal whether a system, taken as a whole, preserves the cultural plurality it is meant to represent. We propose value diversity as a system-level evaluation axis for multicultural agent systems, defined through the dissimilarity between culturally conditioned agents' responses o",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05985",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05976",
+      "title": "The Self-Correction Illusion: LLMs Correct Others but Not Themselves",
+      "authors": [
+        "Kuan-Yen Chen",
+        "Fang-Yi Su",
+        "Jung-Hsien Chiang"
+      ],
+      "abstract": "Recent work shows that LLM agents struggle to correct errors in their own reasoning traces yet show markedly higher correction rates when identical claims appear under external sources. We ask whether this asymmetry reflects a capability deficit or a role-label artifact: does an agent's willingness to correct a wrong claim depend causally on the chat-template role that carries it, rather than on the claim's content? Our setup keeps the erroneous claim byte-identical across all conditions (SHA-256 verified) and varies only its wrapping role: the agent's own \\role{<thought>}, a \\role{user} messa",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05976",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05970",
+      "title": "Measuring the sensitivity of LLM-based structured extraction to prompt, model, and schema choices in clinical discharge summaries",
+      "authors": [
+        "Martin Murin"
+      ],
+      "abstract": "Large language models are increasingly used for structured extraction from clinical free-text notes, but the sensitivity of their output to upstream configuration choices is less understood than their accuracy on fixed benchmarks. This work measures that sensitivity without human-annotated ground truth, by holding the extraction task fixed and varying one choice at a time. The fixed schema comprises 17 clinical documentation flags on a three-way yes/no/not_documented value set and a 47-tag vocabulary for the primary admission reason. Three prompt variants expressing this schema were each run a",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05970",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05937",
+      "title": "Large Language Models are Perplexed by some Political Parties",
+      "authors": [
+        "Paul Lerner",
+        "François Yvon"
+      ],
+      "abstract": "Large Language Models (LLMs) are increasingly used, including in political applications, but their political fairness has been little studied. We assess it using perplexity, posing that a fair model should give equal probability to all political groups. However, we find, across ten LLMs and three datasets covering 37 languages, that LLMs are more perplexed by the texts of far right and nationalist parties than of social-democratic parties. We find this to be consistent with previous work on translation fairness, to the point that perplexity correlates with downstream translation metrics. Our m",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05937",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05922",
+      "title": "Retrospective Harness Optimization: Improving LLM Agents via Self-Preference over Trajectory Rollouts",
+      "authors": [
+        "Wenbo Pan",
+        "Shujie Liu",
+        "Chin-Yew Lin",
+        "Jingying Zeng",
+        "Xianfeng Tang"
+      ],
+      "abstract": "AI agents rely on a harness of skills, tools, and workflows to solve complex problems. Continually improving this harness is essential for adapting to new tasks. However, existing optimization methods typically require ground-truth validation sets, yet such labeled data is difficult to acquire in practical deployment settings. To address this problem, we introduce Retrospective Harness Optimization (RHO), a self-supervised method that optimizes the agent harness using only past trajectories. Specifically, RHO selects a diverse coreset of challenging tasks from past trajectories and re-solves t",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05922",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05920",
+      "title": "Asuka-Bench: Benchmarking Code Agents on Underspecified User Intent and Multi-Round Refinement",
+      "authors": [
+        "Xin Wang",
+        "Liangtai Sun",
+        "Yaoming Zhu",
+        "Shuang Zhou",
+        "Jiaxing Liu"
+      ],
+      "abstract": "Existing code-generation benchmarks score a single mapping from a complete prompt to a one-shot output. However, real web development is different. Users seldom write a full spec at the start; many requirements only become clear once they look at an intermediate result and react to it. We present Asuka-Bench, a benchmark that pairs underspecified user intent with multi-round refinement, grounded in browser-rendered behavior. Each task is resolved through a closed loop: a Code Agent generates a web project, a UI Agent executes test cases on the deployed site, and a User LLM turns evaluation out",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05920",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05894",
+      "title": "EMBER: Efficient Memory via Budgeted Evidence Retention for Long-Horizon Agents",
+      "authors": [
+        "Yilong Li",
+        "Suman Banerjee",
+        "Tong Che"
+      ],
+      "abstract": "Long-horizon agents can archive large histories, but future answers still incur retrieval, rereading, and context costs. When retained memory misses answer-relevant evidence, the system must return to larger portions of the raw history. We study budgeted evidence survival: before the query is known, which source evidence should be retained so that it remains recoverable and usable under a fixed retained source-evidence token budget? We instantiate this setting as Budgeted Pre-Query Retention, where memory is written during ingestion and later read without access to the full raw stream. We intr",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05894",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05890",
+      "title": "Staying with the Uncertainty: Uncertainty-Scaffolding Strategies for Artificial Moral Advisors in LLM-to-LLM Simulated Conversations",
+      "authors": [
+        "Salvatore Greco",
+        "Hainiu Xu",
+        "Jacopo Domenicucci",
+        "Yulan He",
+        "Sylvie Delacroix"
+      ],
+      "abstract": "LLMs are increasingly deployed as Artificial Moral Advisors (AMA) in a variety of contexts: what kind of conversational patterns should they display? In this paper, we study how AMA can help their interlocutors \"stay with the uncertainty\". We propose three modes of uncertainty (Perspective-Multiplying, Tension-Preserving, Process-Reflecting) and compare them against three control conditions (Baseline, Persuasive, Sycophantic). A user-agent LLM engages in a dialogue on an ethical dilemma with an AMA following a specific uncertainty strategy, and completes pre- and post-conversation questionnair",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05890",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05868",
+      "title": "YouZhi: Towards High-Concurrency Financial LLMs via Adaptive GQA-to-MLA Transition",
+      "authors": [
+        " PSBC LLM Team",
+        " Huawei LLM Team",
+        "Ruihan Long",
+        "Junjie Wu",
+        "Tianan Zhang"
+      ],
+      "abstract": "Large language models (LLMs) drive significant financial innovations, yet their high-concurrency deployment is severely bottlenecked by KV cache memory overhead, which inflates infrastructure costs and throttles scalability. To address this, we propose YouZhi-LLM, a highly efficient financial LLM empowered by a comprehensive structural transition and training pipeline natively built on the Huawei Ascend ecosystem. At its algorithmic core, YouZhi-LLM features a layer-adaptive GQA-to-MLA transition framework that dynamically assigns per-layer FreqFold sizes, maximizing KV-cache compression while",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05868",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "2606.05864",
+      "title": "Analysis of the Neglect-Zero Effect in Large Language Models",
+      "authors": [
+        "Jin Tanaka",
+        "Daiki Matsuoka",
+        "Ryoma Kumon",
+        "Hitomi Yanaka"
+      ],
+      "abstract": "We investigate the extent to which the language processing of LLMs resembles human cognitive processes, focusing on a human cognitive bias called the $\\textit{neglect-zero effect}$. This effect refers to the human tendency to ignore $\\textit{zero-models}$, which are configurations that render a proposition vacuously true by virtue of an empty set. We focus on two types of inferences driven by the neglect-zero effect, and examine how LLMs process these inferences by comparing their behavior with that in an inference that does not involve the neglect-zero effect. For this purpose, we employ a pa",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05864",
+      "keyword_hits": 1,
+      "priority": 10.0
+    },
+    {
+      "id": "",
+      "title": "A net-like colloid with peculiar CO2 sorption behavior formed by aggregation of organic ligand molecules in water",
+      "authors": [
+        "Jin Cai",
+        "Wan Chen",
+        "Hai Li",
+        "Xin Zheng",
+        "Han Tang"
+      ],
+      "abstract": "",
+      "sources": [
+        "semantic_scholar"
+      ],
+      "url": "",
+      "keyword_hits": 0,
+      "tracked_author": "Kaiming He",
+      "priority": 20.0
+    },
+    {
+      "id": "",
+      "title": "Theoretical characterization of mesoscopic structure of PBT propellant based on liquid film thickness",
+      "authors": [
+        "Ye-wei Shen",
+        "Mao Yang",
+        "Hong-guang Zhang",
+        "Li-ping Huang",
+        "S. Xing"
+      ],
+      "abstract": "Solid propellant slurry is a high solid content suspension, and its rheological properties are very complex. In order to solve the problem that it is hard to estimate the process propertie of 3,3-bis(azidomethyl) oxetane-tetrahydrofuran copolyether (PBT) solid propellant slurry, the concept of liquid film thickness in propellant was proposed by analyzing the mesoscopic structure of PBT solid propellant slurry, and the calculation method of liquid film thickness under different propellant packing grade ratios is given. Four kinds of filler particle size are used as examples, the theory of tight",
+      "sources": [
+        "semantic_scholar"
+      ],
+      "url": "",
+      "keyword_hits": 0,
+      "tracked_author": "Kaiming He",
+      "priority": 20.0
+    },
+    {
+      "id": "2606.06467",
+      "title": "You Only Index Once: Cross-Layer Sparse Attention with Shared Routing",
+      "authors": [
+        "Yutao Sun",
+        "Yanqi Zhang",
+        "Li Dong",
+        "Jianyong Wang",
+        "Furu Wei"
+      ],
+      "abstract": "Long-context inference in modern LLMs is increasingly constrained by decoding efficiency, especially in reasoning-heavy settings where models generate long intermediate chains of thought. Existing sparse attention methods often face a practical efficiency-quality trade-off. Structured block sparse methods typically provide stronger acceleration but incur noticeable quality loss, while token sparse methods are usually more accurate yet deliver limited end-to-end speedup because top-k routing over the full cache remains expensive. In this work, we propose cross-layer sparse attention (CLSA), whi",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06467",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06349",
+      "title": "\"Chi nas dal soch el sent de legn\" -- Auditing Text Corpora for Lombard",
+      "authors": [
+        "Edoardo Signoroni",
+        "Pavel Rychlý"
+      ],
+      "abstract": "Several of the world's languages are still under-resourced in terms of Natural Language Processing (NLP) tools. This is mostly due to the lack of high-quality datasets to train, develop, and evaluate systems and models for several tasks, such as Machine Translation (MT). We conduct a manual audit of the parallel and monolingual corpora available for Lombard, an under-resourced language continuum from Italy. Our analysis reveals that the perceived abundance of web-scraped data is an illusion, with massive datasets plagued by severe language misidentification, boilerplate text, and non-linguisti",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06349",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06320",
+      "title": "Learning What to Forget: Improving LLM Unlearning via Learned Token-Level Importance",
+      "authors": [
+        "Gizem Yüce",
+        "Giorgos Nikolaou",
+        "Nicolas Flammarion"
+      ],
+      "abstract": "Machine unlearning aims to remove targeted knowledge from a trained model while preserving its general capabilities. For autoregressive language models, not all tokens in a forget sample are equally relevant to forgetting. Existing approaches either ignore this heterogeneity or rely on auxiliary models, heuristics, or external annotations to estimate each token's relevance for forgetting. We instead characterize it through the interaction with the retain objective: a token is forget-specific to the extent that minimizing the forget loss on that token does not conflict with retain optimality. W",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06320",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06306",
+      "title": "Decomposing Factual Sycophancy in Language Models: How Size and Instruction Tuning Shape Robustness",
+      "authors": [
+        "Victor De Marez",
+        "Luna De Bruyne",
+        "Walter Daelemans"
+      ],
+      "abstract": "Factual sycophancy occurs when a language model abandons a correct, verifiable answer under social pressure. Because a flip occurs only when pressure toward a false answer exceeds the model's neutral preference for the truth, flip rates conflate two mechanisms: the strength of that baseline preference (truth margin), and how far pressure shifts it (manipulation sensitivity). We decompose factual sycophancy into these channels and use them to separate the effects of size and instruction tuning across 56 open-weight models spanning 0.3B-32B parameters and 13 manipulation types. We find that vuln",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06306",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06267",
+      "title": "Many Circuits, One Mechanism: Input Variation and Evaluation Granularity in Circuit Discovery",
+      "authors": [
+        "Alireza Bayat Makou",
+        "Jingcheng Niu",
+        "Subhabrata Dutta",
+        "Iryna Gurevych"
+      ],
+      "abstract": "Circuit discovery methods identify subgraphs that explain specific model behaviors, and structural differences between discovered circuits are commonly interpreted as evidence of distinct mechanisms. We test this assumption by varying input statistics while holding the task fixed, and show that the resulting structural differences exhibit apparent specialization but do not correspond to functional differences, a pattern we term phantom specialization. Using Literal Sequence Copying across four token-frequency bands plus a control condition in five Pythia models (70M-1.4B), we extract 75 circui",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06267",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06260",
+      "title": "OneReason Technical Report",
+      "authors": [
+        " OneRec Team",
+        "Biao Yang",
+        "Boyang Ding",
+        "Chenglong Chu",
+        "Dunju Zang"
+      ],
+      "abstract": "Generative recommendation models in the OneRec family have been widely deployed in many real-world services, such as short-video, live-streaming, advertising, and e-commerce. However, these generative models can only benefit from the scaling advantage, while their reasoning ability is hard to activate, since we cannot construct meaningful Chain-of-Thought (CoT) sequences consisting of itemic tokens only. Inspired by the success of the reasoning-style ``think before answer'' paradigm in the LLM field, we conduct preliminary studies (i.e., OneRec-Think, OpenOneRec) to explore reasoning capabilit",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06260",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06242",
+      "title": "Benchmarking Open-Source Layout Detection Models for Data Snapshot Extraction from Institutional Documents",
+      "authors": [
+        "AJ Carl P. Dy",
+        "Aivin V. Solatorio"
+      ],
+      "abstract": "Institutional documents contain substantial amounts of operational and analytical information embedded within figures and tables. Current approaches for extracting visual content from documents are largely built around generic document layout analysis, where figures and tables are treated as uniformly relevant document objects rather than semantically meaningful analytical artifacts. In this work, we introduce a benchmark dataset and evaluation framework for \\textit{data snapshot extraction}, the task of identifying and localizing semantically meaningful visual artifacts within institutional d",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06242",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06203",
+      "title": "Dense Contexts Are Hard Contexts: Lexical Density Limits Effective Context in LLMs",
+      "authors": [
+        "Giovanni Dettori",
+        "Matteo Boffa",
+        "Danilo Giordano",
+        "Idilio Drago",
+        "Marco Mellia"
+      ],
+      "abstract": "Input length and the position of relevant information are widely cited as the primary causes of degraded LLM long-context performance. Here, we study lexical density -- the rate at which a context introduces distinct information -- as a third, largely overlooked factor that systematically reduces the effective context window of LLMs. We quantify the impact of lexical density on open-weight LLMs (9B-685B) using three \"find-the-needle\" style benchmarks with identical length (~12k tokens) and controlled needle position, but increasing density of information. We observe a sharp performance collaps",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06203",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06183",
+      "title": "Revisiting Lexicon Evaluation in Unsupervised Word Discovery",
+      "authors": [
+        "Simon Malan",
+        "Danel Slabbert",
+        "Herman Kamper"
+      ],
+      "abstract": "Building a lexicon from discovered word-like units is a central goal in zero-resource speech processing. But do our evaluations provide a trustworthy indication of lexicon quality? A common metric, normalized edit distance, averages the phoneme edit distances between discovered units in each cluster. We show that this metric has an inherent bias toward the quality of large clusters, inhibiting fair evaluation. Moreover, it ignores how well true classes are distributed across clusters. Based on established theory in clustering literature, we propose two metrics that address these shortcomings: ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06183",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06177",
+      "title": "Ouvia: A User-centered Framework for Measuring Usability of Speech Translation in Real-World Communication Scenarios",
+      "authors": [
+        "Giuseppe Attanasio",
+        "Beatrice Savoldi",
+        "Daniel Chechelnitsky",
+        "Matteo Negri",
+        "Marine Carpuat"
+      ],
+      "abstract": "Speech translation (ST) is increasingly adopted in user applications, yet its evaluation largely focuses on decontextualized testbeds and holistic quality, rather than end users' communication needs. We introduce Ouvia, an evaluation framework for measuring user-perceived usability of speech translation outputs in real-world settings. Ouvia focuses on one-to-one communication: an English speaker needs to convey a request to a Portuguese speaker, and the message is automatically translated. Through a custom web app and multi-phase study design, we collect more than 1,750 such interactions in he",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06177",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06168",
+      "title": "ProSarc: Prosody-Aware Sarcasm Recognition Framework via Temporal Prosodic Incongruity",
+      "authors": [
+        "Prathamjyot Singh",
+        "Ashima Sood",
+        "Sahil Sharma",
+        "Jasmeet Singh"
+      ],
+      "abstract": "We present ProSarc, an audio-only framework that detects sarcasm by modelling temporal prosodic incongruity, that is, the mismatch between local prosodic dynamics and the utterance-level emotional baseline. Dual encoding paths, a Global Emotion Encoder and a Temporal Prosody Encoder (BiLSTM + multi-head attention), feed a Prosodic Incongruity Analyzer that produces a scalar incongruity score for classification. Monte Carlo dropout provides uncertainty estimates, and an attention-based mechanism localises sarcastic onset without frame-level labels. ProSarc outperforms prior audio-only methods o",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06168",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06160",
+      "title": "Where does Absolute Position come from in decoder-only Transformers?",
+      "authors": [
+        "Valeria Ruscio",
+        "Umberto Nanni",
+        "Fabrizio Silvestri"
+      ],
+      "abstract": "RoPE-trained transformers distinguish absolute position in their attention patterns, even though RoPE encodes only relative offsets in the inner product. We trace this leakage to two architectural components, The causal mask is responsible for the first: its per-query softmax denominator depends on the absolute query position by construction. The residual stream supplies the second. Under causal attention the activation at position $0$ attends only to itself and runs as a closed dynamical system from the embedding of the token at that position; downstream attention reads this trajectory throug",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06160",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06109",
+      "title": "Harnessing Structural Context for Entity Alignment Foundation Models",
+      "authors": [
+        "Xingyu Chen",
+        "Yuanning Cui",
+        "Zequn Sun",
+        "Wei Hu"
+      ],
+      "abstract": "Entity alignment (EA) aims to identify equivalent entities across heterogeneous knowledge graphs (KGs) and is a key component of knowledge fusion and cross-KG reasoning. The recent EA foundation model demonstrates that alignment knowledge, once pretrained, can be directly applied to diverse previously unseen KG pairs. However, it still underuses structural context in two places: cross-KG interaction is weak during encoding, and final candidate ranking still relies too heavily on coarse similarity. We address these limitations with ContextEA, an enhanced encoder-decoder framework for transferab",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06109",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06088",
+      "title": "CHALIS: A Challenge Dataset for Language Identification in Difficult Scenarios",
+      "authors": [
+        "Michal Tichý",
+        "Jindřich Libovický"
+      ],
+      "abstract": "We present CHALIS (Challenging Language Identification Samples), a new benchmark dataset explicitly designed to address difficult cases in language identification: cousin languages and orthographic noise. Our dataset has two parts: First, we collected sentences shared across mutually intelligible language pairs (Czech/Slovak, Spanish/Catalan, Portuguese/Galician, Danish/Norwegian). The second part tests for orthography noise: we transliterate text across multiple scripts, remove diacritics, simulate homoglyph attacks, and use Internet slang. We evaluate four widely used language identification",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06088",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06058",
+      "title": "MDP-GRPO: Stabilized Group Relative Policy Optimization for Multi-Constraint Instruction Following",
+      "authors": [
+        "Mohammad Mahdi Salmani-Zarchi",
+        "Zahra Rahimi",
+        "Heshaam Faili",
+        "Mohammad Javad Dousti"
+      ],
+      "abstract": "Reinforcement learning with verifiable rewards is ideal for multi-constraint instruction following, yet standard group-relative policy optimization (GRPO) becomes unstable under discrete, low-dispersion rewards, where within-group reward distributions are frequently homogeneous. We identify and formalize three pathologies of z-score group normalization in this regime: low-variance amplification, mean-centering blindness, and zero-variance collapse. To address them, we propose MDP-GRPO, which stabilizes learning through (1) multi-temperature sampling to increase reward dispersion, (2) dual-anch",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06058",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.06031",
+      "title": "NAVIRA: Decoupled Stochastic Remasking for Masked Diffusion Language Models",
+      "authors": [
+        "Andrey Fomenko",
+        "Maksim Kryzhanovskiy",
+        "Svetlana Glazyrina",
+        "Roman Ischenko"
+      ],
+      "abstract": "Masked diffusion language models generate text by iteratively unmasking many tokens in parallel, but this speed comes with a correction problem: tokens generated in the same step are predicted from marginal distributions, and early local dependency errors can later contaminate the context. PRISM addresses this by learning token-level quality scores and remasking unreliable tokens, but its inference rule is coupled: the same forward pass both detects low-quality tokens and computes logits for their replacements, so the erroneous tokens still condition regeneration. We propose NAVIRA, an inferen",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.06031",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05983",
+      "title": "Framing, Judging, Steering: An Assessable Competency Model for Teach-ing Students to Reason With Generative AI",
+      "authors": [
+        "Alexander Apartsin",
+        "Yehudit Aperstein"
+      ],
+      "abstract": "Generative AI makes answers easy and understanding hard, and uncritical use invites cognitive offloading. Schools still measure unaided performance, yet the real task is to produce good work with AI: framing an ill-defined task, judging the output, and steering the model toward a better result. This ability is rarely assessed in its own right; where measured, it collapses into one \"prompting\" score that cannot diagnose why AI use succeeds or fails. We propose CoRe-3 (Co-Reasoning), a competency model factoring productive AI use into three assessable skills we abbreviate FJS: Framing (specifyin",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05983",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05936",
+      "title": "Epistemic Injustice in Language Models: An Audit of Pretraining Filters and Guardrails",
+      "authors": [
+        "Marco Antonio Stranisci",
+        "A Pranav",
+        "Rossana Damiano",
+        "Christian Hardmeier",
+        "Anne Lauscher"
+      ],
+      "abstract": "Modern language models rely on pretraining filters to remove undesirable content from training corpora and inference-time guardrails to suppress undesirable outputs during deployment. In this paper, we examine how these filtering and moderation decisions produce forms of epistemic erasure and reveal tensions both across automated systems and between these systems and human judgment. We audit four pretraining filters and three inference-time guardrails on Common Crawl sentences containing gender and regional-origin mentions, together with a manually annotated subset of 500 sentences. Our analys",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05936",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05917",
+      "title": "MemoryCard: Topic-Aware Multi-Modal Clue Compression for Long-Video Question Answering",
+      "authors": [
+        "Qing Yang",
+        "Pengcheng Huang",
+        "Xinze Li",
+        "Zhenghao Liu",
+        "Yukun Yan"
+      ],
+      "abstract": "Long-video question answering remains challenging for Vision-Language Models (VLMs), as answer-relevant evidence is often sparse, transient, and temporally dispersed across lengthy video contexts. Existing frame-centric approaches improve efficiency through uniform sampling, query-aware frame selection, visual-token compression, and adaptive resolution strategies. However, they still rely on isolated and fragmented frames as the fundamental evidence units, limiting VLMs' ability to effectively capture coherent event-level semantics. To address this limitation, we propose MemoryCard, a video-me",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05917",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05906",
+      "title": "ACE-SQL: Adaptive Co-Optimization via Empirical Credit Assignment for Text-to-SQL",
+      "authors": [
+        "Xiaobing Chen",
+        "Ai Jian",
+        "Eryu Guo",
+        "Zhiqi Pang"
+      ],
+      "abstract": "Text-to-SQL maps natural language questions to executable SQL queries. Modern databases often contain large and complex schemas, making schema linking a critical step for accurate SQL generation. Existing methods either rely on full-schema generation, which leaves schema linking implicit within a large search space, or use a separate retriever trained with static gold-column supervision, whose targets may be suboptimal for the current generator policy. To address this issue, we propose Adaptive Co-optimization via Empirical Credit Assignment for Text-to-SQL (ACE-SQL), a reinforcement learning ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05906",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05895",
+      "title": "Representing Research Attention as Contextually Structured Flows",
+      "authors": [
+        "Jessica Rodrigues",
+        "Angelo Salatino",
+        "Gard Jenset",
+        "Scott Hale"
+      ],
+      "abstract": "Research attention is widely used as an indicator of visibility, influence, and societal uptake, yet it is typically represented as aggregated counts that do not preserve how attention develops across contexts over time. This creates a mismatch between how attention is interpreted and how it is represented. We propose attention flows as contextually structured representations that encode the organisation of attention and its evolution over time. We evaluate whether these representations capture transferable structure by constructing a benchmark based on analogy-style reasoning across research ",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05895",
+      "keyword_hits": 0,
+      "priority": 0.0
+    },
+    {
+      "id": "2606.05857",
+      "title": "Forgive or forget: Understanding the context of hate in audio retrieval systems",
+      "authors": [
+        "Arghya Pal",
+        "Sailaja Rajanala",
+        "Raphael C. -W. Phan",
+        "Shekhar Nayak"
+      ],
+      "abstract": "Handling toxic retrieval in text-to-audio systems is challenging due to contextual dependencies. Existing strategies (e.g., rephrasing, summarization) risk altering intent or omitting details. We propose a post hoc causal debiasing framework with a sentiment-controlled mediator to preserve semantic relevance while suppressing harmful speech. Our approach is model-agnostic and integrates seamlessly with existing retrieval pipelines. We introduce two variants: Forgive, which re-ranks and filters toxic audio via logit adjustment, and Forget, which generates counterfactual toxic prompts to mitigat",
+      "sources": [
+        "arxiv_cs.CL"
+      ],
+      "url": "https://arxiv.org/abs/2606.05857",
+      "keyword_hits": 0,
+      "priority": 0.0
+    }
+  ]
+}
