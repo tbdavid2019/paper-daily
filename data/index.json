@@ -1,6 +1,13 @@
 {
   "entries": [
     {
+      "date": "2026-07-06",
+      "file": "2026-07-06.json",
+      "total_papers": 361,
+      "keyword_matched": 261,
+      "crawled_at": "2026-07-06T04:50:37.803298Z"
+    },
+    {
       "date": "2026-07-05",
       "file": "2026-07-05.json",
       "total_papers": 361,
@@ -568,5 +575,5 @@
       "crawled_at": "2026-04-16T03:53:30.936963Z"
     }
   ],
-  "latest": "2026-07-05"
+  "latest": "2026-07-06"
 }
