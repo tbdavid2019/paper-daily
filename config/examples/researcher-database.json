@@ -1,0 +1,17 @@
+{
+  "profile_name": "Database Systems Researcher",
+  "background": "Researcher working on database engines and modern data systems.",
+  "research_interests": [
+    "query optimization",
+    "vector databases",
+    "transaction processing",
+    "learned database components"
+  ],
+  "current_projects": [],
+  "report": {
+    "target_papers": 10,
+    "must_read_threshold": 80,
+    "highly_relevant_threshold": 60,
+    "language": "auto"
+  }
+}

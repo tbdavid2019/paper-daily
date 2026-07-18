@@ -1,0 +1,39 @@
+{
+  "default_topic": "database_systems",
+  "topics": {
+    "database_systems": {
+      "name": "Database Systems",
+      "description": "Database engines, query optimization, transactions and modern data systems.",
+      "arxiv_categories": ["cs.DB", "cs.DC"],
+      "keywords": [
+        "database system",
+        "query optimization",
+        "query optimizer",
+        "transaction processing",
+        "vector database",
+        "data lakehouse",
+        "stream processing",
+        "learned index"
+      ],
+      "keyword_searches": [
+        "learned query optimizer",
+        "LLM for databases",
+        "vector database indexing"
+      ],
+      "tracked_authors": {},
+      "source_limits": {
+        "lookback_days": 4,
+        "arxiv_category_max_results": 250,
+        "arxiv_keyword_max_results": 100,
+        "semantic_scholar_max_authors": 0,
+        "semantic_scholar_papers_per_author": 5,
+        "semantic_scholar_delay_seconds": 3
+      },
+      "selection": {
+        "min_keyword_hits": 1,
+        "include_tracked_authors": true,
+        "max_papers": 30
+      }
+    }
+  }
+}

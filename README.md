@@ -33,6 +33,8 @@ paper-daily/
 ├── scripts/
 │   └── crawl.py              ← 爬蟲主程式
 ├── config/
+│   ├── README.md             ← 完整設定與 demo 使用說明
+│   ├── examples/             ← 其他主題與限定學者範例
 │   ├── topics.json           ← 分類、關鍵字、作者等主題設定
 │   └── researcher.json       ← 個人背景、研究興趣與報告篇數
 ├── data/
@@ -305,69 +307,14 @@ PAPER_TOPIC=embodied_ai python scripts/crawl.py
 
 ### 自訂論文主題
 
-新研究者通常只需要編輯兩個檔案：
+完整設定說明與可執行 demo 見 [`config/README.md`](config/README.md)。
+
+clone 後通常只需要編輯兩個檔案：
 
 1. [`config/topics.json`](config/topics.json)：決定抓什麼、留下什麼。
 2. [`config/researcher.json`](config/researcher.json)：告訴 LLM 研究背景、興趣與目前問題。
 
-`researcher.json` 的 `report` 只控制 LLM 報告，不影響爬蟲：
-
-| 參數 | 用途 |
-|------|------|
-| `target_papers` | 報告最多推薦幾篇 |
-| `must_read_threshold` | Must-Read 分數門檻 |
-| `highly_relevant_threshold` | Highly Relevant 分數門檻 |
-| `language` | `auto` 跟隨提問者語言；也可明確指定語言 |
-
-在 `topics.json` 新增一個 profile，可使用下列參數：
-
-| 參數 | 用途 | 範例 |
-|------|------|------|
-| `name` | 顯示名稱 | `Database Systems` |
-| `description` | 主題說明 | `Distributed databases and query optimization` |
-| `arxiv_categories` | 完整索引的 arXiv 分類 | `cs.DB`, `cs.DC` |
-| `keywords` | 相關性與 priority 計分 | `query optimizer`, `vector database` |
-| `keyword_searches` | 跨分類額外搜尋 | `learned query optimization` |
-| `tracked_authors` | Semantic Scholar 作者名稱與 ID | 可留空 `{}` |
-| `source_limits.lookback_days` | 向前回看幾天，用來接住延遲公開的投稿 | `4` |
-| `source_limits.arxiv_category_max_results` | 每個 arXiv 分類最多讀取幾篇候選 | `250` |
-| `source_limits.arxiv_keyword_max_results` | 每個 arXiv 搜尋詞最多讀取幾篇候選 | `100` |
-| `source_limits.semantic_scholar_max_authors` | 每日最多查詢幾位作者；`0` 表示停用 | `4` |
-| `source_limits.semantic_scholar_papers_per_author` | 每位作者最多讀取幾篇近期論文 | `5` |
-| `source_limits.semantic_scholar_delay_seconds` | 作者 API 請求之間至少等待幾秒 | `3` |
-| `selection.min_keyword_hits` | 至少命中幾個關鍵字才保存；`0` 表示保存分類內全部論文 | `1` |
-| `selection.include_tracked_authors` | 即使未命中關鍵字，仍保存追蹤作者論文 | `true` |
-| `selection.max_papers` | 每日最多保存篇數；`0` 表示不限制 | `50` |
-
-例如一位資料庫研究者可以新增：
-
-```json
-"database_systems": {
-  "name": "Database Systems",
-  "description": "Database engines, query optimization and data systems.",
-  "arxiv_categories": ["cs.DB", "cs.DC"],
-  "keywords": ["query optimization", "database system", "vector database", "transaction"],
-  "keyword_searches": ["learned query optimizer", "LLM for databases"],
-  "tracked_authors": {},
-  "source_limits": {
-    "lookback_days": 4,
-    "arxiv_category_max_results": 250,
-    "arxiv_keyword_max_results": 100,
-    "semantic_scholar_max_authors": 0,
-    "semantic_scholar_papers_per_author": 5,
-    "semantic_scholar_delay_seconds": 3
-  },
-  "selection": {
-    "min_keyword_hits": 1,
-    "include_tracked_authors": true,
-    "max_papers": 30
-  }
-}
-```
-
-之後以 `PAPER_TOPIC=profile名稱 python scripts/crawl.py` 執行；GitHub Actions 手動執行時也可以選擇 topic。`arxiv_categories` 中的每個分類會產生一次 arXiv 查詢，`keyword_searches` 中的每個詞也會產生一次查詢；要降低流量時，優先減少這兩個陣列的項目數，而不只是降低回傳篇數。
-
-> `published_at` 是上游的初次投稿／發布 metadata，不是本專案的收錄日。當日是否收錄以 `seen.json` 中的首次發現記錄為準。第一次執行是 bootstrap snapshot；後續執行才是穩定的增量雷達。
+`config/examples/` 提供資料庫主題、資料庫研究者，以及啟用限定學者的具身智能範例。demo 不會被正式排程自動載入。
 
 ---
 

@@ -1,0 +1,46 @@
+{
+  "default_topic": "embodied_ai_people",
+  "topics": {
+    "embodied_ai_people": {
+      "name": "Embodied Intelligence — Researcher Tracking Demo",
+      "description": "Embodied intelligence topic radar with optional researcher tracking enabled.",
+      "arxiv_categories": ["cs.RO", "cs.AI", "cs.CV"],
+      "keywords": [
+        "embodied AI",
+        "embodied intelligence",
+        "vision-language-action",
+        "robot foundation model",
+        "robot learning",
+        "robot policy",
+        "world model",
+        "robot manipulation",
+        "imitation learning",
+        "sim-to-real"
+      ],
+      "keyword_searches": [
+        "embodied artificial intelligence",
+        "vision language action model",
+        "robot foundation model"
+      ],
+      "tracked_authors": {
+        "Sergey Levine": "1736651",
+        "Chelsea Finn": "46881670",
+        "Pieter Abbeel": "1689992",
+        "Deepak Pathak": "38236002"
+      },
+      "source_limits": {
+        "lookback_days": 4,
+        "arxiv_category_max_results": 250,
+        "arxiv_keyword_max_results": 100,
+        "semantic_scholar_max_authors": 4,
+        "semantic_scholar_papers_per_author": 5,
+        "semantic_scholar_delay_seconds": 3
+      },
+      "selection": {
+        "min_keyword_hits": 1,
+        "include_tracked_authors": true,
+        "max_papers": 30
+      }
+    }
+  }
+}

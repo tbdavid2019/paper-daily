@@ -17,6 +17,7 @@
 - 将默认主题改为 `embodied_ai`，新增具身智能关键词、arXiv 分类与选择门槛。
 - 移除原始 `audio_speech` topic 與所有語音關鍵字，只保留 `embodied_ai` 與 `general_ai`。
 - 報告語言改為 `auto`，由 Agent 跟隨提問者語言，不再寫死繁體中文。
+- 新增 `config/README.md` 與可執行的資料庫、研究者及限定學者 demo，方便 clone 後改成其他研究方向。
 - arXiv 分類改為依 `topics.json` 動態建立，不再寫死語音分類。
 - 新增 `source_limits`，限制 arXiv 回傳數、Semantic Scholar 作者數、每位作者論文數與請求間隔。
 - 預設具身智能採主題雷達模式，不綁定特定學者、不呼叫 Semantic Scholar 作者 API，每日輸出上限 30 篇。
