@@ -1,0 +1,61 @@
+{
+  "default_topic": "audio_speech",
+  "topics": {
+    "audio_speech": {
+      "name": "Audio and Speech AI",
+      "description": "Speech, audio representation, generation, recognition and audio-language models.",
+      "arxiv_categories": ["cs.CL", "cs.SD", "cs.AI", "eess.AS"],
+      "keywords": [
+        "audio codec", "neural codec", "token learnability", "codebook",
+        "speech foundation", "audio language model", "modality alignment",
+        "discrete representation", "Q-Former", "connector",
+        "self-supervised speech", "HuBERT", "wav2vec", "WavTokenizer",
+        "ASR", "speech recognition", "speech-to-text",
+        "text-to-speech", "TTS", "voice cloning", "voice conversion",
+        "audio-visual", "lip reading", "lip-to-speech",
+        "continual fine-tuning", "catastrophic forgetting", "domain adaptation",
+        "inference-time scaling", "test-time adaptation", "training-free",
+        "early exit", "recursive transformer", "dynamic depth",
+        "contrastive learning", "DPO", "preference optimization",
+        "LoRA", "adapter", "PEFT", "agent", "tool-calling", "function calling",
+        "multimodal", "large language model", "whisper", "Qwen2-Audio", "SALMONN",
+        "music generation", "audio generation", "sound event"
+      ],
+      "keyword_searches": [
+        "audio codec", "speech foundation model", "audio language model",
+        "modality alignment audio", "inference-time scaling"
+      ],
+      "tracked_authors": {
+        "Hung-yi Lee": "2364785",
+        "Abdelrahman Mohamed": "40aborahman",
+        "Shinji Watanabe": "1757803",
+        "Kaiming He": "1771551"
+      },
+      "selection": {
+        "min_keyword_hits": 0,
+        "include_tracked_authors": true,
+        "max_papers": 0
+      }
+    },
+    "general_ai": {
+      "name": "General Artificial Intelligence",
+      "description": "Broad AI, machine learning, language, vision and agent research.",
+      "arxiv_categories": ["cs.AI", "cs.LG", "cs.CL", "cs.CV"],
+      "keywords": [
+        "large language model", "multimodal", "reasoning", "agent",
+        "tool use", "retrieval augmented generation", "reinforcement learning",
+        "preference optimization", "vision language model", "diffusion model"
+      ],
+      "keyword_searches": [
+        "large language model reasoning", "AI agent tool use",
+        "multimodal foundation model", "preference optimization"
+      ],
+      "tracked_authors": {},
+      "selection": {
+        "min_keyword_hits": 1,
+        "include_tracked_authors": true,
+        "max_papers": 100
+      }
+    }
+  }
+}

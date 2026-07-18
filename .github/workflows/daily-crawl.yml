@@ -7,8 +7,13 @@ on:
   workflow_dispatch:
     inputs:
       date:
-        description: 'Override date (YYYY-MM-DD). Leave empty for today.'
+        description: 'Publication date (YYYY-MM-DD). Empty uses previous UTC day.'
         required: false
+        type: string
+      topic:
+        description: 'Topic profile from config/topics.json'
+        required: false
+        default: 'audio_speech'
         type: string
 
 permissions:
@@ -32,6 +37,7 @@ jobs:
         run: python scripts/crawl.py
         env:
           SCOUT_DATE: ${{ inputs.date || '' }}
+          PAPER_TOPIC: ${{ inputs.topic || 'audio_speech' }}
 
       - name: Commit and push data
         run: |

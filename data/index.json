@@ -16,10 +16,11 @@
     },
     {
       "date": "2026-07-16",
+      "topic": "audio_speech",
       "file": "2026-07-16.json",
-      "total_papers": 358,
-      "keyword_matched": 258,
-      "crawled_at": "2026-07-16T03:46:31.995130Z"
+      "total_papers": 156,
+      "keyword_matched": 95,
+      "crawled_at": "2026-07-18T05:56:11.338763Z"
     },
     {
       "date": "2026-07-15",

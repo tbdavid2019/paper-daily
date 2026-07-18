@@ -2,7 +2,7 @@
 """
 crawl.py — 每日論文爬蟲
 ========================
-從 6 個來源抓取論文，去重合併，輸出單一 JSON 檔。
+從多個來源抓取論文，去重合併，僅輸出指定日期正式發布的論文。
 
 輸出：data/{YYYY-MM-DD}.json
 格式：{ date, crawled_at, stats, papers[] }
@@ -19,54 +19,46 @@ import time
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
-from datetime import datetime, date, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-TODAY = os.environ.get("SCOUT_DATE", "") or date.today().isoformat()
+# The scheduled job runs at 00:30 UTC, so the previous UTC day is the latest
+# complete publication window. Manual SCOUT_DATE always takes precedence.
+TODAY = os.environ.get("SCOUT_DATE", "") or (
+    datetime.now(timezone.utc).date() - timedelta(days=1)
+).isoformat()
 OUT_PATH = Path("data") / f"{TODAY}.json"
 
-ARXIV_CATEGORIES = ["cs.CL", "cs.SD", "cs.AI", "eess.AS"]
+CONFIG_PATH = Path(os.environ.get("PAPER_CONFIG", "config/topics.json"))
 
-KEYWORDS = [
-    # Primary (audio/speech)
-    "audio codec", "neural codec", "token learnability", "codebook",
-    "speech foundation", "audio language model", "modality alignment",
-    "discrete representation", "Q-Former", "connector",
-    "self-supervised speech", "HuBERT", "wav2vec", "WavTokenizer",
-    "ASR", "speech recognition", "speech-to-text",
-    "text-to-speech", "TTS", "voice cloning", "voice conversion",
-    "audio-visual", "lip reading", "lip-to-speech",
-    # Primary (methods)
-    "continual fine-tuning", "catastrophic forgetting", "domain adaptation",
-    "inference-time scaling", "test-time adaptation", "training-free",
-    "early exit", "recursive transformer", "dynamic depth",
-    "contrastive learning", "DPO", "preference optimization",
-    # Secondary
-    "LoRA", "adapter", "PEFT",
-    "agent", "tool-calling", "function calling",
-    "multimodal", "large language model",
-    "whisper", "Qwen2-Audio", "SALMONN",
-    "music generation", "audio generation", "sound event",
-]
 
-TRACKED_AUTHORS = {
-    "Hung-yi Lee": "2364785",
-    "Abdelrahman Mohamed": "40aborahman",
-    "Shinji Watanabe": "1757803",
-    "Kaiming He": "1771551",
-}
+def load_config():
+    with open(CONFIG_PATH, encoding="utf-8") as f:
+        return json.load(f)
 
-KEYWORD_SEARCHES = [
-    "audio codec",
-    "speech foundation model",
-    "audio language model",
-    "modality alignment audio",
-    "inference-time scaling",
-]
+
+CONFIG = load_config()
+TOPIC_NAME = os.environ.get("PAPER_TOPIC") or CONFIG.get("default_topic", "audio_speech")
+
+
+def load_topic_config():
+    try:
+        return CONFIG["topics"][TOPIC_NAME]
+    except KeyError as e:
+        available = ", ".join(sorted(CONFIG.get("topics", {})))
+        raise SystemExit(f"Unknown PAPER_TOPIC={TOPIC_NAME!r}. Available: {available}") from e
+
+
+TOPIC = load_topic_config()
+ARXIV_CATEGORIES = TOPIC.get("arxiv_categories", [])
+KEYWORDS = TOPIC.get("keywords", [])
+TRACKED_AUTHORS = TOPIC.get("tracked_authors", {})
+KEYWORD_SEARCHES = TOPIC.get("keyword_searches", [])
+SELECTION = TOPIC.get("selection", {})
 
 HEADERS = {"User-Agent": "DailyPaperScout/1.0 (github.com/voidful/paper-daily)"}
 
@@ -112,7 +104,24 @@ def normalize_id(raw):
     return re.sub(r"v\d+$", "", raw).strip()
 
 
-def make_paper(*, arxiv_id, title, authors, abstract, source, **extra):
+def publication_date(value):
+    """Return YYYY-MM-DD from an ISO-like publication timestamp."""
+    if not value or not isinstance(value, str):
+        return ""
+    match = re.match(r"^(\d{4}-\d{2}-\d{2})", value.strip())
+    return match.group(1) if match else ""
+
+
+def arxiv_submitted_range(day):
+    """Build an arXiv API submittedDate range for YYYY-MM-DD."""
+    compact = day.replace("-", "")
+    if not re.fullmatch(r"\d{8}", compact):
+        raise SystemExit(f"Invalid SCOUT_DATE={day!r}; expected YYYY-MM-DD")
+    return f"submittedDate:[{compact}0000 TO {compact}2359]"
+
+
+def make_paper(*, arxiv_id, title, authors, abstract, source,
+               published_at="", updated_at="", **extra):
     """Create a standardized paper dict."""
     arxiv_id = normalize_id(arxiv_id)
     return {
@@ -122,6 +131,8 @@ def make_paper(*, arxiv_id, title, authors, abstract, source, **extra):
         "abstract": abstract.strip().replace("\n", " ")[:600],
         "sources": [source],
         "url": f"https://arxiv.org/abs/{arxiv_id}" if arxiv_id else "",
+        **({"published_at": published_at} if published_at else {}),
+        **({"updated_at": updated_at} if updated_at else {}),
         "keyword_hits": kw_score(title + " " + abstract),
         **{k: v for k, v in extra.items() if v},
     }
@@ -145,6 +156,7 @@ def crawl_huggingface():
             authors=[a.get("name", "") for a in p.get("authors", [])],
             abstract=p.get("summary", ""),
             source="huggingface",
+            published_at=p.get("publishedAt") or item.get("publishedAt") or "",
             upvotes=item.get("numUpvotes", 0),
         ))
     print(f"  → {len(papers)} papers")
@@ -153,8 +165,8 @@ def crawl_huggingface():
 
 def crawl_arxiv_category(cat):
     print(f"📥 arXiv {cat}")
-    q = urllib.parse.quote(f"cat:{cat}")
-    url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=80"
+    q = urllib.parse.quote(f"cat:{cat} AND {arxiv_submitted_range(TODAY)}")
+    url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=200"
     xml = fetch_url(url)
     if not xml:
         return []
@@ -171,6 +183,8 @@ def crawl_arxiv_category(cat):
             authors=[a.findtext("a:name", "", ns) for a in e.findall("a:author", ns)],
             abstract=e.findtext("a:summary", "", ns),
             source=f"arxiv_{cat}",
+            published_at=e.findtext("a:published", "", ns),
+            updated_at=e.findtext("a:updated", "", ns),
         ))
     print(f"  → {len(papers)} papers")
     time.sleep(3)
@@ -182,8 +196,8 @@ def crawl_arxiv_keywords():
     all_papers = []
     seen = set()
     for kw in KEYWORD_SEARCHES:
-        q = urllib.parse.quote(f'all:"{kw}"')
-        url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=15"
+        q = urllib.parse.quote(f'all:"{kw}" AND {arxiv_submitted_range(TODAY)}')
+        url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=100"
         xml = fetch_url(url)
         if not xml:
             time.sleep(3)
@@ -205,6 +219,8 @@ def crawl_arxiv_keywords():
                 authors=[a.findtext("a:name", "", ns) for a in e.findall("a:author", ns)],
                 abstract=e.findtext("a:summary", "", ns),
                 source="arxiv_keyword",
+                published_at=e.findtext("a:published", "", ns),
+                updated_at=e.findtext("a:updated", "", ns),
                 search_keyword=kw,
             ))
         time.sleep(3)
@@ -221,7 +237,7 @@ def crawl_semantic_scholar():
             continue
         print(f"  🔍 {name}")
         url = (f"https://api.semanticscholar.org/graph/v1/author/{sid}/papers"
-               f"?fields=title,abstract,externalIds,year,venue,citationCount,authors&limit=10")
+               f"?fields=title,abstract,externalIds,year,publicationDate,venue,citationCount,authors&limit=10")
         data = fetch_json(url)
         if not data or "data" not in data:
             time.sleep(1)
@@ -237,6 +253,7 @@ def crawl_semantic_scholar():
                 authors=[a.get("name", "") for a in (p.get("authors") or [])],
                 abstract=p.get("abstract") or "",
                 source="semantic_scholar",
+                published_at=p.get("publicationDate") or "",
                 tracked_author=name,
                 citations=p.get("citationCount", 0),
             ))
@@ -258,6 +275,7 @@ def crawl_paperswithcode():
             authors=item.get("authors") or [],
             abstract=item.get("abstract") or "",
             source="paperswithcode",
+            published_at=item.get("published") or item.get("date") or "",
         ))
     print(f"  → {len(papers)} papers")
     return papers
@@ -286,6 +304,8 @@ def crawl_alphaxiv():
                 authors=[a.findtext("a:name", "", ns) for a in e.findall("a:author", ns)],
                 abstract=e.findtext("a:summary", "", ns),
                 source="alphaxiv",
+                published_at=e.findtext("a:published", "", ns),
+                updated_at=e.findtext("a:updated", "", ns),
                 trending_rank=i + 1,
             ))
     except ET.ParseError:
@@ -319,7 +339,8 @@ def merge(all_papers):
             if len(p.get("abstract", "")) > len(existing.get("abstract", "")):
                 existing["abstract"] = p["abstract"]
             # Keep upvotes / tracked_author / citations
-            for key in ("upvotes", "tracked_author", "citations", "trending_rank"):
+            for key in ("upvotes", "tracked_author", "citations", "trending_rank",
+                        "published_at", "updated_at"):
                 if p.get(key) and not existing.get(key):
                     existing[key] = p[key]
         else:
@@ -386,20 +407,34 @@ def main():
         p["priority"] = round(priority(p), 1)
     unique.sort(key=lambda p: p["priority"], reverse=True)
 
-    # Remove zero-priority noise (keep top papers manageable for LLM)
-    # Keep all with keyword_hits > 0, plus top 100 even if 0 hits
-    relevant = [p for p in unique if p["keyword_hits"] > 0]
-    filler = [p for p in unique if p["keyword_hits"] == 0][:100]
-    final = relevant + filler
+    # "Daily" means papers formally published on TODAY, not a rolling latest-N snapshot.
+    published = [p for p in unique if publication_date(p.get("published_at")) == TODAY]
+    relevant = [p for p in published if p["keyword_hits"] > 0]
+    missing_published_at = sum(1 for p in unique if not publication_date(p.get("published_at")))
+
+    min_keyword_hits = max(0, int(SELECTION.get("min_keyword_hits", 0)))
+    include_tracked = bool(SELECTION.get("include_tracked_authors", True))
+    final = [
+        p for p in published
+        if p["keyword_hits"] >= min_keyword_hits
+        or (include_tracked and p.get("tracked_author"))
+    ]
+    max_papers = max(0, int(SELECTION.get("max_papers", 0)))
+    if max_papers:
+        final = final[:max_papers]
 
     # Build output
     output = {
         "date": TODAY,
+        "topic": TOPIC_NAME,
         "crawled_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "stats": {
             "sources": stats,
             "total_crawled": sum(stats.values()),
             "after_dedup": len(unique),
+            "published_on_date": len(published),
+            "selected_papers": len(final),
+            "missing_published_at": missing_published_at,
             "keyword_matched": len(relevant),
         },
         "papers": final,
@@ -422,7 +457,9 @@ def main():
         print(f"   {p['priority']:5.0f} | {p['keyword_hits']}kw | {p['title'][:65]}")
 
     if len(final) == 0:
-        print("\n⚠️  No papers found — all sources may be down.")
+        print("\nℹ️  No papers were formally published on this date.")
+    if sum(stats.values()) == 0:
+        print("\n⚠️  No source returned data.")
         sys.exit(1)
 
 
@@ -441,6 +478,7 @@ def update_index(today_output):
     # Add today
     index["entries"].append({
         "date": TODAY,
+        "topic": TOPIC_NAME,
         "file": f"{TODAY}.json",
         "total_papers": len(today_output["papers"]),
         "keyword_matched": today_output["stats"]["keyword_matched"],
@@ -449,7 +487,7 @@ def update_index(today_output):
 
     # Sort by date descending
     index["entries"].sort(key=lambda e: e["date"], reverse=True)
-    index["latest"] = TODAY
+    index["latest"] = index["entries"][0]["date"] if index["entries"] else TODAY
 
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=2)

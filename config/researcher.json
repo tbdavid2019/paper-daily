@@ -1,0 +1,18 @@
+{
+  "profile_name": "Example Audio and Speech Researcher",
+  "background": "Researcher interested in machine learning for speech and audio.",
+  "research_interests": [
+    "audio and speech representation learning",
+    "automatic speech recognition",
+    "audio-language models",
+    "speech generation",
+    "efficient adaptation and inference"
+  ],
+  "current_projects": [],
+  "report": {
+    "target_papers": 15,
+    "must_read_threshold": 80,
+    "highly_relevant_threshold": 60,
+    "language": "Traditional Chinese"
+  }
+}
