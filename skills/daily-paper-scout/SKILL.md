@@ -60,7 +60,7 @@ Use the host's normal HTTP, web, or file-reading tool. Do not clone the reposito
 
 ## Report workflow
 
-Use the language and thresholds in `researcher.json`. If they are absent, use Traditional Chinese and these neutral sections:
+Use the thresholds in `researcher.json`. If `report.language` is `auto` or absent, reply in the user's language; otherwise use the configured language. Use these neutral sections:
 
 1. **今日概況** — date, topic, counts, and dominant themes.
 2. **Must-Read** — strongest direct matches; include title, authors, link, score, evidence, and why it matters to this researcher.

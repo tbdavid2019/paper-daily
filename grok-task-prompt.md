@@ -38,7 +38,7 @@
 
 ## 輸出格式
 
-使用 `config/researcher.json` 指定的語言輸出。
+若 `config/researcher.json` 的 `report.language` 是 `auto` 或未設定，使用提問者的語言；否則使用指定語言。
 
 ```markdown
 # 📰 Daily Paper Scout — [日期] — [主題]

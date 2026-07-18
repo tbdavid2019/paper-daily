@@ -14,6 +14,6 @@
     "target_papers": 10,
     "must_read_threshold": 80,
     "highly_relevant_threshold": 60,
-    "language": "Traditional Chinese"
+    "language": "auto"
   }
 }
