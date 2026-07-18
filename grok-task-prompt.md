@@ -6,9 +6,9 @@
 
 請依序讀取：
 
-1. 今日論文：`https://raw.githubusercontent.com/voidful/paper-daily/main/data/{日期}.json`
-2. 研究者設定：`https://raw.githubusercontent.com/voidful/paper-daily/main/config/researcher.json`
-3. 主題設定：`https://raw.githubusercontent.com/voidful/paper-daily/main/config/topics.json`
+1. 今日論文：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/data/{日期}.json`
+2. 研究者設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/researcher.json`
+3. 主題設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/topics.json`
 
 論文資料已依正式 `published_at` 日期收錄、跨來源去重，並包含：
 

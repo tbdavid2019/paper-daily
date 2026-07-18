@@ -5,14 +5,14 @@ description: Fetch the latest published paper-daily JSON and researcher profile,
 
 # Daily Paper Scout
 
-Use this skill when working with the `voidful/paper-daily` dataset or a deployment of the same schema. It is a discovery and ranking workflow: the JSON is a curated metadata feed, not a replacement for reading the paper.
+Use this skill when working with the `tbdavid2019/paper-daily` dataset or a deployment of the same schema. It is a discovery and ranking workflow: the JSON is a curated metadata feed, not a replacement for reading the paper.
 
 ## Data endpoints
 
 Default repository:
 
 ```text
-https://raw.githubusercontent.com/voidful/paper-daily/main/
+https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/
 ```
 
 Read these resources:
@@ -36,7 +36,7 @@ If the user gives another repository or base URL, use it instead of the default.
 Tool-neutral retrieval example:
 
 ```text
-BASE=https://raw.githubusercontent.com/voidful/paper-daily/main
+BASE=https://raw.githubusercontent.com/tbdavid2019/paper-daily/main
 GET $BASE/data/index.json
 GET $BASE/data/{selected-date}.json
 GET $BASE/config/researcher.json
