@@ -119,10 +119,19 @@ paper-daily/
 
 | Researcher | Semantic Scholar ID |
 |------------|---------------------|
-| Hung-yi Lee | `2364785` |
-| Abdelrahman Mohamed | `40aborahman` |
-| Shinji Watanabe | `1757803` |
-| Kaiming He | `1771551` |
+| Geoffrey E. Hinton | `1695689` |
+| Yoshua Bengio | `1751762` |
+| Demis Hassabis | `48987704` |
+| Ashish Vaswani | `40348417` |
+| Noam Shazeer | `1846258` |
+| Niki Parmar | `3877127` |
+| Jakob Uszkoreit | `39328010` |
+| Llion Jones | `145024664` |
+| Aidan N. Gomez | `19177000` |
+| Lukasz Kaiser | `40527594` |
+| I. Polosukhin | `3443442` |
+
+> Fei-Fei Li 會在 Semantic Scholar API 的同名作者確認完成後加入，避免誤追蹤錯誤 profile。
 
 ---
 
