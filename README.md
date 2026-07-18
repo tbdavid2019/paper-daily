@@ -45,6 +45,55 @@ paper-daily/
 └── README.md
 ```
 
+## 🔄 運作原理
+
+整個流程可以看成「先找候選，再確認發布日，最後交給 LLM 做研究判讀」：
+
+```mermaid
+flowchart TD
+    A[GitHub Actions<br/>每天 UTC 00:30] --> C[決定目標發布日]
+    B[手動執行<br/>SCOUT_DATE] --> C
+
+    C --> D[讀取 config/topics.json<br/>選擇 PAPER_TOPIC]
+    D --> E[建立來源查詢]
+
+    E --> F1[Hugging Face<br/>Daily Papers]
+    E --> F2[arXiv 分類<br/>submittedDate 範圍]
+    E --> F3[arXiv 關鍵字<br/>submittedDate 範圍]
+    E --> F4[Semantic Scholar<br/>追蹤作者]
+    E --> F5[Papers With Code]
+    E --> F6[alphaXiv<br/>best effort]
+
+    F1 --> G[合併候選論文]
+    F2 --> G
+    F3 --> G
+    F4 --> G
+    F5 --> G
+    F6 --> G
+
+    G --> H[以 arXiv ID 去重<br/>合併來源與 metadata]
+    H --> I[只保留 published_at<br/>等於目標日期]
+    I --> J[計算 keyword_hits<br/>與 priority]
+    J --> K[套用 selection 規則<br/>最低命中數／作者／篇數上限]
+    K --> L[data/YYYY-MM-DD.json<br/>與 data/index.json]
+
+    L --> M[LLM 讀取論文資料]
+    N[config/researcher.json<br/>研究背景與興趣] --> M
+    D --> M
+    M --> O[個人化研究雷達報告]
+```
+
+### 用白話說
+
+1. **觸發**：排程每天執行；沒有手動指定日期時，會抓前一個完整 UTC 日，避免漏掉當天稍晚發布的論文。
+2. **決定範圍**：`PAPER_TOPIC` 選擇主題 profile；profile 決定 arXiv 分類、關鍵字、搜尋詞與追蹤作者。
+3. **抓取候選**：不同來源各自回傳論文 metadata。來源抓到的是候選池，不代表每篇都會被保存。
+4. **日期與去重**：以 `published_at` 過濾目標日期，再用 arXiv ID 合併同一篇在不同來源出現的資料。
+5. **排序與選擇**：計算關鍵字命中與 priority，再套用 `selection` 的門檻和篇數上限。
+6. **交給 LLM**：JSON 提供「今天有哪些論文」，`researcher.json` 提供「這位研究者關心什麼」，兩者合起來才會產生個人化報告。
+
+> Mermaid 圖描述的是資料流程，不是每個來源都一定成功；例如 alphaXiv 失敗時，其他來源仍可完成當日資料。
+
 ---
 
 ## 📄 JSON 格式
