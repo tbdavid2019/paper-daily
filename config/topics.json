@@ -90,16 +90,11 @@
         "robot foundation model",
         "dexterous manipulation learning"
       ],
-      "tracked_authors": {
-        "Sergey Levine": "1736651",
-        "Chelsea Finn": "46881670",
-        "Pieter Abbeel": "1689992",
-        "Deepak Pathak": "38236002"
-      },
+      "tracked_authors": {},
       "source_limits": {
         "arxiv_category_max_results": 100,
         "arxiv_keyword_max_results": 50,
-        "semantic_scholar_max_authors": 4,
+        "semantic_scholar_max_authors": 0,
         "semantic_scholar_papers_per_author": 5,
         "semantic_scholar_delay_seconds": 3
       },

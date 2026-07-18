@@ -161,16 +161,11 @@ flowchart TD
 | Papers With Code | REST API v1 | None | 最新 50 篇 |
 | alphaXiv trending | Web scraping | Best effort | 熱門論文排名 |
 
-### 預設 `embodied_ai` 追蹤研究者
+### 預設不綁定研究者
 
-| Researcher | Semantic Scholar ID |
-|------------|---------------------|
-| Sergey Levine | `1736651` |
-| Chelsea Finn | `46881670` |
-| Pieter Abbeel | `1689992` |
-| Deepak Pathak | `38236002` |
+`embodied_ai` 的 `tracked_authors` 預設為空，`semantic_scholar_max_authors` 設為 `0`，因此不會呼叫 Semantic Scholar 作者 API。這不會排除任何學者；所有人的論文仍可透過 arXiv 分類、關鍵字與其他來源進入候選池，避免研究雷達偏向少數知名實驗室。
 
-預設最多追蹤 4 位作者、每位讀取最近 5 篇，兩次 Semantic Scholar 請求至少間隔 3 秒。`audio_speech` 與 `general_ai` 預設不呼叫作者 API。
+若要建立人物追蹤型 profile，可自行加入 Semantic Scholar 作者 ID，再提高 `semantic_scholar_max_authors`。只有被指定的作者會獲得 `tracked_author` 標記與排序加分。
 
 ---
 
