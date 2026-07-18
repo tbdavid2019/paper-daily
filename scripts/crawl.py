@@ -2,13 +2,14 @@
 """
 crawl.py — 每日論文爬蟲
 ========================
-從多個來源抓取論文，去重合併，僅輸出指定日期正式發布的論文。
+從多個公開來源抓取論文，去重後輸出本次第一次發現的主題相關論文。
 
 輸出：data/{YYYY-MM-DD}.json
 格式：{ date, crawled_at, stats, papers[] }
 
 每篇 paper 包含：
-  id, title, authors, abstract, sources[], url, keyword_hits, upvotes, tracked_author
+  id, title, authors, abstract, sources[], url, published_at, first_seen_at,
+  keyword_hits, upvotes, tracked_author
 """
 
 import json
@@ -19,19 +20,24 @@ import time
 import urllib.request
 import urllib.parse
 import xml.etree.ElementTree as ET
-from datetime import datetime, timedelta, timezone
+from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-# The scheduled job runs at 00:30 UTC, so the previous UTC day is the latest
-# complete publication window. Manual SCOUT_DATE always takes precedence.
-TODAY = os.environ.get("SCOUT_DATE", "") or (
-    datetime.now(timezone.utc).date() - timedelta(days=1)
-).isoformat()
-OUT_PATH = Path("data") / f"{TODAY}.json"
+# The weekday schedule runs after arXiv's US-Eastern announcement. The report
+# date is the day this crawler first observes papers, not their submission date.
+# Manual SCOUT_DATE always takes precedence.
+REPORT_DATE = os.environ.get("SCOUT_DATE", "") or datetime.now(timezone.utc).date().isoformat()
+try:
+    REPORT_DAY = date.fromisoformat(REPORT_DATE)
+except ValueError as e:
+    raise SystemExit(f"Invalid SCOUT_DATE={REPORT_DATE!r}; expected YYYY-MM-DD") from e
+
+OUT_PATH = Path("data") / f"{REPORT_DATE}.json"
+SEEN_PATH = Path("data") / "seen.json"
 
 CONFIG_PATH = Path(os.environ.get("PAPER_CONFIG", "config/topics.json"))
 
@@ -42,7 +48,7 @@ def load_config():
 
 
 CONFIG = load_config()
-TOPIC_NAME = os.environ.get("PAPER_TOPIC") or CONFIG.get("default_topic", "audio_speech")
+TOPIC_NAME = os.environ.get("PAPER_TOPIC") or CONFIG.get("default_topic", "embodied_ai")
 
 
 def load_topic_config():
@@ -60,6 +66,8 @@ TRACKED_AUTHORS = TOPIC.get("tracked_authors", {})
 KEYWORD_SEARCHES = TOPIC.get("keyword_searches", [])
 SELECTION = TOPIC.get("selection", {})
 SOURCE_LIMITS = TOPIC.get("source_limits", {})
+LOOKBACK_DAYS = max(1, int(SOURCE_LIMITS.get("lookback_days", 4)))
+WINDOW_START = REPORT_DAY - timedelta(days=LOOKBACK_DAYS)
 
 HEADERS = {"User-Agent": "DailyPaperScout/1.0 (github.com/tbdavid2019/paper-daily)"}
 
@@ -113,12 +121,71 @@ def publication_date(value):
     return match.group(1) if match else ""
 
 
-def arxiv_submitted_range(day):
-    """Build an arXiv API submittedDate range for YYYY-MM-DD."""
-    compact = day.replace("-", "")
-    if not re.fullmatch(r"\d{8}", compact):
-        raise SystemExit(f"Invalid SCOUT_DATE={day!r}; expected YYYY-MM-DD")
-    return f"submittedDate:[{compact}0000 TO {compact}2359]"
+def arxiv_submitted_range(start_day, end_day):
+    """Build an inclusive arXiv submittedDate window."""
+    start = start_day.isoformat().replace("-", "")
+    end = end_day.isoformat().replace("-", "")
+    return f"submittedDate:[{start}0000 TO {end}2359]"
+
+
+def candidate_key(paper):
+    """Return a stable key for first-seen tracking."""
+    arxiv_id = normalize_id(paper.get("id", ""))
+    if arxiv_id:
+        return f"arxiv:{arxiv_id}"
+    title = re.sub(r"\s+", " ", paper.get("title", "").strip().lower())
+    return f"title:{title}" if title else ""
+
+
+def load_seen_state():
+    if not SEEN_PATH.exists():
+        return {"schema_version": 1, "topics": {}}
+    try:
+        with open(SEEN_PATH, encoding="utf-8") as f:
+            state = json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return {"schema_version": 1, "topics": {}}
+    if not isinstance(state.get("topics"), dict):
+        state["topics"] = {}
+    return state
+
+
+def prior_data_keys(before_date):
+    """Use earlier daily files as a fallback if seen.json is missing."""
+    keys = set()
+    for path in Path("data").glob("????-??-??.json"):
+        if path.stem >= before_date:
+            continue
+        try:
+            with open(path, encoding="utf-8") as f:
+                payload = json.load(f)
+        except (OSError, json.JSONDecodeError):
+            continue
+        if payload.get("topic") not in (None, TOPIC_NAME):
+            continue
+        keys.update(filter(None, (candidate_key(p) for p in payload.get("papers", []))))
+    return keys
+
+
+def filter_unseen(papers, topic_seen, report_date, fallback_keys=None):
+    """Return papers not first seen before report_date."""
+    seen_before = {
+        key for key, record in topic_seen.items()
+        if isinstance(record, dict) and record.get("first_seen_on", report_date) < report_date
+    }
+    seen_before.update(fallback_keys or set())
+    return [p for p in papers if candidate_key(p) not in seen_before]
+
+
+def record_first_seen(papers, topic_seen, report_date, seen_at):
+    """Record every candidate, including papers later removed by ranking."""
+    for paper in papers:
+        key = candidate_key(paper)
+        if not key:
+            continue
+        record = topic_seen.get(key)
+        if not isinstance(record, dict) or record.get("first_seen_on", report_date) > report_date:
+            topic_seen[key] = {"first_seen_on": report_date, "first_seen_at": seen_at}
 
 
 def make_paper(*, arxiv_id, title, authors, abstract, source,
@@ -166,9 +233,9 @@ def crawl_huggingface():
 
 def crawl_arxiv_category(cat):
     print(f"📥 arXiv {cat}")
-    q = urllib.parse.quote(f"cat:{cat} AND {arxiv_submitted_range(TODAY)}")
+    q = urllib.parse.quote(f"cat:{cat} AND {arxiv_submitted_range(WINDOW_START, REPORT_DAY)}")
     max_results = max(1, int(SOURCE_LIMITS.get("arxiv_category_max_results", 100)))
-    url = (f"http://export.arxiv.org/api/query?search_query={q}"
+    url = (f"https://export.arxiv.org/api/query?search_query={q}"
            f"&sortBy=submittedDate&sortOrder=descending&max_results={max_results}")
     xml = fetch_url(url)
     if not xml:
@@ -200,8 +267,10 @@ def crawl_arxiv_keywords():
     seen = set()
     max_results = max(1, int(SOURCE_LIMITS.get("arxiv_keyword_max_results", 50)))
     for kw in KEYWORD_SEARCHES:
-        q = urllib.parse.quote(f'all:"{kw}" AND {arxiv_submitted_range(TODAY)}')
-        url = (f"http://export.arxiv.org/api/query?search_query={q}"
+        q = urllib.parse.quote(
+            f'all:"{kw}" AND {arxiv_submitted_range(WINDOW_START, REPORT_DAY)}'
+        )
+        url = (f"https://export.arxiv.org/api/query?search_query={q}"
                f"&sortBy=submittedDate&sortOrder=descending&max_results={max_results}")
         xml = fetch_url(url)
         if not xml:
@@ -302,7 +371,7 @@ def crawl_alphaxiv():
     if not ids:
         return []
     batch = ids[:20]
-    xml = fetch_url(f"http://export.arxiv.org/api/query?id_list={','.join(batch)}&max_results={len(batch)}")
+    xml = fetch_url(f"https://export.arxiv.org/api/query?id_list={','.join(batch)}&max_results={len(batch)}")
     if not xml:
         return []
     ns = {"a": "http://www.w3.org/2005/Atom"}
@@ -385,7 +454,8 @@ def priority(p):
 # ---------------------------------------------------------------------------
 
 def main():
-    print(f"🚀 Daily Paper Crawler — {TODAY}\n")
+    print(f"🚀 Daily Paper Crawler — {REPORT_DATE}")
+    print(f"   Discovery window: {WINDOW_START.isoformat()} through {REPORT_DATE}\n")
 
     all_papers = []
     stats = {}
@@ -415,21 +485,40 @@ def main():
             stats[name] = 0
         print()
 
+    if sum(stats.values()) == 0:
+        print("⚠️  No source returned data; state and daily JSON were not changed.")
+        sys.exit(1)
+    arxiv_total = sum(count for name, count in stats.items() if name.startswith("arxiv_"))
+    if (ARXIV_CATEGORIES or KEYWORD_SEARCHES) and arxiv_total == 0:
+        print("⚠️  All configured arXiv queries returned no data; state and daily JSON were not changed.")
+        sys.exit(1)
+
     # Merge & sort
     unique = merge(all_papers)
     for p in unique:
         p["priority"] = round(priority(p), 1)
     unique.sort(key=lambda p: p["priority"], reverse=True)
 
-    # "Daily" means papers formally published on TODAY, not a rolling latest-N snapshot.
-    published = [p for p in unique if publication_date(p.get("published_at")) == TODAY]
-    relevant = [p for p in published if p["keyword_hits"] > 0]
+    # Upstream published_at is metadata, not the daily inclusion key. Poll a
+    # lookback window and use first-seen state so delayed weekend announcements
+    # are collected on the next weekday without duplication.
+    window = [
+        p for p in unique
+        if WINDOW_START.isoformat() <= publication_date(p.get("published_at")) <= REPORT_DATE
+    ]
     missing_published_at = sum(1 for p in unique if not publication_date(p.get("published_at")))
+
+    seen_state = load_seen_state()
+    topic_seen = seen_state["topics"].setdefault(TOPIC_NAME, {})
+    newly_seen = filter_unseen(
+        window, topic_seen, REPORT_DATE, fallback_keys=prior_data_keys(REPORT_DATE)
+    )
+    relevant = [p for p in newly_seen if p["keyword_hits"] > 0]
 
     min_keyword_hits = max(0, int(SELECTION.get("min_keyword_hits", 0)))
     include_tracked = bool(SELECTION.get("include_tracked_authors", True))
     final = [
-        p for p in published
+        p for p in newly_seen
         if p["keyword_hits"] >= min_keyword_hits
         or (include_tracked and p.get("tracked_author"))
     ]
@@ -437,16 +526,25 @@ def main():
     if max_papers:
         final = final[:max_papers]
 
+    crawled_at = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    record_first_seen(window, topic_seen, REPORT_DATE, crawled_at)
+    for p in final:
+        record = topic_seen.get(candidate_key(p), {})
+        p["first_seen_at"] = record.get("first_seen_at", crawled_at)
+
     # Build output
     output = {
-        "date": TODAY,
+        "date": REPORT_DATE,
         "topic": TOPIC_NAME,
-        "crawled_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
+        "crawled_at": crawled_at,
         "stats": {
             "sources": stats,
             "total_crawled": sum(stats.values()),
             "after_dedup": len(unique),
-            "published_on_date": len(published),
+            "window_start": WINDOW_START.isoformat(),
+            "window_candidates": len(window),
+            "already_seen": len(window) - len(newly_seen),
+            "new_candidates": len(newly_seen),
             "selected_papers": len(final),
             "missing_published_at": missing_published_at,
             "keyword_matched": len(relevant),
@@ -459,26 +557,27 @@ def main():
     with open(OUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    with open(SEEN_PATH, "w", encoding="utf-8") as f:
+        json.dump(seen_state, f, ensure_ascii=False, indent=2, sort_keys=True)
+
     # Update index
     update_index(output)
 
     # Print summary
     print("=" * 50)
-    print(f"✅ {TODAY} — {len(final)} papers saved to {OUT_PATH}")
+    print(f"✅ {REPORT_DATE} — {len(final)} newly discovered papers saved to {OUT_PATH}")
+    print(f"   New candidates: {len(newly_seen)}; already seen: {len(window) - len(newly_seen)}")
     print(f"   Keyword matched: {len(relevant)}")
     print(f"   Top 5:")
     for p in final[:5]:
         print(f"   {p['priority']:5.0f} | {p['keyword_hits']}kw | {p['title'][:65]}")
 
     if len(final) == 0:
-        print("\nℹ️  No papers were formally published on this date.")
-    if sum(stats.values()) == 0:
-        print("\n⚠️  No source returned data.")
-        sys.exit(1)
+        print("\nℹ️  No new topic-matching papers were discovered in this run.")
 
 
 def update_index(today_output):
-    """Update data/index.json with today's entry."""
+    """Update data/index.json with this discovery run."""
     index_path = Path("data") / "index.json"
     if index_path.exists():
         with open(index_path) as f:
@@ -486,14 +585,14 @@ def update_index(today_output):
     else:
         index = {"entries": []}
 
-    # Remove existing entry for today (if re-running)
-    index["entries"] = [e for e in index["entries"] if e["date"] != TODAY]
+    # Remove existing entry for the report date (if re-running)
+    index["entries"] = [e for e in index["entries"] if e["date"] != REPORT_DATE]
 
     # Add today
     index["entries"].append({
-        "date": TODAY,
+        "date": REPORT_DATE,
         "topic": TOPIC_NAME,
-        "file": f"{TODAY}.json",
+        "file": f"{REPORT_DATE}.json",
         "total_papers": len(today_output["papers"]),
         "keyword_matched": today_output["stats"]["keyword_matched"],
         "crawled_at": today_output["crawled_at"],
@@ -501,7 +600,7 @@ def update_index(today_output):
 
     # Sort by date descending
     index["entries"].sort(key=lambda e: e["date"], reverse=True)
-    index["latest"] = index["entries"][0]["date"] if index["entries"] else TODAY
+    index["latest"] = index["entries"][0]["date"] if index["entries"] else REPORT_DATE
 
     with open(index_path, "w", encoding="utf-8") as f:
         json.dump(index, f, ensure_ascii=False, indent=2)

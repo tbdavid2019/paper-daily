@@ -10,8 +10,10 @@
 2. 研究者設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/researcher.json`
 3. 主題設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/topics.json`
 
-論文資料已依正式 `published_at` 日期收錄、跨來源去重，並包含：
+論文資料以 topic 的 first-seen 紀錄收錄並跨來源去重。檔案日期是研究雷達日期，不一定等於論文的 `published_at`。每篇包含：
 
+- `first_seen_at`：本專案第一次在該 topic 發現論文的時間
+- `published_at`：上游提供的初次投稿／發布 metadata，不是當日收錄條件
 - `keyword_hits`：主題關鍵字命中數
 - `priority`：關鍵字、多來源、熱度與追蹤作者的預排序分數
 - `sources`：論文出現的來源
@@ -42,7 +44,7 @@
 # 📰 Daily Paper Scout — [日期] — [主題]
 
 ## 今日概況
-[正式發布篇數、通過 profile 選擇篇數、主要研究趨勢]
+[候選視窗、首次發現篇數、通過 profile 選擇篇數、主要研究趨勢]
 
 ## 🔥 Must-Read
 ### 1. [標題](論文連結)

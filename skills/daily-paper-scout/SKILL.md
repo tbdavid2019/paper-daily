@@ -1,6 +1,6 @@
 ---
 name: daily-paper-scout
-description: Fetch the latest published paper-daily JSON and researcher profile, then produce a source-grounded research report. Use when a user asks for today's papers, a research radar, paper recommendations, or analysis of this repository's daily dataset.
+description: Fetch the latest first-seen paper-daily JSON and researcher profile, then produce a source-grounded research report. Use when a user asks for newly discovered papers, today's research radar, paper recommendations, or analysis of this repository's daily dataset.
 ---
 
 # Daily Paper Scout
@@ -30,7 +30,7 @@ If the user gives another repository or base URL, use it instead of the default.
 2. Select the requested date and, when relevant, confirm the file's `topic` matches the requested profile.
 3. Fetch the date JSON, `researcher.json`, and `topics.json`.
 4. Validate that the date JSON has `date`, `topic`, `stats`, and `papers`.
-5. Report the dataset facts before interpreting it: `published_on_date`, `selected_papers`, `keyword_matched`, source counts, and any missing-date count.
+5. Report the dataset facts before interpreting it: `window_start`, `window_candidates`, `already_seen`, `new_candidates`, `selected_papers`, `keyword_matched`, source counts, and any missing-date count.
 6. Rank papers using the researcher's interests and projects first, then use `priority`, `keyword_hits`, multiple sources, and tracked-author metadata as supporting signals.
 
 Tool-neutral retrieval example:
@@ -47,7 +47,9 @@ Use the host's normal HTTP, web, or file-reading tool. Do not clone the reposito
 
 ## Interpretation rules
 
-- `published_at` is the publication/submission timestamp used by the crawler. It does not mean peer review or acceptance.
+- The file `date` is the discovery report date, not every paper's submission date.
+- `first_seen_at` is when this crawler first observed the paper for this topic. On the initial bootstrap it may include papers that became public earlier within the lookback window.
+- `published_at` is upstream publication/submission metadata. It does not mean peer review or acceptance and is not the daily inclusion key.
 - `priority` is a crawler pre-ranking, not a human relevance score. Re-score against the current researcher profile.
 - `keyword_hits` is a literal profile-keyword signal. A high count can still be a false positive; inspect the title and abstract.
 - `abstract` may be truncated. Never invent experiments, numbers, conclusions, or claims not present in the fetched material.
@@ -86,7 +88,7 @@ When more detail is needed, follow the paper URL and read the full arXiv abstrac
 ## Example requests this skill should handle
 
 - “Read the latest paper-daily JSON and give me the five most important papers for this researcher.”
-- “Compare the last three published dates and identify a trend.”
+- “Compare the last three discovery dates and identify a trend.”
 - “Use the `general_ai` topic and find papers related to agents.”
 - “Explain whether today's dataset is empty because there were no papers or because a source failed.”
 

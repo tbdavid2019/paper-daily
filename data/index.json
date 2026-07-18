@@ -3,10 +3,11 @@
   "entries": [
     {
       "date": "2026-07-18",
+      "topic": "embodied_ai",
       "file": "2026-07-18.json",
-      "total_papers": 360,
-      "keyword_matched": 260,
-      "crawled_at": "2026-07-18T03:41:30.376716Z"
+      "total_papers": 30,
+      "keyword_matched": 91,
+      "crawled_at": "2026-07-18T12:47:10.808408Z"
     }
   ]
 }

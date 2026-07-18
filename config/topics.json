@@ -27,8 +27,9 @@
       ],
       "tracked_authors": {},
       "source_limits": {
-        "arxiv_category_max_results": 100,
-        "arxiv_keyword_max_results": 50,
+        "lookback_days": 4,
+        "arxiv_category_max_results": 250,
+        "arxiv_keyword_max_results": 100,
         "semantic_scholar_max_authors": 0,
         "semantic_scholar_papers_per_author": 5,
         "semantic_scholar_delay_seconds": 3
@@ -54,8 +55,9 @@
       ],
       "tracked_authors": {},
       "source_limits": {
-        "arxiv_category_max_results": 100,
-        "arxiv_keyword_max_results": 50,
+        "lookback_days": 4,
+        "arxiv_category_max_results": 250,
+        "arxiv_keyword_max_results": 100,
         "semantic_scholar_max_authors": 0,
         "semantic_scholar_papers_per_author": 5,
         "semantic_scholar_delay_seconds": 3
@@ -92,8 +94,9 @@
       ],
       "tracked_authors": {},
       "source_limits": {
-        "arxiv_category_max_results": 100,
-        "arxiv_keyword_max_results": 50,
+        "lookback_days": 4,
+        "arxiv_category_max_results": 250,
+        "arxiv_keyword_max_results": 100,
         "semantic_scholar_max_authors": 0,
         "semantic_scholar_papers_per_author": 5,
         "semantic_scholar_delay_seconds": 3

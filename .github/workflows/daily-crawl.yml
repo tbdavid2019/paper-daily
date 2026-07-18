@@ -2,12 +2,13 @@ name: Daily Paper Crawl
 
 on:
   schedule:
-    # UTC 00:30 every day = UTC+8 08:30 (Taiwan time)
-    - cron: '30 0 * * *'
+    # UTC 02:00 Monday-Friday = UTC+8 10:00 Monday-Friday (Taiwan time).
+    # This is after arXiv's Sunday-Thursday 20:00 US-Eastern announcements.
+    - cron: '0 2 * * 1-5'
   workflow_dispatch:
     inputs:
       date:
-        description: 'Publication date (YYYY-MM-DD). Empty uses previous UTC day.'
+        description: 'Discovery report date (YYYY-MM-DD). Empty uses current UTC day.'
         required: false
         type: string
       topic:
