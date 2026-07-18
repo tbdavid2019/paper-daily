@@ -209,6 +209,29 @@ https://raw.githubusercontent.com/voidful/paper-daily/main/data/{YYYY-MM-DD}.jso
 
 參考 [`grok-task-prompt.md`](grok-task-prompt.md) 的 prompt 範本，設定 Grok 每日自動讀取 JSON 並產出個人化論文報告。
 
+### 搭配 Codex、Claude Code、OpenClaw、Hermes
+
+可直接使用 [`skills/daily-paper-scout/SKILL.md`](skills/daily-paper-scout/SKILL.md)。這份 skill 會要求 Agent：
+
+1. 先讀 `data/index.json` 找最新日期。
+2. 再讀對應的 `data/{date}.json`、`config/researcher.json` 與 `config/topics.json`。
+3. 驗證發布日期與統計數字後，依研究者設定分析論文。
+4. 將 metadata、論文原文證據與 Agent 推論分開，避免把截斷摘要當成完整論文。
+
+任何支援 HTTP 或 Markdown skill 的 Agent，都可以直接讀取 GitHub Raw URL；不需要先 clone repository。
+
+### GitHub Raw 還是 GitHub Pages？
+
+目前直接使用 GitHub Raw 已經足夠，而且更適合 Agent：
+
+| 需求 | 建議 |
+|------|------|
+| Codex／Claude Code／OpenClaw／Hermes 讀 JSON | GitHub Raw，直接、穩定、無需額外前端 |
+| 人類瀏覽每日論文 | GitHub Pages，再加一個簡單的 JSON viewer |
+| 對外提供 API 或搜尋介面 | 之後再加 Pages／靜態前端，不改變 Raw JSON 作為 canonical source |
+
+因此目前建議保留 GitHub Raw 作為唯一資料來源；GitHub Pages 是改善閱讀體驗的可選展示層，不是必要條件。
+
 ### 篩選建議
 
 | 欄位 | 用途 |
