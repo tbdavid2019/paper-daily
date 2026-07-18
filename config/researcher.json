@@ -1,16 +1,17 @@
 {
-  "profile_name": "Example Audio and Speech Researcher",
-  "background": "Researcher interested in machine learning for speech and audio.",
+  "profile_name": "Embodied Intelligence Researcher",
+  "background": "Researcher exploring agents that perceive, reason and act in physical or simulated environments.",
   "research_interests": [
-    "audio and speech representation learning",
-    "automatic speech recognition",
-    "audio-language models",
-    "speech generation",
-    "efficient adaptation and inference"
+    "vision-language-action models",
+    "robot foundation models",
+    "world models and spatial intelligence",
+    "dexterous and mobile manipulation",
+    "sim-to-real transfer",
+    "tactile and multimodal perception"
   ],
   "current_projects": [],
   "report": {
-    "target_papers": 15,
+    "target_papers": 10,
     "must_read_threshold": 80,
     "highly_relevant_threshold": 60,
     "language": "Traditional Chinese"

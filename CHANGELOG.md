@@ -4,11 +4,19 @@
 
 ## 2026-07-18
 
+### 项目重置
+
+- 删除 2026-07-18 以前由旧爬虫产生的 93 份历史 JSON，只保留当前日期资料。
+- 将默认主题改为 `embodied_ai`，新增具身智能关键词、arXiv 分类与选择门槛。
+- arXiv 分類改為依 `topics.json` 動態建立，不再寫死語音分類。
+- 新增 `source_limits`，限制 arXiv 回傳數、Semantic Scholar 作者數、每位作者論文數與請求間隔。
+- 預設具身智能追蹤 Sergey Levine、Chelsea Finn、Pieter Abbeel 與 Deepak Pathak，每日輸出上限 30 篇。
+- 将软件授权改为 `AGPL-3.0-or-later`，并保留原作者的 MIT notice。
+
 ### 研究者追蹤名單
 
 - 感謝原作者 [voidful](https://github.com/voidful) 建立本專案的多來源論文爬蟲與自動化基礎。
-- 將預設 `audio_speech` profile 的追蹤名單，從原本的語音研究者改為已驗證的 AI／深度學習與 Transformer 代表作者。
-- Semantic Scholar 作者 ID 以公開 metadata 驗證；Fei-Fei Li 暫待 API 限流解除後補入，避免誤追蹤同名作者。
+- `embodied_ai` 使用已核對的 Semantic Scholar 作者 ID；非預設 topic 不預先追蹤作者，避免不必要的 API 請求。
 
 ### 日期與資料品質
 

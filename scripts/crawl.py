@@ -59,8 +59,9 @@ KEYWORDS = TOPIC.get("keywords", [])
 TRACKED_AUTHORS = TOPIC.get("tracked_authors", {})
 KEYWORD_SEARCHES = TOPIC.get("keyword_searches", [])
 SELECTION = TOPIC.get("selection", {})
+SOURCE_LIMITS = TOPIC.get("source_limits", {})
 
-HEADERS = {"User-Agent": "DailyPaperScout/1.0 (github.com/voidful/paper-daily)"}
+HEADERS = {"User-Agent": "DailyPaperScout/1.0 (github.com/tbdavid2019/paper-daily)"}
 
 
 # ---------------------------------------------------------------------------
@@ -166,7 +167,9 @@ def crawl_huggingface():
 def crawl_arxiv_category(cat):
     print(f"📥 arXiv {cat}")
     q = urllib.parse.quote(f"cat:{cat} AND {arxiv_submitted_range(TODAY)}")
-    url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=200"
+    max_results = max(1, int(SOURCE_LIMITS.get("arxiv_category_max_results", 100)))
+    url = (f"http://export.arxiv.org/api/query?search_query={q}"
+           f"&sortBy=submittedDate&sortOrder=descending&max_results={max_results}")
     xml = fetch_url(url)
     if not xml:
         return []
@@ -195,9 +198,11 @@ def crawl_arxiv_keywords():
     print("📥 arXiv keyword search")
     all_papers = []
     seen = set()
+    max_results = max(1, int(SOURCE_LIMITS.get("arxiv_keyword_max_results", 50)))
     for kw in KEYWORD_SEARCHES:
         q = urllib.parse.quote(f'all:"{kw}" AND {arxiv_submitted_range(TODAY)}')
-        url = f"http://export.arxiv.org/api/query?search_query={q}&sortBy=submittedDate&sortOrder=descending&max_results=100"
+        url = (f"http://export.arxiv.org/api/query?search_query={q}"
+               f"&sortBy=submittedDate&sortOrder=descending&max_results={max_results}")
         xml = fetch_url(url)
         if not xml:
             time.sleep(3)
@@ -232,15 +237,22 @@ def crawl_semantic_scholar():
     print("📥 Semantic Scholar (tracked researchers)")
     cutoff = datetime.now().year - 1
     all_papers = []
-    for name, sid in TRACKED_AUTHORS.items():
+    max_authors = max(0, int(SOURCE_LIMITS.get("semantic_scholar_max_authors", 4)))
+    papers_per_author = min(100, max(1, int(
+        SOURCE_LIMITS.get("semantic_scholar_papers_per_author", 5)
+    )))
+    delay = max(1.0, float(SOURCE_LIMITS.get("semantic_scholar_delay_seconds", 3)))
+    authors = list(TRACKED_AUTHORS.items())[:max_authors] if max_authors else []
+    for name, sid in authors:
         if not sid:
             continue
         print(f"  🔍 {name}")
         url = (f"https://api.semanticscholar.org/graph/v1/author/{sid}/papers"
-               f"?fields=title,abstract,externalIds,year,publicationDate,venue,citationCount,authors&limit=10")
+               f"?fields=title,abstract,externalIds,year,publicationDate,venue,citationCount,authors"
+               f"&limit={papers_per_author}")
         data = fetch_json(url)
         if not data or "data" not in data:
-            time.sleep(1)
+            time.sleep(delay)
             continue
         for p in data["data"]:
             yr = p.get("year")
@@ -257,7 +269,7 @@ def crawl_semantic_scholar():
                 tracked_author=name,
                 citations=p.get("citationCount", 0),
             ))
-        time.sleep(1)
+        time.sleep(delay)
     print(f"  → {len(all_papers)} papers")
     return all_papers
 
@@ -379,17 +391,19 @@ def main():
     stats = {}
 
     # Crawl all sources
-    crawlers = [
-        ("huggingface", crawl_huggingface),
-        ("arxiv_cs.CL", lambda: crawl_arxiv_category("cs.CL")),
-        ("arxiv_cs.SD", lambda: crawl_arxiv_category("cs.SD")),
-        ("arxiv_cs.AI", lambda: crawl_arxiv_category("cs.AI")),
-        ("arxiv_eess.AS", lambda: crawl_arxiv_category("eess.AS")),
-        ("arxiv_keyword", crawl_arxiv_keywords),
-        ("semantic_scholar", crawl_semantic_scholar),
+    crawlers = [("huggingface", crawl_huggingface)]
+    crawlers.extend(
+        (f"arxiv_{cat}", lambda category=cat: crawl_arxiv_category(category))
+        for cat in ARXIV_CATEGORIES
+    )
+    if KEYWORD_SEARCHES:
+        crawlers.append(("arxiv_keyword", crawl_arxiv_keywords))
+    if TRACKED_AUTHORS and int(SOURCE_LIMITS.get("semantic_scholar_max_authors", 4)) > 0:
+        crawlers.append(("semantic_scholar", crawl_semantic_scholar))
+    crawlers.extend([
         ("paperswithcode", crawl_paperswithcode),
         ("alphaxiv", crawl_alphaxiv),
-    ]
+    ])
 
     for name, fn in crawlers:
         try:
