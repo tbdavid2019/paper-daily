@@ -1,0 +1,628 @@
+{
+  "date": "2026-07-20",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-20T05:47:11.577360Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 91,
+      "arxiv_cs.AI": 214,
+      "arxiv_cs.CV": 175,
+      "arxiv_keyword": 6,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 586,
+    "after_dedup": 505,
+    "window_start": "2026-07-16",
+    "window_candidates": 427,
+    "already_seen": 225,
+    "new_candidates": 202,
+    "selected_papers": 29,
+    "missing_published_at": 0,
+    "keyword_matched": 29
+  },
+  "papers": [
+    {
+      "id": "2607.15330",
+      "title": "Xiaomi-Robotics-1: Scaling Vision-Language-Action Models with over 100K Hours of Real-World Trajectories",
+      "authors": [
+        "Xiaomi Robotics Team",
+        "Jun Guo",
+        "Piaopiao Jin",
+        "Jason Li",
+        "Peiyan Li"
+      ],
+      "abstract": "We present Xiaomi-Robotics-1, a foundational vision-language-action (VLA) model capable of (1) following diverse language instructions to perform a wide range of mobile manipulation tasks in unseen environments out-of-the-box, and (2) efficiently adapting to novel downstream tasks with minimal fine-tuning data. We propose a two-stage training recipe consisting of pre-training and post-training. During pre-training, we imbue the model with broad and generalizable action-generation capabilities by training on over 100k hours of real-world manipulation trajectories collected via UMI devices. Cruc",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.15330",
+      "published_at": "2026-07-16T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-07-16T16:02:25Z",
+      "priority": 65.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15641",
+      "title": "IMBench: A Benchmark for Intuitive Robotic Manipulation",
+      "authors": [
+        "Anurag Maurya",
+        "Sukhvansh Jain",
+        "Prajwal Avhad",
+        "Gautham Balachandran",
+        "Ziyi Zhou"
+      ],
+      "abstract": "Humans combine reasoning and motor control to solve complex manipulation tasks under diverse constraints. They build an understanding of the physical world that helps them convert reasoning into actions and quickly adapt to new scenes, tasks, and rules. We refer to this capability as intuitive manipulation. Existing benchmarks fail to capture this integration: they evaluate physical reasoning in isolation from execution, or measure policy performance without requiring explicit reasoning. We introduce IMBENCH, a benchmark designed to evaluate intuitive manipulation as an integrated capability s",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.15641",
+      "published_at": "2026-07-17T05:34:29Z",
+      "updated_at": "2026-07-17T05:34:29Z",
+      "keyword_hits": 3,
+      "priority": 60.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.16187",
+      "title": "Handroid: Bridging Dexterous Hand and Humanoid",
+      "authors": [
+        "Ruogu Li",
+        "Chenyang Ma",
+        "Sikai Li",
+        "Zhenyu Wei",
+        "Yunchao Yao"
+      ],
+      "abstract": "Dexterous hands and humanoid robots are typically developed as distinct embodiments: the former enable contact-rich manipulation at the object scale, whereas the latter provide mobility and whole-body interaction in human-centered environments. We introduce \\textbf{Handroid}, a desktop-scale dual-embodiment robot that integrates both capabilities within a single reconfigurable platform. Handroid reuses one 27-DoF electromechanical body as either a dexterous hand or a desktop humanoid, measuring 0.33 m in height and 2.05 kg in weight. In the dexterous hand embodiment, 20 DoFs form an anthropomo",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.16187",
+      "published_at": "2026-07-17T17:59:05Z",
+      "updated_at": "2026-07-17T17:59:05Z",
+      "keyword_hits": 5,
+      "priority": 50.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15898",
+      "title": "Orbis 2: A Hierarchical World Model for Driving",
+      "authors": [
+        "Sudhanshu Mittal",
+        "Arian Mousakhan",
+        "Silvio Galesso",
+        "Karim Farid",
+        "Jonannes Dienert"
+      ],
+      "abstract": "Current world models operate at a single level of abstraction, with most prioritizing perceptual fidelity while lacking the spatial reasoning and semantic understanding required for real-world downstream tasks. We present a hierarchical driving world model that factorizes future prediction across two levels operating at distinct temporal and abstraction scales: a high-level predictor that forecasts coarse scene structure over extended temporal horizons, and a low-level generator that produces detailed predictions conditioned on the high-level output. This decomposition yields high perceptual f",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.15898",
+      "published_at": "2026-07-17T12:12:33Z",
+      "updated_at": "2026-07-17T12:12:33Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15868",
+      "title": "EgoExoMoCap: Distributed Ego-Exo Human Motion Capture",
+      "authors": [
+        "Jiaxi Jiang",
+        "Bharat Lal Bhatnagar",
+        "Nan Yang",
+        "Lingni Ma",
+        "Sebastian Starke"
+      ],
+      "abstract": "Human motion capture from head-mounted devices (HMDs) offers a scalable way to acquire real-world human motion and interaction data, which is crucial for applications in embodied AI and VR/AR. Existing approaches focus on either egocentric body tracking, estimating the motion of the subject wearing the device, or exocentric tracking, capturing the movements of people in the wearer's surroundings. So far, these two paradigms have largely been explored in isolation. In this paper, we propose a novel distributed framework that jointly leverages ego- and exocentric multi-modal signals for human mo",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.15868",
+      "published_at": "2026-07-17T11:31:41Z",
+      "updated_at": "2026-07-17T11:31:41Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15633",
+      "title": "Scalable Open-Source Visuotactile Sensor for 6-Axis Contact Wrench Estimation in Tensegrity Robots",
+      "authors": [
+        "Wenzhe Tong",
+        "Jonathan Mi",
+        "Xili Yi",
+        "Nima Fazeli",
+        "Xiaonan Huang"
+      ],
+      "abstract": "This paper presents a scalable, open-source visuotactile sensing system for tensegrity robots that enables six-axis wrench estimation and contact detection. The proposed endcap sensor integrates an elastomeric shell, a 3D-printed thermoplastic polyurethane (TPU) interface, and a rigid base housing an embedded camera and LED illumination ring. A novel gyroid-infill bonding technique is introduced to form a durable elastomer-TPU interface without adhesives, yielding a lightweight and modular design compatible with large-scale tensegrity structures. A tactile-to-wrench neural network maps shear v",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15633",
+      "published_at": "2026-07-17T05:21:06Z",
+      "updated_at": "2026-07-17T05:21:06Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15901",
+      "title": "DSWorld: A Data Science World Model for Efficient Autonomous Agents",
+      "authors": [
+        "Zherui Yang",
+        "Fan Liu",
+        "Hao Liu"
+      ],
+      "abstract": "Despite strong capabilities in data understanding and decision-making, autonomous data science agents still heavily rely on trial-and-error workflows that involve expensive computation. This bottleneck motivates models that can anticipate the effects of data science operations before real execution. In this paper, we introduce the concept of Data Science World Model, which model the data science execution environment by predicting environment state transitions conditioned on current workflow states and candidate operations. We further propose DSWorld, a practical framework that combines struct",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15901",
+      "published_at": "2026-07-17T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-17T12:14:55Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15974",
+      "title": "Embodied Active Learning under Limited Annotation and Navigation Budget for Object Detection",
+      "authors": [
+        "Hadrien Crassous",
+        "Mohamed Yassine Kabouri",
+        "Minahil Raza",
+        "Joni Pajarinen",
+        "Riad Akrour"
+      ],
+      "abstract": "This paper studies how to adapt a computer vision object detector to an unknown environment under both a robot navigation time and annotation budget constraint. Our approach selects informative robot trajectories and image samples to retrain the detector, explicitly targeting its failure cases. Formally, the approach is an embodied variant of batch active learning, where at each round an agent has a limited navigation budget to collect candidate samples and a limited annotation budget for the most relevant images. We leverage spatial consistency to identify images with inconsistent labels, whi",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.15974",
+      "published_at": "2026-07-17T14:07:46Z",
+      "updated_at": "2026-07-17T14:07:46Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15621",
+      "title": "Think at 5 Hz, Act at 20 Hz: Asynchronous Fast-Slow Vision-Language-Action Inference for Closed-Loop Driving",
+      "authors": [
+        "Yun Li",
+        "Jiachen Gong",
+        "Simon Thompson",
+        "Ehsan Javanmardi",
+        "Qunli Zhang"
+      ],
+      "abstract": "Large language models bring instruction following and scene reasoning to end-to-end driving, but their inference latency collides with the control rate a vehicle requires. Existing closed-loop agents hide this gap by invoking the model on alternate simulation ticks and replaying the previous command in between, so half of all control outputs ignore the newest observations. We present a fast-slow architecture that removes this compromise. A frozen 7B vision-language backbone acts as the slow system, digesting navigation instructions and visual history at low frequency while exposing its per-lay",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15621",
+      "published_at": "2026-07-17T04:40:02Z",
+      "updated_at": "2026-07-17T04:40:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15620",
+      "title": "AEGIS: Assay-Aware Protocol Validation and Runtime Monitoring for Open-Source Liquid Handling Robots",
+      "authors": [
+        "Priyanka V. Setty",
+        "Arvind Ramanathan",
+        "Ian Foster",
+        "Rick Stevens"
+      ],
+      "abstract": "Self-driving laboratories increasingly rely on low-cost liquid handlers such as the Opentrons OT-2, which ship without the pressure-based aspiration monitoring of Hamilton or Tecan systems and are typically run open-loop. Two failure modes go undetected: protocols that are syntactically valid but violate assay-specific invariants (e.g., tip reuse between a PCR template and a no-template control), and physical execution failures (partial dispense, air bubbles, missing tips) at runtime. We present AEGIS, a two-layer guardian for both. Layer 1 pairs a curated machine-readable assay rule database ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15620",
+      "published_at": "2026-07-17T04:39:04Z",
+      "updated_at": "2026-07-17T04:39:04Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15589",
+      "title": "MemoGuard: An Adaptive Runtime for Guarding Against Memory Traps in Communication-Limited Robot Navigation",
+      "authors": [
+        "Rajat Bhattacharjya",
+        "Hyeonjong Ju",
+        "Sing-Yao Wu",
+        "Eli Bozorgzadeh",
+        "Nikil Dutt"
+      ],
+      "abstract": "Communication-limited robots in mission-critical scenarios such as disaster inspection and search-and-rescue must make reliable onboard decisions without access to remote operators or high-capacity reasoning services. Episodic memory reuse is an attractive low-cost fallback, but retrieval similarity does not guarantee execution validity, i.e., a retrieved action may match the current context yet be unsafe due to changed topology, insufficient battery margin, or unreliable prior outcomes. We call such high-similarity but execution-invalid episodes memory traps. This creates a safety-efficiency ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15589",
+      "published_at": "2026-07-17T03:21:30Z",
+      "updated_at": "2026-07-17T03:21:30Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15746",
+      "title": "Towards Artificial Nerves: Biomimetic Optical-Fiber Tactile Sensing for Robots",
+      "authors": [
+        "Laura E. Butcher",
+        "Chris J. Ford",
+        "Nathan F. Lepora",
+        "Efi Psomopoulou"
+      ],
+      "abstract": "Robotic systems increasingly demand tactile sensing that approaches the adaptability and resolution of human skin to enable dexterous manipulation and safe interaction. OptiTac is a biomimetic tactile sensor that emulates the mechanoreceptor-to-nerve architecture of human touch by pairing each mechanical pin on a soft skin with an optical fiber acting as an artificial nerve. This design demonstrates an architectural principle for routing tactile information away from the sensing surface while preserving high spatial resolution, establishing a practical route toward distributed tactile sensing ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15746",
+      "published_at": "2026-07-17T08:34:01Z",
+      "updated_at": "2026-07-17T08:34:01Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.16074",
+      "title": "JoyNexus: Service-Oriented Multi-Tenant Post-Training for VLA Models",
+      "authors": [
+        "Haoran Sun",
+        "Wentao Zhang",
+        "Junyang Hua",
+        "Hedan Yang",
+        "Yongjian Guo"
+      ],
+      "abstract": "The post-training of Vision-Language-Action (VLA) models is essential due to the diversity of simulators, robot embodiments, and task objectives. Existing compute services, whether offered as direct accelerator rental or batch-workload submission, typically allocate an exclusive set of GPU and CPU resources to a single tenant. While this paradigm maximizes client flexibility, it burdens users with infrastructure adaptation, and the fixed card-hour accounting model renders short or bursty workloads both expensive for tenants and inefficient for the service provider. To address these challenges,",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.16074",
+      "published_at": "2026-07-17T15:58:20Z",
+      "updated_at": "2026-07-17T15:58:20Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.16095",
+      "title": "Let the Body Follow: Coupled Egocentric Control for Whole-Body Robot Teleoperation",
+      "authors": [
+        "Tsung-Chi Lin",
+        "Yichen Xie",
+        "Chien-Ming Huang"
+      ],
+      "abstract": "Whole-body teleoperation requires users to coordinate perception, manipulation, posture, and mobility across multiple robot components. This coordination is difficult because users must simultaneously control the robot's head, arms, torso, and base while maintaining task awareness and avoiding kinematic or environmental constraints. In this paper, we propose coupled egocentric control, a body-following teleoperation approach in which the robot's torso and base automatically respond to the operator's head and arm motions. Rather than requiring explicit touchpad commands for every torso or base ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.16095",
+      "published_at": "2026-07-17T16:26:45Z",
+      "updated_at": "2026-07-17T16:26:45Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15880",
+      "title": "Dynamics-Aware Meta-Imitation for Generalization to Unseen Robotic Manipulation",
+      "authors": [
+        "Zhenduo Shang",
+        "Xiyao Liu",
+        "Bohan Li",
+        "Xudong Wang",
+        "Teng Ren"
+      ],
+      "abstract": "Imitation Learning aims to learn skills from extensive observations and demonstrations for robots, so it suffers from data scarcity and environment generalization. The existing methods predominantly focus on imitation from in-domain tasks and consequently struggle with generalization to unseen tasks. To bridge this generalization gap, we propose the \\textbf{D}ynamics-\\textbf{A}ware \\textbf{M}eta-\\textbf{I}mitation (DAMI) framework. By integrating meta-learning to construct a shared skill space, DAMI equips agents for rapid adaptation to novel tasks. We introduce the Visual-Motor Trajectory (VM",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15880",
+      "published_at": "2026-07-17T11:50:03Z",
+      "updated_at": "2026-07-17T11:50:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15733",
+      "title": "A Task-Space Receding Horizon Controller for Fast Collision Avoidance",
+      "authors": [
+        "Mattia Penzotti",
+        "Marco Controzzi"
+      ],
+      "abstract": "Real-time collision avoidance for robotic manipulators requires fast reactions to unexpected obstacle motion and lookahead to avoid becoming trapped by near-future constraints. Full model predictive control can provide this foresight, but its online cost may grow quickly with horizon length, model fidelity, and the number of active geometric constraints. Conversely, horizon-free reactive methods are computationally efficient but can be short-sighted in dynamic clutter. We present a task-space receding-horizon controller that uses a short contact-consistent rollout to generate a terminal kinema",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15733",
+      "published_at": "2026-07-17T08:13:12Z",
+      "updated_at": "2026-07-17T08:13:12Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15714",
+      "title": "AC-VLA: Robust Out-of-Distribution Action Execution via Compositional Learning",
+      "authors": [
+        "Xiaojiang Peng",
+        "Kai Peng",
+        "Jie Lu",
+        "Zheng Lian",
+        "Zitong YU"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models excel at end-to-end robotic manipulation but struggle with out-of-distribution (OOD) generalization when familiar sub-tasks are recombined in unseen configurations. We identify two mutually reinforcing failure modes: \\emph{trajectory overfitting}, where models overfit to holistic trajectory patterns rather than compositional sub-skill semantics; and \\emph{perceptual shortcut}, where action tokens over-rely on wrist-view textures at the expense of global spatial grounding. To address both, we introduce \\textbf{AC-VLA}, a plug-and-play Action Compositional lea",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15714",
+      "published_at": "2026-07-17T07:51:03Z",
+      "updated_at": "2026-07-17T07:51:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15701",
+      "title": "RAVEN: Reinforcement-Adaptive Visibility-Graph Planning for Robust Humanoid Navigation with Collision-Free MPC",
+      "authors": [
+        "Ruochen Hou",
+        "Shiqi Wang",
+        "Beom Jun Kim",
+        "Hanzhang Fang",
+        "Mehak Singal"
+      ],
+      "abstract": "Humanoid navigation in dynamic environments requires long-horizon planning while respecting short-horizon dynamic and safety constraints. Classical visibility-graph planners combined with model predictive control (MPC) can efficiently generate collision-free trajectories, but their performance depends on manually tuned parameters and accurate system modeling. In real robotic systems, control delays, state-estimation noise, and locomotion uncertainties can cause overshoot and constraint violations even when the nominal path is geometrically optimal. We propose RAVEN, a hierarchical reinforcemen",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15701",
+      "published_at": "2026-07-17T07:23:54Z",
+      "updated_at": "2026-07-17T07:23:54Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15642",
+      "title": "Difference-Based Relational Learning for Zero-Shot Object-Goal Visual Navigation With Direct Sim-to-Real Transfer",
+      "authors": [
+        "Guolei Qi",
+        "Feitian Zhang"
+      ],
+      "abstract": "End-to-end deep reinforcement learning (DRL) for zero-shot object-goal visual navigation remains challenged by the sim-to-real gap, particularly variations in object appearance and restricted camera field-of-view (FoV). This letter proposes a Temporal Difference-Relational Network (T-DRN) for robust zero-shot sim-to-real transfer. T-DRN combines a Siamese difference-based feature extractor, which computes relational difference between the target and observed objects to produce domain-independent representations, with a dual-frame temporal buffer that preserves short-term object continuity unde",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15642",
+      "published_at": "2026-07-17T05:35:40Z",
+      "updated_at": "2026-07-17T05:35:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15582",
+      "title": "A Model-Based Decoupling Strategy for Proprioception and Contact Sensing in an Architected Soft Manipulator",
+      "authors": [
+        "Francesco Stella",
+        "Annan Zhang",
+        "Cosimo Della Santina",
+        "Josie Hughes",
+        "Daniela Rus"
+      ],
+      "abstract": "Soft continuum robots require embedded sensing for proprioception and contact detection, yet integrating sensors into sparse, highly deformable architected structures remains challenging. We present a model-based strategy that decouples proprioceptive and contact signals from a common set of fluidic pressure sensors embedded in a soft architected segment. Each segment of the Innervated Trimmed Helicoid (ITH) contains six air channels routed in a localized zigzag pattern along the circumference. With only three principal kinematic degrees of freedom (axial compression, bending in x, bending in ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15582",
+      "published_at": "2026-07-17T03:03:19Z",
+      "updated_at": "2026-07-17T03:03:19Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15579",
+      "title": "PACE: Persona Adaptation through Conversational Elicitation in Human-Robot Interaction",
+      "authors": [
+        "Peizhen Li",
+        "Longbing Cao",
+        "Megani Rajendran",
+        "Timothy Liu",
+        "Aik Beng Ng"
+      ],
+      "abstract": "Equipping humanoid robots with coherent and adaptable personas is crucial for fostering natural, engaging, and trustworthy human-robot interaction (HRI). However, existing approaches often rely on static, hard-coded identities that lack the flexibility to adapt to individual user contexts. In this paper, we present PACE (Persona Adaptation through Conversational Elicitation), a novel framework for the interactive generation and deployment of structured personas on the Ameca humanoid robot. Our system introduces an Interactive Persona Elicitation Pipeline, enabling the robot to dynamically synt",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15579",
+      "published_at": "2026-07-17T02:45:52Z",
+      "updated_at": "2026-07-17T02:45:52Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15483",
+      "title": "Risk-Aware Preference Learning for Stochastic Outcomes",
+      "authors": [
+        "Yi-Shiuan Tung",
+        "Yuni Wu",
+        "Wei Jiang",
+        "Alessandro Roncone",
+        "Bradley Hayes"
+      ],
+      "abstract": "Learning reward functions from human preferences is a widely used approach for aligning robot behavior with user expectations in human-robot interaction. Most existing approaches assume that humans evaluate uncertain outcomes using expected utility (EU), aggregating outcome utilities linearly with their probabilities. However, behavioral evidence shows that humans are systematically risk-sensitive, overweighting rare negative events and exhibiting loss aversion. We study the consequences of this mismatch in social robot navigation, where safety-critical outcomes (e.g., collisions) are rare but",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15483",
+      "published_at": "2026-07-16T21:59:38Z",
+      "updated_at": "2026-07-16T21:59:38Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15448",
+      "title": "VTAP Gripper: Synergizing Fingertip Sensing and a Visuo-Tactile Active Palm for Dexterous In-Hand Manipulation",
+      "authors": [
+        "Yuhao Zhou",
+        "Sheeraz Athar",
+        "Zhixian Hu",
+        "Binghao Huang",
+        "Yunzhu Li"
+      ],
+      "abstract": "This paper presents a tactile-reactive gripper that integrates a Visuo-Tactile Active Palm (VTAP) and compliant, reconfigurable fingers equipped with tactile array sensors. The design exploits structured finger-palm synergy and multi-modal perception to achieve both robust grasping and fine manipulation. The actuated bi-modal palm seamlessly combines long-range visual localization with contact-rich tactile feedback, substantially extending the system's manipulation capability. To bridge the embodiment gap between human hand motion and the heterogeneous three-finger structure, we further propos",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.15448",
+      "published_at": "2026-07-16T20:41:00Z",
+      "updated_at": "2026-07-16T20:41:00Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15660",
+      "title": "ToolVerse: Unlocking Massive Environments and Long-Horizon Tasks for Agentic Reinforcement Learning",
+      "authors": [
+        "Shuaiyu Zhou",
+        "Fengpeng Yue",
+        "Zengjie Hu",
+        "Yuanzhe Shen",
+        "Chenyang Zhang"
+      ],
+      "abstract": "While LLM agents demonstrate strong reasoning abilities in compact and well-defined scenarios, they struggle to maintain robustness and effectiveness when faced with large-scale, diverse, and dynamic real-world environments that demand seamless tool integration. To address this gap, we introduce ToolVerse, a comprehensive framework that scales up agentic RL environments and enables agents to perform complex long-horizon reasoning in Tool-Integrated Reasoning (TIR) tasks. First, ToolVerse automatically builds the massive executable agent training environments from nearly 400 real-world Model Co",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15660",
+      "published_at": "2026-07-17T06:12:04Z",
+      "updated_at": "2026-07-17T06:12:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15550",
+      "title": "SeerGuard: A Safety Framework for Mobile GUI Agents via World Model Prediction",
+      "authors": [
+        "Xue Yu",
+        "Bo Yuan",
+        "Pengshuai Yang",
+        "Kailin Zhao",
+        "Hong Hu"
+      ],
+      "abstract": "Mobile graphical user interface (GUI) agents have demonstrated remarkable capabilities in automating complex tasks, yet they introduce critical safety risks where a single erroneous action can lead to irreversible consequences. Existing safety mechanisms are primarily reactive, lacking the ability to assess risks before execution. In this paper, we introduce SeerGuard, a consequence-aware safety framework designed to mitigate these risks through pre-execution instruction-level screening and action-level risk assessment. Specifically, the action-level assessment analyzes agent-proposed actions ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15550",
+      "published_at": "2026-07-17T01:45:54Z",
+      "updated_at": "2026-07-17T01:45:54Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15439",
+      "title": "Do Coding Agents Need Executable World Models, Simplification, and Verification to Solve ARC-AGI-3?",
+      "authors": [
+        "Sergey Rodionov"
+      ],
+      "abstract": "Our previous ARC-AGI-3 agent bundled executable world modeling, scheduled simplification, and exact replay verification, leaving unclear which idea accounted for its performance. We address this attribution question with four nested Codex-based agents: a textual baseline; a flexible-interface executable world model without replay verification; the same executable model with scheduled simplification; and a fixed-interface verification treatment that retains simplification and requires exact reproduction of recorded observations. The main study evaluates all four agents with gpt-5.4 and gpt-5.5 ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.15439",
+      "published_at": "2026-07-16T20:18:59Z",
+      "updated_at": "2026-07-16T20:18:59Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.16192",
+      "title": "MotionForesight: Re-purposing Video Models for Future 3D Scene-Flow Prediction",
+      "authors": [
+        "Homanga Bharadhwaj",
+        "Yash Jangir"
+      ],
+      "abstract": "Humans can infer how objects are likely to move from passive observation: a cup may be lifted, a drawer may slide, and a lid may rotate shut. Such predictions expose the physical consequences of interaction needed to act in the real world. We study how to learn this anticipation from ordinary monocular videos of human-object interaction. Given a short observed video context, MotionForesight predicts future 3D trajectories for points on the manipulated object. This casts interaction prediction as object-centered 3D motion forecasting without any assumptions on the object properties. Our key ins",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.16192",
+      "published_at": "2026-07-17T17:59:38Z",
+      "updated_at": "2026-07-17T17:59:38Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15890",
+      "title": "Exo2EgoPose: Leveraging Exocentric Demonstrations for Vision-Language guided Egocentric 3D Hand Pose Forecasting",
+      "authors": [
+        "Zhaofeng Shi",
+        "Heqian Qiu",
+        "Lanxiao Wang",
+        "Xiang Li",
+        "Hongliang Li"
+      ],
+      "abstract": "Perceiving multimodal cues and forecasting fine-grained actions from an egocentric (Ego) perspective is vital for applications like robot manipulation. However, previous studies either rely mainly on under-informed visual inputs to predict coarse human motions or follow the VRM/VLA paradigm, which suffers from insufficient robot data and the gap between human and robot embodiments. We observe that 3D hand pose naturally serves as a unified representation to bridge human-robot actions. Hence, we investigate an under-explored Vision-Language guided Egocentric 3D Hand Pose Forecasting (VL-EHPF) t",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.15890",
+      "published_at": "2026-07-17T12:05:07Z",
+      "updated_at": "2026-07-17T12:05:07Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    },
+    {
+      "id": "2607.15536",
+      "title": "E3DGS: Unified Geometric-Photometric Equivariance for 3D Gaussian Splatting via Color-as-Geometry Embedding",
+      "authors": [
+        "Chankyo Kim",
+        "Maani Ghaffari"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) captures scenes by coupling explicit geometry (position, covariance) with view-dependent photometry (Spherical Harmonics). However, building $\\mathrm{SE}(3)$-equivariant architectures on these primitives presents a fundamental representation bottleneck. Color has been treated as a signal rather than a geometric entity, making it nontrivial to unify symmetry across geometry and appearance as the camera frame changes. While translations are handled by relative coordinates, rotations act heterogeneously across attributes: $μ\\mapsto Rμ$, $Σ\\mapsto RΣR^\\top$, and $f_\\el",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.15536",
+      "published_at": "2026-07-17T01:12:26Z",
+      "updated_at": "2026-07-17T01:12:26Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-20T05:47:11.577360Z"
+    }
+  ]
+}
