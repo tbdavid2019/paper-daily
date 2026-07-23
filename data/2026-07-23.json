@@ -1,0 +1,438 @@
+{
+  "date": "2026-07-23",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-23T05:32:45.182712Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 130,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 5,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 735,
+    "after_dedup": 647,
+    "window_start": "2026-07-19",
+    "window_candidates": 598,
+    "already_seen": 384,
+    "new_candidates": 214,
+    "selected_papers": 20,
+    "missing_published_at": 0,
+    "keyword_matched": 20
+  },
+  "papers": [
+    {
+      "id": "2607.20345",
+      "title": "Closing the Lab-to-Store Gap: A Data-Efficient Post-Training and Experience-Driven Learning VLA Framework for Retail Humanoids",
+      "authors": [
+        "Roger Sala Sisó",
+        "Tiago Silvério",
+        "Jakob Sand",
+        "Tran Nguyen Le"
+      ],
+      "abstract": "Closing the gap between benchmark performance and reliable real-world operation remains a central challenge for Vision-Language-Action (VLA) humanoid robots, which must handle execution errors, distribution shifts, and environmental variability. This paper presents DEED (Data-Efficient Post-Training and Experience-Driven Learning), a systems-level approach evaluated on a supermarket chip-restocking task using a Unitree G1-Edu humanoid robot and the GR00T N1.6 foundation model. DEED comprises three key components: (1) a data-efficient post-training pipeline with control-frequency alignment, dat",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.20345",
+      "published_at": "2026-07-22T16:30:51Z",
+      "updated_at": "2026-07-22T16:30:51Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19479",
+      "title": "ModPack: An Extensible Teleoperation Interface for Bimanual Mobile Manipulation",
+      "authors": [
+        "Joshua Citron",
+        "Renee Zbizika",
+        "Zeyi Liu",
+        "Shuran Song"
+      ],
+      "abstract": "Existing teleoperation systems are often tailored to specific robot hardware and task domains, limiting their scalability and adaptability. We present ModPack, a modular and extensible teleoperation system designed to support diverse robot embodiments and task requirements within a unified framework. At the core of ModPack is a self-contained wearable \"backpack\" that integrates onboard computation, power, communication, and data storage. Built on top of this shared interface, the system supports plug-and-play capability modules including joint-level teleoperation with haptic feedback, mobile m",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.19479",
+      "published_at": "2026-07-21T18:02:20Z",
+      "updated_at": "2026-07-21T18:02:20Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.20399",
+      "title": "Towards Miniature Humanoid Tele-Loco-Manipulation Using Virtual Reality and Reinforcement Learning",
+      "authors": [
+        "Nicolas Kosanovic",
+        "Jordan Dowdy",
+        "Jean Chagas Vaz"
+      ],
+      "abstract": "Full-sized humanoid robot capabilities have grown exponentially in recent years, aiming towards general-purpose deployment in human environments. A popular control method used by manufacturers utilizes Virtual Reality for upper-body teleoperation and Reinforcement Learning for lower-body balance and locomotion control. As a result, a single remote operator can see, manipulate, and navigate about a real, distant physical environment. This powerful control stack is often relegated to expensive full-sized robots, many of which are inaccessible to the research community. Miniature humanoids are mo",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.20399",
+      "published_at": "2026-07-22T17:35:43Z",
+      "updated_at": "2026-07-22T17:35:43Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.20061",
+      "title": "ReferTrack: Referring Then Tracking for Embodied Visual Tracking",
+      "authors": [
+        "Hanjing Ye",
+        "Tianle Zeng",
+        "Jiazhao Zhang",
+        "Shaoan Wang",
+        "Zibo Zhang"
+      ],
+      "abstract": "Embodied visual tracking (EVT) requires a mobile agent to continuously follow a specific target described in natural language using only onboard vision. While recent vision-language-action (VLA) policies unify target identification and trajectory planning, their chain-of-thought (CoT) reasoning often operates in abstract spatial latents that are difficult to supervise and weakly aligned with explicit image-space detections. To address this, we introduce ReferTrack, a referring-then-tracking paradigm that grounds EVT using a single forward-facing camera. Our model first selects the target from ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.20061",
+      "published_at": "2026-07-22T12:05:13Z",
+      "updated_at": "2026-07-22T12:05:13Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.20207",
+      "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+      "authors": [
+        "Yang Xu",
+        "Gurpreet Singh Mukker",
+        "Raymond Wang",
+        "Jasper Gerigk",
+        "Maria Attarian"
+      ],
+      "abstract": "Practical robotic grasping in complex scenes requires both 3D spatial reasoning and alignment with task-specific requirements. Vision-language models (VLMs) offer a natural way to specify these requirements using language, but existing approaches either use a VLM to predict the grasp directly with limited spatial awareness, or train the VLM together with the grasping model, which requires significantly more data and compute. These limitations impede performance and have prevented scaling to multiple embodiments in complex scenes. We address this by proposing SeededGrasp, a novel data-efficient",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.20207",
+      "published_at": "2026-07-22T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-22T14:27:45Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19971",
+      "title": "Unified Prediction and Planning via Conflict-Aware Disjoint Parameter Training",
+      "authors": [
+        "Taewon Seo",
+        "Seonae Jeon",
+        "Giwon Lee",
+        "Kuk-Jin Yoon",
+        "Daehee Park"
+      ],
+      "abstract": "Accurate motion prediction of surrounding agents and safe motion planning are two closely coupled key tasks for social robot navigation in crowded environments. Deploying these systems on resource-constrained edge devices necessitates compact, unified models that can perform both tasks simultaneously. However, within these compact shared encoders, recent unified models often overlook severe representational conflicts that arise from the distinct objectives of predicting neighbor behaviors versus ego-centric safety planning. To address this issue, we first identify the Skill Conflict$\\unicode{x",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19971",
+      "published_at": "2026-07-22T09:54:22Z",
+      "updated_at": "2026-07-22T09:54:22Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19880",
+      "title": "EA-Nav: Learning Safe Visual Navigation Policies with Embodiment Awareness",
+      "authors": [
+        "Jialu Zhang",
+        "Yong Du",
+        "Xianda Guo",
+        "Shunwang Sun",
+        "Xinqi Liu"
+      ],
+      "abstract": "Cross-embodiment navigation is a key challenge in embodied intelligence. Due to differences in embodiment, the same visual observation may imply different actions for different agents, making prediction ambiguous when relying solely on vision. Existing studies mainly rely on reinforcement learning, which requires large-scale interaction and careful reward design, making it difficult to support scalable pretraining and real-world adaptation. In contrast, imitation-learning-based approaches remain limited. To address these challenges, we propose an imitation-learning-based embodiment-aware navig",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19880",
+      "published_at": "2026-07-22T08:10:49Z",
+      "updated_at": "2026-07-22T08:10:49Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19876",
+      "title": "KineBench: Benchmarking Embodied World Models via IDM-Free Kinematic Grounding",
+      "authors": [
+        "Zeyu Liu",
+        "Zhangzhe Zhu",
+        "Yang Zhang",
+        "Chenyou Fan",
+        "Chenjia Bai"
+      ],
+      "abstract": "Evaluating the physical consistency of embodied world models(EWMs) is a critical open challenge. While closed-loop evaluation via simulator rollouts offers a more faithful assessment of physical plausibility than open-loop alternatives, existing frameworks almost exclusively rely on Inverse Dynamics Models(IDMs) for action extraction. Due to the intricate mapping from 2D pixel space to 3D kinematic space, the learned IDMs can be brittle to data outside their training distribution, resulting in unreliable action extraction from the generated videos with novel objects and scenarios. This creates",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19876",
+      "published_at": "2026-07-22T08:04:17Z",
+      "updated_at": "2026-07-22T08:04:17Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19745",
+      "title": "EgoRecovery: Acquiring Failure Recovery Ability Through Human Recovery Demonstration",
+      "authors": [
+        "Zuhao Ge",
+        "Yuchen Zhou",
+        "Weitao Zhou",
+        "Minglei Li",
+        "Xinyu Li"
+      ],
+      "abstract": "Robust embodied robots should be able to recover from failures and retry tasks in order to operate reliably in unstructured and noisy real-world environments. Achieving this capability requires training policies on data that captures recovery behaviors. However, collecting such data through robot teleoperation is difficult to scale, as it is time-consuming to induce diverse failure states, perform corrective actions, and reset the environment. This challenge is further exacerbated by the high diversity of failure modes, which demands substantially more recovery data than success demonstrations",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19745",
+      "published_at": "2026-07-22T04:44:26Z",
+      "updated_at": "2026-07-22T04:44:26Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19633",
+      "title": "LENS: LLM-guided Environment Simplification for Planning and Control in Clutter",
+      "authors": [
+        "Aileen Liao",
+        "Rachel Holladay",
+        "Dinesh Jayaraman",
+        "Michael Posa"
+      ],
+      "abstract": "Despite recent advances in general-purpose robotic manipulation, real-world multi-object clutter remains challenging to handle for today's prevalent approaches. The problem scales in complexity due to more objects and collisions, more unpredictable contact physics, distractors, and task ambiguity. Bridging this gap to real-world deployment requires effective scene abstractions; yet today, producing such abstractions requires extensive task-specific manual engineering, which does not scale. These abstractions are costly to generate and difficult to adjust or fine-tune. We instead propose a plug",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.19633",
+      "published_at": "2026-07-22T00:05:00Z",
+      "updated_at": "2026-07-22T00:05:00Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19919",
+      "title": "Diffusion ReRoll: Revisable Denoising for Robotic Sequential Prediction",
+      "authors": [
+        "Seonsoo Kim",
+        "Seongil Hong",
+        "Jun-Gill Kang"
+      ],
+      "abstract": "We propose Diffusion ReRoll, a diffusion-based framework for robotic sequential prediction that enables revisable denoising over horizons. Existing diffusion-based sequence predictors typically perform a single monotonic denoising process. In contrast, Diffusion ReRoll selectively re-noises regions that have become locally stable while the remaining regions continue denoising, so the re-noised regions can be refined again using context from the rest of the horizon. This structured re-noising enables iterative cross-horizon revision, allowing earlier and later segments to revise one another, wh",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.19919",
+      "published_at": "2026-07-22T08:50:40Z",
+      "updated_at": "2026-07-22T08:50:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19850",
+      "title": "SOPD-SocialNav: Selective On-Policy Distillation for Vision-Language Social Navigation",
+      "authors": [
+        "Xinyu Zhang",
+        "Zishuo Wang",
+        "Ling Xiao"
+      ],
+      "abstract": "Vision-language models have shown strong potential for social robot navigation by leveraging rich semantic understanding of complex environments and human behaviors. However, large scale VLMs are difficult to deploy on resource-constrained robotic platforms, while lightweight VLMs often lack sufficient social reasoning capability. To address this problem, we propose SOPD-SocialNav, a selective on-policy distillation (SOPD) method that transfers social navigation knowledge from a large teacher VLM to a lightweight student VLM. SOPD introduces an entropy-based token selection mechanism that uses",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.19850",
+      "published_at": "2026-07-22T07:35:35Z",
+      "updated_at": "2026-07-22T07:35:35Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19719",
+      "title": "Koopman Dreamer: Spectrally Constrained Latent Dynamics for Stable World-Model Imagination",
+      "authors": [
+        "Jiaqi Li",
+        "Xinglong Zhang",
+        "Haibin Xie",
+        "Yixing Lan",
+        "Wei Pan"
+      ],
+      "abstract": "Latent world models improve sample efficiency in continuous control by optimizing policies over imagined latent trajectories, but common neural transitions offer limited direct control over modal persistence and error accumulation in long rollouts. We propose Koopman Dreamer, a Dreamer-style world model with a spectrally constrained deterministic latent dynamics core. Its Koopman-inspired backbone uses two-dimensional rotation--scaling blocks with bounded radii to represent damping, rotation, and near-periodic modes. Linear and low-rank bilinear action terms capture global and state-dependent ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.19719",
+      "published_at": "2026-07-22T03:38:15Z",
+      "updated_at": "2026-07-22T03:38:15Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19714",
+      "title": "Morphing MILR: Design and control of a cable-driven limbless robot with rolling joints for maneuvering in complex environments",
+      "authors": [
+        "Donoven Dortilus",
+        "Tianyu Wang",
+        "Galen Tunnicliffe",
+        "Matthew Fernandez",
+        "Daniel I. Goldman"
+      ],
+      "abstract": "Limbless robots offer exceptional mobility in confined and cluttered environments due to their slender bodies and their ability to exploit body-terrain interactions. Recent designs incorporating compliance demonstrate robust locomotion without complex sensing or control; however, these systems typically rely on fixed body configurations, with each morphology specialized for a single locomotion mode or environment. This raises a key challenge: how can a single limbless robot achieve versatile locomotion while preserving the robustness of compliance-mediated locomotion? To address this challenge",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.19714",
+      "published_at": "2026-07-22T03:29:39Z",
+      "updated_at": "2026-07-22T03:29:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19534",
+      "title": "Learning Personalized Safety Interventions for Haptic Human-Robot Shared Control",
+      "authors": [
+        "Dawei Zhang",
+        "Roberto Tron"
+      ],
+      "abstract": "Haptic feedback provides an implicit channel for communicating safety intentions during human-robot shared control. Existing haptic guidance systems typically employ predefined intervention strategies that cannot accommodate the diverse safety preferences of individual users or application scenarios. To address this limitation, we propose a Learning from Haptics (LfH) framework that learns user-preferred safety interventions from sparse demonstrations, eliminating the need for manual trial-and-error design. Our framework is built on a differentiable Control Barrier Function (CBF)-based optimiz",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.19534",
+      "published_at": "2026-07-21T19:28:41Z",
+      "updated_at": "2026-07-21T19:28:41Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19749",
+      "title": "The World Model Remembers, the Actor Forgets: Dream Rehearsal for Continual Model-Based RL",
+      "authors": [
+        "Gurp Nijjer"
+      ],
+      "abstract": "Model-based reinforcement-learning agents of the DreamerV3 family forget catastrophically when trained on task sequences, even when an unbounded replay buffer preserves every earlier experience. We ask a question the continual-RL literature has assumed an answer to but never measured: which component forgets? Under never-clear replay, pre-registered component-level probes (n=3 seeds throughout) show that the world model retains essentially everything measurable about old tasks -- reward discrimination (retention ratio ~1.0), value estimates, and termination structure -- while the actor's behav",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.19749",
+      "published_at": "2026-07-22T04:46:49Z",
+      "updated_at": "2026-07-22T04:46:49Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.20293",
+      "title": "Evolving Cache Schedules for Fast Diffusion Policy Inference",
+      "authors": [
+        "Siying Wang",
+        "Kangye Ji",
+        "Di Wang",
+        "Fei Cheng"
+      ],
+      "abstract": "Diffusion policies achieve strong visuomotor control by iteratively denoising action chunks, but repeated denoising makes real-time deployment computationally demanding. Cache-based methods reduce inference cost by reusing intermediate activations, but existing training-free schedules typically allocate computation uniformly across blocks, ignoring heterogeneous redundancy across blocks and leading to a suboptimal performance-efficiency trade-off. To bridge this gap, we introduce Evolving Cache Schedules (EVO), a training-free acceleration framework that globally schedules cache refreshes via ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.20293",
+      "published_at": "2026-07-22T15:40:11Z",
+      "updated_at": "2026-07-22T15:40:11Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.20197",
+      "title": "RS-RIE-Bench: Benchmarking Reasoning-Guided Remote Sensing Image Editing",
+      "authors": [
+        "Zihan Qin",
+        "Boao Xu",
+        "Zhao Dong",
+        "Yingping Sun",
+        "Ziheng Jiao"
+      ],
+      "abstract": "Remote sensing image editing aims to modify remote sensing images according to natural language instructions while preserving geographic rules and sensor observation characteristics. Existing benchmarks mainly target natural images or general visual scenes, and thus may not fully capture the reasoning, regional control, and sensor-consistency abilities required in remote sensing editing. To fill this gap, we introduce RS-RIE-Bench, the first benchmark for reasoning-guided remote sensing image editing. RS-RIE-Bench organizes tasks into three categories: temporal reasoning, causal reasoning, and",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.20197",
+      "published_at": "2026-07-22T14:20:40Z",
+      "updated_at": "2026-07-22T14:20:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19889",
+      "title": "LAVIFT: Latent-Action-Guided Vision Fine-Tuning for Surgical Interaction Recognition",
+      "authors": [
+        "Jiajun Cheng",
+        "Subarna Tripathi",
+        "Sainan Liu",
+        "Xiaofan Yu",
+        "Shan Lin"
+      ],
+      "abstract": "Understanding instrument-tissue interactions is essential for context-aware surgical AI and autonomous robotic surgery. Pretrained vision-language models (VLMs) and vision encoders offer an alternative to conventional interaction classifiers by transferring broad visual and semantic knowledge. However, adapting them to fine-grained surgical interactions remains challenging: (1) freezing the vision encoder depends entirely on pretrained representations that may retain noise and provide weak spatial localization, while (2) full fine-tuning can improve global semantic alignment without ensuring t",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19889",
+      "published_at": "2026-07-22T08:20:52Z",
+      "updated_at": "2026-07-22T08:20:52Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    },
+    {
+      "id": "2607.19701",
+      "title": "SafeGen: Goal-Conditioned Video Diffusion of Safety-Critical Scenarios for VLM-Based Autonomous Driving",
+      "authors": [
+        "Jiangfan Liu",
+        "Zexuan Cui",
+        "Tianyuan Zhang",
+        "Zonglei Jing",
+        "Zonghao Ying"
+      ],
+      "abstract": "VLMs are increasingly deployed in AD systems, creating an urgent need for rigorous safety evaluation under rare yet safety-critical scenarios. Among these, interactions with vulnerable road users represent a major source of real-world failures. However, existing safety-critical scenario generation methods predominantly rely on simulator-based pipelines, which suffer from a substantial sim-to-real gap and often fail to capture realistic, diverse, and unforeseen human-vehicle interaction dynamics. We present SafeGen, a goal-conditioned diffusion framework for safety-critical scenario generation ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.19701",
+      "published_at": "2026-07-22T03:05:32Z",
+      "updated_at": "2026-07-22T03:05:32Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-23T05:32:45.182712Z"
+    }
+  ]
+}
