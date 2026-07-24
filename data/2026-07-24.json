@@ -1,0 +1,362 @@
+{
+  "date": "2026-07-24",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-24T05:27:54.635884Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 150,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 6,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 756,
+    "after_dedup": 661,
+    "window_start": "2026-07-20",
+    "window_candidates": 626,
+    "already_seen": 363,
+    "new_candidates": 263,
+    "selected_papers": 16,
+    "missing_published_at": 0,
+    "keyword_matched": 16
+  },
+  "papers": [
+    {
+      "id": "2607.20988",
+      "title": "HyWorldVLA: A Vision-Language-Action Model with Hybrid World Modeling for Autonomous Driving",
+      "authors": [
+        "Quanfu Yu",
+        "Xian Wu",
+        "Hao Xu",
+        "Liulong Ma"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models augmented with world modeling represent a promising paradigm for end-to-end autonomous driving. While pixel-level future prediction enables fine-grained spatiotemporal reasoning, it compromises robustness in noisy driving scenarios. Conversely, latent-based world models alleviate this sensitivity but often incur limited interpretability and representational degradation due to absent pixel-level grounding. To reconcile this trade-off, we propose HyWorldVLA, a hybrid world-VLA framework that unifies pixel-level supervision and latent representation learning. I",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.20988",
+      "published_at": "2026-07-23T07:11:41Z",
+      "updated_at": "2026-07-23T07:11:41Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21588",
+      "title": "AXIS: A Growable Community-Driven Data Engine for Scalable Robot Manipulation",
+      "authors": [
+        "Mengfei Zhao",
+        "Dihong Huang",
+        "Yikai Tang",
+        "Peihao Li",
+        "Mingxuan Yan"
+      ],
+      "abstract": "Learning effective robot manipulation policies requires diverse, high-quality demonstrations, yet existing data pipelines are often difficult to scale because they rely on specialized hardware, centralized operators, or fixed task suites. We present AXIS, a growable community-driven data engine and benchmark for scalable robot learning, which enables browser-based teleoperation for large-scale demonstration collection, automatically generates and validates new manipulation tasks, and transforms community-collected demonstrations into training-ready data through automated success checking, qual",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21588",
+      "published_at": "2026-07-23T17:58:08Z",
+      "updated_at": "2026-07-23T17:58:08Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21072",
+      "title": "Show, Don't Tell: Evaluating Spatial Cognition in Generative Pixels Rather Than LLM Text",
+      "authors": [
+        "Xu Wang",
+        "Kaixiang Yao",
+        "Miao Pan",
+        "Xiaohe Zhou",
+        "Xuanyu Liu"
+      ],
+      "abstract": "Spatial intelligence is essential for agents to move from static semantic understanding toward interacting with the physical world. Many spatial tasks are grounded in continuous visual scenes, where locations, regions, and paths are more naturally expressed by pointing, marking, or drawing than by reporting precise coordinates or discrete textual symbols. Yet existing spatial reasoning benchmarks usually require coordinates, options, or text, creating an answer-interface mismatch for image-generation models. This makes it difficult to evaluate image-generation models under the same task semant",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21072",
+      "published_at": "2026-07-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-07-23T09:04:48Z",
+      "priority": 35.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21400",
+      "title": "VoLN: Vision-Only Long-Horizon Navigation---Paradigm, Benchmark, and Method",
+      "authors": [
+        "Jiabin Lou",
+        "Haopeng Wang",
+        "Yuanshuai Wang",
+        "Xinyu Liu",
+        "Xuxin Lv"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) enables embodied agents to follow natural-language instructions. However, route-level instructions commonly encode spatial priors, such as orientation, distance, and layout, that are not explicitly available from onboard sensing at deployment in open, GPS-denied environments. Benchmark performance under such interfaces therefore jointly reflects visual navigation ability and the use of route structure explicitly supplied by the task description. As a complementary formulation, we propose Vision-Only Long-Horizon Navigation (VoLN), which shifts route-relevan",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21400",
+      "published_at": "2026-07-23T15:02:01Z",
+      "updated_at": "2026-07-23T15:02:01Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21594",
+      "title": "Streaming Multi-Agent Autoregressive Diffusion Model with World State Registers",
+      "authors": [
+        "Sicheng Mo",
+        "Yuheng Li",
+        "Ziyang Leng",
+        "Krishna Kumar Singh",
+        "Bolei Zhou"
+      ],
+      "abstract": "Multi-agent interactive world models should not only generate consistent observations, but also maintain world states that persist across agents and evolve across views. Existing autoregressive video diffusion pipelines carry forward observation history as conditioning context, which makes shared state difficult to maintain in multi-agent and multi-view settings. We present WorldWeaver (W^2), a streaming multi-agent video diffusion model that augments rollout with cross-agent world state registers: learnable tokens that store shared world information, track individual agent status, and are dyn",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21594",
+      "published_at": "2026-07-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-23T17:59:58Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21071",
+      "title": "TransBiolab: A Real-World Multi-View Dataset of Cluttered Transparent Biomedical Objects",
+      "authors": [
+        "Ke Ma",
+        "Yifei Wang",
+        "Meng Wang",
+        "Tian Xia"
+      ],
+      "abstract": "Autonomous biomedical laboratories increasingly rely on visual perception to recognize, localize, and manipulate transparent plasticware, yet high-quality real-world datasets for this setting remain limited. The scarcity of domain-relevant data is particularly restrictive in cluttered multi-object scenes, where mutual occlusion and view-dependent appearance changes remain challenging even for contemporary visual foundation models. Existing transparent-object datasets have advanced segmentation, depth, and pose estimation, but they usually do not evaluate the combined setting of multi-object cl",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21071",
+      "published_at": "2026-07-23T09:04:11Z",
+      "updated_at": "2026-07-23T09:04:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.20653",
+      "title": "PhysCoRe: Physics-Corrected Residual World Models for Material-Aware Deformable Dynamics",
+      "authors": [
+        "Haocheng Yin",
+        "Shuohan Tao",
+        "Yongsheng Chen",
+        "Lu Gan"
+      ],
+      "abstract": "Predicting how deformable objects evolve under robotic manipulation is a longstanding challenge. Existing approaches typically rely on per-object optimization to fit material parameters, which can be slow and cannot generalize, while end-to-end learned alternatives extrapolate poorly and often violate basic physical structure. We present PhysCoRe, a physics-corrected residual world model that couples a differentiable Material Point Method (MPM) simulator with two feed-forward neural networks. A material refinement module, Material from Motion (MfM), infers per-particle elasticity from visual o",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.20653",
+      "published_at": "2026-07-22T18:25:57Z",
+      "updated_at": "2026-07-22T18:25:57Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21595",
+      "title": "3D-Aware VLMs with Implicit and Explicit Geometries",
+      "authors": [
+        "Wenhao Li",
+        "Xueying Jiang",
+        "Quanhao Qian",
+        "Deli Zhao",
+        "Ran Xu"
+      ],
+      "abstract": "Despite rapid progress, most existing vision-language models (VLMs) built from 2D visual inputs often struggle when handling various 3D tasks that require fine-grained spatial understanding and reasoning. To bridge this gap, we present VLM-IE3D, a unified framework that enhances the 3D spatial awareness of VLMs by equipping them with both implicit and explicit 3D geometries learned from RGB videos. Our VLM-IE3D introduces Implicit Geometry Tokens (IGTs) that capture high-level geometric priors from input videos, as well as complementary Explicit Geometry Tokens (EGTs) that encode detailed geom",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21595",
+      "published_at": "2026-07-23T17:59:59Z",
+      "updated_at": "2026-07-23T17:59:59Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21049",
+      "title": "GuidedAttention: Interpretable and Correctable Visual Attention for OOD-Robust Robot Manipulation via Imitation Learning",
+      "authors": [
+        "Masaki Murooka",
+        "Ryoichi Nakajo",
+        "Keisuke Shirai",
+        "Tomohiro Motoda",
+        "Hanbit Oh"
+      ],
+      "abstract": "End-to-end visuomotor policies provide little opportunity for humans to understand or correct the policy's visual attention. We propose GuidedAttention, a visuomotor imitation learning framework that introduces interpretable and correctable visual attention as an explicit intermediate representation. Task-relevant attention keypoints are predicted from camera images and condition a diffusion-based action policy. Users can inspect and optionally correct selected keypoints once at rollout initialization, after which the corrected attention is automatically propagated throughout execution by a tr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21049",
+      "published_at": "2026-07-23T08:33:40Z",
+      "updated_at": "2026-07-23T08:33:40Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.20665",
+      "title": "Safe and Scalable Multi-Drone Payload Transport via CBF-based Reinforcement Learning with Zero-Shot Sim-to-Real Transfer",
+      "authors": [
+        "Jaeyoun Choi",
+        "Oswin So",
+        "Songyuan Zhang",
+        "Cooper Taylor",
+        "Chuchu Fan"
+      ],
+      "abstract": "Multi-drone payload transportation has emerged as a promising research paradigm with potential applications in construction, logistics, and disaster response. However, the complex coupled dynamics among drones, cables, and payloads pose significant challenges, and existing approaches remain limited in safety and scalability, particularly in dynamic and unstructured environments. In this work, we propose a learning-based framework for safe and scalable multi-drone cooperative payload transport. We introduce a minimal 2D abstraction that preserves the task-relevant drone-payload coupling require",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.20665",
+      "published_at": "2026-07-22T19:01:57Z",
+      "updated_at": "2026-07-22T19:01:57Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21341",
+      "title": "Grasp, Handover, Rotate: Bimanual Object Reorientation via Compositional Diffusion and Energy-Based Optimization",
+      "authors": [
+        "Wun Lam Yeung",
+        "Wenjun Liu",
+        "Yui Cheung Yu",
+        "Zhengyan Lambo Qin",
+        "Qijin She"
+      ],
+      "abstract": "Bimanual object reorientation - picking an object, handing it over between two arms, and placing it in a desired target pose - is valuable when direct placement from the initial grasp is infeasible due to collisions, kinematic constraints, or poor final orientation. However, achieving this under multiple competing objectives remains challenging. We introduce BiCompoDiff, a compositional diffusion and energy-based framework that jointly optimizes grasp selection, handover, regrasp, and motion planning under multiple constraints. By combining a pretrained grasp diffusion model with bimanual plan",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21341",
+      "published_at": "2026-07-23T14:11:14Z",
+      "updated_at": "2026-07-23T14:11:14Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21227",
+      "title": "FORGE-plus: Force-Budgeted Recovery for Contact-Rich Assembly with a Frozen LLM Supervisor",
+      "authors": [
+        "Kyupaeck Jeff Rah",
+        "Midum Oh"
+      ],
+      "abstract": "Force-conditioned reinforcement learning (RL) enables tight-clearance assembly under a commanded force ceiling, but practical deployment requires determining an appropriate force limit for each object and recovering from insertion failures without exceeding it. We present a two-layer framework in which a frozen, text-only large language model (LLM) assigns a per-object force ceiling before execution and selects recovery maneuvers from a fixed action menu using compact textual force signatures. The LLM never controls force directly: a low-level controller enforces the force ceiling, the recover",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21227",
+      "published_at": "2026-07-23T11:43:31Z",
+      "updated_at": "2026-07-23T11:43:31Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.20772",
+      "title": "Socially Consistent Multi-Robot Navigation Using Decoupled Planning and Trajectory Coordination",
+      "authors": [
+        "Matthew M. Sato",
+        "Kincho H. Law"
+      ],
+      "abstract": "The successful integration of mobile robots in human-centric environments requires navigation that is not only safe and efficient, but also predictable and aligned with social conventions, key precursors for human comfort and acceptance. While significant research addresses short-term human-aware planning, these methods often lack mechanisms for ensuring consistent and predictable behaviors across long horizons. Without socially aware long-term planners, local planners are overburdened, resulting in inefficient and locally reactive movements that undermine predictability. This paper introduces",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.20772",
+      "published_at": "2026-07-22T22:38:07Z",
+      "updated_at": "2026-07-22T22:38:07Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21111",
+      "title": "TOUR: A Trajectory-Level Unlearning Benchmark for Offline Reinforcement Learning",
+      "authors": [
+        "Chaofan Pan",
+        "Lingfei Ren",
+        "Xiangyu Jiang",
+        "Yanhua Li",
+        "Xuemei Cao"
+      ],
+      "abstract": "Offline Reinforcement Learning (RL) agents are trained on fixed behavioral trajectories, which makes trajectory-level deletion important when selected data must be removed after training. Evaluating such deletion is difficult because a lower membership score can reflect trajectory removal, residual memorization visible to another attack, or policy collapse that destroys useful behavior. We introduce Trajectory-level memOrization and Unlearning in offline RL (TOUR), a benchmark that combines trajectory-level partitioning, matched non-member controls, retraining references, retained-performance ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21111",
+      "published_at": "2026-07-23T09:40:40Z",
+      "updated_at": "2026-07-23T09:40:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.21085",
+      "title": "Geo3R: Mitigating Spatial Reasoning Hallucination in Multimodal Large Language Models",
+      "authors": [
+        "Mingyu Wang",
+        "Weilin Jin",
+        "Wenbo Li",
+        "Haoyang Huang",
+        "Tong Jia"
+      ],
+      "abstract": "Despite remarkable progress in visual understanding, Multimodal Large Language Models (MLLMs) remain prone to hallucinations when reasoning about spatial relationships, often producing judgments that contradict the true 3D structure of the scene. Though several existing works have proposed to mitigate hallucinations, our analysis indicates that they show limited effectiveness in spatial reasoning, as they fail to bridge the fundamental gap between 2D visual representations and 3D spatial reality. Based on this finding, we define hallucinations arising from insufficient spatial structure modeli",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21085",
+      "published_at": "2026-07-23T09:15:08Z",
+      "updated_at": "2026-07-23T09:15:08Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    },
+    {
+      "id": "2607.20883",
+      "title": "WhereEdit: Mask-aware Local Latent Editing for One-Step Image Editing",
+      "authors": [
+        "Ming Hu",
+        "Mingyu Dou",
+        "Jianfu Yin",
+        "Miaomiao Zhang",
+        "Cong Hu"
+      ],
+      "abstract": "Recent one-step text-to-image (T2I) models enable efficient image synthesis and provide new opportunities for real-time image editing. However, existing one-step editing methods primarily rely on text conditioning for semantic transformation, lacking explicit spatial control over \\textit{where} to edit. More importantly, even when spatial constraints are introduced, these methods often struggle to achieve strong and stable semantic modifications within the target regions. In this work, we revisit one-step image editing from a spatially controlled perspective and identify two key challenges: di",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.20883",
+      "published_at": "2026-07-23T03:11:25Z",
+      "updated_at": "2026-07-23T03:11:25Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-24T05:27:54.635884Z"
+    }
+  ]
+}
