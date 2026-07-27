@@ -1,0 +1,369 @@
+{
+  "date": "2026-07-27",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-27T05:58:06.321128Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 50,
+      "arxiv_cs.AI": 230,
+      "arxiv_cs.CV": 157,
+      "arxiv_keyword": 1,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 538,
+    "after_dedup": 469,
+    "window_start": "2026-07-23",
+    "window_candidates": 390,
+    "already_seen": 216,
+    "new_candidates": 174,
+    "selected_papers": 17,
+    "missing_published_at": 0,
+    "keyword_matched": 17
+  },
+  "papers": [
+    {
+      "id": "2607.22014",
+      "title": "Zero-Shot Mission-Level Evaluation for Aerial MLLM Agents",
+      "authors": [
+        "Suman Navaratnarajah",
+        "Taehyoung Kim",
+        "Jona Ruthardt",
+        "Ishaan Bhimwal",
+        "Ryousuke Yamada"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) are emerging as core reasoning modules for embodied agents, yet it remains unclear how well general-purpose models can solve long-horizon embodied tasks from a single high-level instruction. We introduce MissionBench, a benchmark for mission-level evaluation of MLLMs in aerial 3D environments. It comprises 120 missions across five simulated 3D environments and four task families. Agents must autonomously plan, navigate, and report outcomes using only egocentric observations and its action history, without aerial-specific fine-tuning. Across 22 open- and",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22014",
+      "published_at": "2026-07-24T06:22:50Z",
+      "updated_at": "2026-07-24T06:22:50Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22530",
+      "title": "ViTacWorld: Scaling Visuo-Tactile World Models for Contact-Rich Robot Manipulation",
+      "authors": [
+        "Yunao Huang",
+        "Shiyu Sang",
+        "Haotao Lu",
+        "Suting Ni",
+        "Shijie Wu"
+      ],
+      "abstract": "Contact-rich robot manipulation requires physical interaction cues that are often invisible to cameras, making tactile sensing essential for robust control. However, scaling visuo-tactile robot learning remains difficult because real tactile interaction data are expensive to collect, hardware-dependent, and limited in task and scene diversity. We present ViTacWorld, an action-conditioned visuo-tactile world model for scalable contact-rich robot manipulation. ViTacWorld leverages public real tactile datasets and a constructed simulation environment to scale visuo-tactile-action data, exploiting",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.22530",
+      "published_at": "2026-07-24T17:59:33Z",
+      "updated_at": "2026-07-24T17:59:33Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22535",
+      "title": "Robot-Factored World Models via Robot Rendering",
+      "authors": [
+        "Byungjun Kim",
+        "Taeksoo Kim",
+        "Hyunsoo Cha",
+        "Hanbyul Joo"
+      ],
+      "abstract": "Action-conditioned video world models predict future observations from an initial observation and an action signal. In robotics, actions influence future observations through two distinct processes: they are first realized into robot motion by the robot body and controller, and the scene then responds through contact and object motion. Conditioning directly on action commands asks the world model to learn the realization process itself, while conditioning on logged future states leaks the interaction outcomes it is meant to predict. We propose robot-factored world models, which move two robot-",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22535",
+      "published_at": "2026-07-24T17:59:57Z",
+      "updated_at": "2026-07-24T17:59:57Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22043",
+      "title": "Scaling Native Multimodal Pre-Training From Scratch",
+      "authors": [
+        "Haoyuan Wu",
+        "Aoqi Wu",
+        "Hai Wang",
+        "Jiajia Wu",
+        "Jinxiang Ou"
+      ],
+      "abstract": "Although large language models (LLMs) exhibit remarkable reasoning capabilities, their reliance on text-only pre-training restricts the perception of the multimodal physical world. Native multimodal pre-training avoids this limitation by training models from scratch on multimodal inputs, thereby achieving deep cross-modal integration and mitigating optimization asymmetries inherent to traditional late-fusion architectures. Despite these advantages, the scaling properties of this paradigm remain systematically uncharacterized. To address this gap, we investigate the optimal model size and token",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22043",
+      "published_at": "2026-07-24T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-24T07:13:52Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22434",
+      "title": "Robot Learning to Communicate through Projected Visual Abstractions",
+      "authors": [
+        "Danyang Yan",
+        "Boyuan Wang",
+        "Jiaxun Liu",
+        "Boyuan Chen"
+      ],
+      "abstract": "Humans routinely communicate through abstractions of their bodies, including shadows, silhouettes, and reflections. Yet robots remain largely confined to expressing themselves through their physical morphology. Enabling robots to communicate through such projected visual abstractions requires reasoning not only about bodily motion but also about how that motion is transformed into an external representation perceived by an observer. Among these abstractions, shadows provide a particularly compelling example because they emerge directly from the robot's embodiment while remaining visually disti",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.22434",
+      "published_at": "2026-07-24T15:52:36Z",
+      "updated_at": "2026-07-24T15:52:36Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22119",
+      "title": "One Hand Watches The Other: Dynamic Multi-Agent Cooperation for Sample-Efficient Bimanual Manipulation in Dynamic Environments",
+      "authors": [
+        "Jan Ole von Hartz",
+        "Abhinav Valada",
+        "Joschka Boedecker"
+      ],
+      "abstract": "Multi-stream robot manipulation policies achieve unparalleled sample efficiency and generalization by modeling actions relative to environmental reference frames. However, existing approaches typically assume these frames to be strictly exogenous. This causal assumption collapses in dynamic settings, such as when a single robot arm manipulates a moving object or when two arms coordinate, where each arm effectively becomes part of the dynamic environment of the other. We propose DynaMAC, a lightweight, policy-agnostic framework that resolves this causal limitation while preserving the sample ef",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.22119",
+      "published_at": "2026-07-24T09:14:07Z",
+      "updated_at": "2026-07-24T09:14:07Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21964",
+      "title": "ACME: A Multi-Cultural, Multi-Embodiment Social-Navigation Dataset",
+      "authors": [
+        "Shashank Rao Marpally",
+        "Allan Wang",
+        "Atharva Ghotavadekar",
+        "Renato Alexandre Ribeiro",
+        "Nhat Le"
+      ],
+      "abstract": "Understanding how robots and humans move in shared spaces is essential for designing effective social robot navigation policies and predicting human behavior. However, existing datasets often lack the diversity needed to capture differences in culture, geography, and human-robot interaction-factors that strongly shape appropriate social behavior. To address this gap, we introduce ACME: A Cross-cultural, Multi-Embodiment dataset for social navigation. A large-scale data collection effort across 8 sites in 5 countries, using 7 robot embodiments, ACME is a large and diverse multi-modal dataset ai",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21964",
+      "published_at": "2026-07-24T04:23:21Z",
+      "updated_at": "2026-07-24T04:23:21Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22355",
+      "title": "SiPhy: Single-Image Physical Property Reasoning",
+      "authors": [
+        "Hoang Le",
+        "Joonwoo Kwon",
+        "Elkhan Ismayilzada",
+        "Yufei Zhang",
+        "Zijun Cui"
+      ],
+      "abstract": "Inferring physical properties such as mass, stiffness, and elasticity from a single image is essential for simulation and embodied AI, yet most existing approaches rely on multi-view reconstruction or physics-based supervision. We introduce SiPhy, a unified framework for single-image physical property reasoning that aligns 3D-aware visual cues, depth with language-based material knowledge. From one RGB image, SiPhy samples pseudo-voxel points, extracts CLIP features, and grounds them to material candidates proposed by a VLM. A part-based contrastive aggregator enforces region consistency, whil",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22355",
+      "published_at": "2026-07-24T14:36:37Z",
+      "updated_at": "2026-07-24T14:36:37Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21725",
+      "title": "Addressing the Orchestration Gap in Generalist Robots via Physical Agency",
+      "authors": [
+        "Liane Galanti",
+        "Dhruv Shah",
+        "Tri Dao"
+      ],
+      "abstract": "General-purpose robots need to reason about their actions, combining perception, world knowledge, planning, success detection, recovery, and low-level control. Today's state-of-the-art models attempt to combine all these capabilities into the learned policy via large-scale pre-training. Instead, we show that these capabilities can be decomposed into a general language-conditioned policy/control agent and a high-level agent manager/orchestrator. Rather than training policies to reason via pre-training, we build a closed-loop physical agent orchestrator that can do high-level planning, decompose",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21725",
+      "published_at": "2026-07-23T18:18:32Z",
+      "updated_at": "2026-07-23T18:18:32Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22249",
+      "title": "Design and Human Evaluation of Tactile Withdrawal Reflexes for a Skin-Covered Robot Arm",
+      "authors": [
+        "Laura Babayeva",
+        "Lukas Rustler",
+        "Matej Hoffmann"
+      ],
+      "abstract": "Nociception is a protective biological mechanism that links harmful stimulation to a reaction. This paper investigates artificial nociception for a robotic arm with whole-body tactile sensing. We present a complete pipeline that maps pressure changes from sensitive skin on a robot manipulator to bio-inspired withdrawal motions. The system first converts skin pressure into a scalar pain gain using a nonlinear continuous model. We compare three reflexes: (i) uniform reflex moves four robot joints by a fixed amount, whereby the withdrawal is approximated by a movement of the arm \"toward the base\"",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.22249",
+      "published_at": "2026-07-24T12:31:44Z",
+      "updated_at": "2026-07-24T12:31:44Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.22226",
+      "title": "Offline Vision-Language Navigation with Geometric Goal Localization for Outdoor Environments",
+      "authors": [
+        "Ali Salmasi",
+        "Xianjia Yu",
+        "Tomi Westerlund"
+      ],
+      "abstract": "Foundation-model-based vision-language navigation (VLN) has advanced autonomous robot navigation by enabling robots to interpret natural-language instructions, identify semantic goals, and follow user-specified behavioral rules. However, existing VLN systems rely heavily on cloud-hosted foundation models for language understanding and semantic grounding, limiting their applicability where network connectivity is unavailable and reliable metric goal localization is required. Although recent small language models (SLMs) enable fully onboard inference, their suitability for navigation instruction",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.22226",
+      "published_at": "2026-07-24T11:49:25Z",
+      "updated_at": "2026-07-24T11:49:25Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21960",
+      "title": "Adaptive Undulatory Locomotion of Snake-like Robots in Dynamic Viscous Environments via Deep Reinforcement Learning",
+      "authors": [
+        "Tsuyoshi Kimoto",
+        "Akio Yamano",
+        "Kohei Honda",
+        "Takashi Iwasa"
+      ],
+      "abstract": "This paper demonstrates how deep reinforcement learning (DRL) enables adaptive locomotion of snake-like robots in dynamically changing viscous environments, overcoming the inherent performance limitations of classical predefined control methods. The lack of direct onboard sensors for fluid properties necessitates formulating this task as a partially observable Markov decision process. By employing an asymmetric actor-critic framework, a teacher policy trained using privileged information available only in the physics simulator distills its knowledge into a student policy that relies solely on ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21960",
+      "published_at": "2026-07-24T04:14:36Z",
+      "updated_at": "2026-07-24T04:14:36Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21918",
+      "title": "Action-Conditioned World Model for Goal Plane Probe Guidance in Robotic Ultrasound",
+      "authors": [
+        "Siqi Fan",
+        "Mingcong Chen",
+        "Ran Liu",
+        "Zixuan Yang",
+        "Xiaoyu Fu"
+      ],
+      "abstract": "We present an action-conditioned world model framework for goal plane probe guidance in robotic ultrasound, with a focus on neck ultrasound scanning. Autonomous ultrasound tasks often require large numbers of probe-motion trajectories for training, but collecting high-quality demonstrations is labor-intensive and explicit simulators are difficult to build because ultrasound appearance depends on contact, tissue deformation, and view-dependent acoustic artifacts. We address this problem with a two-stage model-based learning pipeline. First, a latent conditional diffusion world model predicts fu",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.21918",
+      "published_at": "2026-07-24T02:48:13Z",
+      "updated_at": "2026-07-24T02:48:13Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21910",
+      "title": "TRW: TRACE-RealWorld---An Auditable Consistency Contract for World Models as Materialized Views",
+      "authors": [
+        "Edward Y. Chang"
+      ],
+      "abstract": "TRACE-RealWorld addresses a core data-management problem: maintaining an actionable materialized view over a continuously changing physical world when reads of the base state are priced, delayed, heterogeneous, and fallible. Its data-management contributions are a commitment-level validity abstraction for materialized predictions; consequence-conditioned adaptive view maintenance; transaction-style, dependency-scoped compensation for commitments invalidated after authorization; and append-only provenance supporting exact replay. The work builds directly on materialized-view maintenance, adapti",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21910",
+      "published_at": "2026-07-24T02:31:10Z",
+      "updated_at": "2026-07-24T02:31:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21867",
+      "title": "When Is a Learned Command Adapter Worth It? Closed-Loop Identification and Counterfactual Auditing of Frozen Locomotion Policies",
+      "authors": [
+        "Zongtan Li"
+      ],
+      "abstract": "Adding a learned adapter to a frozen, command-conditioned locomotion policy is worthwhile only if the interface exposes improvements that are both real and recoverable from deployment-time observations. We introduce an adapter necessity audit that separates global operating-point gain,same-state counterfactual headroom, deployment gain over a cross-fitted fixed action, and state-allocation gain over a frequency-matched randomized policy. Source-cluster learner refits map these quantities and constraint violations to a GO/NO-GO/ABSTAIN decision. Closed-loop command- response identification prov",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21867",
+      "published_at": "2026-07-23T23:47:03Z",
+      "updated_at": "2026-07-23T23:47:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21686",
+      "title": "Persistent Computational State: A Session-Centric Runtime for Generative World Models",
+      "authors": [
+        "Zhen Lin"
+      ],
+      "abstract": "Generative world models are increasingly driven as simulators: a planner forks a state, rolls out futures, backtracks, and returns to a visited viewpoint. Recent benchmarks establish that current video world models fail this usage, and attribute it to the model, prescribing new architectures and training objectives. We show this attribution is incomplete, and for an important class of models simply wrong. Snapshotting the state the runtime already holds -- an observation plus RNG state, a memory bank, or a windowed KV context, by architecture -- and restoring it after a genuine excursion repro",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.21686",
+      "published_at": "2026-07-23T14:39:46Z",
+      "updated_at": "2026-07-23T14:39:46Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    },
+    {
+      "id": "2607.21722",
+      "title": "Be Consistent! Enhancing Robust Visual Reasoning in LVLMs with Consistency Constraints",
+      "authors": [
+        "Liqiang Jing",
+        "Xiong Zhou",
+        "Siddharth Varia",
+        "Neha Anna John",
+        "Xinya Du"
+      ],
+      "abstract": "While Large Vision-Language Models (LVLMs) exhibit strong perceptual capabilities, they remain vulnerable in visual reasoning tasks. Existing benchmarks largely focus on symbolic mathematical or scientific problems and simple vision-centric tasks, offering limited assessment of complex visual reasoning and logical consistency, a critical requirement for reliable reasoning systems. We introduce ConVBench, a complex vision-centric reasoning benchmark in which each image is paired with two logically equivalent questions across six categories: action and state, complex counting, spatial reasoning,",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.21722",
+      "published_at": "2026-07-23T18:04:51Z",
+      "updated_at": "2026-07-23T18:04:51Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-27T05:58:06.321128Z"
+    }
+  ]
+}
