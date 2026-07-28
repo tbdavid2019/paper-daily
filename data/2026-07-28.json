@@ -1,0 +1,653 @@
+{
+  "date": "2026-07-28",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-28T05:21:51.300231Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 93,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 4,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 697,
+    "after_dedup": 617,
+    "window_start": "2026-07-24",
+    "window_candidates": 542,
+    "already_seen": 76,
+    "new_candidates": 466,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 39
+  },
+  "papers": [
+    {
+      "id": "2607.24744",
+      "title": "Data Pyramid for Embodied Manipulation",
+      "authors": [
+        "Yifan Ye",
+        "Yankai Fu",
+        "Yaoxu Lv",
+        "Bohan Hou",
+        "Jun Cen"
+      ],
+      "abstract": "Multimodal foundation models learned to see and to speak by consuming the whole internet. Embodied agents admit no such shortcut, since they require data that couple observations with physical states and actions. These signals can be provided, to varying degrees, by multiple data sources. In this work, we organize the embodied data ecosystem as a \"pyramid\" spanning five complementary sources: real-robot data, UMI-style data, egocentric and exocentric data, simulation data, and general vision-language data. We organize the pyramid around the tension between scalability and robot alignment, and ",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.24744",
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "keyword_hits": 4,
+      "updated_at": "2026-07-27T17:59:58Z",
+      "priority": 85.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23784",
+      "title": "A Few Words Go a Long Way: Language Guided Robot Policy Synthesis",
+      "authors": [
+        "Daphne Chen",
+        "Archit Ritesh Jain",
+        "Eric Goossen",
+        "Emma Romig",
+        "Michael Murray"
+      ],
+      "abstract": "While vision-language-action models have demonstrated impressive zero-shot manipulation capabilities, they remain fundamentally black box policies that are difficult to interpret, adapt, or correct when they inevitably fail. In this work, we propose ARCHITECT, a framework that treats robot policy acquisition as an interactive program synthesis task. ARCHITECT leverages the reasoning capabilities of LLM coding agents to synthesize modular robot programs that utilize a suite of perception and control tools. Unlike end-to-end models where distribution shift leads to unpredictable, cascading failu",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.23784",
+      "published_at": "2026-07-26T18:00:02Z",
+      "updated_at": "2026-07-26T18:00:02Z",
+      "keyword_hits": 4,
+      "priority": 70.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24159",
+      "title": "DeVA: Decoupled Video-Action Model with physical guidance for robot policy learning",
+      "authors": [
+        "Mengqi Zhang",
+        "Sahil Khose",
+        "Simar Kareer",
+        "Yuchen Song",
+        "Unnat Jain"
+      ],
+      "abstract": "Generalizable robot manipulation requires policies that can anticipate how visual scenes evolve while executing language instructions. While recent Vision-Language-Action models benefit from large-scale pretraining, their predominantly static pretraining objectives provide limited supervision for physical dynamics and temporal causality, leaving control-relevant knowledge to be learned from downstream robot demonstrations. Video generative models offer a promising foundation by encoding rich spatiotemporal priors through future predictions. However, existing Video-Action Models either couple v",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.24159",
+      "published_at": "2026-07-27T08:37:35Z",
+      "updated_at": "2026-07-27T08:37:35Z",
+      "keyword_hits": 3,
+      "priority": 60.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22997",
+      "title": "Real2Sim2Real for Vision-Language-Action Manipulation: An AMD ROCm-Based Pipeline",
+      "authors": [
+        "Qing Yang",
+        "Xun Wang",
+        "Ziguan Wang",
+        "Zhenjiang Li",
+        "Hongqiang Wang"
+      ],
+      "abstract": "Physical AI -- the integration of large vision-language-action (VLA) models with embodied agents that act in the real world -- has emerged as the next major frontier for AI, echoed by industry leaders such as Jensen Huang (``the next big thing is Physical AI, AI with a body,'' GTC Paris, June 2025) and Dr. Lisa Su (`we're entering the world of Physical AI ... this is where AI enters the real world,' CES 2026). This paper presents an end-to-end, fully AMD-accelerated technology stack for embodied manipulation, spanning data-center training silicon, Radeon PRO simulation/rendering GPUs, and Ryze",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.22997",
+      "published_at": "2026-07-25T02:23:34Z",
+      "updated_at": "2026-07-25T02:23:34Z",
+      "keyword_hits": 4,
+      "priority": 55.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24485",
+      "title": "τ: Learning Touch-Augmented Vision-Language-Action Models from Future Visual Supervision",
+      "authors": [
+        "Ning Cheng",
+        "Jinan Xu",
+        "Wanlin Li",
+        "Yangzhi Chen",
+        "Jing Gao"
+      ],
+      "abstract": "Learning the informative tactile representation while effectively adapting it to pretrained Vision-Language-Action (VLA) models remains challenging at both the data and modeling levels. At the data level, limited task-specific demonstrations constrain representation quality, whereas large-scale pretraining incurs substantial costs. At the modeling level, existing methods either focus on instantaneous contact states or model temporal interaction dynamics using 6D wrench sequences, leaving high-dimensional tactile signals underexplored. To address these challenges, we present τ, a touch-augmente",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.24485",
+      "published_at": "2026-07-27T14:25:15Z",
+      "updated_at": "2026-07-27T14:25:15Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23899",
+      "title": "Embodied GPT-5.1: Evidence of a World Model?",
+      "authors": [
+        "Roberto Spinelli",
+        "Thiago C. Martins"
+      ],
+      "abstract": "This exploratory study examines whether a large multimodal language model, GPT-5.1, can serve as the high-level controller of a physical mobile robot despite having no prior embodiment, no training in simulated environments, and no exposure to sensorimotor experience. Using only low-resolution first-person images and a discrete action set, the model was tasked with navigation and object-directed behaviors such as locating and contacting a target toy. Across multiple trials, GPT-5.1 demonstrated emergent capabilities that suggest elements of spatial reasoning and physical understanding. These i",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.23899",
+      "published_at": "2026-07-27T00:14:21Z",
+      "updated_at": "2026-07-27T00:14:21Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22999",
+      "title": "WCM: World-Cognition Model for Generalizable Human-Robot Interaction",
+      "authors": [
+        "Yuzhen Chen",
+        "KC Zhou"
+      ],
+      "abstract": "Language agents can now interact fluently with users in software, but robots still struggle to bring comparable interaction to physical tasks. Current robot-control paradigms, including vision-language-action policies and world-model-based planners, are mainly optimized for instruction execution, leaving users with little visibility into why an action is chosen and few mechanisms to redirect, correct, or teach the robot through interaction. To solve this problem, we present the World-Cognition Model (WCM), a human-centered embodied agent built on the SLAK architecture (Sensing, Logic, Action, ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.22999",
+      "published_at": "2026-07-25T02:27:16Z",
+      "updated_at": "2026-07-25T02:27:16Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24481",
+      "title": "ArmnetBench v0.1: Parallel Real-World Evaluation of Manipulation Policies on a Low-Cost Arm Farm",
+      "authors": [
+        "Praveen Selvaraj",
+        "Lorenzo Uttini",
+        "Ville Kuosmanen"
+      ],
+      "abstract": "Real-world evaluation is a bottleneck in developing generalist robot manipulation policies. Each rollout requires physical hardware and an operator to set up, reset, and score it. We introduce ArmnetBench v0.1, a benchmark run on a fleet of low-cost SO-101 cells under light on-site supervision. v0.1 validates this arm farm end to end and compares 7 policies across 12 tasks with both single-arm and bimanual configurations. Each policy is trained or fine-tuned on 50 demonstrations per task; the benchmark contains 2,518 policy rollouts and 600 reference demonstrations. All 3,118 episodes carry a ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24481",
+      "published_at": "2026-07-27T14:16:43Z",
+      "updated_at": "2026-07-27T14:16:43Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23473",
+      "title": "PRISM: Polynomial Representations for Interaction-Structured Motor Control",
+      "authors": [
+        "Seung Hyun Lee",
+        "Stella X. Yu"
+      ],
+      "abstract": "Robot policies are typically MLPs mapping observations to actions. Yet robot observations are physical variables, and many action-relevant cues arise not from individual variables but from their interactions; power, inertial effects, contact, slip, and compliance depend on products among observable signals. We introduce PRISM, a policy representation that makes polynomial interactions among observable physical variables explicit, learnable, and compact. Rather than listing all polynomial terms, PRISM uses a factorized polynomial module to expose higher-order interaction features efficiently. I",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.23473",
+      "published_at": "2026-07-26T05:58:10Z",
+      "updated_at": "2026-07-26T05:58:10Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22964",
+      "title": "Pose-Aware Modeling to Mitigate Pose-Related Artifacts in Tactile Gloves",
+      "authors": [
+        "Tianhong Catherine Yu",
+        "Ziyi Kou",
+        "Mia Huang",
+        "Taylor Niehues",
+        "Yiyue Luo"
+      ],
+      "abstract": "Tactile gloves digitize contact and force during hand-object interactions, enabling robotics applications in dexterous manipulation, teleoperation, and learning from demonstration. To preserve hand dexterity and capture the nuances of natural interactions, these gloves and the integrated tactile sensors are designed to be soft, flexible, and comfortable. However, such flexible sensors are sensitive not only to contact forces but also unavoidably to hand pose changes, resulting in pose-related artifacts (PRAs). PRAs are especially problematic in the low-force range, resulting in misdetections o",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.22964",
+      "published_at": "2026-07-25T00:12:31Z",
+      "updated_at": "2026-07-25T00:12:31Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24148",
+      "title": "A Motion-Aware Vector Quantization Framework with Centroid Reuse for Efficient VLA Inference",
+      "authors": [
+        "Zhuoran Song",
+        "Haozhe Jiang",
+        "Chunyu Qi",
+        "Minnan Pei",
+        "Gang Li"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have demonstrated strong potential for embodied AI, yet their high inference latency on GPUs limits real-time deployment. Existing accelerators, such as Dadu-Corki, improve efficiency but treat VLA models as full-precision workloads, leaving substantial redundancy in both memory and computation underexploited.   In this paper, we propose VQVLA, an algorithm-hardware co-design framework that accelerates VLA inference by exploiting weight similarity and execution dynamics. We first introduce MotionVQ, a motion-aware vector quantization scheme that dynamically ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.24148",
+      "published_at": "2026-07-27T08:29:05Z",
+      "updated_at": "2026-07-27T08:29:05Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24720",
+      "title": "The Physics of Multi-Turn Long-Horizon Planning: From Pre-training to Post-training via Single- and Multi-Teacher On-Policy Agentic Distillation",
+      "authors": [
+        "Tianyi Men",
+        "Zhuoran Jin",
+        "Kang Liu",
+        "Jun Zhao"
+      ],
+      "abstract": "Multi-turn long-horizon planning is critical for foundation model agents, yet how to fundamentally improve it remains unclear. Existing models are trained on uncontrollable and opaque Internet data, making it difficult to identify how planning ability is acquired, shaped, and integrated. To address this challenge, we introduce a unified and controlled multi-turn environment that enables precise control. It allows systematically study long-horizon planning across three stages. (1) Planning ability acquisition during pre-training. We study data format, distribution, and quality. Explicit world m",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.24720",
+      "published_at": "2026-07-27T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-27T17:55:03Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24190",
+      "title": "Not Forgotten: Implementation and Evaluation of a Personalized Episodic Memory for the Humanoid Robot Head Kim",
+      "authors": [
+        "Steve Aschenbrenner",
+        "Marcel Heisler",
+        "Thomas Sievers",
+        "Christian Becker-Asano"
+      ],
+      "abstract": "Social robots that rely on large language models for conversation are unable to retain information across sessions. This absence of memory violates social expectations, potentially preventing the formation of persistent relationships. This paper presents a lightweight episodic memory module that integrates vector-based semantic retrieval with an LLM-controlled dialog system, deployed on the humanoid robot head Kim. The module employs a hybrid scoring function combining cosine similarity with a memory strength metric to retrieve contextually relevant past interactions and inject them into the g",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.24190",
+      "published_at": "2026-07-27T09:11:55Z",
+      "updated_at": "2026-07-27T09:11:55Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24113",
+      "title": "A Case Study on the Acceptance of a Humanoid Robotic Head Employed in Three Public Spaces",
+      "authors": [
+        "Marcel Heisler",
+        "Luca Randecker",
+        "Christian Becker-Asano"
+      ],
+      "abstract": "Previous research has shown that a human-like robot's acceptance heavily depends on the setting in which it operates and its ability to perform relevant tasks. This paper, first, reports on how our robot processes natural language to generate a multimodal, verbal response integrating emotional expressions based on an emotion simulation backend. Then, it describes how visitors were invited to speak with our robot in their own language at three different, public locations, where the robot was running continuously for several days. The TAM2 questionnaire results reveal that on average users were ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.24113",
+      "published_at": "2026-07-27T07:56:28Z",
+      "updated_at": "2026-07-27T07:56:28Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23704",
+      "title": "LabRobFail: A Benchmark for Robotic Failure Analysis in Chemical Self-driving Laboratories",
+      "authors": [
+        "Haobo Wang",
+        "Baoli Sun",
+        "Anqi Zou",
+        "Dongsheng Huang",
+        "Zelin Lv"
+      ],
+      "abstract": "The deployment of embodied agents in self-driving laboratories could accelerate scientific discovery, yet their reliability is constrained by the irreversible and safety-critical nature of chemical experiments. Progress is further hindered by scarce failure data and the lack of fine-grained evaluation protocols. To address these challenges, we introduce LabRobFail, a failure-centric framework for learning and evaluating robotic failure analysis in chemical laboratories. LabRobFail-Sim injects controllable failures at the control, physics, and semantic levels, enabling the construction of LabRo",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.23704",
+      "published_at": "2026-07-26T14:56:04Z",
+      "updated_at": "2026-07-26T14:56:04Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23602",
+      "title": "Action from Adjacent Set in Physical Space Outperforms the Best Prediction in World Models",
+      "authors": [
+        "Liangyu Li",
+        "Qingwen Liu",
+        "Mingqing Liu"
+      ],
+      "abstract": "Controllers based on sampling and latent world models assign a predicted terminal cost to each candidate action sequence, choose the minimum, execute its first action block, and replan. This rule can fail even when the terminal cost perfectly and accurately reflects the true task objective in the physical world. Residual prediction error can give an infeasible sequence an anomalously low cost, and a larger proposal pool gives such errors more chances to outrank feasible alternatives. We call this conditional failure proposal overgeneration. In Cube candidate execution audits, increasing the to",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.23602",
+      "published_at": "2026-07-26T11:11:23Z",
+      "updated_at": "2026-07-26T11:11:23Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22789",
+      "title": "Learning-based Hierarchical Tracheal Anatomy Understanding from Sparse Surgical Demonstration Annotations for Ultrasound Robots",
+      "authors": [
+        "Hiu Ching Cheung",
+        "Wenchao Yue",
+        "Zhengran Han",
+        "Mingcong Chen",
+        "Guanglin Cao"
+      ],
+      "abstract": "Tracheostomy requires precise localization of the tracheal incision site; however, conventional manual palpation is subjective and often unreliable, while ultrasound utility remains operator-dependent. This work presents a learning-based framework for hierarchical tracheal anatomy understanding, designed specifically for ultrasound-guided robotic systems. We propose a two-stage perception pipeline integrating a YOLOv8n localization backbone with a sparse, prompt-optimized SAM2 decoder to achieve high-fidelity segmentation from sparse surgical annotations. Our hybrid training strategy, bridging",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22789",
+      "published_at": "2026-07-24T13:04:39Z",
+      "updated_at": "2026-07-24T13:04:39Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23343",
+      "title": "Patient-Agnostic Synthetic Pretraining for Efficient Patient-Specific Intraoperative 2D/3D Registration",
+      "authors": [
+        "Minheng Chen",
+        "Youyong Kong"
+      ],
+      "abstract": "Intraoperative 2D/3D registration aligns preoperative CT volumes with intraoperative X-ray or fluoroscopic images and is essential for image-guided interventions. Recent learning-based and differentiable registration methods have shown promising accuracy, especially in patient-specific settings where abundant digitally reconstructed radiographs (DRRs) can be synthesized from the target CT. However, training a separate patient-specific model from scratch for every new patient is computationally inefficient and limits practical deployment. In this work, we propose an efficient patient-specific 2",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.23343",
+      "published_at": "2026-07-25T19:39:54Z",
+      "updated_at": "2026-07-25T19:39:54Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24296",
+      "title": "PAC-DP: PAC-Bayesian Diffusion Policy Learning",
+      "authors": [
+        "Mohammad Hasan Yeganegi",
+        "Dian Yu",
+        "Andrea Del Prete",
+        "Majid Khadiv",
+        "Matteo Saveriano"
+      ],
+      "abstract": "Diffusion Policies (DPs) are able to perform complex manipulation tasks. However, DPs are typically trained by minimizing a denoising objective, which provides limited control over generalization in the finite-data regimes common in robotics. In this letter, we propose PAC-DP, an approach that increases the performance of DPs in robotic manipulation tasks. By modeling the DP as a Bayesian neural network, and defining a PAC-Bayes generalization bound, we derive a novel training objective that augments the standard denoising loss with a Kullback-Leibler divergence regularizer between the posteri",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24296",
+      "published_at": "2026-07-27T11:43:49Z",
+      "updated_at": "2026-07-27T11:43:49Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24267",
+      "title": "FeelWorld: Visuo-Tactile World Model for Hierarchical Contact Prediction and Planning",
+      "authors": [
+        "Wenxuan Ma",
+        "Chaofan Zhang",
+        "Chao Xue",
+        "Yinghao Cai",
+        "Guocai Yao"
+      ],
+      "abstract": "Humans plan physical interactions by imagining the possible outcomes of candidate actions. However, existing visual world models primarily capture appearance dynamics while overlooking the tactile states that govern contact-rich interactions, potentially producing imagined futures that appear visually plausible but violate physical dynamics. We introduce FeelWorld, a hierarchical visuo-tactile world model that jointly predicts future visual latents and three tactile states. FeelWorld organizes these states hierarchically as contact state, a 3D tactile latent that encodes force-related informat",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24267",
+      "published_at": "2026-07-27T11:00:26Z",
+      "updated_at": "2026-07-27T11:00:26Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24207",
+      "title": "FloAff-Kitchen: Bridging Navigation and Manipulation via Canonical and Progressive Floor Affordance Learning",
+      "authors": [
+        "Ping Zhong",
+        "Manling Teng",
+        "Tao Wu",
+        "Bolei Chen",
+        "Jiazhi Xia"
+      ],
+      "abstract": "Mobile manipulation requires robots to identify Floor Affordance (FloAff) that maximizes downstream manipulation success rather than merely ensuring navigation feasibility. FloAff prediction is a target-conditioned local spatial reasoning problem, yet existing methods suffer from representation ambiguity caused by irrelevant spatial context and arbitrary object orientations, while entangling shared and task-specific knowledge across heterogeneous manipulation skills. To address these challenges, we propose a unified framework for FloAff prediction from egocentric multimodal perception, consist",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24207",
+      "published_at": "2026-07-27T09:36:00Z",
+      "updated_at": "2026-07-27T09:36:00Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24008",
+      "title": "FutureRTC: Real-Time Robot Execution with Anticipatory-Conditioned Action Chunking",
+      "authors": [
+        "Hai Jiang",
+        "Yixian Zou",
+        "Binbin Liang",
+        "Boqian Liu",
+        "Fanman Meng"
+      ],
+      "abstract": "Real-time deployment of Vision-Language-Action (VLA) policies necessitates asynchronous execution, wherein subsequent action chunks are computed concurrently with the execution of the current chunk, leading to prediction-execution misalignment and manifesting as inter-chunk discontinuities. Existing methods either superficially smooth chunk boundaries, require costly policy optimization, or exclusively forward-predict proprioceptive states yet neglect critical visual observations. In this paper, we propose \\textbf{FutureRTC}, a plug-and-play adaptation framework that predicts execution-time ob",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24008",
+      "published_at": "2026-07-27T05:10:16Z",
+      "updated_at": "2026-07-27T05:10:16Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23969",
+      "title": "LeapBot-WA: World-Anchor Action Models via Predictive Latent Alignments",
+      "authors": [
+        "Pei Liu",
+        "Nan Zheng",
+        "Lang Zhang",
+        "Daojie Peng",
+        "Yanan Zhang"
+      ],
+      "abstract": "World Action Models (WAMs) have emerged as a powerful paradigm for embodied intelligence, yet the prevailing reliance on pixel-level video generation creates a fundamental bottleneck. Forcing models to reconstruct task-irrelevant visual details dissipates representational capacity and renders policies vulnerable to visual distractors. In this paper, we propose LeapBot-WA, which establishes a novel Predictive-Latent paradigm for WAMs by operationalizing the Joint-Embedding Predictive Architecture (JEPA) as a World-Anchor. Departing from the traditional reliance on visual synthesis, LeapBot-WA s",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.23969",
+      "published_at": "2026-07-27T03:36:45Z",
+      "updated_at": "2026-07-27T03:36:45Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.23565",
+      "title": "Anticipatory Risk-Guided Reinforcement Learning for Safe Flight Through Dynamic Clutter",
+      "authors": [
+        "Yuchao Mei",
+        "Guohao Zhang",
+        "Luxia Ai",
+        "Haopeng Chen",
+        "Wenbing Tao"
+      ],
+      "abstract": "Safe quadrotor navigation in cluttered and dynamic environments depends not only on instantaneous geometric perception, but more critically on anticipating collision risks induced by relative motion. Conventional modular pipelines frequently suffer from perception latency, while end-to-end learning methods relying on implicit scalar rewards often struggle to extract reliable spatio-temporal features without physics-grounded supervision. To address this, we propose an anticipatory risk-guided reinforcement learning framework. Leveraging privileged simulator states, we construct a directionally ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.23565",
+      "published_at": "2026-07-26T09:31:49Z",
+      "updated_at": "2026-07-26T09:31:49Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22858",
+      "title": "A Replay-Constrained Simulation Framework for Personalization of Powered Knee--Ankle Prosthesis Controllers",
+      "authors": [
+        "Duong Le",
+        "Ryan Posh",
+        "Shihao Cheng",
+        "Maani Ghaffari",
+        "Robert D. Gregg"
+      ],
+      "abstract": "Personalization of impedance controllers for powered prosthetic legs is critical to accommodating individual gait biomechanics but remains challenging. Existing methods rely on time-intensive human-in-the-loop exploration and/or constrain optimization to low-dimensional, single-joint parameter subspaces. Sim-to-real transfer has enabled high-dimensional locomotion control for legged robots, but in assistive device control the human partner remains un-modelable. We present a replay-constrained simulation framework: a MuJoCo-based simulator reproduces prosthetic knee-ankle dynamics while replayi",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.22858",
+      "published_at": "2026-07-24T18:59:48Z",
+      "updated_at": "2026-07-24T18:59:48Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22890",
+      "title": "Meshless Domain Randomization via Explicit Parameter Perturbation of 3D Gaussian Splatting",
+      "authors": [
+        "Felipe Nunes Carbone de Carvalho",
+        "Joyce de Morais Souza",
+        "Alan de Aguiar",
+        "Charles Morphy D. Santos",
+        "João Paulo Gois"
+      ],
+      "abstract": "Domain Randomization (DR) is a standard technique for closing the Sim-to-Real gap, yet traditional DR pipelines rely on classical computer graphics rendering driven by polygon meshes. For complex organic subjects, such as insect specimens, extracting and rendering textured meshes is challenging. To address this issue, we propose a meshless DR framework that operates on the parameter space of 3D Gaussian Splatting (3DGS). Our method employs two independent perturbation pipelines to synthesize randomized training datasets. First, a Photometric DR pipeline alters the baked illumination and color ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22890",
+      "published_at": "2026-07-24T20:01:33Z",
+      "updated_at": "2026-07-24T20:01:33Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.22864",
+      "title": "Spatial-IQ: Deconstructing Spatial Intelligence via Hierarchical Capability Tests",
+      "authors": [
+        "Patrick Rim",
+        "Tom Long",
+        "Ekta Prashnani",
+        "Ruth Rosenholtz",
+        "Ben Boudaoud"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) excel at visual interpretation but fail on spatial reasoning tasks that humans solve reliably. Existing benchmarks evaluate these models as black boxes, limiting their ability to identify the underlying causes of lower performance: when a model fails a spatial reasoning task, it remains difficult to ascertain whether the hurdle is perceptual, such as recognizing object boundaries, or cognitive, such as reasoning about occlusion to infer hidden geometry. We introduce Spatial-IQ, a hierarchical diagnostic framework that decomposes object counting in stack",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.22864",
+      "published_at": "2026-07-24T19:09:25Z",
+      "updated_at": "2026-07-24T19:09:25Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24538",
+      "title": "NEO: NeRF It Once, Edit It Many Times for Continuous Object Manipulation",
+      "authors": [
+        "Mikołaj Zieliński",
+        "David Hall",
+        "Dominik Belter",
+        "Peyman Moghadam"
+      ],
+      "abstract": "In this paper, we present NEO, a unified framework providing language-guided NeRF editing for robotic manipulation. Our paper introduces (i) a language-guided object removal that combines neural field resampling with multiview-consistent progressive inpainting, (ii) a direct NeRF weight editing method utilizing knowledge distillation, composing original and edited NeRFs via a teacher-student model, enabling coherent modeling of future scene states before a robot executes an action, and (iii) the first benchmark (NEO-Dataset) for quantitatively evaluating NeRF scene editing methods suitable for",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24538",
+      "published_at": "2026-07-27T15:16:46Z",
+      "updated_at": "2026-07-27T15:16:46Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24083",
+      "title": "Learning Reusable Hybrid Motion Priors for Humanoid Locomotion from Motion Imitation",
+      "authors": [
+        "Valerio Belli",
+        "Valerio Modugno",
+        "Enrico Mingo Hoffman",
+        "Fabio Amadio"
+      ],
+      "abstract": "Reinforcement learning can produce robust humanoid controllers, but each new task is typically trained as a separate policy with its own reward design and training process. Motion imitation provides an alternative source of motor competence by training policies to track retargeted human motions, yet the resulting controllers remain reference trackers and are not directly usable as task policies. We propose a three-stage pipeline that turns motion-imitation skills into a reusable hybrid motion prior (HMP) for humanoid locomotion. First, an expert policy is trained to imitate retargeted human mo",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24083",
+      "published_at": "2026-07-27T07:25:17Z",
+      "updated_at": "2026-07-27T07:25:17Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    },
+    {
+      "id": "2607.24079",
+      "title": "Effective Parameters, Real Behavior: Renormalization for Robotics -- From Infinite Electron Mass to Sim-to-Real Gap",
+      "authors": [
+        "Youran Sun",
+        "Jiaxuan Guo",
+        "Xingyu Ren",
+        "Chugang Yi",
+        "Haizhao Yang"
+      ],
+      "abstract": "Bridging the sim-to-real gap is a central problem in robotics, and the prevailing approach is to build increasingly accurate simulators. Here, we propose another approach based on renormalization: using effective, resolution-dependent parameters to absorb details omitted by the simulator and reproduce real behavior. These parameters may differ from measured physical values because they compensate for what the simulator leaves out. We demonstrate this mechanism analytically for proportional--derivative (PD) control at finite simulation frequency, where proportional feedback changes the effectiv",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.24079",
+      "published_at": "2026-07-27T07:20:30Z",
+      "updated_at": "2026-07-27T07:20:30Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-28T05:21:51.300231Z"
+    }
+  ]
+}
