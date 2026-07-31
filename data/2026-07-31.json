@@ -1,0 +1,660 @@
+{
+  "date": "2026-07-31",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-07-31T05:42:44.692319Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 150,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 9,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 759,
+    "after_dedup": 653,
+    "window_start": "2026-07-27",
+    "window_candidates": 630,
+    "already_seen": 276,
+    "new_candidates": 354,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 32
+  },
+  "papers": [
+    {
+      "id": "2607.28625",
+      "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
+      "authors": [
+        "Yukang Cao",
+        "Haozhe Xie",
+        "Beichen Wen",
+        "Runmao Yao",
+        "Yinghao Liu"
+      ],
+      "abstract": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two comple",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28625",
+      "published_at": "2026-07-30T00:00:00.000Z",
+      "keyword_hits": 7,
+      "updated_at": "2026-07-30T17:59:50Z",
+      "priority": 85.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27549",
+      "title": "Cross-Embodiment Transfer via Behavior-Aligned Representations",
+      "authors": [
+        "Ajay Sridhar",
+        "Jensen Gao",
+        "Jonathan Yang",
+        "Jean Mercat",
+        "Suneel Belkhale"
+      ],
+      "abstract": "Recent progress in large-scale imitation learning for robot manipulation has been driven by leveraging datasets across a wide range of robot embodiments. However, achieving significant cross-embodiment transfer is often still challenging. In this work, we study the role of using behavior-aligned representations (e.g., object bounding boxes, language motions, end-effector traces of robot motion) in vision-language-action (VLA) models to promote cross-embodiment transfer. We hypothesize that by possessing invariances across embodiments while being predictive of robot actions, these representatio",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.27549",
+      "published_at": "2026-07-30T00:49:53Z",
+      "updated_at": "2026-07-30T00:49:53Z",
+      "keyword_hits": 4,
+      "priority": 70.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28415",
+      "title": "QQWorld: Quantile-Quantile Matching for World Model Regularization",
+      "authors": [
+        "Zhoushun Yu",
+        "Xiaoyu Hu",
+        "Xiangyu Xu"
+      ],
+      "abstract": "Latent world models enable efficient planning by predicting future states in a compact representation space, but their performance depends critically on the quality of the learned latent distribution. LeWorldModel (LeWM) regularizes its latents toward an isotropic Gaussian using the Epps-Pulley (EP) objective. We show that the corrective gradients of EP rapidly vanish for isolated tail samples, leaving heavy-tailed deviations insufficiently controlled. To address this limitation, we propose QQWorld, which replaces EP with a quantile-quantile matching objective that directly aligns projected la",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28415",
+      "published_at": "2026-07-30T16:00:39Z",
+      "updated_at": "2026-07-30T16:00:39Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27599",
+      "title": "World Action Planner: Generalizable Decision-Making with Action-Conditioned World Models",
+      "authors": [
+        "Xiangcheng Zhang",
+        "Yilun Du"
+      ],
+      "abstract": "Building generalizable agents for diverse applications remains a fundamental challenge. While imitation learning-based policies succeed in specific training environments, they often fail to generalize to novel scenes and tasks. In this work, we propose World Action Planner, a robot planning system that leverages the reasoning capabilities of Vision-Language Models (VLMs) and the physical grounding of a multi-task pose-image conditioned world model. Our system enables an agent to propose initial action plans and iteratively refine them via optimization and search, reasoning over imagined world ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27599",
+      "published_at": "2026-07-30T02:41:52Z",
+      "updated_at": "2026-07-30T02:41:52Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27784",
+      "title": "DexDirect: Direct Kinesthetic Arm Guidance for Efficient Dexterous Demonstration Collection",
+      "authors": [
+        "Beom Jun Kim",
+        "Shiu-Jen Wang",
+        "Jonathan Liu",
+        "Alvin Zhu",
+        "Quanyou Wang"
+      ],
+      "abstract": "Scalable collection of dexterous manipulation demonstrations remains a major bottleneck for robot learning. High-fidelity interfaces often require costly hardware and extensive setup, while low-setup, low cost alternatives tend to provide less precise control and impose greater cognitive workload on operators. We present DexDirect, a direct kinesthetic arm guidance for efficient dexterous demonstration collection. The operator drags a 6-DoF gravity-compensated robot arm directly by a handle, while a single webcam retargets operator's other hand onto a 16 joints 13-DoF dexterous robot hand. Use",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.27784",
+      "published_at": "2026-07-30T07:17:28Z",
+      "updated_at": "2026-07-30T07:17:28Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28251",
+      "title": "Self-Evolving Learning for Embodied AI with Criticality Model",
+      "authors": [
+        "Linxuan He",
+        "Yuying Tian",
+        "Lingxiang Fan",
+        "Jiaqi Pi",
+        "Yinqiao Lu"
+      ],
+      "abstract": "Despite rapid advances in policy pretraining, embodied AI systems routinely plateau during task-specific finetuning. The root cause lies in how finetuning data are collected: the default pipeline gathers data randomly, treating every sample as informative. Datasets become dominated by nominal scenarios, while rare failure cases--the most valuable for improvement--are missed. We propose a self-evolving method that breaks this plateau. Our core insight is that a state-wise criticality model, learned from the policy's own execution outcomes to predict the probability of future failure, can guide ",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.28251",
+      "published_at": "2026-07-30T14:13:18Z",
+      "updated_at": "2026-07-30T14:13:18Z",
+      "keyword_hits": 3,
+      "search_keyword": "vision language action model",
+      "priority": 30.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28624",
+      "title": "PhiZero: A World Model Built Around Physical Language",
+      "authors": [
+        "Shuyao Shang",
+        "Yuqi Wang",
+        "Ruopeng Gao",
+        "Xu Chen",
+        "Tieniu Tan"
+      ],
+      "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world e",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28624",
+      "published_at": "2026-07-30T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-30T17:59:46Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27703",
+      "title": "SpatialCLI: Learning to Reason With Spatial Tools, Then Without Them",
+      "authors": [
+        "Yang Zhou",
+        "Zixuan Huang",
+        "Sunzhu Li",
+        "Zhuo Yang",
+        "Chen Zhang"
+      ],
+      "abstract": "Vision-language models (VLMs) are increasingly used in embodied agents to interpret visual inputs, reason about spatial relationships, and make task-level decisions based on that reasoning. However, a fundamental capability mismatch remains: general VLMs can reason about the overall task but often miss the visual details that determine success, while specialist vision models can capture those details but cannot translate them into task-level decisions. In this work, we propose SpatialCLI, a framework that teaches VLMs to reason with spatial tools and progressively internalize the specialist pe",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27703",
+      "published_at": "2026-07-30T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-07-30T05:39:01Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28198",
+      "title": "UniCross: Unified Cross-Skill Dexterous Manipulation Synthesis",
+      "authors": [
+        "Hui Zhang",
+        "Julian Ferchow",
+        "Jie Song",
+        "Mirko Meboldt"
+      ],
+      "abstract": "Many dexterous manipulation tasks require the object to remain securely held throughout the interaction. From the perspective of hand-object relational motion, such manipulation comprises four canonical skills: grasping, relocation, in-hand rotation, and in-hand translation. Human hands flexibly compose these skills to accomplish complex tasks. Existing approaches, however, model these skills separately with skill-specific action constraints, objectives, or even dedicated hand morphologies, which breaks the compatibility and continuity required for long-horizon composition. In this work, we pr",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28198",
+      "published_at": "2026-07-30T13:35:45Z",
+      "updated_at": "2026-07-30T13:35:45Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27924",
+      "title": "ODEWorld: A Continuous Predictive Architecture via Physical-Time Flow",
+      "authors": [
+        "Dongxiu Liu",
+        "Haoyi Niu",
+        "Peng Cheng",
+        "Yuan Gao",
+        "Xirui Kang"
+      ],
+      "abstract": "In the physical world we inhabit, space and time are fundamentally continuous. However, existing machine learning paradigms for world modeling are largely confined to discrete-time prediction, thereby exhibiting significant inefficiency in capturing the dynamics of physical world. We introduce Physical-Time Flow (\\textbf{PT-Flow}), a novel approach that learns a continuous latent velocity field operating in physical time. Crucially, the underlying dynamics of sequential data are parameterized by an ordinary differential equation (ODE) embedded in a well-structured representation space. Under t",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.27924",
+      "published_at": "2026-07-30T09:37:30Z",
+      "updated_at": "2026-07-30T09:37:30Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27881",
+      "title": "RoboBRIDGE: A Modular Framework for Bridging Policies to Robust Real-World Robotic Agents",
+      "authors": [
+        "Sihyung Yoon",
+        "Minjong Yoo",
+        "Sanghyun Ahn",
+        "Seojeong Choi",
+        "Honguk Woo"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have attracted growing interest as a scalable approach to robotic manipulation. While these models are effective action predictors, deploying them as robotic agents exposes critical gaps: no mechanism for failure recovery, inconsistent execution over long horizons, and limited robustness to shifts in observations, tasks, or embodiments. Existing solutions address these limitations individually through model retraining or environment-specific modules, yet what is needed is a general framework that systematically transforms a pretrained VLA into a robotic agen",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27881",
+      "published_at": "2026-07-30T08:55:45Z",
+      "updated_at": "2026-07-30T08:55:45Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27782",
+      "title": "RedFlow: Redirect Failure into Action-Level Corrections for Flow-matching VLA Policy",
+      "authors": [
+        "Zhengyang Yan",
+        "Junhao Li",
+        "Fangqi Zhu",
+        "Zijun Wang",
+        "Quanxin Shou"
+      ],
+      "abstract": "Flow-matching Vision-Language-Action (VLA) policies have shown strong potential for robotic manipulation but often suffer from compounding errors caused by distribution shifts during deployment. While offline reinforcement learning (RL) provides a practical way to improve deployed policies using rollout data, existing methods either ignore failure data or exploit it only at the trajectory level, resulting in low learning efficiency and persistent errors. We propose **RedFlow**, a fine-grained offline RL framework that redirects failure experiences into action-level corrective supervision for f",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27782",
+      "published_at": "2026-07-30T07:14:39Z",
+      "updated_at": "2026-07-30T07:14:39Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28362",
+      "title": "ShadowDancer: Teaching Video World Models Any Action by Learning Unified Dynamics Representations from a Video and Its Shadow",
+      "authors": [
+        "Jin Cao",
+        "Zian Meng",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "We present ShadowDancer, a novel approach to any-action, frame-level control of interactive video world models. The obstacle is representational: existing interfaces either encode an action loosely, leaving how it unfolds for the model to improvise, or encode it exactly through structured signals that serve one family and are hard to acquire, so precise control across diverse dynamics remains impractical. Demonstration videos are the natural remedy, specifying any dynamics frame by frame; yet a video shows its dynamics only through one particular appearance, a single shadow of the underlying d",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28362",
+      "published_at": "2026-07-30T15:28:43Z",
+      "updated_at": "2026-07-30T15:28:43Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28287",
+      "title": "Tycho: Active Abstraction with Programmatic World Models for ARC-AGI-3",
+      "authors": [
+        "Jens Lehmann",
+        "Andrei Aioanei",
+        "Sahar Vahdati"
+      ],
+      "abstract": "ARC-AGI-3 turns abstraction into an interactive problem of skill acquisition. A player must infer an unfamiliar game's rules, hidden state, and goal while maintaining action efficiency because every move counts. We formalize these environments as parameterized rendered deterministic Moore machines and introduce Tycho, a coding-agent system that constructs and uses game-specific models during interaction. Tycho separates actionable observations from intermediate animation, level-completion, and game-over frames. From this structured history, an agent can model, test, plan with, repair, or bypas",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28287",
+      "published_at": "2026-07-30T14:34:41Z",
+      "updated_at": "2026-07-30T14:34:41Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28243",
+      "title": "EgoGenesis: Egocentric World-Action Modeling with Online Anchored Projective Memory and Action-3D RoPE",
+      "authors": [
+        "Zexuan Yan",
+        "Yuzhou Wu",
+        "Yue Ma",
+        "Zonghang He",
+        "Kaibo Yin"
+      ],
+      "abstract": "Egocentric video offers rich manipulation experience for embodied AI, yet collecting diverse egocentric data across scenes, objects, motions, and embodiments remains costly. We present \\method, an egocentric world-action simulator that synthesizes controllable, high-quality manipulation videos to expand scarce real-world training data. \\method{} builds on a pretrained video generation prior and introduces two geometry-aware conditioning mechanisms. Online Anchored Projective Memory (OAPM) preserves a first-frame 3D scene anchor while periodically refreshing a recent state during autoregressive",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28243",
+      "published_at": "2026-07-30T14:06:26Z",
+      "updated_at": "2026-07-30T14:06:26Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27511",
+      "title": "Failure Detection for Surgical Robot Imitation Policies via Flow-Matching World Modeling",
+      "authors": [
+        "Zhefeng Huang",
+        "Yilin Cai",
+        "Ankit Patel",
+        "Mohammad Hajiha",
+        "Brendan Browne"
+      ],
+      "abstract": "Imitation learning has shown increasing promise for autonomous robotic surgery, yet safe deployment remains challenging due to the safety-critical nature of surgical tasks and the complexity and variability of surgical environments. Failure detection is therefore an essential safeguard, but its development remains difficult due to the challenges of scarce failure data, highly variable manipulation dynamics, and the need to balance missed detections against disruptive false alarms. To address these challenges, we introduce FoMo-FD (Flow-Matching World Model for Failure Detection), a failure det",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.27511",
+      "published_at": "2026-07-29T22:55:54Z",
+      "updated_at": "2026-07-29T22:55:54Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28226",
+      "title": "Security of World-Model-Based Embodied AI: A Lifecycle of Threats, Defenses, and Evaluation",
+      "authors": [
+        "Fazhong Liu",
+        "Zhuoyan Chen",
+        "Haozhen Tan",
+        "Yan Meng",
+        "Guoxing Chen"
+      ],
+      "abstract": "World models give embodied AI a predictive core: they compress observations into states, simulate action-conditioned futures, and enable planning beyond reactive control. This predictive layer, however, opens a new security boundary-compromise can propagate from data, sensors, prompts, or feedback into physical action. Rather than treating world models as an isolated component, this survey traces threats across their entire lifecycle-from data construction and representation learning, through state grounding and imagination, to trajectory evaluation, execution, and long-term adaptation via mem",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.28226",
+      "published_at": "2026-07-30T13:58:33Z",
+      "updated_at": "2026-07-30T13:58:33Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28442",
+      "title": "ViewMind3D: Modular View-Aware Inference for Training-Free 3D-QA",
+      "authors": [
+        "Ping-Kun Chiang",
+        "Kun-Ru Wu",
+        "Po-han Li",
+        "Sandeep Chinchali",
+        "Ufuk Topcu"
+      ],
+      "abstract": "Recent advances in large language models (LLMs) and vision-language models (VLMs) have enabled new possibilities for 3D question answering (3D-QA), a key capability for embodied AI and robotic perception. However, most existing methods rely on 3D-specific training or fine-tuning with costly annotations, limiting their scalability and real-world applicability. We present \\textbf{ViewMind3D}, a fully training-free and modular framework for 3D spatial reasoning over multi-view observations of a scene without requiring complete 3D reconstruction. The framework decomposes the 3D-QA task into four i",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28442",
+      "published_at": "2026-07-30T16:14:30Z",
+      "updated_at": "2026-07-30T16:14:30Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28596",
+      "title": "FA-RDP: A Frequency-Adaptive Reactive Diffusion Policy for Contact-Rich Manipulation",
+      "authors": [
+        "Lifeng Zhuo",
+        "Wendi Chen",
+        "Han Xue",
+        "Shirun Tang",
+        "Jun Lv"
+      ],
+      "abstract": "In contact-rich manipulation, action multimodality and reactivity dominate different stages of a single episode. Before contact, multiple trajectories might be equally valid, making it important to preserve diverse action modes. After contact, geometric constraints and force limits narrow the solution space, while successful execution demands rapid responses to force feedback. However, standard diffusion policies use a fixed inference frequency and sampling steps throughout the episode, forcing a fundamental compromise: low-frequency, multi-step sampling better preserves pre-contact multimodal",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28596",
+      "published_at": "2026-07-30T17:47:49Z",
+      "updated_at": "2026-07-30T17:47:49Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28560",
+      "title": "X-NavDP: Generalizing Navigation Diffusion Policy to Novel Behavior and Embodiments with Group Q-score Reweighted Matching",
+      "authors": [
+        "Tianyu Yang",
+        "Yiming Zeng",
+        "Wenzhe Cai",
+        "Yuqiang Yang",
+        "Jiaqi Peng"
+      ],
+      "abstract": "Pretraining navigation diffusion policies rely on large-scale expert demonstrations. These data are typically generated by a fully-informed oracle planner suited to a single nominal robot. This limits the policy's generalization to diverse embodiments and challenging scenarios (e.g., escaping dead ends or detouring long obstacles) that demand diverse local reactive behaviors with only onboard local observations. Post-training the policy with reinforcement learning (RL) offers a principled remedy. However, previous RL for diffusion approaches lead to only marginal improvements. This is because ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28560",
+      "published_at": "2026-07-30T17:26:12Z",
+      "updated_at": "2026-07-30T17:26:12Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28416",
+      "title": "FasTac: A Curved Multispectral Vision-Based Tactile Sensor for High-Speed High-Precision 3D Shape and Force Perception",
+      "authors": [
+        "Xiaofan Lu",
+        "Kaiji Huang",
+        "Jiahui Chen",
+        "Yuankai Lin",
+        "Hua Yang"
+      ],
+      "abstract": "Curved tactile fingertips for dexterous manipulation must resolve fine contact geometry, distinguish normal and tangential loads, and capture transient signals. Existing curved vision-based tactile sensors struggle to combine accurate 3D reconstruction, three-axis force estimation, and high-speed processing in a compact form. This article presents FasTac, a curved vision-based tactile sensor integrating multispectral photometric stereo, dynamic-convolution force estimation, and hardware acceleration on a field-programmable gate array (FPGA). Single-image-sensor simultaneous multispectral imagi",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28416",
+      "published_at": "2026-07-30T16:00:51Z",
+      "updated_at": "2026-07-30T16:00:51Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28382",
+      "title": "SemAnCorr: Semantic Anchored Correspondence for Zero-Shot Manipulation Skill Transfer",
+      "authors": [
+        "Xiaoxiang Dong",
+        "William Baron",
+        "Hongyi Chen",
+        "Uksang Yoo",
+        "Jeffrey Ichnowski"
+      ],
+      "abstract": "Transferring manipulation skills across object instances that share functionality but differ in geometry remains a fundamental challenge in robot learning. While recent correspondence methods leverage dense visual descriptors and 3D feature fields, nearest-neighbor feature matching often produces spatially incoherent correspondences that fail to recover the local geometric frames required for reliable skill transfer. We introduce SemAnCorr, a training-free framework that establishes dense correspondence by selecting semantically consistent anchor regions through joint pose-correspondence optim",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28382",
+      "published_at": "2026-07-30T15:41:39Z",
+      "updated_at": "2026-07-30T15:41:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28256",
+      "title": "When Robots Exchange Meaning: A Demo of Goal-Oriented Semantic Communications for Collaborative Robotics",
+      "authors": [
+        "Peizheng Li",
+        "Xinyi Lin",
+        "Sajida Gufran",
+        "Adnan Aijaz"
+      ],
+      "abstract": "Collaborative robotics is a representative task-oriented 6G use-case, where communication quality should be reflected in mission execution, environment understanding, and closed-loop operation rather than packet delivery alone. This demo paper presents a robot-edge semantic communication (SemCom) testbed integrating robot-side visual compression, edge-side semantic mapping, and dashboard-based mission interaction. A mobile robot equipped with RGB-D sensing and LiDAR runs ROS 2, while a Jetson Orin edge node performs reconstruction, RTAB-Map mapping, semantic object handling, and browserbased v",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28256",
+      "published_at": "2026-07-30T14:16:23Z",
+      "updated_at": "2026-07-30T14:16:23Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27922",
+      "title": "Learning Social Robot Navigation By Sensing Human Legs",
+      "authors": [
+        "Alberto Vaglio",
+        "Andrea Garulli",
+        "Antonio Giannitrapani",
+        "Renato Quartullo",
+        "Tommaso Van Der Meer"
+      ],
+      "abstract": "Robots navigating among pedestrians typically sense their surroundings with a 2D LiDAR mounted close to the ground. At that height, the sensor mostly sees moving legs rather than whole people, yet most learning-based navigation methods still treat pedestrians as simple shapes like circles. This paper addresses that gap with CALF (Convolutional Attention for Leg Features), an end-to-end neural architecture that combines convolutional layers, attention, and MLP to interpret leg motion directly from LiDAR scans and produce safe navigation commands. The CALF policy is trained using deep reinforcem",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.27922",
+      "published_at": "2026-07-30T09:35:03Z",
+      "updated_at": "2026-07-30T09:35:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27261",
+      "title": "It's Not Just More Demos: Counterfactual Action Sensitivity Coverage for Data-Efficient Robust Robot Imitation",
+      "authors": [
+        "Giovanni D'urso",
+        "Kaushik Roy",
+        "Nicholas Lawrance",
+        "Brendan Tidd"
+      ],
+      "abstract": "Visuomotor imitation learning has demonstrated success for manipulation tasks. However, the trained policies remain brittle to visual `nuisances', with even minor task-preserving variations such as lighting, distractions or changes in colour result in heavy degradation of the trained policy's performance. While increasing data diversity can improve robustness, it is unclear which additional demonstrations are informative for a particular trained policy. We propose Counterfactual Nuisance Behaviour Cloning (CFNBC), an offline data-selection framework for targeted robustness repair. Starting fro",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.27261",
+      "published_at": "2026-07-29T05:55:57Z",
+      "updated_at": "2026-07-29T05:55:57Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28405",
+      "title": "QuantWAMs: Calibrating at the Right Granularity for World Action Models",
+      "authors": [
+        "Jiacheng Zhou",
+        "Jinfan Lv",
+        "Ruixuan Li",
+        "Longtai Zhang",
+        "Yan Wang"
+      ],
+      "abstract": "World Action Models (WAMs) jointly predict future observations and actions, but their iterative denoising and closed-loop execution make efficient deployment costly. Existing post-training quantization (PTQ) methods are poorly suited to WAMs because they rely on open-loop objectives, homogeneous model assumptions, and calibration distributions that do not reflect deployment. We present QuantWAMs, a PTQ framework that aligns quantization decisions with the calibration context defined by model structure, rollout distribution, and task objective. QuantWAMs introduces three strategies: shared-basi",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.28405",
+      "published_at": "2026-07-30T15:54:29Z",
+      "updated_at": "2026-07-30T15:54:29Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28318",
+      "title": "PathView-Bench: Can Multimodal Large Language Models Achieve Fine-grained Multiscale Understanding of Pathology Images?",
+      "authors": [
+        "Zongyi Chen",
+        "Yu Liang",
+        "Jie Lin",
+        "Liansheng Wang"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) are increasingly used to analyze pathology images. However, dominant multimodal benchmarks in pathology mainly score final diagnostic answers, captions, or reports. These evaluations provide limited insight into whether a model understands the multiscale visual content needed for pathology reasoning and decision-making. We introduce PathVU, a vision-anchored benchmark for fine-grained and multiscale visual understanding in computational pathology. Built from 23 public pathology imaging datasets with human-supervised labels and spatial annotations, PathV",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.28318",
+      "published_at": "2026-07-30T14:53:51Z",
+      "updated_at": "2026-07-30T14:53:51Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27967",
+      "title": "MARS-RA: Rank Aggregation for Credit Assignment via Multimodal Comparisons in Embodied Multi-Agent Cooperation",
+      "authors": [
+        "Dawei Wang",
+        "Di Zhao",
+        "Xinyuan Liu",
+        "Marci Chi Ma",
+        "Xiaoyang Liu"
+      ],
+      "abstract": "Credit assignment is a fundamental challenge in cooperative multi-agent reinforcement learning, particularly in embodied AI settings characterized by limited and delayed feedback as well as dynamically changing numbers of active agents. We propose MARS-RA, a framework that reformulates credit assignment as a rank aggregation problem using contribution-based pairwise comparisons among agents generated by large multimodal models. This shift from absolute to relative estimation ensures robustness against noise and dynamic agent participation, converting comparison results into contribution scores",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27967",
+      "published_at": "2026-07-30T10:14:24Z",
+      "updated_at": "2026-07-30T10:14:24Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.27443",
+      "title": "Leveraging Trajectory Graphs for Pre-Execution Error Diagnosis in Agentic LLM Systems",
+      "authors": [
+        "Xu Zheng",
+        "Zhuomin Chen",
+        "Chaohao Lin",
+        "Hua Wei",
+        "Haifeng Chen"
+      ],
+      "abstract": "Large Language Model~(LLM)-based agents have demonstrated exceptional performance across a wide range of complex interactive tasks. However, they often struggle with long-horizon interactive tasks common in domains, such as embodied AI. The complexity and vast action spaces in these settings lead to compounding errors, where a single suboptimal action can derail an entire trajectory, causing the agent to exhaust its limited step budget on inefficient or unrecoverable paths. To overcome this without costly fine-tuning, we draw inspiration from software debugging, where execution logs are analyz",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.27443",
+      "published_at": "2026-07-29T20:14:43Z",
+      "updated_at": "2026-07-29T20:14:43Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    },
+    {
+      "id": "2607.28487",
+      "title": "AuricularWorld: Hierarchical Action-Guided World Modeling for Fine-Grained Auricular Structure Segmentation from CT Scans",
+      "authors": [
+        "Jingwen Yang",
+        "Senmao Wang",
+        "Luoyao Kang",
+        "Runmeng Cui",
+        "Keying Zhang"
+      ],
+      "abstract": "Fine-grained segmentation of auricular structures in CT is challenging because the ear occupies a small image region, cartilage boundaries are highly irregular, and interfaces between cartilage and surrounding soft tissues are often ambiguous. Clinical annotations may also include both composite structures containing cartilage and adjacent skin and their corresponding cartilage-only regions, producing nested and overlapping labels. We propose a world-model-based segmentation framework that enables iterative anatomical reasoning beyond conventional feed-forward prediction. Built on an encoder-d",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28487",
+      "published_at": "2026-07-30T16:38:30Z",
+      "updated_at": "2026-07-30T16:38:30Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-07-31T05:42:44.692319Z"
+    }
+  ]
+}
