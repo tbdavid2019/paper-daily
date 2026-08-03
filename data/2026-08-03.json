@@ -1,0 +1,462 @@
+{
+  "date": "2026-08-03",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-03T05:50:32.968566Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 64,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 214,
+      "arxiv_keyword": 4,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 632,
+    "after_dedup": 545,
+    "window_start": "2026-07-30",
+    "window_candidates": 476,
+    "already_seen": 262,
+    "new_candidates": 214,
+    "selected_papers": 21,
+    "missing_published_at": 0,
+    "keyword_matched": 21
+  },
+  "papers": [
+    {
+      "id": "2607.29302",
+      "title": "BWM: A Low-Cost High-Fidelity World Simulator for Robot Learning",
+      "authors": [
+        " BWM Team"
+      ],
+      "abstract": "Reliable robot learning requires a world simulator that can predict action consequences before execution on physical hardware, including risky and failure-prone outcomes. Existing physics simulators require substantial asset construction and calibration and still face a sim-to-real gap, while video generators often lack precise control over their responses to fine-grained robot actions. In this paper, we present the Boundless World Model (BWM), an open-source, low-cost, high-fidelity world simulator for robot manipulation. BWM is an action-conditioned world model that combines initial-environm",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.29302",
+      "published_at": "2026-07-31T11:18:17Z",
+      "updated_at": "2026-07-31T11:18:17Z",
+      "keyword_hits": 4,
+      "priority": 55.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.28737",
+      "title": "Mirror Learning",
+      "authors": [
+        "Yunpeng Liu",
+        "Matthew Niedoba",
+        "Oluwanifemi A. Adekanye",
+        "Jason Yoo",
+        "Yingchen He"
+      ],
+      "abstract": "We investigate imitation learning through the lens of third-person observation and propose a framework for mirror learning: acquiring actionable policies from passive observation. While behavior cloning (BC) excels under dense, well-aligned first-person data, it fundamentally fails to leverage the rich observational signals arising from third-person demonstrations that humans and animals routinely exploit. We introduce a method that composes (i) a learned perspective transformation that places learners in demonstrators' shoes using a fine-tuned video diffusion model and (ii) an inverse dynamic",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.28737",
+      "published_at": "2026-07-30T18:00:31Z",
+      "updated_at": "2026-07-30T18:00:31Z",
+      "keyword_hits": 4,
+      "priority": 55.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29596",
+      "title": "FibVLA: An Efficient Temporal Vision-Language-Action Model with Fibonacci Sampling",
+      "authors": [
+        "Li Lin",
+        "Wujun Xu",
+        "Weiwei Meng",
+        "Kaiwen Xia",
+        "Kang Hao Cheong"
+      ],
+      "abstract": "Vision-language-action models (VLAs), which leverage the cognition of multimodal information to infer physical-world actions, provide a generalized solution for embodied AI applications. Conventional VLAs usually concentrate on current digital cognition. While some efforts are made to enhance VLAs' reasoning capabilities by capturing temporal information, encoding the long-context history causes an efficiency-decreasing issue. To reconcile the conflict between capturing temporal information and maintaining inference efficiency in VLAs, this paper introduces FibVLA, an efficient framework featu",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.29596",
+      "published_at": "2026-07-31T16:23:07Z",
+      "updated_at": "2026-07-31T16:23:07Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29172",
+      "title": "CLIFT: Turning Gemini Robotics On-Device into Humanoid Specialists via Non-Invasive Closed-Loop Iterative Fine-Tuning",
+      "authors": [
+        "Yuxin Chen",
+        "Hari Srikanth",
+        "Nathan Jew",
+        "Menglin Wu",
+        "Pengcheng Wang"
+      ],
+      "abstract": "While robot foundation models are growing increasingly capable, the strongest models are typically trained on proprietary data and remain closed-source, limiting downstream users' ability to adapt them to new tasks, embodiments, and deployment settings. Following the LLM community, an emerging access paradigm for closed-weight robot foundation models is the managed supervised fine-tuning (SFT) API, where users submit training data and receive a tuned policy without access to model weights, gradients, or training internals. While such APIs let downstream users leverage powerful proprietary foun",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.29172",
+      "published_at": "2026-07-31T08:50:25Z",
+      "updated_at": "2026-07-31T08:50:25Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29613",
+      "title": "WCM: A World Critic Model for Vision-Language-Action Reinforcement Learning",
+      "authors": [
+        "Senyu Fei",
+        "Xiaopeng Yu",
+        "Siyin Wang",
+        "Xianzhong Zhao",
+        "Jingjing Gong"
+      ],
+      "abstract": "Reinforcement learning (RL) post-training of Vision-Language-Action (VLA) models has shown strong promise for robotic manipulation. Among RL methods, critic-based approaches rely on a value estimator that predominantly operates on single-frame observations or single-frame VLM backbone latents, which is a fundamental mismatch with the partially observable nature of robot control. A naive approach to incorporate observation history into the critic incurs exponential complexity with high-dimensional visual space, and still fails because pure scalar-return regression provides insufficient supervis",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.29613",
+      "published_at": "2026-07-31T16:48:45Z",
+      "updated_at": "2026-07-31T16:48:45Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29622",
+      "title": "RayViT: Ray-Conditioned Visual Representations for Viewpoint-Robust Imitation Learning",
+      "authors": [
+        "Qian Wang",
+        "Longrui Chen",
+        "Peiran Sun",
+        "Aleksandar Taranovic",
+        "Niklas Freymuth"
+      ],
+      "abstract": "Visual imitation learning enables robots to acquire visuomotor skills directly from images, yet RGB observations lack explicit geometric cues, making learned policies brittle to camera perturbations. To address this, we propose \\textbf{Ray-conditioned Vision Transformer Encoder (RayViT)}, a lightweight architecture that injects camera geometry into pretrained ViT backbones. RayViT represents camera geometry as a Plücker ray map, patchifies it into ray features, and uses gated cross-attention to produce a ray-conditioned class token. These ray features are added as dense positional embeddings, ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2607.29622",
+      "published_at": "2026-07-31T16:56:33Z",
+      "updated_at": "2026-07-31T16:56:33Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29569",
+      "title": "Safe Vision Language Action Models via Barrier Enhanced Flow Matching",
+      "authors": [
+        "Kasra Sinaei",
+        "Hung-Chieh Wu",
+        "Donald Ebeigbe"
+      ],
+      "abstract": "This article presents a modular inference framework that integrates Flow Matching generative models with formal Control Barrier Function (CBF) safety guarantees. Unlike existing methods that apply external safety filters to a model's final output, our approach modifies the Flow Matching denoising process within the model to inherently generate safe trajectories. By employing a smooth Log-Sum-Exponential aggregate barrier, we enforce safety over entire action chunks. This aggregate barrier ensures a minimal increase in computational overhead and does not alter the semantic intent of the model. ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2607.29569",
+      "published_at": "2026-07-31T15:56:19Z",
+      "updated_at": "2026-07-31T15:56:19Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29169",
+      "title": "ActFovea: Runtime Safeguarding for VLA Policies via Spatiotemporal Visual-Action Consistency",
+      "authors": [
+        "Wenda Yu",
+        "Tianshi Wang",
+        "Fengling Li",
+        "Xin Li",
+        "Jingjing Li"
+      ],
+      "abstract": "Vision-language-action (VLA) policies achieve strong performance in robotic manipulation but remain vulnerable to runtime disturbances that break the temporal alignment among visual observations, robot states, and executed actions. We introduce ActFovea, a plug-and-play safeguarding framework that detects and mitigates such failures without retraining or modifying the underlying VLA policy. ActFovea uses robot kinematics, proprioceptive states, and recent actions to construct action-conditioned foveated regions that retain contact-relevant areas and predicted motion corridors while suppressing",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.29169",
+      "published_at": "2026-07-31T08:47:57Z",
+      "updated_at": "2026-07-31T08:47:57Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29031",
+      "title": "Auto-JEPA: A Latent World Model of Continuous Intent for End-to-End Autonomous Driving",
+      "authors": [
+        "Jiwei Yang",
+        "Zhengxian Chen",
+        "Chaosheng Huang",
+        "Jun Li"
+      ],
+      "abstract": "Existing autonomous-driving world models typically perform dense prediction of future videos, occupancy states, BEV representations, or agent motion. We argue that planning need not reconstruct the complete future world, but only focus on scene features that affect future ego action. Based on this perspective, we propose Auto-JEPA, an action-oriented latent world model that learns continuous future driving intent through joint-embedding prediction. Given visual observations, egomotion history, and navigation commands, Auto-JEPA predicts an intent embedding aligned with the latent representatio",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.29031",
+      "published_at": "2026-07-31T05:10:23Z",
+      "updated_at": "2026-07-31T05:10:23Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29482",
+      "title": "Temporal Policy: History-Initialized Action Generation for Robotic Learning from Demonstration",
+      "authors": [
+        "Dylan Miller",
+        "Martin Jagersand"
+      ],
+      "abstract": "By relying on independent couplings from uninformative Gaussian priors, standard diffusion and flow matching models are forced to learn complex, high-cost vector fields to reach the physical action space. Generative models excel at capturing multimodal behaviors for robotic Learning from Demonstration (LfD), but often suffer from high inference cost. This paper introduces Temporal Policy, a generative framework based on stochastic interpolants that formulates action generation as a temporally coupled transport problem. By initializing the generative flow at the robot's recent history, we expli",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29482",
+      "published_at": "2026-07-31T14:47:02Z",
+      "updated_at": "2026-07-31T14:47:02Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29393",
+      "title": "AquaJEPA: Action-Conditioned Multimodal Predictive Representations for Underwater Robot Dynamics",
+      "authors": [
+        "Alan-Barsag Gazzaev",
+        "Alexey Gavrilov",
+        "Sergey Muravyov"
+      ],
+      "abstract": "Underwater robots combine complementary sensors whose reliability changes abruptly with water visibility, viewpoint, and vehicle motion. We introduce AquaJEPA, an action-conditioned joint-embedding predictive model that fuses an RGB camera, forward-looking sonar, and proprioception with explicit sensor validity. It predicts a future latent target conditioned on eight-thruster commands and supplies velocity and sonar-profile predictions to a shared receding-horizon planner. We study the method in Stonefish against reactive, state-only, ordinary multimodal, supervised dynamics, and recurrent wor",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29393",
+      "published_at": "2026-07-31T13:11:11Z",
+      "updated_at": "2026-07-31T13:11:11Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29285",
+      "title": "TRACT: Temporally Routed Action Chunks with Chronological Phase Authority for Contact-Rich Manipulation",
+      "authors": [
+        "Jiahao Liu",
+        "Kento Kawaharazuka",
+        "Tasuku Makabe",
+        "Kei Okada"
+      ],
+      "abstract": "Action chunking shortens the effective decision horizon of robot imitation learning by predicting multiple future actions, while conventional phase conditioning describes the current control instant. When a predicted horizon crosses a procedural boundary, assigning the current phase to the entire chunk creates a structural temporal mismatch. We present TRACT, which factorizes phase-structured action chunking into an accepted current phase and a single CURRENT-to-NEXT boundary inside the future horizon. A task-local graph constrains chronological phase authority, and a cumulative boundary distr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29285",
+      "published_at": "2026-07-31T10:59:14Z",
+      "updated_at": "2026-07-31T10:59:14Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29231",
+      "title": "TacPrint: A Wearable Fingertip Tactile Sensor for Human-to-Robot Contact Reproduction",
+      "authors": [
+        "Yongxi Liu",
+        "Chaofan Zhang",
+        "Xingyu Zhang",
+        "Xiangyin Bao",
+        "Boyue Zhang"
+      ],
+      "abstract": "Human-centric data collection is emerging as a significant paradigm for robot skill acquisition, but seamlessly integrating low-cost, scalable tactile sensing systems that capture fine-grained fingertip interactions without compromising natural operation remains a key challenge. This reduces the reliability of human-to-robot transfer in contact-rich tasks. In this work, we present TacPrint, a wearable fingertip tactile sensor, where protrusions on the inner surface of the silicone skin are aligned one-to-one with 24 capacitive taxels to enable localized capacitive responses. A real-to-sim-to-r",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29231",
+      "published_at": "2026-07-31T10:04:10Z",
+      "updated_at": "2026-07-31T10:04:10Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29617",
+      "title": "When Does On-Policy Interaction Help? Representational Tradeoffs in Value-Based Imitation Learning",
+      "authors": [
+        "Luca Viano",
+        "Antoine Moulin",
+        "Audrey Huang",
+        "Volkan Cevher",
+        "Philip Amortila"
+      ],
+      "abstract": "Imitation learning (IL)---training an agent to replicate expert behavior from demonstrations---underpins applications from robotics to language model training. Standard approaches such as Behavior Cloning (BC) are known to suffer from compounding errors and performance plateaus, particularly when the learner cannot perfectly represent the expert's policy (as is typical, e.g., in distillation). Two interventions are widely understood empirically to improve performance: querying the expert interactively along the learner's own trajectories, and using value function estimation en route to generat",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.29617",
+      "published_at": "2026-07-31T16:52:47Z",
+      "updated_at": "2026-07-31T16:52:47Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29687",
+      "title": "Diagnosing Compositional Generalization in Sequential Robot Tasks",
+      "authors": [
+        "Yixiao Wang",
+        "Cheng-En Wu",
+        "Lingfeng Sun",
+        "Pengcheng Wang",
+        "Xiang Ji"
+      ],
+      "abstract": "Sequential robot manipulation requires policies to execute novel combinations of familiar instruction components. However, collecting demonstrations for all possible instruction tuples is combinatorially expensive, while sparsely covered datasets often fail under out-of-distribution recombination. This paper studies compositional generalization through the lens of instruction-space coverage. We decompose the generalization gap into three sources: \\textit{marginal instruction shift}, \\textit{instruction-compositional shift}, and \\textit{context--action shift}. This decomposition allows us to di",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29687",
+      "published_at": "2026-07-31T17:59:59Z",
+      "updated_at": "2026-07-31T17:59:59Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29625",
+      "title": "Balancing of Humanoid with Object Mass: Trade-off Analyses and Lifting Control",
+      "authors": [
+        "Hyunjong Song",
+        "William Z. Peng",
+        "Joo H. Kim"
+      ],
+      "abstract": "The demand for humanoid loco-manipulation tasks with an object has recently increased, and most existing control approaches for stability in such tasks rely on heuristics or machine-learning techniques. This study rigorously analyzes and exploits the dynamic effects of the object mass on balance stability. By formulating the object mass parameters in the whole-body dynamics with distributed contact wrenches and centers of pressure at the stance contacts, their nonlinear effects on the system momenta and constraints are quantified. The dynamic models and constraints are incorporated into the co",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29625",
+      "published_at": "2026-07-31T16:57:51Z",
+      "updated_at": "2026-07-31T16:57:51Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29517",
+      "title": "STAGE: STyle-controllable Action GEneration for personalized autonomous driving",
+      "authors": [
+        "Zihao Liu",
+        "Xing Liu",
+        "Yizhai Zhang",
+        "Panfeng Huang"
+      ],
+      "abstract": "Driving style refers to the behavioral preferences that drivers maintain during driving, shaped by their diverse experiences, habits, and needs, and is typically reflected in varying levels of aggressiveness. If humans choose to use autonomous driving systems, they would expect the driving style of the systems to closely resemble their own habit. However, this is challenging for current industrial autonomous driving systems. To address this, we developed a style controllable action generation method, STAGE, for driving tasks. Its training process is based on imitation learning, incorporating b",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29517",
+      "published_at": "2026-07-31T15:17:50Z",
+      "updated_at": "2026-07-31T15:17:50Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29271",
+      "title": "MDIR: A Task-Manifold Impedance Retargeting Method for Contact-Rich Teleoperation",
+      "authors": [
+        "Liu Jiahao",
+        "Kento Kawaharazuka",
+        "Tasuku Makabe",
+        "Kei Okada"
+      ],
+      "abstract": "Fixed Cartesian impedance makes contact-rich teleoperation demonstrations practical, but gains that secure progress and contact support also determine impact and force variability. We study single-demonstration controller-to-controller impedance retargeting. Given one fixed Cartesian impedance command sequence {K0, D0, xcmd}, Manifold-Decomposed Impedance Retargeting (MDIR) deterministically reparameterizes the recorded controller into an executable task-channel variable-impedance command. MDIR targets this local retargeting problem by preserving projected task-channel responses near the demon",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29271",
+      "published_at": "2026-07-31T10:41:45Z",
+      "updated_at": "2026-07-31T10:41:45Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29227",
+      "title": "Event-Based Upper-Body Humanoid Teleoperation Under Challenging Illumination",
+      "authors": [
+        "Haoyu Fu",
+        "Zhou Ge",
+        "Chengze Li",
+        "Chenzhao Sun",
+        "Ze Cui"
+      ],
+      "abstract": "We present a real-time upper-body human-to-humanoid motion imitation framework driven by neuromorphic event-based vision. This work addresses practical perceptual bottlenecks of conventional frame-based RGB sensors, specifically their difficulty in high dynamic range (HDR) scenes and rapid motions due to fixed integration times. By leveraging the Prophesee EVK4 event camera, which operates asynchronously with high temporal resolution and a dynamic range exceeding 120 dB, our system supports stable tracking in conditions where standard vision pipelines degrade, such as severe backlighting and v",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.29227",
+      "published_at": "2026-07-31T09:58:15Z",
+      "updated_at": "2026-07-31T09:58:15Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.28952",
+      "title": "Advances, challenges, and opportunities for legged robots",
+      "authors": [
+        "Jonas Frey",
+        "Matías Mattamala",
+        "Hae-Won Park",
+        "Mayank Mittal",
+        "Georg Martius"
+      ],
+      "abstract": "Humanoid and quadrupedal robots have the potential to revolutionize the way we work, interact, and coexist with intelligent machines. To understand their effects on society and how they can enable scientific discovery, we assess the current capabilities of these systems along hardware, locomotion, autonomy, data, and applications. We identify recent advances and key open challenges that must be overcome to enable widespread adoption and new use cases for legged robots. Last, we provide an outlook on the future of legged robots, exploring their ethical considerations, economic potential, policy",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2607.28952",
+      "published_at": "2026-07-31T02:16:54Z",
+      "updated_at": "2026-07-31T02:16:54Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    },
+    {
+      "id": "2607.29491",
+      "title": "DreamQAS: Learning a Decision-Useful World Model for VQE-Efficient Quantum Architecture Search",
+      "authors": [
+        "Jiayang Niu",
+        "Yan Wang",
+        "Jie Li",
+        "Ke Deng",
+        "Azadeh Alavi"
+      ],
+      "abstract": "Reinforcement-learning-based quantum architecture search (RL-QAS) repeatedly optimizes a variational quantum eigensolver (VQE) after extending a circuit, although circuit construction and action legality are deterministic and known. We introduce DreamQAS, a model-based RL framework that preserves these exact circuit dynamics and learns only the expensive post-VQE feedback. A recurrent randomized-prior ensemble predicts an oracle-free score relative to an empirical energy frontier and supports multi-step imagined policy learning over explicit legal circuits. Ranking-based activation, uncertaint",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2607.29491",
+      "published_at": "2026-07-31T14:58:23Z",
+      "updated_at": "2026-07-31T14:58:23Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-03T05:50:32.968566Z"
+    }
+  ]
+}
