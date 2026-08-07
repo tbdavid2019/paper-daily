@@ -1,0 +1,648 @@
+{
+  "date": "2026-08-07",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-07T04:30:55.029942Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 178,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 10,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 788,
+    "after_dedup": 692,
+    "window_start": "2026-08-03",
+    "window_candidates": 667,
+    "already_seen": 353,
+    "new_candidates": 314,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 44
+  },
+  "papers": [
+    {
+      "id": "2608.05369",
+      "title": "World-to-Wrist: Task-Conditioned Future Wrist Modeling for Fine-Grained Robot Manipulation",
+      "authors": [
+        "Yuhao Pan",
+        "Haosong Peng",
+        "Zhengshen Zhang",
+        "Zhengyang Yan",
+        "Yalun Dai"
+      ],
+      "abstract": "Vision-language-action (VLA) models often treat main-view and wrist-view observations as parallel visual inputs, overlooking their distinct roles in robot manipulation. Fine-grained manipulation, however, benefits from anticipating how wrist-local interactions may evolve under the global task context. To address this limitation, we present World-to-Wrist VLA (W2-VLA), a VLA model for fine-grained robot manipulation with task-conditioned future wrist modeling. Given current multi-view observations and a task instruction, W2-VLA contextualizes a set of latent modeling tokens as a compact interfa",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05369",
+      "published_at": "2026-08-05T00:00:00.000Z",
+      "keyword_hits": 3,
+      "updated_at": "2026-08-05T19:48:47Z",
+      "priority": 60.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05948",
+      "title": "GAUGE: A Measurement-Grounded Benchmark for Physical Fidelity in Simulation Engines and Video World Models",
+      "authors": [
+        "Shuai Wang",
+        "Yaxin Feng",
+        "Xuekun Jiang",
+        "Shihan Tian",
+        "Ningyu Yan"
+      ],
+      "abstract": "Physics engines facilitate large-scale training and evaluation for embodied intelligence, while generative video world models are emerging as implicit simulators of future states and interactions. However, existing evaluations of physical fidelity are often conducted in isolation and rely heavily on perceptual similarity or human judgments, providing limited insight into which physical principles or parameters are violated. We introduce GAUGE, a real-world-grounded diagnostic benchmark for jointly evaluating how numerical simulators and generative video world models reproduce or deviate from r",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05948",
+      "published_at": "2026-08-06T12:19:38Z",
+      "updated_at": "2026-08-06T12:19:38Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05747",
+      "title": "GST-Bench: Can VLMs Develop Global Spatial Awareness from Video?",
+      "authors": [
+        "Qifeng Zhang",
+        "Kaixiang Huang",
+        "Heng Dong",
+        "Huang Fang",
+        "Junting Chen"
+      ],
+      "abstract": "Spatial intelligence is fundamental to embodied agents, yet existing benchmarks focus on local spatial perception from single or few viewpoints, overlooking global spatial awareness over continuous, long-horizon visual streams. To address this limitation, we introduce the Global-Spatial-Temporal Benchmark (GST-Bench), a VQA benchmark for global spatial intelligence in video understanding, comprising human-verified questions derived from 6,790 minutes of synthetically generated video. It requires models to perform accurate spatial inference from novel viewpoints unseen in the input video and to",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05747",
+      "published_at": "2026-08-06T00:00:00.000Z",
+      "keyword_hits": 3,
+      "updated_at": "2026-08-06T08:33:13Z",
+      "priority": 45.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05738",
+      "title": "In-Context VLA: Endowing Vision-Language-Action Models with Language via In-Context Post-Training and Agentic Tool Use",
+      "authors": [
+        "Jiarui Yang",
+        "Wen Huang",
+        "Jiale Zhang",
+        "Maowei Hu",
+        "Hang Guo"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have become the dominant recipe for generalist manipulation, yet they are almost universally trained by behavior cloning: a policy imitates expert action chunks conditioned on a static image and a fixed instruction. A natural remedy is to inject explicit reasoning through textual chain-of-thought (CoT). We show, both empirically and analytically, that free-form textual CoT degrades low-level control: the reasoning it produces is ungrounded, its latency breaks closed-loop timing, and, crucially, the reasoning and action tokens are optimized against conflictin",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.05738",
+      "published_at": "2026-08-06T08:21:02Z",
+      "updated_at": "2026-08-06T08:21:02Z",
+      "keyword_hits": 3,
+      "priority": 45.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06374",
+      "title": "DyPES-VLA: Learning Shared Dynamics Priors and Embodiment-Specific Control for Cross-Embodiment Manipulation",
+      "authors": [
+        "Junfeng Li",
+        "Junjie He",
+        "Zhide Zhong",
+        "Yangyang Zheng",
+        "Pingyue Sheng"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have become a powerful paradigm for robot manipulation, but training a single generalist policy for heterogeneous robot embodiments remains an open problem. Existing methods have two main limitations. First, they underuse dynamics priors shared across diverse visual and interaction data, limiting cross-embodiment transfer. Second, they require extensive manual preprocessing to convert embodiment-specific actions into a common format. To overcome these limitations, we propose DyPES-VLA, a cross-embodiment VLA that learns shared Dynamics Priors and Embodiment-",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06374",
+      "published_at": "2026-08-06T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-08-06T17:59:20Z",
+      "priority": 35.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05970",
+      "title": "SkillMemo: Expert-guided Skill Memory Framework for Compositional Embodied Manipulation",
+      "authors": [
+        "Changyuan Wang",
+        "Chubin Zhang",
+        "Zhenyu Wu",
+        "Runhao Li",
+        "Angyuan Ma"
+      ],
+      "abstract": "Embodied visuomotor models, including Diffusion Policy (DP) and Vision-Language-Action (VLA) models, have demonstrated promising performance on robotic manipulation benchmarks. However, their potential remains fundamentally constrained by the scarcity of large-scale embodied trajectory datasets, leading to insufficient compositional generalization in out-of-distribution (OOD) scenarios with limited capability to capture reusable skill structures. To address this limitation, we propose Skill-Based Memory (SkillMemo) framework that implicitly decomposes long-horizon demonstrations into latent at",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.05970",
+      "published_at": "2026-08-06T12:46:13Z",
+      "updated_at": "2026-08-06T12:46:13Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06332",
+      "title": "GeniWorld: A Generalizable Interactive World Model for Robotic Manipulation via Visual Actions",
+      "authors": [
+        "Chenghao Gu",
+        "Hanyang Yu",
+        "Jingbo Zhang",
+        "Haitao Lin",
+        "Wenyao Zhang"
+      ],
+      "abstract": "Generalist robot policies exhibit strong capabilities, but their robustness in complex and unseen environments remains limited. Scaling robot learning and evaluation in diverse real-world environments remains costly and challenging. Action-conditioned world models offer a promising alternative, but they often suffer from limited action controllability and poor generalization to out-of-distribution (OOD) scenarios. To this end, we present GeniWorld, an interactive world model for robots that generalizes robustly across unseen scenarios. Building on pretrained video generative models, we use URD",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06332",
+      "published_at": "2026-08-06T17:40:32Z",
+      "updated_at": "2026-08-06T17:40:32Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06221",
+      "title": "Robot Learning from Human Demonstrations: Handwritten Alphabet Trajectories and Human-Likeness Evaluation",
+      "authors": [
+        "Alperen Kenan",
+        "Paul Bremner",
+        "Manuel Giuliani"
+      ],
+      "abstract": "Learning from demonstration (LfD) provides a developmental framework through which robots can develop motor skills by observing and imitating human dynamics, reducing reliance on explicit programming to teach a skill to a robot. The resulting human-like robot motion is recognised as a key factor in building trust and enabling natural collaboration in human-robot interaction. This paper presents a framework for learning human-like robot motion from demonstration, including data collection, probabilistic trajectory learning, and perceptual user evaluation. A dataset of 3,142 handwriting demonstr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06221",
+      "published_at": "2026-08-06T16:12:18Z",
+      "updated_at": "2026-08-06T16:12:18Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06210",
+      "title": "VIDP: Variable Impedance Diffusion Policy for Compliant Robot Manipulation from Diverse Demonstrations",
+      "authors": [
+        "Hisham Khalil",
+        "Neil Fernandes",
+        "Thomas M. Kwok",
+        "Hsiu-Chin Lin",
+        "Yue Hu"
+      ],
+      "abstract": "Contact-rich manipulation requires precise tracking and mechanical compliance, where variable impedance control can improve robustness in task success, whereas static compliance cannot adapt to varying contact constraints. Variable impedance skills can be learned from demonstrations, avoiding complex modeling, but compliance is a hidden variable in force-agnostic kinematic data. While existing methods infer compliance from trajectory variations, these variations may reflect geometric adaptation and not intentional compliance when subject to changing spatial layouts. Therefore, this letter intr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06210",
+      "published_at": "2026-08-06T16:03:00Z",
+      "updated_at": "2026-08-06T16:03:00Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05999",
+      "title": "Beyond Flat Policies: Hierarchical Post-Training for Embodied Agents in Robotic Manipulation",
+      "authors": [
+        "He Kong",
+        "Zengjue Chen",
+        "Qi Wang",
+        "Qianli Xing",
+        "Runliang Niu"
+      ],
+      "abstract": "Vision-language-action (VLA) models have demonstrated remarkable capabilities in robotic manipulation by leveraging pretrained vision-language models. However, existing post-training methods predominantly optimize VLA models as flat policies, making it difficult to explicitly model task progression and perform robust long-horizon manipulation. Although hierarchical approaches introduce task decomposition, they mainly rely on supervised learning from offline demonstrations and cannot effectively improve execution through online interaction. To address this limitation, we propose Hierarchical Ro",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.05999",
+      "published_at": "2026-08-06T13:07:56Z",
+      "updated_at": "2026-08-06T13:07:56Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05242",
+      "title": "Disentangling 3D Modeling from Spatial Reasoning",
+      "authors": [
+        "Haoze Sun",
+        "Jiequan Cui",
+        "Qingshan Xu",
+        "Richang Hong"
+      ],
+      "abstract": "In this work, we explore an alternative paradigm for spatial reasoning by explicitly disentangling 3D perception from reasoning, rather than jointly acquiring implicit 3D perception and reasoning through large-scale training. Our key observation is that modern perception models excel at estimating continuous 3D geometry, whereas large language models (LLMs) are particularly effective at compositional and symbolic reasoning. Motivated by these complementary strengths, we propose the Disentangled Spatial Reasoner (DiSR), a simple yet effective framework that reconstructs the physical world into ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05242",
+      "published_at": "2026-08-05T14:32:48Z",
+      "updated_at": "2026-08-05T14:32:48Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06197",
+      "title": "EnvACE: Internalizing Environment Dynamics via World Rehearsal for Agentic Reinforcement Learning",
+      "authors": [
+        "Zishan Xu",
+        "Zhiyuan Yao",
+        "Yuxin Chen",
+        "Yifu Guo",
+        "Zhengxi Lu"
+      ],
+      "abstract": "Training large language model agents for long-horizon tool use typically relies on interactions with real or synthesized executable environments, whose construction and verification are costly, or on external simulators that are difficult to ground. We introduce EnvACE, an agentic reinforcement learning method that replaces external environment interaction during training with world rehearsal. The policy alternates between acting and rehearsal: it first generates a tool call, then plays the role of the environment to produce the response induced by that action, and conditions subsequent decisi",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.06197",
+      "published_at": "2026-08-06T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-06T15:54:36Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06170",
+      "title": "Prior-SG: Task and Prior Driven Region Segmentation for Scene Graphs in Arbitrarily-Structured Environments",
+      "authors": [
+        "Giorgio Tonetti",
+        "Laurent Kneip",
+        "Abel Gawel",
+        "Marco Hutter"
+      ],
+      "abstract": "Hierarchical 3D scene graphs are a promising representation for high-level spatial reasoning in autonomous mobile platforms. However, existing extraction frameworks typically rely on purely local visual clustering or strict geometric heuristics, such as wall-separated rooms, which fail in open-plan or arbitrarily-structured environments. We propose Prior-SG, a task- and prior-driven framework that casts scene graph generation fundamentally as a probabilistic alignment problem. As the robot explores, it continuously aggregates an incoming RGB-D sensor stream into a physically grounded Instance ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.06170",
+      "published_at": "2026-08-06T15:36:12Z",
+      "updated_at": "2026-08-06T15:36:12Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05975",
+      "title": "TRACE: Learned Proprioceptive Odometry for Legged Robots under Unreliable Contact Conditions",
+      "authors": [
+        "Taehyeon Kong",
+        "Woojin Kim",
+        "Jemin Hwangbo"
+      ],
+      "abstract": "In this paper, we present TRACE (Tokenized Robust Attention for Contact-Aware Estimation), an end-to-end learned proprioceptive odometry estimator for legged robots under unreliable contact conditions. The proposed estimator directly predicts relative displacement, relative rotation, and body-frame velocity from a recent history of onboard inertial and joint measurements. To improve robustness under unreliable contact conditions, we introduce a foot-aware cross-attention module that adaptively weights IMU and leg-wise kinematic tokens without relying on manually defined contact or slip thresho",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.05975",
+      "published_at": "2026-08-06T12:53:33Z",
+      "updated_at": "2026-08-06T12:53:33Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05799",
+      "title": "XEWorld: Can Action-Conditioned World Models Generalize to Unseen Robot Embodiments?",
+      "authors": [
+        "Yixiang Chen",
+        "Jiabing Yang",
+        "Yuan Xu",
+        "Qisen Ma",
+        "Keji He"
+      ],
+      "abstract": "Action-conditioned world models are promising learned simulators for robotic manipulation, yet evaluating them exclusively on training robots fails to reveal whether they capture physical dynamics or merely memorize visual patterns. To answer whether a model can faithfully render a robot it has never seen, we introduce XEWorld, a controlled cross-embodiment testbed for world models that isolates embodiments by evaluating held-out robots within physically identical scenes. Our systematic analysis uncovers a shared architectural bottleneck: current models act primarily as 2D visual pattern match",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05799",
+      "published_at": "2026-08-06T09:35:33Z",
+      "updated_at": "2026-08-06T09:35:33Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05684",
+      "title": "Nonvisual Classification of Ground-Condition by Artificial Proprioception in an Amoeba-Inspired Autonomous Walking Robot",
+      "authors": [
+        "Hyoto Yamaguchi",
+        "Zenji Yatabe",
+        "Seiya Kasai"
+      ],
+      "abstract": "Nonvisual classification of ground condition based on a multimodal sensing approach was investigated for an amoeba-inspired autonomous walking robot. To classify ground condition without image sensing and processing, we implemented artificial proprioception by integrating a three-axis accelerometer, eight foot pressure sensors, and reservoir computing (RC). Even when large fluctuations in the sensor outputs are caused by dynamic motions of a four-legged robot in walking, our system can classify the ground condition, flat or rough, with high accuracy. We demonstrate on-site switching of walking",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.05684",
+      "published_at": "2026-08-06T07:19:02Z",
+      "updated_at": "2026-08-06T07:19:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05215",
+      "title": "VLAff: Vision-Language-Affordance Model for Unified Actionable Affordances",
+      "authors": [
+        "Jihoon Oh",
+        "Kento Kawaharazuka",
+        "Kei Okada"
+      ],
+      "abstract": "Learning manipulation skills from human videos is promising for scalable robot learning. However, the embodiment mismatch between humans and robots makes this challenging. One promising solution is to learn object-centric actionable affordances that are embodiment-agnostic. In this work, we propose a framework that leverages egocentric human videos with state-of-the-art 3D Structure-from-Motion and hand mesh reconstruction to extract actionable affordances such as visual, grasp, and trajectory affordances that explicitly encode where to interact, how to grasp, and how to move. We construct Ego",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05215",
+      "published_at": "2026-08-05T10:15:55Z",
+      "updated_at": "2026-08-05T10:15:55Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06375",
+      "title": "$ω$-0: A Latent Predictive World Action Model for Concurrent Humanoid Loco-Manipulation",
+      "authors": [
+        "Zhe Li",
+        "Zhenzhe Zhang",
+        "Yangyang Wei",
+        "Wenjie Zhang",
+        "Xichen Yuan"
+      ],
+      "abstract": "Humanoid household tasks often require concurrent loco-manipulation, where the robot must move, adjust posture, maintain balance, and manipulate objects as a single coordinated behavior. Yet existing humanoid policies typically decompose locomotion and manipulation, while recent world-action models remain either arm-centric or video-centered. We present $ω$-0, a latent predictive whole-body world-action model for real-world humanoid concurrent loco-manipulation. Given a language instruction, current visual observation, and robot proprioceptive state, $ω$-0 directly predicts controller-compatib",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06375",
+      "published_at": "2026-08-06T17:59:31Z",
+      "updated_at": "2026-08-06T17:59:31Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05674",
+      "title": "JoyAI-RA 0.5: Scaling Robot Manipulation Learning via Dual Action Alignment",
+      "authors": [
+        "JoyAI-RA Team"
+      ],
+      "abstract": "Robot data is scarce, so generalist policies need to learn from heterogeneous sources, including human egocentric video, simulation, and real robots, which differ in supervision and embodiment, with action labels missing or mutually incompatible. Human egocentric data scale best but sit farthest from robot data, and naive pooling causes negative transfer rather than knowledge sharing. We propose JoyAI-RA 0.5, a generalist Vision-Language-World-Action (VLWA) framework that couples physical world-dynamics priors with visual semantics and scales manipulation learning across such data via dual act",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.05674",
+      "published_at": "2026-08-06T07:14:55Z",
+      "updated_at": "2026-08-06T07:14:55Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06227",
+      "title": "From Passive Mirrors to Active Agents: Holonic Digital Twins for Physical AI over Networks",
+      "authors": [
+        "Christo Kurisummoottil Thomas",
+        "Omar Hashash",
+        "Walid Saad"
+      ],
+      "abstract": "Despite advances in artificial intelligence (AI) across multiple sectors, today's AI tools, including deep learning and generative AI, still fail when embedded into physical systems, such as robots and vehicles operating under real-world physical laws. This stems from their inability to maintain reliable world models for long-horizon planning under uncertainty and generalize to unseen scenarios. In this context, wireless networks, through pervasive sensing and communication, can orchestrate physical intelligence. However, current architectures optimize throughput, latency, and reliability and ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.06227",
+      "published_at": "2026-08-06T16:17:43Z",
+      "updated_at": "2026-08-06T16:17:43Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06020",
+      "title": "From Economic Agents to Agentic Economies: A Systems Blueprint for Economic World Models",
+      "authors": [
+        "Jiale Han",
+        "Xiang Li",
+        "Jing Qian",
+        "Wenyuan Gu",
+        "Pin Gao"
+      ],
+      "abstract": "Economic World Models (EWMs) are generative economic models that simulate how economies evolve from within by modeling heterogeneous agents, their beliefs and actions, and the market and institutional mechanisms through which their interactions produce aggregate outcomes. This paper develops an implementation roadmap for building economic world models as generative engines in which heterogeneous agents act, interact, adapt, and co-evolve with markets and institutions, thereby producing economic dynamics from the inside. We organize EWM systems into a six-level capability ladder, from fixed rul",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.06020",
+      "published_at": "2026-08-06T13:26:46Z",
+      "updated_at": "2026-08-06T13:26:46Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05706",
+      "title": "LAWM-3D: Learning 3D-Aware Latent Actions from Human Videos for Generalizable Robot World Models",
+      "authors": [
+        "Jiarui Yang",
+        "Jiale Zhange",
+        "Jiawei Li",
+        "Hang Guo",
+        "Wen Huang"
+      ],
+      "abstract": "World models enable agents to perform forward rollout and planning without real-world interaction. However, their application in open-world embodied intelligence remains limited by the high cost of action annotations and the heterogeneity of action spaces across platforms. Recently, latent action models (LAMs) have alleviated this bottleneck by learning action representations directly from unlabeled human videos in a self-supervised manner. Nevertheless, most existing LAMs rely on single-view inputs and operate primarily in 2D pixel space, raising a fundamental question: can simply incorporati",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.05706",
+      "published_at": "2026-08-06T07:47:01Z",
+      "updated_at": "2026-08-06T07:47:01Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.04378",
+      "title": "Helping Music Co-Creation Agents 'Listen' Well: Hierarchical Self-Supervised World Models for Understanding and Generation",
+      "authors": [
+        "Scott H. Hawley"
+      ],
+      "abstract": "Collaborative music agents need internal representations rich enough to support both understanding and generation, yet flexible enough for a workflow where the human retains agency. We present a hierarchical self-supervised ``world model'' for symbolic music: a 2.55M-parameter Swin V2 encoder trained on MIDI piano-roll images with JEPA-style objectives (pitch- and time-shift equivariance, masked embedding prediction, and a distributional regularizer), using no labels and no music-theory vocabulary. Probing the frozen embeddings shows that the level at which a musical property becomes decodable",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2608.04378",
+      "published_at": "2026-08-05T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06354",
+      "title": "A Master-Salve Robot Manipulator for Needle-Based Teleoperation in MRI Chamber",
+      "authors": [
+        "Omar Curiel",
+        "Jing-Yuan Huang",
+        "Po-Chih Chen",
+        "Ji Ma",
+        "Qing Dai"
+      ],
+      "abstract": "We present a MR safe, master-slave robot manipulator for abdominal interventions in the MRI chamber. A human operated 2+1-DoF master controller manipulator transmits motion and force to a 2+1-DoF slave manipulator via fluid transmission. Jointly, a digital master controller provides multimodal control capability beyond common split axis or mode switchable hybrid human-digital controller configurations found in previous studies. High input impedance, low-leakage, elastomeric fluid actuators are delegated to remote angulation control. Low-friction graphite piston cylinders are delegated to needl",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06354",
+      "published_at": "2026-08-06T17:53:32Z",
+      "updated_at": "2026-08-06T17:53:32Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06219",
+      "title": "Design and Evaluation of a Touchscreen-Based Teleoperation Interface for Robotic Manipulators",
+      "authors": [
+        "Juan José García Cárdenas",
+        "Alperen Kenan",
+        "Hamidreza Raei",
+        "Paul Bremner",
+        "Manuel Giuliani"
+      ],
+      "abstract": "Intuitive teleoperation interfaces are crucial for the safe and effective operation of robotic manipulators in challenging environments. In the nuclear industry, surface contact tasks such as swab sampling require precise path and force tracking, obstacle avoidance, and sustained operator attention, which conventional joystick interfaces struggle to support effectively.   This study designs and evaluates a novel touchscreen teleoperation interface that maps continuous finger movements directly to robotic manipulator motions, provides finer velocity control, and integrates control with visualiz",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06219",
+      "published_at": "2026-08-06T16:10:02Z",
+      "updated_at": "2026-08-06T16:10:02Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06208",
+      "title": "ErgoSurf: Ergodic Control for the Coverage of Unknown Surfaces",
+      "authors": [
+        "Stefan Schneyer",
+        "Timo Bachmann",
+        "Maged Iskandar",
+        "Korbinian Nottensteiner",
+        "Alin Albu-Schäffer"
+      ],
+      "abstract": "Contact-centric tasks on surfaces, ranging from inspection and cleaning to sanding and polishing, require robots to systematically cover the surface while maintaining stable contact. Ergodic control generates trajectories that spend time at a location proportional to a desired, task-specific spatial distribution, enabling efficient information gathering and coverage. However, traditional ergodic control methods rely on prior knowledge of surface geometry or require a vision sensory input to scan the geometry beforehand, limiting their applicability in real-world scenarios with unknown or dynam",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06208",
+      "published_at": "2026-08-06T16:01:21Z",
+      "updated_at": "2026-08-06T16:01:21Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.06088",
+      "title": "IcFuzz: Fuzzing Isaac Sim with Semantic Stage Guidance and Multi-level Mutation",
+      "authors": [
+        "Zhixiang Chen",
+        "Zhuangbin Chen",
+        "Ruoxi Jia",
+        "Zeqin Liao",
+        "Wei Li"
+      ],
+      "abstract": "Robotics simulators serve as a foundational infrastructure for embodied AI, facilitating safe and scalable robotic system development. NVIDIA Isaac Sim has emerged as one of the most popular simulators, distinguished by its GPU-accelerated physics engine and photorealistic rendering, which enable high-fidelity modeling of complex environments. However, its inherent complexity inevitably introduces software bugs that can compromise simulation reliability. Existing fuzzing approaches struggle to test Isaac Sim effectively due to challenges of context-aware object semantics, hierarchical simulati",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.06088",
+      "published_at": "2026-08-06T14:29:05Z",
+      "updated_at": "2026-08-06T14:29:05Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05746",
+      "title": "Acoustic-driven millimetric helical robot: ultrasonic synergistic manipulation in confined fluidic environment",
+      "authors": [
+        "Hanlin Wang",
+        "Xin Wang",
+        "Xinwei Wei",
+        "Jiaxu Liu",
+        "Le Wang"
+      ],
+      "abstract": "Acoustic field-driven manipulation provides a non-contact and non-invasive strategy for controlling microscale and nanoscale objects, yet its extension to millimeter-scale robots was limited by insufficient propulsion efficiency in confined biological environments. Here, a coordinated multi-acoustic-field approach is introduced, which harnesses the synergistic action of acoustic radiation forces and acoustic streaming flows to enable controlled locomotion of millimeter-scale helical robots and enhance propulsion. Multiphysics simulations captured the dynamics of millimeter-scale helical robots",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.05746",
+      "published_at": "2026-08-06T08:30:52Z",
+      "updated_at": "2026-08-06T08:30:52Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05725",
+      "title": "Near-sensor Computing for Rapid Visuotactile Perception",
+      "authors": [
+        "Zhengying Zhu",
+        "Ruilin Zhang",
+        "Runze Hu",
+        "Chenxi Xiao"
+      ],
+      "abstract": "Visuotactile sensors reconstruct dense contact geometry from measured surface gradients, but host-based processing increases power consumption and introduces data-transfer delays and variable scheduling latency, limiting the sensing and response speed of robotic systems. To address these limitations, we implement a near-sensor computing framework that includes a spectral Poisson solver as a fully streaming hardware pipeline. The computational core logic has an estimated power consumption of 347 mW and achieves high throughput without data-dependent branching or iterative convergence, thereby p",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.05725",
+      "published_at": "2026-08-06T08:08:45Z",
+      "updated_at": "2026-08-06T08:08:45Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    },
+    {
+      "id": "2608.05647",
+      "title": "KILVO: Kinematic-Inertial-LiDAR-Visual Odometry with Robust Multimodal Adaptation for Humanoid Robots",
+      "authors": [
+        "Jixin Gao",
+        "Fucheng Liu",
+        "Teng Zhang",
+        "Fusheng Zha"
+      ],
+      "abstract": "This article presents a kinematic-inertial-LiDAR-visual odometry for humanoid robots, called KILVO. Tailored to the platform features, requirements, and real-world complexity, it fully utilizes the sensors commonly equipped on humanoid robots, including joint encoders, IMU, LiDAR, and camera, within an asynchronous-sequential hybrid error-state iterated Kalman filter (ESIKF). Specifically, inertial data are used for prediction, leg kinematics are processed asynchronously at a high rate and provide proprioceptive constraints, while exteroception is updated sequentially, first by registering LiD",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.05647",
+      "published_at": "2026-08-06T06:43:09Z",
+      "updated_at": "2026-08-06T06:43:09Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-07T04:30:55.029942Z"
+    }
+  ]
+}
