@@ -1,0 +1,424 @@
+{
+  "date": "2026-08-13",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-13T04:18:33.322075Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 130,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 8,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 738,
+    "after_dedup": 640,
+    "window_start": "2026-08-09",
+    "window_candidates": 586,
+    "already_seen": 311,
+    "new_candidates": 275,
+    "selected_papers": 19,
+    "missing_published_at": 0,
+    "keyword_matched": 19
+  },
+  "papers": [
+    {
+      "id": "2608.11363",
+      "title": "Adaptation of Generalist Robot Policies with Minimal Data",
+      "authors": [
+        "Shreyas Kowshik",
+        "Sreyas Venkataraman",
+        "Leo Wang",
+        "Niharika Pant",
+        "Max Simchowitz"
+      ],
+      "abstract": "A central goal in robot learning is to move beyond task-specific human data collection toward robots that improve through autonomous interaction. Yet fully autonomous learning remains difficult with current policies: sparse rewards and weak zero-shot exploration make it unlikely that a robot will discover successful behavior from scratch. We study minimal-data adaptation, a regime in which a pre-trained robot policy must learn a new task from as little as one demonstration followed by autonomous online interaction. This setting serves as the closest tractable proxy for fully autonomous improve",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11363",
+      "published_at": "2026-08-11T19:15:26Z",
+      "updated_at": "2026-08-11T19:15:26Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12122",
+      "title": "HandEdit: A Unified Benchmark for Egocentric Human-to-Robot Dexterous Hand Image Editing",
+      "authors": [
+        "Zhenjie Yang",
+        "Xingyu Jiao",
+        "Guopeng Zhong",
+        "Shuzhe Yang",
+        "Shi Che"
+      ],
+      "abstract": "Robotic manipulation with dexterous hands is a cornerstone of Embodied AI, yet its progress is stifled by the high cost of collecting embodiment-aware teleoperation data. While abundant egocentric videos of human hands offer a scalable alternative, the profound discrepancies in appearance, articulation, and camera viewpoints between human and robotic data raise significant challenges for co-training. Though existing general image-editing models demonstrate strong capabilities, they lack necessary embodiment-specific priors to fully bridge this gap. In this work, we present HandEdit, a unified ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12122",
+      "published_at": "2026-08-12T14:41:53Z",
+      "updated_at": "2026-08-12T14:41:53Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12063",
+      "title": "Learning Loco-Manipulation From SMPC Demonstrations With Sparse Offline-to-Online RL",
+      "authors": [
+        "Martin Schuck",
+        "Maks Sorokin",
+        "Simone Manni",
+        "Duy Ta",
+        "Angela P. Schoellig"
+      ],
+      "abstract": "Integrating locomotion and manipulation is essential for robot autonomy, but scaling standard Reinforcement Learning (RL) to complex tasks is severely bottlenecked by the slow, manual process of dense reward shaping. To bypass this limitation, we leverage Sample-based Model Predictive Control (SMPC) entirely in simulation as an automated, rapidly tunable expert to generate massive offline datasets. Because this data solves the fundamental exploration problem, we can train an off-policy RL agent using purely sparse task rewards, drastically reducing the time required to learn new skills and eli",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.12063",
+      "published_at": "2026-08-12T13:48:56Z",
+      "updated_at": "2026-08-12T13:48:56Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11739",
+      "title": "G0.5: One Autoregressive Stream for Robot Reasoning and Action",
+      "authors": [
+        "Yicheng Liu",
+        "Zibin Dong",
+        "Baijun Ye",
+        "Tianyuan Yuan",
+        "Tao Jiang"
+      ],
+      "abstract": "The prevailing recipe for Vision-Language-Action (VLA) models couples a pretrained VLM with a separately trained flow-matching action expert. This makes the VLM a context encoder rather than a decision-maker. We introduce G0.5, a pretrained autoregressive VLA in which a single transformer decoder emits reasoning and action tokens under a single objective. Three components make this tractable at foundation-model scale: a learnable cross-embodiment action tokenizer that maps heterogeneous robot actions into a shared vocabulary; a native chain-of-thought stream interleaving task decomposition, ob",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.11739",
+      "published_at": "2026-08-12T07:26:47Z",
+      "updated_at": "2026-08-12T07:26:47Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11671",
+      "title": "StellaVLA: In-Context Structured Demonstration for Generalizable Vision-Language-Action Models",
+      "authors": [
+        "Siyu Xu",
+        "Yunke Wang",
+        "Zijian Wang",
+        "Dihao Zhu",
+        "Chenghao Xia"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models can follow instructions and manipulate objects, but their performance often collapses out of distribution (OOD), when the scene, viewpoint, or object differs from training. Adapting to each new situation typically requires collecting more data and fine-tuning. We present StellaVLA, a framework that instead adapts at test time by conditioning on a single retrieved demonstration. The key idea is to move beyond imitating what an expert did and instead convey why: an automated offline pipeline converts each raw trajectory into a structured demonstration, e.g., a",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.11671",
+      "published_at": "2026-08-12T05:30:53Z",
+      "updated_at": "2026-08-12T05:30:53Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12308",
+      "title": "DreamFly: Causal Memory and Receding-Horizon Diffusion Planning for Aerial Vision-Language Navigation",
+      "authors": [
+        "Yan Deng",
+        "Fei Xu"
+      ],
+      "abstract": "Aerial vision-language navigation (VLN) requires an embodied agent to integrate visual evidence over time, plan future actions, and determine when it has reached a navigation goal under partial observability. Although recent VLA models offer a promising perception-to-action paradigm, adapting them to aerial navigation remains challenging due to limited historical context, short planning horizons, and unreliable implicit termination. To address these challenges, we propose DreamFly, a diffusion-based aerial VLN framework built on Dream-VLA. DreamFly introduces a causally aligned historical memo",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12308",
+      "published_at": "2026-08-12T17:54:33Z",
+      "updated_at": "2026-08-12T17:54:33Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12078",
+      "title": "Better Slots, Better Worlds: Representation Quality & Robustness in Object-Centric World Models",
+      "authors": [
+        "Shukrullo Nazirjonov",
+        "Sai Prasanna",
+        "Anna Manasyan",
+        "Georg Martius"
+      ],
+      "abstract": "Learning world models from offline trajectories enables agents to accomplish different tasks through planning. Object-centric (OC) representations, which decompose a scene into a set of slots that bind to its objects, have been proposed as an inductive bias for world models that are more sample-efficient and generalize better. Yet prior object-centric world models (OCWMs) take the slot encoder as given and evaluate only in-distribution, leaving open whether the object-centric bias actually delivers for planning and what within the OCWM drives it. We conduct a controlled study of OCWMs for visu",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12078",
+      "published_at": "2026-08-12T14:02:36Z",
+      "updated_at": "2026-08-12T14:02:36Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12220",
+      "title": "SCOUT: Unlocking Enhanced Spatial Reasoning via Structured Chain-of-Thought and Multi-Objective Process Reward",
+      "authors": [
+        "Zile Zhou",
+        "Huining Yuan",
+        "Weichen Zhang",
+        "Xinlei Chen",
+        "Xiao-ping Zhang"
+      ],
+      "abstract": "Existing Vision-Language Models (VLMs) exhibits a critical bottleneck in robust spatial reasoning. Recent reinforcement learning (RL) methods aim to close this gap with verifiable outcomes, yet they suffer from poor credit assignment across intermediate reasoning steps. Concurrently, structured reasoning approaches overlook the critical depth perception necessary for comprehensive 3D understanding. To address these challenges, we propose SCOUT (Structured Chain-Of-Thought Utilizing Process-Supervised RL Training). Specifically, we design a structured Chain-of-Thought (CoT) framework that expli",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12220",
+      "published_at": "2026-08-12T16:14:25Z",
+      "updated_at": "2026-08-12T16:14:25Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11582",
+      "title": "A Hybrid Framework of Vision Transformer and Gated Recurrent Unit for Detection of Mosquito Diseases",
+      "authors": [
+        "Danial Sharifrazi",
+        "Saadat Behzadi",
+        "Nouman Javed",
+        "Roohallah Alizadehsani",
+        "Prasad N. Paradkar"
+      ],
+      "abstract": "Identifying dengue virus-infected mosquitoes from control mosquitoes is a major challenge in analyzing mosquito locomotion behavior due to the small size and complexity of the video background. Conventional AI methods are often unable to extract accurate features from video frames and produce erroneous features. In this study, a three-step framework is introduced: first, mosquitoes are identified and the background is removed using the YOLO 11M model, then visual features are extracted using the Vision Transformer (ViT), and finally the videos are classified with a convolutional GRU (ConvGRU) ",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.11582",
+      "published_at": "2026-08-12T02:43:47Z",
+      "updated_at": "2026-08-12T02:43:47Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11901",
+      "title": "DaViNCi: A Dataset Towards Outdoor Vision-and-Language Navigation with Continuous Actions and Dynamic Elements",
+      "authors": [
+        "Zihao Xie",
+        "Pingrui Lai",
+        "Yitong Wu",
+        "Hua Yang"
+      ],
+      "abstract": "Vision-and-Language Navigation (VLN) has progressively expanded from indoor to outdoor environments. However, existing outdoor VLN datasets still rely on fixed discrete topological graphs for construction. It fails to align with the rapidly changing real-world outdoor environments and impedes the sim-to-real transfer of VLN agents. To address this limitation, we propose DaViNCi (\\textbf{D}yn\\textbf{a}mic \\textbf{Vi}sion-and-Language \\textbf{N}avigation in \\textbf{C}ont\\textbf{i}nuous Environment), the first outdoor VLN dataset that simultaneously introduces both continuous and dynamic factors.",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11901",
+      "published_at": "2026-08-12T10:27:48Z",
+      "updated_at": "2026-08-12T10:27:48Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11876",
+      "title": "D3D-GEN: Robot-Aware Domain-Grounded Interactive 3D World Generation for Social Robotics",
+      "authors": [
+        "Anh Duc Do",
+        "Volodymyr Scherbyna",
+        "Tai Duc Nguyen",
+        "Spaarsh Thakkar",
+        "Zhengcheng Shen"
+      ],
+      "abstract": "Training and validation of Embodied AI for social navigation critically depends on realistic simulation environments, yet many current approaches fail to find a balance between realism and simulability. We propose D3D-GEN, a novel world generation system that combines a domain agent with a retrieval-augmented generation (RAG) pipeline grounded in that domain. Our system enables users to rapidly generate domain-grounded, fully interactive 3D worlds by automating both the collection of domain knowledge and the synthesis of realistic floorplans and object placements, without dependence on any fix",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11876",
+      "published_at": "2026-08-12T10:03:01Z",
+      "updated_at": "2026-08-12T10:03:01Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11870",
+      "title": "Enhancing Visual Domain Robustness in Behaviour Cloning via Saliency-Guided Augmentation",
+      "authors": [
+        "Zheyu Zhuang",
+        "Ruiyu Wang",
+        "Nils Ingelhag",
+        "Ville Kyrki",
+        "Danica Kragic"
+      ],
+      "abstract": "In vision-based behavior cloning (BC), conventional image augmentations such as Random Crop and Color Jitter often fall short under substantial visual domain shifts, including changes in shadows, distractors, and backgrounds. Superimposition-based augmentations, which blend in-domain and out-of-domain images, have shown promise for improving generalization in computer vision, but their suitability for BC remains uncertain because task-critical semantics, spatiotemporal relationships, and agent-target interactions must be preserved. To address this, we introduce RoboSaGA, a Saliency-Guided Augm",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11870",
+      "published_at": "2026-08-12T09:55:07Z",
+      "updated_at": "2026-08-12T09:55:07Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11769",
+      "title": "Policy-Induced Hand Priors in Humanoid Dual-Arm Manipulation: Diagnosing and Mitigating Initial-Pose Dependence",
+      "authors": [
+        "Chaeyeon Jung",
+        "Juyoun Park"
+      ],
+      "abstract": "Vision-language-action (VLA) policies are expected to operate robustly across variations in the robot's initial configuration, yet aggregate task success can conceal pose-specific failures and inappropriate hand selection. This work investigates initial-pose dependence in VLA-based humanoid dual-arm manipulation. We characterize the initial-condition-dependent early hand preference as a policy-induced hand prior and quantify it using HandPriorScore, residual hand bias, and target responsiveness. Evaluations across multiple policies and 17 initial configurations reveal strong initial-pose--poli",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11769",
+      "published_at": "2026-08-12T08:13:44Z",
+      "updated_at": "2026-08-12T08:13:44Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11417",
+      "title": "Locomotion Variability and User Experience in Smart Wheelchair Human-Robot Interaction",
+      "authors": [
+        "Sean Kille",
+        "Adina M. Panchea",
+        "Balint Varga",
+        "Sören Hohmann"
+      ],
+      "abstract": "Human movement is inherently variable, with variability structured according to task relevance: movements are typically more consistent at task-critical points and more flexible elsewhere. In human-robot interaction (HRI), however, model-based assistance strategies commonly assume deterministic human behavior and suppress such variability, potentially altering how interactions are experienced and lowering sense of agency. While movement variability is increasingly recognized as functionally meaningful, its deliberate preservation in assisted interaction, and its consequences for user experienc",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11417",
+      "published_at": "2026-08-11T20:33:26Z",
+      "updated_at": "2026-08-11T20:33:26Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11350",
+      "title": "Self-Evolving Embodied Agents via Skill-Harness Evolution",
+      "authors": [
+        "Peidong Wang",
+        "Zhiming Ma",
+        "Ying Chang",
+        "Xufang Luo",
+        "Xiaocui Yang"
+      ],
+      "abstract": "Embodied agents are increasingly built as systems around foundation models, where performance depends not only on model weights but also on the skills, context, action interfaces, and execution harness surrounding the model. While supervised fine-tuning and reinforcement learning can adapt agents to new environments, they require additional data, rewards, and training runs; meanwhile, many train-free code-centric approaches rely on programmable robot APIs that may be unavailable in fixed-interface settings. We propose SHAPER, a self-evolving framework for train-free embodied adaptation that ke",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.11350",
+      "published_at": "2026-08-11T18:55:58Z",
+      "updated_at": "2026-08-11T18:55:58Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11692",
+      "title": "HUGIN: Enhancing Vision-Language Planning for Autonomous Logistics Sorting",
+      "authors": [
+        "Xikai Sun",
+        "Cangtian Zhou",
+        "Kebin Liu",
+        "Ke Ma",
+        "Xu Wang"
+      ],
+      "abstract": "Autonomous logistics sorting systems (ALSS) are an important industrial application of embodied AI, which requires joint planning over spatially disjoint camera views. We formulate this setting as Joint Multi-Scene Understanding (JMSU). With open-world visual understanding and task-planning capabilities, vision-language models (VLMs) are promising candidates for JMSU. However, directly applying existing VLMs to JMSU is non-trivial due to scarce cross-scene supervision and attention dispersion caused by long visual context in JMSU. To address these challenges, we propose HUGIN, a training frame",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.11692",
+      "published_at": "2026-08-12T06:04:27Z",
+      "updated_at": "2026-08-12T06:04:27Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12179",
+      "title": "Map-Det3D: Metric Feed-Forward 3D Reconstruction Prior for Multi-view 3D Object Detection from Streaming Inputs",
+      "authors": [
+        "Yung-Hsu Yang",
+        "Luigi Piccinelli",
+        "Samuel Rota Bulò",
+        "Sunghwan Hong",
+        "Denis Rozumny"
+      ],
+      "abstract": "Metric 3D object detection is a core capability for embodied agents, yet most reliable systems lean on depth sensors, trading away cost, power, and integration simplicity. This motivates monocular 3D detection, which avoids additional constraints, yet it faces a major obstacle: from a single image, depth, and especially absolute scale, are underconstrained. As a result, the prevailing pattern of detecting in 2D and then predicting 3D attributes is often brittle, since modest range errors can dominate 3D localization, and the learned scale prior can fail when cameras, motion, or environments un",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12179",
+      "published_at": "2026-08-12T15:33:42Z",
+      "updated_at": "2026-08-12T15:33:42Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.12045",
+      "title": "Localizing to Debias: A Patch-Level Benchmark and Baseline for Weakly Supervised Spatial Anomaly Detection",
+      "authors": [
+        "Sara Abdulaziz",
+        "Abdulrahman Al-Abri",
+        "Giacomo D'Amicantonio",
+        "Egor Bondarev"
+      ],
+      "abstract": "Despite growing interest in weakly supervised video anomaly detection (WSVAD), current methods struggle to bridge the gap between coarse temporal supervision and fine-grained spatial reasoning. A key obstacle is the tendency of temporal detectors to latch onto background and scene-level cues rather than truly discriminative anomaly evidence. This background bias raises ethical concerns: models may inadvertently associate anomalies with societal or environmental context rather than authentic crime-related cues. Without spatial grounding, such biases remain hidden and unauditable. To address thi",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.12045",
+      "published_at": "2026-08-12T13:27:20Z",
+      "updated_at": "2026-08-12T13:27:20Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    },
+    {
+      "id": "2608.11601",
+      "title": "How Can Driving World Models Do Counterfactual Prediction?",
+      "authors": [
+        "Jiaru Zhang",
+        "Can Cui",
+        "Yi Xu",
+        "Xin Ye",
+        "Ruqi Zhang"
+      ],
+      "abstract": "Driving world models are often interpreted as counterfactual simulators for observed driving episodes: given a factual driving log, they are asked what would have happened under an alternative ego action. In this paper, we identify a fundamental mismatch between this goal and direct action-conditioned prediction. The direct prediction uses the shared history and the alternative action but not the factual continuation observed after that history. It can therefore generate a plausible future without preserving what actually happened in this episode. We formalize this gap using the causal recipe ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.11601",
+      "published_at": "2026-08-12T03:19:59Z",
+      "updated_at": "2026-08-12T03:19:59Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-13T04:18:33.322075Z"
+    }
+  ]
+}
