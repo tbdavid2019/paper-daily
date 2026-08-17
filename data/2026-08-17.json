@@ -1,0 +1,511 @@
+{
+  "date": "2026-08-17",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-17T03:07:17.199961Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 60,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 180,
+      "arxiv_keyword": 6,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 596,
+    "after_dedup": 516,
+    "window_start": "2026-08-13",
+    "window_candidates": 437,
+    "already_seen": 205,
+    "new_candidates": 232,
+    "selected_papers": 23,
+    "missing_published_at": 0,
+    "keyword_matched": 23
+  },
+  "papers": [
+    {
+      "id": "2608.14047",
+      "title": "Evolve Vision-Language-Action Model into an Agent with On-the-fly Tool-use",
+      "authors": [
+        "Yi Ding",
+        "Yanzhao Yu",
+        "Xili Dai",
+        "Xianbiao Qi",
+        "Peiwen Sun"
+      ],
+      "abstract": "This paper integrates end-to-end Visual-Language-Action (VLA) models with agentic tool-use to propose Agentic Robot with Tool-use (ART). ART is a tool-injection framework that tunes any VLA model to leverage off-the-shelf tool modules for low-level vision, high-level affordance, and embodiment enhancement. Compared to vanilla VLA models with a whole continuous action solution space, ART reduces the complexity of the action solution space through tool-use, which not only improves generalizability across different tasks but also reduces data dependency. To demonstrate the advantages (high genera",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.14047",
+      "published_at": "2026-08-14T07:53:18Z",
+      "updated_at": "2026-08-14T07:53:18Z",
+      "keyword_hits": 2,
+      "priority": 65.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14028",
+      "title": "AdvDex: Learning Dexterous Manipulation from Human Demonstrations via Joint-Aligned Actions and Adversarial Learning",
+      "authors": [
+        "Zhiyue Zhao",
+        "Jingyi Wu",
+        "Hairuo Liu",
+        "Mingyu Liu",
+        "Liyang Li"
+      ],
+      "abstract": "Dexterous manipulation is a fundamental capability for embodied intelligence, but scaling it remains difficult because robot demonstrations are expensive to collect and action spaces vary across embodiments. Policies trained on heterogeneous data can also entangle task-relevant visual cues with embodiment-specific appearance, limiting cross-embodiment generalization. We present AdvDex, a unified Vision-Language-Action framework for learning dexterous manipulation from human and robot demonstrations. First, we introduce OmniShare, a large-scale multimodal dataset of human manipulation demonstra",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.14028",
+      "published_at": "2026-08-14T07:19:06Z",
+      "updated_at": "2026-08-14T07:19:06Z",
+      "keyword_hits": 4,
+      "priority": 55.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14379",
+      "title": "Reflex: Enabling Fast and Predictive Vision-Language-Action Models for Reaction-Critical Manipulation",
+      "authors": [
+        "Yuxuan Chen",
+        "Wanruo Zhang",
+        "Xiao Li"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have recently achieved promising performance in robotic manipulation. However, existing benchmarks mainly evaluate generalization on static manipulation tasks and largely overlook dynamic interaction scenarios. To address this gap, we present ReflexBench, a benchmark for reaction-critical manipulation. ReflexBench contains six dynamic tasks and introduces an evaluation framework that decouples simulator stepping from robot control while supporting configurable latency under synchronous and asynchronous inference. Building upon ReflexBench, we propose ReflexV",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.14379",
+      "published_at": "2026-08-14T15:19:04Z",
+      "updated_at": "2026-08-14T15:19:04Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14138",
+      "title": "SPARGen: Unifying Spatial Perception and Reasoning through Native Multimodal Generation",
+      "authors": [
+        "Jinsheng Quan",
+        "Jianhua Li",
+        "Siyi Xie",
+        "Xuanke Shi",
+        "Kewang Deng"
+      ],
+      "abstract": "Spatial perception and reasoning from visual observations require recovering geometric structure, establishing correspondences, and understanding spatial relations. Existing approaches typically address these capabilities separately using task-specific architectures or external geometric modules, limiting knowledge transfer among complementary representations of the same physical scene. We introduce SPARGen, a unified multimodal framework that casts 3D reconstruction, dense correspondence, and spatial reasoning as instruction-conditioned generation tasks. SPARGen serializes compact structured ",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14138",
+      "published_at": "2026-08-14T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-14T09:44:37Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14530",
+      "title": "Marionette: Predicting World States, Rendering Geometry, Painting Appearance",
+      "authors": [
+        "Zian Meng",
+        "Zhen Li",
+        "Chuanhao Li",
+        "Qiang Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Interactive game world models typically autoregress visual observations directly in pixel or latent space, forcing structured properties such as pose, geometry, and occlusion to be implicitly maintained by the same generative sequence. Over long horizons, errors in these latent world properties accumulate, making consistency and controllability fragile. We explicitly model the evolving world state, delegate exact geometric computation to a fixed, zero-parameter renderer, and leave the neural model to synthesize appearance. We instantiate this idea as Marionette, a world model for interactive g",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14530",
+      "published_at": "2026-08-14T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-14T17:48:16Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14481",
+      "title": "Ensuring Safe Physical AI in Urban Mobility via Hazard-Informed Synthesized Envelopes",
+      "authors": [
+        "Alexei Odinokov",
+        "Rostislav Yavorskiy"
+      ],
+      "abstract": "As heterogeneous robotic systems deploy across diverse urban zones, maintaining safety amid complex human-robot interactions remains a critical challenge. We present a unified framework that bridges systematic hazard analysis and runtime enforcement using hazard-informed safety envelopes. Rather than treating safety as a static constraint isolated within individual software modules, we introduce a cross-layer safety transformation process spanning symbolic, spatial, and dynamic world models. We show how this representation naturally interfaces with physical AI runtime harnesses to guarantee sa",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.14481",
+      "published_at": "2026-08-14T16:57:54Z",
+      "updated_at": "2026-08-14T16:57:54Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14284",
+      "title": "PRM-as-a-Judge 1.5: A Toolkit for Robot Process Assessment",
+      "authors": [
+        "Yuyang Liu",
+        "Yanqing Shen",
+        "Ruike Chen",
+        "Jifan Zhao",
+        "Yuxuan Tian"
+      ],
+      "abstract": "Fine-grained robotic evaluation matters for understanding embodied models, going beyond binary success rates and rule-based process scores. We present PRM-as-a-Judge 1.5, a toolkit for robot process assessment that turns rollout videos into dense progress curves and derives multiple fine metrics. PRM-as-a-Judge 1.5 introduces three metrics, building on version 1.0, that characterize failure-side progress, post-drawdown recovery, and success-side execution quality, helping users understand embodied model capability. Based on the rollout videos from benchmarks, we perform a comprehensive assessm",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14284",
+      "published_at": "2026-08-14T13:10:02Z",
+      "updated_at": "2026-08-14T13:10:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.13719",
+      "title": "Coverage Aware Active Evaluation for Failure Discovery with Paired Systems",
+      "authors": [
+        "Anjali Parashar",
+        "Rachel Luo",
+        "Apoorva Sharma",
+        "Sushant Veer",
+        "Edward Schmerling"
+      ],
+      "abstract": "Autonomous systems can fail in rare and heterogeneous ways, making real-world failure discovery difficult under limited testing budgets. Although cheaper proxies such as simulators, lower-fidelity systems, or related policies can be sampled extensively to find failures, proxy failures often do not transfer to the real world due to sim-to-real and system-to-system gaps. The key challenge is therefore to effectively leverage proxy system information for accurate prediction of severe target system failures. We propose an adaptive failure discovery method that combines proxy evaluations with limit",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.13719",
+      "published_at": "2026-08-13T19:26:25Z",
+      "updated_at": "2026-08-13T19:26:25Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14022",
+      "title": "ForgeWM: Progressive Causal Training for Few-Step Action-Conditioned Video World Models",
+      "authors": [
+        "Xinye Li",
+        "Lingshuai Lin",
+        "Lei Wang",
+        "Liuzhou Zhang",
+        "Jialin Cui"
+      ],
+      "abstract": "Action-conditioned video world models require low-latency causal generation and reliable responses to game-native controls. Although causal distillation enables one- or few-step video synthesis, extending it to interactive world models remains challenging, as discrete keyboard states and continuous mouse motion must remain aligned with temporally compressed latent chunks during causal training and autoregressive rollout. We introduce ForgeWM, a progressive framework that transforms a bidirectional action-conditioned video generator into efficient few-step world models through domain adaptation",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14022",
+      "published_at": "2026-08-14T07:13:34Z",
+      "updated_at": "2026-08-14T07:13:34Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14135",
+      "title": "AgilePE: Autonomous UAV Pursuit-Evasion via Self-Play Reinforcement Learning",
+      "authors": [
+        "Wenhao Tang",
+        "Tianyang Chen",
+        "Zhejun Cui",
+        "Boyuan An",
+        "Jiayu Chen"
+      ],
+      "abstract": "Autonomous pursuit-evasion is a fundamental challenge for Unmanned Aerial Vehicles (UAVs), requiring rapid decision-making under tightly coupled dynamics and continuously changing opponent behaviors. Traditional rule-based or differential-game approaches often struggle with high-dimensional aerial interactions and agile maneuvering. We present AgilePE, a complete system for autonomous UAV pursuit-evasion via self-play reinforcement learning. AgilePE integrates agile low-level control, competitive policy optimization, and sim-to-real deployment in a unified framework. The policy directly maps o",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14135",
+      "published_at": "2026-08-14T09:41:16Z",
+      "updated_at": "2026-08-14T09:41:16Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.13678",
+      "title": "hint$^2$: Hierarchical World Models for Inference-Time Temporal Logic Guidance",
+      "authors": [
+        "Moritz Zoellner",
+        "Anastasios Manganaris",
+        "Ahmed H. Qureshi",
+        "Rohan Paleja"
+      ],
+      "abstract": "A central goal of robot learning is to enable robots to execute rich instructions specified at runtime. Large-scale language-conditioned policies have made substantial progress toward this goal, yet still struggle with temporal structure and safety constraints. Linear Temporal Logic (LTL) provides a powerful language to express complex, non-Markovian instructions. However, guiding learned manipulation policies toward LTL satisfaction remains challenging because modern policies generate short-horizon action chunks and replan in closed loop, while almost all LTL specifications are evaluated over",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.13678",
+      "published_at": "2026-08-13T18:22:08Z",
+      "updated_at": "2026-08-13T18:22:08Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14024",
+      "title": "SSP: An Event-Matched Syn2Sim2Phy Cross-Domain Evaluation Framework for Autonomous Driving VLA Models",
+      "authors": [
+        "Haojie Feng",
+        "Peizhi Zhang",
+        "Xinrui Zhang",
+        "Zhuoren Li",
+        "Junpeng Huang"
+      ],
+      "abstract": "Vision-language-action (VLA) models for autonomous driving jointly produce scene interpretation, language-based reasoning, and driving trajectories. Existing evaluations often use independently selected synthetic, simulated, and physical data, so measured performance gaps can be confounded by changes in scenario content rather than genuine domain sensitivity. We propose SSP (Synthetic-Simulation-Physical), an event-matched Syn2Sim2Phy evaluation framework that anchors cross-domain comparison to the same safety-critical interaction. Starting from a synthetic long-tail video, SSP builds a valida",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14024",
+      "published_at": "2026-08-14T07:15:16Z",
+      "updated_at": "2026-08-14T07:15:16Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14462",
+      "title": "THRIVE: Therapeutic Humanoid Robot In Virtual Environment",
+      "authors": [
+        "Jin Xu",
+        "Yu-Ping Chen",
+        "Ayanna Howard"
+      ],
+      "abstract": "This paper presents THRIVE (Therapeutic Humanoid Robot In Virtual Environment), an at-home rehabilitation platform that integrates a suite of virtual-reality upper-body rehabilitation games, a real-time camera-based motion-tracking system, and a socially interactive robot therapist. The system is designed for therapy and intervention in children with upper-limb motor impairments, which can be improved through consistent, task-specific practice. THRIVE features a set of newly designed, engaging games that target functional reaching, grasping, and object-manipulation movements through customizab",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14462",
+      "published_at": "2026-08-14T16:42:58Z",
+      "updated_at": "2026-08-14T16:42:58Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14406",
+      "title": "Effect of Twisted-Yarn Architecture on Pressure and Proximity Sensing Characteristics of Textile Capacitive Sensors for Robotic Skin",
+      "authors": [
+        "Ishtia Zahir",
+        "Eslam Saleh",
+        "Maryam Rezayati",
+        "Güunter Grabher",
+        "Gaffar Hossain"
+      ],
+      "abstract": "Textile-integrated capacitive sensors offer flexible and conformable tactile sensing for wearable electronics and human-robot interaction; however, the influence of yarn-level architecture on capacitive transduction characteristics remains insufficiently quantified. This work presents a textile capacitive sensing platform based on silver-coated yarns coated with polydimethylsiloxane and assembled into one-, two-, and four-layer twisted configurations. The influence of effective electrode overlap area and inter-fiber separation on the capacitive response is systematically investigated, enabling",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14406",
+      "published_at": "2026-08-14T15:48:55Z",
+      "updated_at": "2026-08-14T15:48:55Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14160",
+      "title": "OccPlanner: Goal-Aware Occupancy-Conditioned Diffusion Planner for Pixel-Goal Navigation",
+      "authors": [
+        "Binling Huang",
+        "Nianjin Ye",
+        "Xi Yang",
+        "Liang Hu",
+        "Zhou Huang"
+      ],
+      "abstract": "Pixel-goal navigation specifies targets directly in the agent's camera view, but a target pixel provides neither metric depth nor traversability, making 3D goal grounding and collision-free continuous planning challenging. We present OccPlanner, a goal-aware occupancy-conditioned diffusion planner that grounds pixel goals in egocentric metric space and sequentially conditions the goal representation on temporal visual context and learned local 3D occupancy features. To provide occupancy supervision at scale, we introduce L3ROcc, which converts monocular RGB navigation videos into robot-centric",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14160",
+      "published_at": "2026-08-14T10:15:07Z",
+      "updated_at": "2026-08-14T10:15:07Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14082",
+      "title": "PILOT: Privileged Imitation Learning for End-to-End Motion Planning of Autonomous UAVs under Partial Observability",
+      "authors": [
+        "Qingrui Zhang",
+        "Feng Xue",
+        "Xiang Zhou",
+        "Chenghao Yu"
+      ],
+      "abstract": "Autonomous navigation in cluttered environments is hampered by partial observability and dynamic constraints. This paper presents PILOT, a constraint-aware privileged imitation learning framework for vision-based end-to-end UAV motion planning under partial observability. The framework distills planning strategies from a computationally intensive optimal control expert into a student policy regularized toward safety and dynamic requirements via a dual-objective loss function. To mitigate partial observability, a spatiotemporal perception fusion module using a Temporal Convolutional Network (TC",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14082",
+      "published_at": "2026-08-14T08:43:59Z",
+      "updated_at": "2026-08-14T08:43:59Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14031",
+      "title": "Demonstration of Space Robot Teleoperation over a Lossy and Delayed Network using ATMOS",
+      "authors": [
+        "Inkyu Jang",
+        "Gregorio Marchesini",
+        "Nicola De Carli",
+        "Byeongjun Kim",
+        "Sunwoo Hwang"
+      ],
+      "abstract": "We present a demonstration showcasing the Autonomy Testbed for Multi-purpose Orbiting Systems (ATMOS), a planar spacecraft-analog robot designed for hardware-in-the-loop evaluation of guidance and control strategies in microgravity-like conditions. Using ATMOS as the physical test platform, we investigate the design, analysis, and performance evaluation of control architectures for remotely operated spacecraft under round-trip communication delays. In this work, we develop and experimentally validate a control strategy that combines state prediction and trajectory tracking control to perform a",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.14031",
+      "published_at": "2026-08-14T07:20:40Z",
+      "updated_at": "2026-08-14T07:20:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.13924",
+      "title": "BICPO-VLA: Behavior-Identified Continuation Preference Optimization for Smooth Asynchronous Vision-Language-Action Control",
+      "authors": [
+        "Ming Shang",
+        "Yuchen Huang",
+        "Jiaoyang Chen",
+        "Haoyuan Hu",
+        "Han Yu"
+      ],
+      "abstract": "The request-to-handoff gap has three coupled sources: ambiguity about the behavior intended at request time, physical-state drift accumulated during action generation, and residual incompatibility when the new action finally assumes control. BICPO-VLA addresses them in sequence. First, an instruction-aware causal history encoder identifies the behavior supported by the command and current task progress. Second, sequential Haar subspace generation decomposes each action chunk into complementary pairwise scaffold and residual coefficients, enabling two specialized generation stages followed by e",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.13924",
+      "published_at": "2026-08-14T03:51:27Z",
+      "updated_at": "2026-08-14T03:51:27Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.13901",
+      "title": "Ontology-Grounded World Models for Failure Diagnosis and Closed-Loop Repair in Physical AI Systems",
+      "authors": [
+        "Kailin Wang",
+        "Haoxiang Jie",
+        "Yaoyuan Yan",
+        "Jiacheng Zhou",
+        "Zhiyou Heng"
+      ],
+      "abstract": "EV-WM represents candidate quality with feature and event scores, but these scores do not explicitly record an unmet task predicate, a route label for an available correction mechanism, or a post-correction acceptance result. We present Onto-EV-WM, an ontology-grounded diagnosis and verification-gated correction interface layered above EV-WM rather than a replacement world-model architecture. The implemented task-local TBox defines entity types, predicate signatures, and constraints; source-specific grounding maps predicted or simulator-observed states to task ABoxes; and deterministic rules r",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.13901",
+      "published_at": "2026-08-14T03:13:57Z",
+      "updated_at": "2026-08-14T03:13:57Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14490",
+      "title": "Twin: Playing an Unknown Game with a Test-Time Digital Twin",
+      "authors": [
+        "Alexy Skoutnev",
+        "Kirill Acharya",
+        "Gaston Longhitano",
+        "Madeleine Udell",
+        "Kevin Ellis"
+      ],
+      "abstract": "We present a Test-time World-model Inference (Twin) system, in which a frontier coding agent writes an executable world model for completing continual learning tasks, such as ARC-AGI-3 games. Traditional approaches hand-engineer such models, one custom design per task. Each game hides its rules and goal, and our system constructs them from simulation and interaction alone. Its inductive prior over grid games is strong enough to recover the true transitions of the game and the goal on nearly all levels. Replay validation happens in a twin world model. The harness enforces that an action is not ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.14490",
+      "published_at": "2026-08-14T17:06:00Z",
+      "updated_at": "2026-08-14T17:06:00Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14125",
+      "title": "Traj-LeWM: Path-Aware World-Model Planning via Latent Trajectory Cost",
+      "authors": [
+        "Xiaodi Huang",
+        "Ziyi Ding",
+        "Jingtian Wan",
+        "Yuchen Liu",
+        "Yuan Zhang"
+      ],
+      "abstract": "LeWM is a lightweight visual world model that learns latent dynamics end-to-end from pixels and ranks candidate action sequences by the distance between their predicted endpoints and the goal. However, LeWM has two limitations. First, during training, it learns local next-step transitions without evaluating complete trajectories relative to the task goal. Second, during planning, it ranks candidates solely by predicted endpoint distance. Because model predictions may differ from actual execution outcomes, the candidate whose predicted endpoint is closest to the goal may not perform best when e",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.14125",
+      "published_at": "2026-08-14T09:32:38Z",
+      "updated_at": "2026-08-14T09:32:38Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.13958",
+      "title": "Implementing Computational Law in Wolfram Language for the Governance of Artificial Intelligence",
+      "authors": [
+        "James K. Wiles"
+      ],
+      "abstract": "How do we govern AI systems whose reasoning we cannot fully inspect? Governance does not require understanding a system's reasoning. It requires stating what the system is obliged, permitted, and forbidden to do, and checking whether it complied. I present an implementation of Reified Input/Output Logic, the formalism behind the DAPRECO knowledge base, in Wolfram Language: the core I/O axioms, obligations, permissions, constitutive norms, reified eventualities, and temporal operators. I then test whether GPT-4 can translate English legal statements into the formalism, and report the failures: ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.13958",
+      "published_at": "2026-08-14T04:58:01Z",
+      "updated_at": "2026-08-14T04:58:01Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    },
+    {
+      "id": "2608.14309",
+      "title": "Spatial Message Passing in Language Space for Pathology Image Interpretation",
+      "authors": [
+        "Jing-Cheng Yang",
+        "Hao-Jung Wang",
+        "Jinhao Du",
+        "Yang Hu",
+        "Ming-shan Tsai"
+      ],
+      "abstract": "Multimodal Large Language Models (MLLMs) can generate pathological descriptions from histological images, but gigapixel Whole Slide Images (WSIs) exceed their visual context limits. The standard tiling workaround makes WSIs tractable yet severs the tissue neighborhoods that define tumor-stroma interfaces and morphology. We introduce Spatial Language Message Passing (SLMP), a framework that performs spatial reasoning entirely in language space, human-readable by construction. SLMP represents a WSI region as a spatial text graph: tiles are nodes initialized with MLLM descriptions, and edges enco",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.14309",
+      "published_at": "2026-08-14T13:48:15Z",
+      "updated_at": "2026-08-14T13:48:15Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-17T03:07:17.199961Z"
+    }
+  ]
+}
