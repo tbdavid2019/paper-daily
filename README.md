@@ -1,9 +1,11 @@
-# 📰 Daily Paper Scout
+# 888每日論文雷達 -- Embodied AI
 
 [![Daily Paper Crawl](https://github.com/tbdavid2019/paper-daily/actions/workflows/daily-crawl.yml/badge.svg)](https://github.com/tbdavid2019/paper-daily/actions/workflows/daily-crawl.yml)
+[![Deploy GitHub Pages](https://github.com/tbdavid2019/paper-daily/actions/workflows/pages-deploy.yml/badge.svg)](https://github.com/tbdavid2019/paper-daily/actions/workflows/pages-deploy.yml)
 
-GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後將本專案第一次發現的相關論文保存為結構化 JSON。
-作為論文資料庫供 LLM（Grok、Claude、GPT 等）讀取並產出個人化篩選報告。
+GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後將本專案第一次發現的相關論文保存為結構化 JSON，再由 LLM 產生繁體中文研究摘要，建置並部署到 GitHub Pages。
+
+Blog：[https://tbdavid2019.github.io/paper-daily/](https://tbdavid2019.github.io/paper-daily/)
 
 > 🙏 **致謝**：感謝 [voidful](https://github.com/voidful) 建立本專案的原始版本，完成多來源論文聚合、去重、排序與 GitHub Actions 每日自動化的核心架構。現在的可配置主題與 first-seen 增量流程，都是建立在這個扎實基礎之上。
 
@@ -20,6 +22,9 @@ GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後�
 - 🧭 **可切換主題** — 預設 `embodied_ai`，亦可選擇 `general_ai` 或自訂 profile
 - 🎛️ **研究者可配置** — 分類、關鍵字、作者、收錄門檻與篇數上限都由 JSON 控制
 - 📊 **預排序優先級** — 基於關鍵字命中、多來源交叉、社群熱度、追蹤作者
+- 📝 **LLM 研究摘要** — 取每日優先度最高的論文，產生有來源連結的繁體中文報告
+- 🌐 **GitHub Pages Blog** — Jekyll 建置，支援首頁文章索引與每日文章頁
+- 🔐 **安全的 Actions Secret** — LLM API key 只透過 GitHub Secret 注入 workflow
 - 🤖 **Agent-Ready** — 提供標準 JSON 與可安裝的 `SKILL.md`
 
 ---
@@ -29,9 +34,17 @@ GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後�
 ```
 paper-daily/
 ├── .github/workflows/
-│   └── daily-crawl.yml      ← GitHub Actions 定時排程
+│   ├── daily-crawl.yml      ← 抓取、LLM 摘要與每日 Pages 部署
+│   ├── pages-deploy.yml     ← 網站樣式變更時單獨部署 Pages
+│   └── llm-connection-test.yml ← 手動測試 LLM endpoint
+├── _config.yml              ← Jekyll 與 Blog 設定
+├── _layouts/                ← Blog layout
+├── _posts/                  ← LLM 產生的每日文章
+├── assets/css/style.css     ← Blog 樣式
+├── index.md                 ← Blog 首頁
 ├── scripts/
-│   └── crawl.py              ← 爬蟲主程式
+│   ├── crawl.py              ← 爬蟲主程式
+│   └── generate_blog.py      ← LLM 摘要與 Markdown 產生器
 ├── config/
 │   ├── README.md             ← 完整設定與 demo 使用說明
 │   ├── examples/             ← 其他主題與限定學者範例
@@ -78,10 +91,12 @@ flowchart TD
     J --> K[套用 selection 規則<br/>最低命中數／作者／篇數上限]
     K --> L[data/YYYY-MM-DD.json<br/>與 data/index.json]
 
-    L --> M[LLM 讀取論文資料]
+    L --> M[LLM 讀取前 10 篇優先論文]
     N[config/researcher.json<br/>研究背景與興趣] --> M
     D --> M
-    M --> O[個人化研究雷達報告]
+    M --> O[_posts/YYYY-MM-DD-daily-paper-scout.md]
+    O --> P[Jekyll build]
+    P --> Q[GitHub Pages]
 ```
 
 ### 用白話說
@@ -91,9 +106,31 @@ flowchart TD
 3. **抓取候選**：不同來源各自回傳論文 metadata。來源抓到的是候選池，不代表每篇都會被保存。
 4. **視窗與去重**：`published_at` 只用來限定回看視窗；是否收錄由 arXiv ID 在 `seen.json` 中的 `first_seen_on` 決定。
 5. **排序與選擇**：計算關鍵字命中與 priority，再套用 `selection` 的門檻和篇數上限。所有候選 ID 都先記錄，不會因未進入前 30 篇而隔天重複出現。
-6. **交給 LLM**：JSON 提供「本次雷達第一次發現什麼」，`researcher.json` 提供「這位研究者關心什麼」。
+6. **交給 LLM**：預設取優先度最高的 10 篇，JSON 提供「本次雷達第一次發現什麼」，`researcher.json` 提供「這位研究者關心什麼」。
+7. **發佈 Blog**：摘要寫入 `_posts/`，Jekyll 建置後由 GitHub Pages workflow artifact 發佈。
 
 > Mermaid 圖描述的是資料流程，不是每個來源都一定成功；例如 alphaXiv 失敗時，其他來源仍可完成當日資料。
+
+---
+
+## 🌐 Blog 與 GitHub Pages
+
+公開網站：
+
+```text
+https://tbdavid2019.github.io/paper-daily/
+```
+
+目前使用 GitHub 官方 Pages Actions，不使用獨立的 `gh-pages` branch：
+
+```text
+actions/configure-pages@v5
+actions/jekyll-build-pages@v1
+actions/upload-pages-artifact@v3
+actions/deploy-pages@v4
+```
+
+每日 workflow 會在台灣時間週一至週五 10:00 執行；只有 `_config.yml`、`_layouts/`、`assets/` 或 `index.md` 等網站檔案變更時，`pages-deploy.yml` 會單獨重新建置網站，不會額外呼叫 LLM。
 
 ---
 
@@ -279,15 +316,37 @@ Skill 載入後固定執行：
 ### 使用方式（推薦）
 
 1. **Fork** 這個 repository
-2. GitHub Actions 會自動啟用
-3. 台灣時間週一至週五 **10:00**（UTC 02:00）自動建立當日首次發現清單
-4. 資料會自動 commit 到 `data/` 資料夾
+2. 到 **Settings → Pages → Build and deployment**，確認 Source 為 **GitHub Actions**
+3. 在 **Settings → Secrets and variables → Actions** 設定 LLM 參數，詳見下方「LLM 設定」
+4. 台灣時間週一至週五 **10:00**（UTC 02:00）自動抓取、摘要並部署 Blog
+5. 資料會自動 commit 到 `data/`，文章會自動 commit 到 `_posts/`
 
-> **不需要任何 API key。** 所有資料來源都使用公開 API。
+> 爬蟲本身不需要 API key；自動產生 Blog 摘要需要設定 LLM API key。
+
+### LLM 設定
+
+在 repository 的 **Settings → Secrets and variables → Actions** 設定：
+
+| 類型 | 名稱 | 值 |
+|------|------|-----|
+| Variable | `LLM_BASE_URL` | 你的 OpenAI-compatible Base URL，例如 `https://nen.com.tw/v1` |
+| Variable | `LLM_MODEL` | 模型名稱，例如 `gemini-3.7-flash` |
+| Secret | `LLM_API_KEY` | LLM API key，不要提交到 Git |
+
+workflow 會呼叫：
+
+```text
+POST {LLM_BASE_URL}/chat/completions
+Authorization: Bearer {LLM_API_KEY}
+```
+
+API key 不會寫入資料檔、文章或 workflow log。若 key 曾經出現在公開對話或 commit，請立即撤銷並輪換。
 
 ### 手動觸發
 
 到 **Actions → Daily Paper Crawl → Run workflow**，可以指定雷達日期與 topic；日期留空時使用當前 UTC 日。
+
+若只要測試 LLM 連線，到 **Actions → LLM Connection Test → Run workflow**。此測試只驗證 HTTP 回應與文字內容，不輸出完整回應或 API key。
 
 ### 本地開發
 
@@ -303,6 +362,9 @@ PAPER_TOPIC=general_ai python scripts/crawl.py
 
 # 具身智能（目前預設）
 PAPER_TOPIC=embodied_ai python scripts/crawl.py
+
+# 使用已設定的環境變數產生當日 Blog 文章
+python scripts/generate_blog.py
 ```
 
 ### 自訂論文主題

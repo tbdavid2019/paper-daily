@@ -2,6 +2,31 @@
 
 本檔案記錄 Daily Paper Scout 的重要變更。
 
+## 2026-08-20
+
+### LLM 研究摘要 Blog
+
+- 新增 `scripts/generate_blog.py`，讀取每日論文 JSON、研究者設定與 topic profile，使用 OpenAI-compatible LLM endpoint 產生繁體中文研究摘要。
+- 摘要固定包含「今日概況」、「Must-Read」、「Highly Relevant」、「Interesting」與「Idea Sparks」段落；模型漏段落時會修復，仍無法補足時明確標示「資料未提供」。
+- 新增 `_posts/`、Jekyll layout、首頁與 responsive CSS，輸出成 `888每日論文雷達 -- Embodied AI` Blog。
+
+### GitHub Pages 自動部署
+
+- `daily-crawl.yml` 現在會依序執行爬蟲、LLM 摘要、Jekyll build 與 GitHub Pages deploy。
+- 新增 `pages-deploy.yml`，品牌或網站樣式變更時可不重新呼叫 LLM，直接重新部署 Pages。
+- GitHub Pages 使用官方 workflow artifact，不需要 `gh-pages` branch。
+- 公開網址：[888每日論文雷達 -- Embodied AI](https://tbdavid2019.github.io/paper-daily/)。
+
+### 品牌與技術提供
+
+- Blog 名稱改為 `888每日論文雷達 -- Embodied AI`。
+- Footer 中央新增 [https://david888.com](https://david888.com) 技術提供連結。
+
+### 測試與安全
+
+- 新增手動 `LLM Connection Test` workflow，驗證 LLM 連線但不輸出 API key 或完整回應。
+- 新增摘要產生器的排序、回應格式、Markdown 與必要段落測試。
+
 ## 2026-07-18
 
 ### First-seen 增量雷達
