@@ -204,7 +204,7 @@ actions/deploy-pages@v4
 | Papers With Code | REST API v1 | None | 最新 50 篇 |
 | alphaXiv trending | Web scraping | Best effort | 熱門論文排名 |
 
-目前爬蟲直接呼叫上述公開來源，不使用 `2md.aiurl.tw`、`2md.glsoft.ai` 或 `create360.ai`。現階段保存的是論文 metadata 與摘要，不會下載或解析完整 PDF；完整 PDF 轉 Markdown 可作為未來的獨立擴充。
+目前爬蟲直接呼叫上述公開來源，先完成論文發現與 metadata 整理。`2md.aiurl.tw`、`2md.glsoft.ai` 與 `create360.ai` 是可接入的 888 URL to Markdown Reader 服務入口，支援網頁、PDF 與批次 URL 轉換；目前 pipeline 尚未將完整內容擷取接到 LLM 階段，因此現階段報告主要使用標題、作者與摘要。
 
 ### 預設不綁定研究者
 
