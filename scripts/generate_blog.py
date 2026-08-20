@@ -22,6 +22,13 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_TIMEOUT = 120
 DEFAULT_MAX_PAPERS = 10
+REQUIRED_SECTIONS = (
+    "今日概況",
+    "Must-Read",
+    "Highly Relevant",
+    "Interesting",
+    "Idea Sparks",
+)
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -208,6 +215,40 @@ def clean_markdown(text: str) -> str:
     return text.strip()
 
 
+def missing_sections(text: str) -> list[str]:
+    normalized = clean_markdown(text).casefold()
+    return [section for section in REQUIRED_SECTIONS if f"## {section}".casefold() not in normalized]
+
+
+def ensure_required_sections(text: str) -> str:
+    """Keep the public post shape stable even if a model omits a section."""
+    body = clean_markdown(text)
+    missing = missing_sections(body)
+    if missing:
+        body += "\n\n" + "\n\n".join(
+            f"## {section}\n\n資料未提供。" for section in missing
+        )
+    return body
+
+
+def build_repair_messages(draft: str, missing: list[str]) -> list[dict[str, str]]:
+    sections = ", ".join(f"`## {section}`" for section in missing)
+    system = """你是 Markdown 報告修訂編輯。以下 draft 來自研究摘要模型。
+請保留 draft 中有證據支持的內容，補齊指定的標題段落，並只輸出完整文章本文。
+不可新增輸入沒有支持的實驗結果、數字或結論。若無法補齊內容，該段只能寫「資料未提供」。
+不要輸出 YAML front matter、JSON 或 code fence。"""
+    user = json.dumps(
+        {
+            "required_missing_sections": missing,
+            "required_heading_format": sections,
+            "draft": draft,
+        },
+        ensure_ascii=False,
+        indent=2,
+    )
+    return [{"role": "system", "content": system}, {"role": "user", "content": user}]
+
+
 def render_post(report_date: str, topic_name: str, body: str) -> str:
     title = f"每日論文雷達｜{report_date}"
     front_matter = "\n".join(
@@ -246,11 +287,22 @@ def main() -> None:
         os.environ.get("LLM_MODEL", ""),
         messages,
     )
+    missing = missing_sections(body)
+    if missing:
+        body = call_llm(
+            os.environ.get("LLM_BASE_URL", ""),
+            os.environ.get("LLM_API_KEY", ""),
+            os.environ.get("LLM_MODEL", ""),
+            build_repair_messages(body, missing),
+        )
 
     output_dir = Path(os.environ.get("POSTS_DIR", ROOT / "_posts"))
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{report_date}-daily-paper-scout.md"
-    output_path.write_text(render_post(report_date, topic_name, body), encoding="utf-8")
+    output_path.write_text(
+        render_post(report_date, topic_name, ensure_required_sections(body)),
+        encoding="utf-8",
+    )
     print(f"Generated {output_path} from {len(papers)} papers for {report_date}.")
 
 

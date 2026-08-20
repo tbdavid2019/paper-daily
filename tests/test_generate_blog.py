@@ -36,6 +36,14 @@ class GenerateBlogTest(unittest.TestCase):
         self.assertIn("topic: \"embodied_ai\"", post)
         self.assertTrue(post.endswith("\n"))
 
+    def test_missing_sections_are_detected_and_filled_honestly(self):
+        body = "## 今日概況\n內容\n\n## Must-Read\n內容"
+        missing = generate_blog.missing_sections(body)
+        self.assertIn("Idea Sparks", missing)
+        completed = generate_blog.ensure_required_sections(body)
+        self.assertIn("## Idea Sparks", completed)
+        self.assertIn("資料未提供", completed)
+
 
 if __name__ == "__main__":
     unittest.main()
