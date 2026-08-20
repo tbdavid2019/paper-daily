@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "topic": "embodied_ai",
-  "crawled_at": "2026-08-20T03:04:18.405890Z",
+  "crawled_at": "2026-08-20T07:08:32.400256Z",
   "stats": {
     "sources": {
       "huggingface": 100,
@@ -13,7 +13,7 @@
       "alphaxiv": 0
     },
     "total_crawled": 760,
-    "after_dedup": 670,
+    "after_dedup": 665,
     "window_start": "2026-08-16",
     "window_candidates": 623,
     "already_seen": 384,
@@ -23,6 +23,28 @@
     "keyword_matched": 22
   },
   "papers": [
+    {
+      "id": "2608.18701",
+      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
+      "authors": [
+        "Bowen Jing",
+        "Mingxin Wang",
+        "Ruiyang Hao",
+        "Chenchen Ge",
+        "Hanwen Shen"
+      ],
+      "abstract": "Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive compression. A primary bottleneck is the absence of visuo-tactile datasets that pair policy-visible contact observations with independent physical ground truth over complete tasks. We introduce SoftVTBench, a visuo-tactile dataset for physical-interaction-aware deformable-object manipulation. It contains 4,000 expert demonstrations and more than 50 assets, including volumetric deformable objects and v",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18701",
+      "published_at": "2026-08-19T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-08-19T08:58:47Z",
+      "priority": 35.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
     {
       "id": "2608.18433",
       "title": "The Embodiment Gap in Robot Foundation Models",
@@ -62,6 +84,28 @@
       "updated_at": "2026-08-18T18:16:15Z",
       "keyword_hits": 3,
       "priority": 30.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18746",
+      "title": "Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning",
+      "authors": [
+        "Jiawei Wang",
+        "Ke Rui",
+        "Yushen Zuo",
+        "Yichun Feng",
+        "Minglei Li"
+      ],
+      "abstract": "JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this particular cost ranks candidate action sequences by real task progress. We call the latter property decision-metric alignment. We introduce Plan-Real Spearman, which measures latent--real rank agreement on random plans, and CEM-stage Spearman, which measures the same agreement as cross-entropy-method (CEM) search concentrates its proposal. We analyze sufficient conditions under which latent distance p",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18746",
+      "published_at": "2026-08-19T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-19T09:56:39Z",
+      "priority": 25.0,
       "first_seen_at": "2026-08-20T03:04:18.405890Z"
     },
     {
@@ -255,27 +299,6 @@
       "first_seen_at": "2026-08-20T03:04:18.405890Z"
     },
     {
-      "id": "2608.18701",
-      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
-      "authors": [
-        "Bowen Jing",
-        "Mingxin Wang",
-        "Ruiyang Hao",
-        "Chenchen Ge",
-        "Hanwen Shen"
-      ],
-      "abstract": "Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive compression. A primary bottleneck is the absence of visuo-tactile datasets that pair policy-visible contact observations with independent physical ground truth over complete tasks. We introduce SoftVTBench, a visuo-tactile dataset for physical-interaction-aware deformable-object manipulation. It contains 4,000 expert demonstrations and more than 50 assets, including volumetric deformable objects and v",
-      "sources": [
-        "arxiv_cs.RO"
-      ],
-      "url": "https://arxiv.org/abs/2608.18701",
-      "published_at": "2026-08-19T08:58:47Z",
-      "updated_at": "2026-08-19T08:58:47Z",
-      "keyword_hits": 2,
-      "priority": 20.0,
-      "first_seen_at": "2026-08-20T03:04:18.405890Z"
-    },
-    {
       "id": "2608.18618",
       "title": "LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories",
       "authors": [
@@ -432,27 +455,6 @@
       "url": "https://arxiv.org/abs/2608.18827",
       "published_at": "2026-08-19T11:36:55Z",
       "updated_at": "2026-08-19T11:36:55Z",
-      "keyword_hits": 1,
-      "priority": 10.0,
-      "first_seen_at": "2026-08-20T03:04:18.405890Z"
-    },
-    {
-      "id": "2608.18746",
-      "title": "Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning",
-      "authors": [
-        "Jiawei Wang",
-        "Ke Rui",
-        "Yushen Zuo",
-        "Yichun Feng",
-        "Minglei Li"
-      ],
-      "abstract": "JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this particular cost ranks candidate action sequences by real task progress. We call the latter property \\emph{decision-metric alignment}. We introduce Plan-Real Spearman, which measures latent--real rank agreement on random plans, and CEM-stage Spearman, which measures the same agreement as cross-entropy-method (CEM) search concentrates its proposal. We analyze sufficient conditions under which latent dis",
-      "sources": [
-        "arxiv_cs.CV"
-      ],
-      "url": "https://arxiv.org/abs/2608.18746",
-      "published_at": "2026-08-19T09:56:39Z",
-      "updated_at": "2026-08-19T09:56:39Z",
       "keyword_hits": 1,
       "priority": 10.0,
       "first_seen_at": "2026-08-20T03:04:18.405890Z"
