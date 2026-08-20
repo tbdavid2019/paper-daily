@@ -1,7 +1,7 @@
 {
   "date": "2026-08-20",
   "topic": "embodied_ai",
-  "crawled_at": "2026-08-20T07:14:51.596270Z",
+  "crawled_at": "2026-08-20T09:26:09.014973Z",
   "stats": {
     "sources": {
       "huggingface": 100,
@@ -13,7 +13,7 @@
       "alphaxiv": 0
     },
     "total_crawled": 760,
-    "after_dedup": 665,
+    "after_dedup": 664,
     "window_start": "2026-08-16",
     "window_candidates": 623,
     "already_seen": 384,
