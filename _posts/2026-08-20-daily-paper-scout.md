@@ -7,12 +7,12 @@ topic: "embodied_ai"
 ## 今日概況
 
 * **日期**：2026-08-20
-* **研究主題**：具身智能（Embodied Intelligence / Embodied AI）
-* **收錄與篩選統計**：
-  * 總爬取篇數：760 篇（來源涵蓋 arXiv cs.RO 148 篇、cs.AI 250 篇、cs.CV 250 篇、Hugging Face 100 篇、arXiv keyword 12 篇，其餘來源 0 篇）
-  * 去重後候選：665 篇
-  * 時間窗口內候選：623 篇（排除已處理 384 篇後，新增候選 239 篇）
-  * 關鍵字匹配與精選收錄：22 篇中精選 10 篇代表性論文
+* **主題**：具身智慧（Embodied Intelligence）
+* **資料統計**：
+  * 爬取總量：760 篇（經去重後為 664 篇）
+  * 時間窗口內候選論文：623 篇（已處理 384 篇，新候選 239 篇）
+  * 今日入選展示論文：10 篇（精選自關鍵字匹配的 22 篇中）
+  * 資料來源分佈：arXiv cs.AI (250)、arXiv cs.CV (250)、arXiv cs.RO (148)、Hugging Face (100)、arXiv keyword (12)
 
 ---
 
@@ -20,86 +20,90 @@ topic: "embodied_ai"
 
 ### The Embodiment Gap in Robot Foundation Models
 * **作者**：Yukiyasu Domae, Keisuke Shirai, Hanbit Oh, Ryoichi Nakajo, Tomohiro Motoda
-* **來源**：arXiv (cs.RO, arxiv_keyword)
-* **論文連結**：[https://arxiv.org/abs/2608.18433](https://arxiv.org/abs/2608.18433)
-* **重點與研究關聯**：
-  * **摘要核心**：論文探討機器人基礎模型（Robot Foundation Models, RFM）與視覺-語言-動作（VLA）策略中的「具身差距（Embodiment Gap）」。儘管模型可透過擴展資料與模型規模展現泛化能力，但在實際部署至特定機械本體時仍需大量適配工作。本篇回顧分析了可重用模型/表示與具體機器人執行之間的差距成因與影響。
-  * **對具身智能研究者的價值**：對於研究跨本體控制、泛化策略與 VLA 實際落地的研究者而言，該文釐清了純資料擴展與本體物理限制之間的落差，有助於重新審視跨平台部署的挑戰。
+* **連結**：https://arxiv.org/abs/2608.18433
+* **來源**：arxiv_cs.RO, arxiv_keyword
+* **重點與關聯**：
+  * **摘要證據**：機器人基礎模型（RFM）與視覺-語言-動作（VLA）策略常基於擴展定律（Scaling Law）進行討論，但模型在泛化之餘，要實際部署至特定硬體本體仍需額外工作。本文將「可重用模型、表徵或數據」與「在目標機器人上執行」之間的落差正式定義為「具體化落差（embodiment gap）」，並對其成因與影響展開綜述（具體分類細節摘要未完整提供）。
+  * **對研究者的關聯**：該文直擊當前具身基礎模型從預訓練泛化走向真實特定硬體部署的核心痛點，為跨本體策略遷移提供了系統性的概念框架。
 
 ### SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation
 * **作者**：Bowen Jing, Mingxin Wang, Ruiyang Hao, Chenchen Ge, Hanwen Shen
-* **來源**：Hugging Face, arXiv (cs.RO)
-* **論文連結**：[https://arxiv.org/abs/2608.18701](https://arxiv.org/abs/2608.18701)
-* **重點與研究關聯**：
-  * **摘要核心**：現有可變形物體操作基準多僅評估任務成功率，忽略了滑動或過度擠壓等物理接觸品質。論文提出 SoftVTBench 視觸覺數據集與基準，包含 4,000 筆專家示範與超過 50 種資產（含體積可變形物體），將策略可見的接觸觀測與物理真實基準配對。
-  * **對具身智能研究者的價值**：為多模態感知、觸覺回饋控制以及軟質/可變形物體操作研究提供了具備物理形變感知的評測環境與資料基礎。
+* **連結**：https://arxiv.org/abs/2608.18701
+* **來源**：huggingface, arxiv_cs.RO
+* **重點與關聯**：
+  * **摘要證據**：針對傳統基準僅評估任務成功率而忽略滑移或過度擠壓等物理互動品質的問題，作者提出了首個具備形變感知的視觸覺數據集與基準 SoftVTBench。該基準包含 4,000 條專家示範與超過 50 種資產（含體積可變形物體），將策略可見的接觸觀測與整個任務期間獨立的物理真值進行配對。
+  * **對研究者的關聯**：為可變形物體操作（Deformable-Object Manipulation）與多模態視觸覺策略學習提供了具備物理真值的高質量評估平台。
 
-### GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting
-* **作者**：Yechan Park, HyunJin Kim
-* **來源**：arXiv (cs.AI, cs.CV)
-* **論文連結**：[https://arxiv.org/abs/2608.19066](https://arxiv.org/abs/2608.19066)
-* **重點與研究關聯**：
-  * **摘要核心**：針對 VLA 策略對視角偏移極度敏感的問題（實驗指出相機安裝的微小位移可使 LIBERO 基準成功率從約 90% 下降至約 10%），提出利用 3D Gaussian Splatting（3DGS）進行新視角合成的即插即用框架，在不重新訓練凍結策略的情況下進行觀測空間標準化。
-  * **對具身智能研究者的價值**：展示了將 3D 空間表示（3DGS）作為預處理管道以提升既有凍結 VLA 策略視角強健性的有效途徑。
+### ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning
+* **作者**：Jayjun Lee, Jessica Yin, Asif Rana, Nicholas Blauch, Sam Mady
+* **連結**：https://arxiv.org/abs/2608.19182
+* **來源**：arxiv_cs.RO, arxiv_cs.AI
+* **重點與關聯**：
+  * **摘要證據**：本文提出 ADEPT 大規模強化學習（RL）框架，用於實現高自由度（DoF）機器人從原始視觸覺感知直接學習可跨 Sim-to-Real 遷移的靈巧操作。該方法先在通用物體位姿調整（reposing）任務上預訓練靈巧策略，再以此行為作為先驗進行下游策略的後訓練（post-training），以解決多指機器人從頭學習困難且重複學習技能的問題。
+  * **對研究者的關聯**：展示了「預訓練 + 微調」範式在高自由度靈巧手操作與視觸覺閉環控制中的具體可行性。
 
 ---
 
 ## Highly Relevant
 
-### ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning
-* **作者**：Jayjun Lee, Jessica Yin, Asif Rana, Nicholas Blauch, Sam Mady
-* **來源**：arXiv (cs.RO, cs.AI)
-* **論文連結**：[https://arxiv.org/abs/2608.19182](https://arxiv.org/abs/2608.19182)
-* **重點評析**：提出大規模強化學習框架，先在泛化物體姿態重置（reposing）任務上預訓練靈巧手策略，再作為先驗微調至下游任務。該框架支援高自由度機械手從原始視觸覺感知中直接學習長時程任務，並具備 Sim-to-Real 遷移能力。
+### GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting
+* **作者**：Yechan Park, HyunJin Kim
+* **連結**：https://arxiv.org/abs/2608.19066
+* **來源**：arxiv_cs.AI, arxiv_cs.CV
+* **重點**：針對 VLA 策略對相機視角偏差極度敏感的問題（實驗指出相機支架微小位移可使 LIBERO 基準成功率從約 90% 降至約 10% 左右），提出首個直接利用 3D Gaussian Splatting 進行新視角合成的即插即用框架，在無需重新訓練凍結策略的前提下規範化觀測空間。
+
+### Revisiting the "Push-T" Robot Manipulation Task with Agentic Robotics
+* **作者**：Shuangyu Xie, Kaiyuan Chen, Ken Goldberg
+* **連結**：https://arxiv.org/abs/2608.18227
+* **來源**：arxiv_cs.RO
+* **重點**：重新審視經典的 Push-T 基準，探索利用 LLM 程式碼代理（Claude Code 搭配 Fable 5）在完全不需要示範數據的情況下自動生成演算法解決方案（Code as Policy），並將其結果與視覺動作模仿學習策略進行比較分析。
 
 ### DA-WAM: Decision-Aligned Future Latents for Driving World Models
 * **作者**：Ruiguo Zhong, Benshan Ma, Xiaolong Chen, Lang Zhang, Mingyue Feng
-* **來源**：arXiv (cs.RO, cs.AI)
-* **論文連結**：[https://arxiv.org/abs/2608.19085](https://arxiv.org/abs/2608.19085)
-* **重點評析**：針對自動駕駛世界模型中未來預測與決策優化脫節的問題，提出決策對齊（Decision-Aligned）的未來潛在空間學習方法，使預測的未來狀態能直接反映動作特異性結果，進而引導軌跡選擇。
+* **連結**：https://arxiv.org/abs/2608.19085
+* **來源**：arxiv_cs.RO, arxiv_cs.AI
+* **重點**：針對現有自動駕駛世界模型將未來表徵學習與規劃優化解耦、導致動作特定後果被稀釋的問題，提出決策對齊（Decision-Aligned）的未來潛在空間建構方法，確保預測出的未來狀態能直接引導軌跡選擇。
 
 ### LT-Mem: Volatility-Aware Spatio-Temporal Memory for Lifelong Scene Understanding
 * **作者**：Yumin Lee, Hyoseok Ju, Giseop Kim
-* **來源**：arXiv (cs.RO, cs.CV)
-* **論文連結**：[https://arxiv.org/abs/2608.19059](https://arxiv.org/abs/2608.19059)
-* **重點評析**：為解決機器人在長期運行中因覆蓋歷史地圖而產生的「時間失憶」問題，LT-Mem 結合空間對齊的實例級 3D 感知與動態揮發性（volatility）條件化記憶機制，維持跨 session 的物件身份一致性。
-
-### Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction
-* **作者**：Zijian Xiao, Zipeng Ye, Jinkun Hao, Xiong Yang, Yuchen Xie
-* **來源**：arXiv (cs.RO, cs.CV)
-* **論文連結**：[https://arxiv.org/abs/2608.18840](https://arxiv.org/abs/2608.18840)
-* **重點評析**：提出 RoomWright 框架，將 3D 場景完全表示為程式碼，並聚焦於場景的「功能性使用」而非僅限於物件擺放與關節鉸接，透過以用途為驅動的物件推理生成可供具身互動的模擬環境。
+* **連結**：https://arxiv.org/abs/2608.19059
+* **來源**：arxiv_cs.RO, arxiv_cs.CV
+* **重點**：針對機器人長期運作中歷史被覆蓋或跨工作期（cross-session）物體識別不一致引起的「時間遺忘症」，提出結合空間對齊 3D 實例感知與揮發性條件（volatility-conditioned）演化的時空記憶架構，支援跨會話物體軌跡查詢。
 
 ---
 
 ## Interesting
 
-### Revisiting the "Push-T" Robot Manipulation Task with Agentic Robotics
-* **作者**：Shuangyu Xie, Kaiyuan Chen, Ken Goldberg
-* **來源**：arXiv (cs.RO)
-* **論文連結**：[https://arxiv.org/abs/2608.18227](https://arxiv.org/abs/2608.18227)
-* **簡要筆記**：重新審視經典的 Push-T 基準，探討使用 LLM 寫程式代理（Claude Code 搭配 Fable 5）在無示範資料下直接生成演算法策略（Code as Policy）的可行性，並與傳統視動模仿學習策略進行對比。
+### Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction
+* **作者**：Zijian Xiao, Zipeng Ye, Jinkun Hao, Xiong Yang, Yuchen Xie
+* **連結**：https://arxiv.org/abs/2608.18840
+* **來源**：arxiv_cs.RO, arxiv_cs.CV
+* **重點**：提出 RoomWright 框架，將室內場景完全表示為可執行的程式碼，並從單純的幾何放置與關節鉸接轉向基於功能用途（usage-driven）的物件推理，生成支援具身互動的模擬環境。
 
 ### Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models
 * **作者**：Pardis Taghavi, Reza Langari, Gaurav Pandey
-* **來源**：arXiv (cs.AI, cs.CV)
-* **論文連結**：[https://arxiv.org/abs/2608.18484](https://arxiv.org/abs/2608.18484)
-* **簡要筆記**：針對影片生成與世界模型提出名為 SparsePR 的免訓練區塊稀疏注意力機制，透過耦合響應分割與殘差重構來加速注意力計算，對於世界模型的推論加速具潛在參考價值。
+* **連結**：https://arxiv.org/abs/2608.18484
+* **來源**：arxiv_cs.AI, arxiv_cs.CV
+* **重點**：提出名為 SparsePR 的免訓練區塊稀疏注意力機制，透過響應耦合分區與探針擬合殘差重構，降低注意力運算開銷，可用於加速視訊生成與世界模型的計算效率。
 
 ### GrabVG: Graph-Attentive Binding for Visual Grounding in UAV Imagery
 * **作者**：Chaowei Wang, Yan Di, Jingjun Sun, Baozhe Liu, Jiaxu Tian
-* **來源**：arXiv (cs.AI, cs.CV)
-* **論文連結**：[https://arxiv.org/abs/2608.18996](https://arxiv.org/abs/2608.18996)
-* **簡要筆記**：針對無人機鳥瞰視角下的微小密集物件與拓撲模糊性，提出圖注意力綁定機制以提升視覺定位精確度，主要針對無人機領域，但其空間拓撲建模想法具借鑑性。
+* **連結**：https://arxiv.org/abs/2608.18996
+* **來源**：arxiv_cs.AI, arxiv_cs.CV
+* **重點**：針對無人機鳥瞰視角下密集小型目標與拓撲歧義問題，提出基於圖注意力機制的視覺定位方法，強化實例間細微差異識別與空間拓撲結構利用。
 
 ---
 
 ## Idea Sparks
 
-### 1. 3D 空間標準化與本體差距（Embodiment Gap）的解耦
-* **跨論文觀察**：*The Embodiment Gap in Robot Foundation Models* 指出 RFM/VLA 在不同機器人載體部署時存在顯著鴻溝；而 *GS-VLA* 則示範了利用 3DGS 進行視角標準化，無需重新訓練策略即可顯著緩解感測器幾何位移造成的性能崩塌。
-* **後續研究問題**：能否將 3DGS 或顯式 3D 幾何表徵進一步擴展至機械手臂本體配置與工作空間的標準化，將「觀測空間適配」與「動作空間映射」完全解耦，以系統性縮小 RFM 的具身差距？
+### 1. 視觸覺感知與物理真實性評估的閉環結合
+* **跨論文觀察**：`SoftVTBench` 指出傳統強化學習或模仿學習常因缺乏接觸真值而導致過度擠壓或滑移，而 `ADEPT` 則成功透過通用任務預訓練與原始視觸覺感知實現了高自由度靈巧手的跨本體遷移。
+* **後續研究問題**：若將 SoftVTBench 所建立的形變程度與接觸滑移等物理約束訊號，轉化為 ADEPT 強化學習預訓練或後訓練階段的獎勵懲罰項，是否能在維持 Sim-to-Real 靈巧度的同時，顯著降低高自由度機械手操作脆弱/可變形物體時的損壞率？
 
-### 2. 視觸覺融合在接觸豐富型任務中的物理約束評估
-* **跨論文觀察**：*SoftVTBench* 強調傳統成功率無法反映形變與接觸品質（如滑動、過度擠壓），而 *ADEPT* 證明了透過通用姿態調整預訓練可加速多指靈巧手從原始視觸覺中學習策略。
-* **後續研究問題**：在靈巧操作與軟質物件互動中，若將 SoftVTBench 所定義的物理接觸約束（如接觸應力、滑移懲罰）整合為 ADEPT 等強化學習框架的輔助獎勵或安全約束，是否能在提升 Sim-to-Real 遷移成功率的同時
+### 2. 觀測空間幾何規範化 vs. 符號化程式碼策略
+* **跨論文觀察**：`GS-VLA` 透過 3D Gaussian Splatting 在觀測端進行視角規範化來適應凍結的 VLA 策略；而 `Revisiting Push-T` 則顯示 LLM 代理可以直接編寫控制程式碼來解決操作任務，完全跳過神經網路策略的視角依賴。
+* **後續研究問題**：在面對相機外參大幅變動或動態視角場景時，採用 3DGS 觀測重建輸入給神經策略，與利用視覺語言模型直接生成基於幾何不變量的執行程式碼（Code-as-Policy），兩者在泛化邊界、推論延遲與失敗恢復能力上有何具體差異？
+
+### 3. 長期揮發性記憶與世界模型決策對齊的融合
+* **跨論文觀察**：`DA-WAM` 強調世界模型預測的未來潛在空間必須與即時動作決策緊密對齊，而 `LT-Mem` 則專注於長期環境演化中物體位置與狀態的揮發性時空記憶維護。
+* **後續研究問題**：如何將 LT-Mem 的實例級揮發性時空記憶作為先驗狀態注入 DA-WAM 的決策世界模型中，使具身智能體在規劃未來軌跡時，能同時基於短期動態反饋與跨工作期的物
