@@ -1,0 +1,82 @@
+name: LLM Connection Test
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    env:
+      LLM_BASE_URL: ${{ vars.LLM_BASE_URL }}
+      LLM_MODEL: ${{ vars.LLM_MODEL }}
+      LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+
+    steps:
+      - name: Call configured LLM endpoint
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          : "${LLM_BASE_URL:?LLM_BASE_URL variable is missing}"
+          : "${LLM_MODEL:?LLM_MODEL variable is missing}"
+          : "${LLM_API_KEY:?LLM_API_KEY secret is missing}"
+
+          response_file=$(mktemp)
+          trap 'rm -f "$response_file"' EXIT
+
+          payload=$(python3 - <<'PY'
+          import json
+          import os
+
+          print(json.dumps({
+              "model": os.environ["LLM_MODEL"],
+              "messages": [{
+                  "role": "user",
+                  "content": "Reply with exactly OK."
+              }],
+              "temperature": 0,
+              "max_tokens": 16,
+          }))
+          PY
+          )
+
+          http_code=$(curl \
+            --silent \
+            --show-error \
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            --max-time 90 \
+            "${LLM_BASE_URL%/}/chat/completions" \
+            -H 'Content-Type: application/json' \
+            -H "Authorization: Bearer ${LLM_API_KEY}" \
+            --data "$payload")
+
+          if [[ "$http_code" != 2* ]]; then
+            echo "LLM request failed with HTTP ${http_code}. Response body was intentionally not printed."
+            exit 1
+          fi
+
+          RESPONSE_FILE="$response_file" python3 - <<'PY'
+          import json
+          import os
+
+          with open(os.environ["RESPONSE_FILE"], encoding="utf-8") as f:
+              response = json.load(f)
+
+          choices = response.get("choices") or []
+          content = choices[0].get("message", {}).get("content") if choices else None
+          if isinstance(content, list):
+              content = "".join(
+                  part.get("text", "") if isinstance(part, dict) else str(part)
+                  for part in content
+              )
+          if not isinstance(content, str) or not content.strip():
+              raise SystemExit("LLM request returned no message content")
+
+          print("LLM connection test passed: HTTP 2xx and response content present.")
+          PY
