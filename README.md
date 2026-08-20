@@ -204,6 +204,8 @@ actions/deploy-pages@v4
 | Papers With Code | REST API v1 | None | 最新 50 篇 |
 | alphaXiv trending | Web scraping | Best effort | 熱門論文排名 |
 
+目前爬蟲直接呼叫上述公開來源，不使用 `2md.aiurl.tw`、`2md.glsoft.ai` 或 `create360.ai`。現階段保存的是論文 metadata 與摘要，不會下載或解析完整 PDF；完整 PDF 轉 Markdown 可作為未來的獨立擴充。
+
 ### 預設不綁定研究者
 
 `embodied_ai` 的 `tracked_authors` 預設為空，`semantic_scholar_max_authors` 設為 `0`，因此不會呼叫 Semantic Scholar 作者 API。這不會排除任何學者；所有人的論文仍可透過 arXiv 分類、關鍵字與其他來源進入候選池，避免研究雷達偏向少數知名實驗室。
