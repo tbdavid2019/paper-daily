@@ -3,13 +3,13 @@
 [![Daily Paper Crawl](https://github.com/tbdavid2019/paper-daily/actions/workflows/daily-crawl.yml/badge.svg)](https://github.com/tbdavid2019/paper-daily/actions/workflows/daily-crawl.yml)
 [![Deploy GitHub Pages](https://github.com/tbdavid2019/paper-daily/actions/workflows/pages-deploy.yml/badge.svg)](https://github.com/tbdavid2019/paper-daily/actions/workflows/pages-deploy.yml)
 
-GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後將本專案第一次發現的相關論文保存為結構化 JSON，再由 LLM 產生繁體中文研究摘要，建置並部署到 GitHub Pages。
+GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後將本專案第一次發現的相關論文保存為結構化 JSON，再交由 LLM 產生繁體中文研究摘要，最後建置並部署到 GitHub Pages。
 
 Blog：[https://tbdavid2019.github.io/paper-daily/](https://tbdavid2019.github.io/paper-daily/)
 
 > 🙏 **致謝**：感謝 [voidful](https://github.com/voidful) 建立本專案的原始版本，完成多來源論文聚合、去重、排序與 GitHub Actions 每日自動化的核心架構。現在的可配置主題與 first-seen 增量流程，都是建立在這個扎實基礎之上。
 
-這個專案的定位是可重用的「每日研究雷達」，預設聚焦具身智能，也能透過設定改成其他研究方向。研究者不需要修改爬蟲程式，只要調整 [`config/topics.json`](config/topics.json) 的主題參數，以及 [`config/researcher.json`](config/researcher.json) 的個人研究背景。
+這個專案的定位是可重用的「每日研究雷達」，預設聚焦具身智能，也能透過設定改成其他研究方向。研究者只需調整 [`config/topics.json`](config/topics.json) 的主題參數，以及 [`config/researcher.json`](config/researcher.json) 的個人研究背景。
 
 ---
 
@@ -91,7 +91,7 @@ flowchart TD
     J --> K[套用 selection 規則<br/>最低命中數／作者／篇數上限]
     K --> L[data/YYYY-MM-DD.json<br/>與 data/index.json]
 
-    L --> M[LLM 讀取前 10 篇優先論文]
+    L --> M[LLM 讀取標題、摘要與 metadata]
     N[config/researcher.json<br/>研究背景與興趣] --> M
     D --> M
     M --> O[_posts/YYYY-MM-DD-daily-paper-scout.md]
@@ -101,15 +101,15 @@ flowchart TD
 
 ### 用白話說
 
-1. **觸發**：排程在台灣時間週一至週五 10:00 執行；週六、週日不執行。
+1. **觸發**：排程在台灣時間週一至週五 10:00 執行，平日每日產生一份研究雷達。
 2. **決定範圍**：`PAPER_TOPIC` 選擇主題 profile；profile 決定 arXiv 分類、關鍵字、搜尋詞、追蹤作者與各來源抓取上限。
-3. **抓取候選**：不同來源各自回傳論文 metadata。來源抓到的是候選池，不代表每篇都會被保存。
+3. **抓取候選**：不同來源各自回傳論文 metadata，合併後形成候選池，再依 selection 規則建立保存清單。
 4. **視窗與去重**：`published_at` 只用來限定回看視窗；是否收錄由 arXiv ID 在 `seen.json` 中的 `first_seen_on` 決定。
-5. **排序與選擇**：計算關鍵字命中與 priority，再套用 `selection` 的門檻和篇數上限。所有候選 ID 都先記錄，不會因未進入前 30 篇而隔天重複出現。
-6. **交給 LLM**：預設取優先度最高的 10 篇，JSON 提供「本次雷達第一次發現什麼」，`researcher.json` 提供「這位研究者關心什麼」。
+5. **排序與選擇**：計算關鍵字命中與 priority，再套用 `selection` 的門檻和篇數上限。所有候選 ID 先寫入 first-seen state，後續日期沿用這份狀態完成去重。
+6. **交給 LLM**：預設取優先度最高的 10 篇，JSON 提供本次雷達第一次發現的論文，`researcher.json` 提供研究背景與興趣。
 7. **發佈 Blog**：摘要寫入 `_posts/`，Jekyll 建置後由 GitHub Pages workflow artifact 發佈。
 
-> Mermaid 圖描述的是資料流程，不是每個來源都一定成功；例如 alphaXiv 失敗時，其他來源仍可完成當日資料。
+> Mermaid 圖描述的是資料流程。各來源採 best-effort 設計，alphaXiv 發生暫時性問題時，其他來源仍可完成當日資料。
 
 ---
 
@@ -121,16 +121,16 @@ flowchart TD
 https://tbdavid2019.github.io/paper-daily/
 ```
 
-目前使用 GitHub 官方 Pages Actions，不使用獨立的 `gh-pages` branch：
+GitHub Pages 透過官方 Actions artifact 建置與發布，部署來源與步驟如下：
 
-```text
-actions/configure-pages@v5
-actions/jekyll-build-pages@v1
-actions/upload-pages-artifact@v3
-actions/deploy-pages@v4
+```yaml
+- uses: actions/configure-pages@v5
+- uses: actions/jekyll-build-pages@v1
+- uses: actions/upload-pages-artifact@v3
+- uses: actions/deploy-pages@v4
 ```
 
-每日 workflow 會在台灣時間週一至週五 10:00 執行；只有 `_config.yml`、`_layouts/`、`assets/` 或 `index.md` 等網站檔案變更時，`pages-deploy.yml` 會單獨重新建置網站，不會額外呼叫 LLM。
+每日 workflow 會在台灣時間週一至週五 10:00 執行。`pages-deploy.yml` 專責 `_config.yml`、`_layouts/`、`assets/` 與 `index.md` 等網站檔案的即時重建，網站樣式調整可直接完成 Pages 部署，LLM 摘要流程維持每日排程。
 
 ---
 
@@ -204,11 +204,11 @@ actions/deploy-pages@v4
 | Papers With Code | REST API v1 | None | 最新 50 篇 |
 | alphaXiv trending | Web scraping | Best effort | 熱門論文排名 |
 
-目前爬蟲直接呼叫上述公開來源，先完成論文發現與 metadata 整理。`2md.aiurl.tw`、`2md.glsoft.ai` 與 `create360.ai` 是可接入的 888 URL to Markdown Reader 服務入口，支援網頁、PDF 與批次 URL 轉換；目前 pipeline 尚未將完整內容擷取接到 LLM 階段，因此現階段報告主要使用標題、作者與摘要。
+目前爬蟲直接呼叫上述公開來源，先完成論文發現與 metadata 整理，原生流程將標題、作者與摘要交給 LLM。
 
-### 預設不綁定研究者
+### 預設主題雷達
 
-`embodied_ai` 的 `tracked_authors` 預設為空，`semantic_scholar_max_authors` 設為 `0`，因此不會呼叫 Semantic Scholar 作者 API。這不會排除任何學者；所有人的論文仍可透過 arXiv 分類、關鍵字與其他來源進入候選池，避免研究雷達偏向少數知名實驗室。
+`embodied_ai` 的 `tracked_authors` 預設為空，`semantic_scholar_max_authors` 設為 `0`，來源池以 arXiv 分類、關鍵字、HuggingFace、Papers With Code 與 alphaXiv 為主，讓各研究團隊的論文依主題條件公平進入候選池。
 
 若要建立人物追蹤型 profile，可自行加入 Semantic Scholar 作者 ID，再提高 `semantic_scholar_max_authors`。只有被指定的作者會獲得 `tracked_author` 標記與排序加分。
 
@@ -280,7 +280,7 @@ cp -R paper-daily/skills/daily-paper-scout .claude/skills/
 
 ### OpenClaw、Hermes 或其他 Agent
 
-這些工具若沒有固定的 skill 目錄，直接要求它讀取 Raw skill URL：
+這些工具可直接讀取 Raw skill URL：
 
 ```text
 https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/skills/daily-paper-scout/SKILL.md
@@ -300,7 +300,7 @@ Skill 載入後固定執行：
 3. 驗證雷達日期、first-seen 統計與來源數字後，依研究者設定分析論文。
 4. 將 metadata、論文原文證據與 Agent 推論分開，避免把截斷摘要當成完整論文。
 
-除 Codex／Claude Code 的本地安裝外，其他 Agent 都可以直接讀 Raw URL，不需要 clone repository。
+Codex／Claude Code 支援本地安裝；其他 Agent 可直接讀取 Raw URL，快速載入同一份 skill。
 
 ### 篩選建議
 
@@ -323,7 +323,7 @@ Skill 載入後固定執行：
 4. 台灣時間週一至週五 **10:00**（UTC 02:00）自動抓取、摘要並部署 Blog
 5. 資料會自動 commit 到 `data/`，文章會自動 commit 到 `_posts/`
 
-> 爬蟲本身不需要 API key；自動產生 Blog 摘要需要設定 LLM API key。
+> 爬蟲使用公開資料來源；自動產生 Blog 摘要時，GitHub Actions 透過 Secret 注入 LLM API key。
 
 ### LLM 設定
 
@@ -333,7 +333,7 @@ Skill 載入後固定執行：
 |------|------|-----|
 | Variable | `LLM_BASE_URL` | 你的 OpenAI-compatible Base URL，例如 `https://nen.com.tw/v1` |
 | Variable | `LLM_MODEL` | 模型名稱，例如 `gemini-3.7-flash` |
-| Secret | `LLM_API_KEY` | LLM API key，不要提交到 Git |
+| Secret | `LLM_API_KEY` | LLM API key，保留在 GitHub Secret |
 
 workflow 會呼叫：
 
@@ -342,7 +342,7 @@ POST {LLM_BASE_URL}/chat/completions
 Authorization: Bearer {LLM_API_KEY}
 ```
 
-API key 不會寫入資料檔、文章或 workflow log。若 key 曾經出現在公開對話或 commit，請立即撤銷並輪換。
+API key 僅存在 GitHub Secret，資料檔、文章與 workflow log 都維持無 key 狀態。若 key 曾經出現在公開對話或 commit，請立即撤銷並輪換。
 
 ### 手動觸發
 
@@ -378,7 +378,7 @@ clone 後通常只需要編輯兩個檔案：
 1. [`config/topics.json`](config/topics.json)：決定抓什麼、留下什麼。
 2. [`config/researcher.json`](config/researcher.json)：告訴 LLM 研究背景、興趣與目前問題。
 
-`config/examples/` 提供資料庫主題、資料庫研究者，以及啟用限定學者的具身智能範例。demo 不會被正式排程自動載入。
+`config/examples/` 提供資料庫主題、資料庫研究者，以及啟用限定學者的具身智能範例。正式排程讀取正式設定檔；demo 需複製到正式設定檔後啟用。
 
 ---
 

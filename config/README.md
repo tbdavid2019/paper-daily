@@ -5,9 +5,9 @@
 | 檔案 | 控制內容 | 是否影響爬蟲 |
 |------|----------|--------------|
 | `topics.json` | 資料來源、分類、關鍵字、作者追蹤、候選與篇數上限 | 是 |
-| `researcher.json` | LLM 閱讀者背景、研究興趣、報告篇數、門檻與語言 | 否 |
+| `researcher.json` | LLM 閱讀者背景、研究興趣、報告篇數、門檻與語言 | 讀取與解讀 |
 
-目前正式預設是 `embodied_ai`。`general_ai` 只是內建的切換示範；原始語音 profile 已移除。
+目前正式預設是 `embodied_ai`。`general_ai` 提供內建切換示範；正式設定檔聚焦目前支援的研究主題。
 
 ## 修改目前研究方向
 
@@ -61,7 +61,7 @@
 
 ## 啟用限定學者
 
-預設不指定學者，也不呼叫 Semantic Scholar 作者 API。要啟用時，同時設定作者 ID 與數量上限：
+預設以主題條件聚合論文，`tracked_authors` 維持空集合，Semantic Scholar 作者查詢額度設為 0。啟用人物雷達時，同時設定作者 ID 與數量上限：
 
 ```json
 "tracked_authors": {
@@ -82,7 +82,7 @@
 
 作者 ID 取自 Semantic Scholar 作者頁。每位作者通常需要一次請求，失敗時爬蟲可能重試；公開 API 容易限流，建議先從 4–8 位開始。追蹤作者的論文會帶有 `tracked_author`，並獲得 priority 加分。
 
-完整可執行範例見 [`examples/topics-embodied-authors.json`](examples/topics-embodied-authors.json)。此檔只是 demo，不會被預設排程載入。
+完整可執行範例見 [`examples/topics-embodied-authors.json`](examples/topics-embodied-authors.json)。正式排程讀取正式設定檔；示範檔複製到正式設定檔後即可啟用。
 
 ## 設定 LLM 研究者
 
@@ -123,6 +123,6 @@ PAPER_TOPIC=embodied_ai_people \
 python scripts/crawl.py
 ```
 
-若要讓 GitHub Actions 長期使用 demo，將所需 profile 複製進正式 `topics.json`，並修改 `default_topic`。不要直接修改 demo 後期待排程自動讀取它。
+若要讓 GitHub Actions 長期使用 demo，將所需 profile 複製進正式 `topics.json`，並修改 `default_topic`。示範檔的調整完成後，請同步更新正式設定檔以套用到排程。
 
 每個 topic 在 `data/seen.json` 有獨立 first-seen state。大幅改變研究方向時，建議使用新的 topic 名稱，避免舊 state 影響新主題的首次發現結果。

@@ -10,31 +10,31 @@
 2. 研究者設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/researcher.json`
 3. 主題設定：`https://raw.githubusercontent.com/tbdavid2019/paper-daily/main/config/topics.json`
 
-論文資料以 topic 的 first-seen 紀錄收錄並跨來源去重。檔案日期是研究雷達日期，不一定等於論文的 `published_at`。每篇包含：
+論文資料以 topic 的 first-seen 紀錄收錄並跨來源去重。檔案日期代表研究雷達日期；論文的 `published_at` 保留上游發布時間。每篇包含：
 
 - `first_seen_at`：本專案第一次在該 topic 發現論文的時間
-- `published_at`：上游提供的初次投稿／發布 metadata，不是當日收錄條件
+- `published_at`：上游提供的初次投稿／發布 metadata，用於補充時間脈絡
 - `keyword_hits`：主題關鍵字命中數
 - `priority`：關鍵字、多來源、熱度與追蹤作者的預排序分數
 - `sources`：論文出現的來源
 - `tracked_author`：是否來自 profile 追蹤作者
 
-不要假設研究者的身份、機構、專案或研究方向；一律以 `config/researcher.json` 為準。
+研究者的身份、機構、專案與研究方向一律以 `config/researcher.json` 為準。
 
 ## 任務
 
 1. 讀取 researcher profile 的背景、研究興趣與目前專案。
-2. 從當日 JSON 選出最相關的論文，篇數以 `report.target_papers` 為上限；沒有足夠好論文時可以少於上限。
+2. 從當日 JSON 選出最相關的論文，篇數以 `report.target_papers` 為上限，實際數量依論文品質決定。
 3. 對每篇評分 0–100：
    - 研究興趣直接匹配：40
    - 與目前專案或問題的連結：30
    - 方法論可借鑑性：20
    - 熱度、多來源或作者訊號：10
 4. 依 researcher profile 的門檻分類為 Must-Read、Highly Relevant、Interesting。
-5. 明確區分論文原文提供的資訊與你的推論；摘要不足時不要臆測實驗結果。
+5. 明確區分論文原文提供的資訊與你的推論；摘要不足時標示「資料未提供」，將推論範圍維持在現有證據內。
 6. 將跨論文的共同趨勢整理成 2–3 個 Idea Sparks。
 
-若能可靠取得社群或程式碼資訊，可以補充 X/Twitter、Hugging Face、GitHub 等外部訊號，但必須標示為補充來源，不可與論文內容混為一談。
+若能可靠取得社群或程式碼資訊，可以補充 X/Twitter、Hugging Face、GitHub 等外部訊號，並標示為補充來源，與論文內容分開呈現。
 
 ## 輸出格式
 
