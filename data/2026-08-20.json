@@ -1,0 +1,482 @@
+{
+  "date": "2026-08-20",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-20T03:04:18.405890Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 148,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 12,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 760,
+    "after_dedup": 670,
+    "window_start": "2026-08-16",
+    "window_candidates": 623,
+    "already_seen": 384,
+    "new_candidates": 239,
+    "selected_papers": 22,
+    "missing_published_at": 0,
+    "keyword_matched": 22
+  },
+  "papers": [
+    {
+      "id": "2608.18433",
+      "title": "The Embodiment Gap in Robot Foundation Models",
+      "authors": [
+        "Yukiyasu Domae",
+        "Keisuke Shirai",
+        "Hanbit Oh",
+        "Ryoichi Nakajo",
+        "Tomohiro Motoda"
+      ],
+      "abstract": "Robot foundation models (RFMs), including vision-language-action (VLA) policies, are often discussed through a scaling view: more data, larger models, and broader benchmarks should improve generalization. In robotics, however, a model can generalize while work still remains before it can run on a robot with a particular body. The work required differs across methods and target robots, and those differences affect practical deployment. We call the gap between reusable models, representations, or data and their use in execution on the target robot the embodiment gap. This survey examines what ca",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.18433",
+      "published_at": "2026-08-19T01:55:04Z",
+      "updated_at": "2026-08-19T01:55:04Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18227",
+      "title": "Revisiting the \"Push-T\" Robot Manipulation Task with Agentic Robotics",
+      "authors": [
+        "Shuangyu Xie",
+        "Kaiyuan Chen",
+        "Ken Goldberg"
+      ],
+      "abstract": "Push-T is an iconic benchmark for learning manipulation policies from human demonstrations. The robot must use a single point of contact to push a T-shaped block into a target pose. In this short paper, we revisit the Push-T task in the context of emerging advances in Agentic Robotics where an LLM coding agent -- Claude Code with Fable 5 -- is prompted to create an algorithmic solution that does not require any demonstration data. We study how effective the agentic coding loop can solve the Push-T task, and compare the resulting code as policy with the visuomotor imitation learning policy. Res",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18227",
+      "published_at": "2026-08-18T18:16:15Z",
+      "updated_at": "2026-08-18T18:16:15Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.19182",
+      "title": "ADEPT: Accelerating Dexterity via Pre-Training and Post-Training using Reinforcement Learning",
+      "authors": [
+        "Jayjun Lee",
+        "Jessica Yin",
+        "Asif Rana",
+        "Nicholas Blauch",
+        "Sam Mady"
+      ],
+      "abstract": "We introduce Accelerating Dexterity via Pre-Training (ADEPT), a large-scale reinforcement learning (RL) framework for learning sim-to-real transferable dexterity across high degree-of-freedom (DoF) robot embodiments that can solve long-horizon tasks directly from raw visuo-tactile perception. ADEPT pretrains a dexterous policy on a generic object reposing task, then post-trains downstream policies with this pretrained behavior as a prior. ADEPT enables learning new behaviors that are otherwise difficult to discover from scratch on multi-fingered robots and avoids learning the same set of skill",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.19182",
+      "published_at": "2026-08-19T17:55:06Z",
+      "updated_at": "2026-08-19T17:55:06Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.19085",
+      "title": "DA-WAM: Decision-Aligned Future Latents for Driving World Models",
+      "authors": [
+        "Ruiguo Zhong",
+        "Benshan Ma",
+        "Xiaolong Chen",
+        "Lang Zhang",
+        "Mingyue Feng"
+      ],
+      "abstract": "Anticipating how scenes evolve under ego actions is fundamental to safe autonomous driving, yet the full potential of world models for decision-making remains unrealized. The critical challenge lies in ensuring that future modeling is not merely predictive, but decision-informative: the predicted future must directly shape which trajectory is selected. Existing approaches decouple future representation learning from planning optimization, or share predicted states across trajectory candidates, thereby diluting the action-specific consequences that ought to guide selection. To bridge this gap, ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.19085",
+      "published_at": "2026-08-19T16:33:02Z",
+      "updated_at": "2026-08-19T16:33:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.19059",
+      "title": "LT-Mem: Volatility-Aware Spatio-Temporal Memory for Lifelong Scene Understanding",
+      "authors": [
+        "Yumin Lee",
+        "Hyoseok Ju",
+        "Giseop Kim"
+      ],
+      "abstract": "Long-term robot operation in evolving environments requires object-level understanding that persists across repeated revisits. Existing systems either overwrite history to maintain an up-to-date map or store semantic snapshots without consistent cross-session object identity, resulting in temporal amnesia: the systematic loss of object history that prevents answering queries such as \"Where has the green chair been across all sessions?\" We propose LT-Mem, a volatility-aware memory evolution framework that unifies spatially aligned instance-level 3D perception with volatility-conditioned tempora",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.19059",
+      "published_at": "2026-08-19T15:56:53Z",
+      "updated_at": "2026-08-19T15:56:53Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18840",
+      "title": "Beyond Placement and Articulation: Usage-Driven Code Scenes for Embodied Interaction",
+      "authors": [
+        "Zijian Xiao",
+        "Zipeng Ye",
+        "Jinkun Hao",
+        "Xiong Yang",
+        "Yuchen Xie"
+      ],
+      "abstract": "Indoor scene synthesis provides essential environments for embodied AI, robotic manipulation, and simulation-based policy learning. Recent code-based scene generation methods produce editable and extensible environments, yet they remain focused on visual construction and object-level articulation, leaving the functional usage of scenes largely unmodeled. To address this problem, we present RoomWright, an agentic usage-driven framework for generating 3D scenes represented entirely as code for embodied interaction. RoomWright performs usage-driven object reasoning, which treats each anchor as a ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18840",
+      "published_at": "2026-08-19T12:00:35Z",
+      "updated_at": "2026-08-19T12:00:35Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18234",
+      "title": "GigaBrain-WBC-0.5: A Behavior World Model for Robust Whole-Body Control with Environment Interaction",
+      "authors": [
+        "Ziyang Cheng",
+        "Tianshu Tang",
+        "Jinxin Lan",
+        "Xinze Chen",
+        "Yuhan Gong"
+      ],
+      "abstract": "Whole-body motion tracking policies turn a humanoid into a robust control interface: the teleoperator---or an upstream model---only supplies a coarse movement intent, while the low-level policy keeps the robot balanced and physically feasible. Existing trackers deliver this interface only on flat ground: trained in empty scenes, they never learn how contact with terrain and objects reshapes their dynamics, and they attempt to teach the policy to balance under any command by continually enlarging the reference-motion corpus, which stops working once feasible behaviors become environment-depende",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.18234",
+      "published_at": "2026-08-18T18:21:36Z",
+      "updated_at": "2026-08-18T18:21:36Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.19066",
+      "title": "GS-VLA: Plug-and-Play Viewpoint Canonicalization for Frozen VLA Policies via Gaussian Splatting",
+      "authors": [
+        "Yechan Park",
+        "HyunJin Kim"
+      ],
+      "abstract": "This paper proposes a lightweight, plug-and-play framework that improves robustness to viewpoint shifts in Vision-Language-Action (VLA) policies without policy retraining. To our knowledge, this is the first approach to directly leverage 3D Gaussian-based novel-view synthesis for observation-space adaptation in VLA policies. Current VLA performance relies on the implicit assumption that training and deployment camera configurations are identical. Our experiments show that even a small displacement of the camera mount can reduce the success rate on the LIBERO benchmark from about 90% to about 1",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.19066",
+      "published_at": "2026-08-19T16:08:10Z",
+      "updated_at": "2026-08-19T16:08:10Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18996",
+      "title": "GrabVG: Graph-Attentive Binding for Visual Grounding in UAV Imagery",
+      "authors": [
+        "Chaowei Wang",
+        "Yan Di",
+        "Jingjun Sun",
+        "Baozhe Liu",
+        "Jiaxu Tian"
+      ],
+      "abstract": "Visual grounding in Unmanned Aerial Vehicle (UAV) imagery aims to localize a target object in complex bird's-eye-view scenes according to a natural language description. However, the abundance of small, densely distributed, and visually similar objects creates high visual redundancy, while repetitive local configurations give rise to strong topological ambiguity. Existing approaches mainly focus on visual--language feature alignment or dense contextual interaction, yet they struggle to distinguish subtle inter-instance differences and effectively exploit spatial topological structures, leading",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18996",
+      "published_at": "2026-08-19T15:00:02Z",
+      "updated_at": "2026-08-19T15:00:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18484",
+      "title": "Partition the Support, Reconstruct the Residual: Training-Free Sparse Attention for Video Generation and World Models",
+      "authors": [
+        "Pardis Taghavi",
+        "Reza Langari",
+        "Gaurav Pandey"
+      ],
+      "abstract": "Training-free block-sparse attention can accelerate video transformers, but row-wise attention concentration does not by itself specify an executable sparse operator. Queries sharing a block route may have poorly overlapping supports, while retained attention mass alone does not determine the post-softmax error from skipped interactions. We show that partition geometry affects both pooled support and the predictability of the remaining residual from the sparse output. We introduce SparsePR, which combines Response-Coupled Partitioning with Probe-Fitted Residual Reconstruction. Sampled-query ke",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18484",
+      "published_at": "2026-08-19T03:16:09Z",
+      "updated_at": "2026-08-19T03:16:09Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18787",
+      "title": "Dream2Reward: Transition-Alignment Reward Models from Positive Demonstrations for Robotic Manipulation",
+      "authors": [
+        "Haoyu Zhang",
+        "Zecui Zeng",
+        "Bin Wang",
+        "Lusong Li",
+        "Liang Lin"
+      ],
+      "abstract": "Learning robotic policies requires dense rewards that remain informative when behavior departs from successful demonstrations. Progress-based rewards estimate how far an observation has advanced along a nominal successful trajectory, but may remain high after an incorrect transition. We introduce Dream2Reward, which learns a language-conditioned successful latent transition field from positive demonstrations. Given the visual history up to a transition start, the model predicts the latent displacement associated with successful execution and scores the observed displacement through signed dire",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18787",
+      "published_at": "2026-08-19T10:44:20Z",
+      "updated_at": "2026-08-19T10:44:20Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18701",
+      "title": "SoftVTBench: A Deformation-Aware Visuo-Tactile Dataset and Benchmark for Deformable-Object Manipulation",
+      "authors": [
+        "Bowen Jing",
+        "Mingxin Wang",
+        "Ruiyang Hao",
+        "Chenchen Ge",
+        "Hanwen Shen"
+      ],
+      "abstract": "Physical interaction quality is central to deformable-object manipulation, yet most benchmarks evaluate task success alone. A policy may complete the task while allowing slip or causing excessive compression. A primary bottleneck is the absence of visuo-tactile datasets that pair policy-visible contact observations with independent physical ground truth over complete tasks. We introduce SoftVTBench, a visuo-tactile dataset for physical-interaction-aware deformable-object manipulation. It contains 4,000 expert demonstrations and more than 50 assets, including volumetric deformable objects and v",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18701",
+      "published_at": "2026-08-19T08:58:47Z",
+      "updated_at": "2026-08-19T08:58:47Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18618",
+      "title": "LabDex: A Hierarchical Benchmark for Dexterous Manipulation in Laboratories",
+      "authors": [
+        "Zhipeng Tang",
+        "Sihang Chen",
+        "Sha Zhang",
+        "Peihao Yang",
+        "Yan Liu"
+      ],
+      "abstract": "Autonomous laboratories hold great promise for accelerating scientific discovery. To achieve this vision, robots are supposed to dexterously manipulate diverse labware and instruments and execute long-horizon, state-dependent experimental procedures. Yet existing benchmarks do not jointly capture dexterous hand use, real-world laboratory interactions, and multi-stage experimental procedures, limiting systematic training and evaluation. To bridge this gap, we introduce LabDex, a large-scale real-world dataset and benchmark for dexterous manipulation in chemistry laboratories, organized around a",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18618",
+      "published_at": "2026-08-19T07:11:06Z",
+      "updated_at": "2026-08-19T07:11:06Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18446",
+      "title": "HarvestPoint-ACT: Explicit Target Selection and Harvest-Point Conditioning for Robotic Fruit Harvesting under Occlusion",
+      "authors": [
+        "Hanying Hu",
+        "Weipeng Li",
+        "Yikun Huang",
+        "Hao Chen",
+        "Zhengtao Hu"
+      ],
+      "abstract": "End-to-end imitation learning avoids hand-made robot motion for approaching and grasping, but the policy must still decide which fruit to pick and where to close the gripper. Occlusion can make the policy lose the selected fruit during harvesting, and the correct closing point is difficult to infer from pixels alone. This paper presents HarvestPoint-ACT, which makes both decisions explicit in perception and provides them to the policy. An instance segmentation front end with a keypoint branch predicts a mask and a harvest point for each visible fruit, where the harvest point specifies the loca",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18446",
+      "published_at": "2026-08-19T02:21:27Z",
+      "updated_at": "2026-08-19T02:21:27Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18671",
+      "title": "Vision-Language Models for Egocentric Video: From Hand-Object Interaction to Embodied AI",
+      "authors": [
+        "Mohammad Zamani",
+        "Fatemeh Ziaeetabar"
+      ],
+      "abstract": "Egocentric video captures activities from the wearer's perspective, providing a direct view of human attention, hand--object interaction, and goal-directed behavior. This perspective is increasingly important for wearable intelligence, assistive systems, human--robot interaction, and embodied AI, yet it introduces challenges including ego-motion, occlusion, small active objects, viewpoint-dependent appearance, and long-range temporal dependencies. Vision--language models (VLMs) offer a promising foundation for addressing these challenges by linking visual observations with semantic knowledge a",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18671",
+      "published_at": "2026-08-19T08:21:58Z",
+      "updated_at": "2026-08-19T08:21:58Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18948",
+      "title": "RoboEdit: Turning Human Manipulation Videos into Scalable Robot Experience",
+      "authors": [
+        "Yaowei Guo",
+        "Zeng Tao",
+        "Yuxin Jiang",
+        "Yunuo Chen",
+        "Zhiyang Dou"
+      ],
+      "abstract": "Collecting robot hand-object interaction data is costly and embodiment-specific, yet abundant human-object videos remain unusable for robot training. We present RoboEdit, a human-to-robot video editing suite that transforms human manipulation videos into action-consistent, physically plausible robot videos with aligned 3D hand states. To enable scalable supervision, we introduce RoboEdit-ADC, an automatic pipeline that reconstructs and retargets 3D interactions from RGB videos across embodiments. This pipeline generates RoboEdit-14M, a large-scale dataset of 174K aligned video pairs (14M frame",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18948",
+      "published_at": "2026-08-19T14:15:36Z",
+      "updated_at": "2026-08-19T14:15:36Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18647",
+      "title": "Progressive Experience Fusion for Multi-Task World Model Control in Endovascular Navigation",
+      "authors": [
+        "Harry Robertshaw",
+        "Maxence Boels",
+        "Nikola Fischer",
+        "Sebastien Ourselin",
+        "Christos Bergeles"
+      ],
+      "abstract": "Autonomous endovascular navigation could support the delivery of mechanical thrombectomy to underserved areas, but controllers must navigate long, multi-stage paths across varying vascular anatomies. This study investigates Progressive Experience Fusion (PEF) to train a multi-task TD-MPC2 controller. We additionally evaluate a heuristic that changes the Model Predictive Path Integral planning horizon using residual action-sequence dispersion, and fine-tuning in a patient-specific simulation. Across five subtasks in ten known training anatomies with held-out targets, PEF achieved a mean success",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18647",
+      "published_at": "2026-08-19T07:51:50Z",
+      "updated_at": "2026-08-19T07:51:50Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18470",
+      "title": "DevGRU: Depth-guided Visual Navigation using a Collision-aware Recurrent Model",
+      "authors": [
+        "Kyung Min Han",
+        "Eunsom Kim",
+        "Young J. Kim"
+      ],
+      "abstract": "Existing visual navigation models often aim to develop foundation models that can generalize robot navigation across diverse platforms. However, many of these models are prone to collisions when deployed in complex indoor environments, particularly in structured layouts and narrow passages. To address this problem, we propose a depth image- and point-goal-conditioned navigation system, DevGRU. The proposed system employs an action predictor (AP) that generates collision-aware future trajectories, enabling effective avoidance of immediate obstacles. In conjunction with a collision predictor, th",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18470",
+      "published_at": "2026-08-19T02:55:49Z",
+      "updated_at": "2026-08-19T02:55:49Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18258",
+      "title": "VERAGMIL: Virtual Environment for Scooping Granular Foods with Imitation Learning Models",
+      "authors": [
+        "Amanuel Ergogo",
+        "Diego Dall'Alba",
+        "Przemyslaw Korzeniowski"
+      ],
+      "abstract": "Robot-Assisted Feeding (RAF) systems are essential for assisting individuals with disabilities or motor impairments in eating tasks. Manipulating granular food items, such as rice and beans, poses significant challenges due to their dynamic physical properties. Learning from human demonstrations offers a promising solution, but acquiring high-quality demonstrations is complex. To address this, we present VERAGMIL, a framework that combines a high-fidelity simulator with an intuitive Virtual Reality (VR) interface for recording demonstrations and supporting different imitation learning methods.",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.18258",
+      "published_at": "2026-08-18T19:18:38Z",
+      "updated_at": "2026-08-18T19:18:38Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18827",
+      "title": "MLREF: Efficient Module Reuse for Reward Design in Reinforcement Learning via Large Language Models",
+      "authors": [
+        "Chenglin Liu",
+        "Xun Wang",
+        "Ruishuo Chen",
+        "Zhuoran Li",
+        "Longbo Huang"
+      ],
+      "abstract": "Reward function design remains a bottleneck in reinforcement learning. While large language models (LLMs) have enabled automated reward generation, existing methods generate and revise reward functions as monolithic programs, making it difficult to reliably preserve and reuse effective components discovered in earlier iterations, leading to unstable performance across iterations. To address this, we propose Module Level Reward Evolution Framework (MLREF). At the core of MLREF is a module pool, a persistent repository of reusable reward components. MLREF treats the module pool as the primary op",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.18827",
+      "published_at": "2026-08-19T11:36:55Z",
+      "updated_at": "2026-08-19T11:36:55Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18746",
+      "title": "Decision-Metric Alignment in Latent World Models: Diagnostics and Action-Conditioned Objectives for MPC Planning",
+      "authors": [
+        "Jiawei Wang",
+        "Ke Rui",
+        "Yushen Zuo",
+        "Yichun Feng",
+        "Minglei Li"
+      ],
+      "abstract": "JEPA-style latent world models can use Euclidean distance to a goal latent as the cost for model-predictive control (MPC). Strong decoding of task variables, however, does not guarantee that this particular cost ranks candidate action sequences by real task progress. We call the latter property \\emph{decision-metric alignment}. We introduce Plan-Real Spearman, which measures latent--real rank agreement on random plans, and CEM-stage Spearman, which measures the same agreement as cross-entropy-method (CEM) search concentrates its proposal. We analyze sufficient conditions under which latent dis",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18746",
+      "published_at": "2026-08-19T09:56:39Z",
+      "updated_at": "2026-08-19T09:56:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    },
+    {
+      "id": "2608.18734",
+      "title": "CL4D: Contrastive Language-4D Pretraining for Vision-Language Reasoning in Dynamic Scenes",
+      "authors": [
+        "Kumal Hewagamage",
+        "Isuranga Senavirathne",
+        "Sasika Amarasinghe",
+        "Hasitha Gallella",
+        "Dulanga Weerakoon"
+      ],
+      "abstract": "4D understanding and reasoning is a fundamental capability for embodied AI agents operating in dynamic physical environments. However, existing vision encoders are largely limited to static 2D images or 3D point clouds without temporal modeling, or to 2D videos that lack accurate geometric depth reasoning. Consequently, current approaches fail to jointly capture spatial structure and motion evolution in dynamic scenes. We present CL4D, the first foundational 4D vision encoder that directly operates on dynamic point clouds, trained with a contrastive learning objective to align spatio-temporal ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.18734",
+      "published_at": "2026-08-19T09:37:15Z",
+      "updated_at": "2026-08-19T09:37:15Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-20T03:04:18.405890Z"
+    }
+  ]
+}
