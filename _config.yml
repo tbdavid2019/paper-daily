@@ -1,0 +1,23 @@
+title: 每日論文雷達
+description: 由每日研究資料與 LLM 生成的繁體中文研究摘要。
+lang: zh-Hant
+timezone: Asia/Taipei
+markdown: kramdown
+permalink: /posts/:year/:month/:day/:title/
+show_excerpts: true
+repository: tbdavid2019/paper-daily
+exclude:
+  - config/
+  - data/
+  - scripts/
+  - skills/
+  - tests/
+  - .github/
+  - .gitignore
+  - CHANGELOG.md
+  - LICENSE
+  - LICENSE-MIT
+  - NOTICE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
