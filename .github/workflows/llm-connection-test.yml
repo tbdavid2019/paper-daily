@@ -68,15 +68,28 @@ jobs:
           with open(os.environ["RESPONSE_FILE"], encoding="utf-8") as f:
               response = json.load(f)
 
-          choices = response.get("choices") or []
-          content = choices[0].get("message", {}).get("content") if choices else None
-          if isinstance(content, list):
-              content = "".join(
-                  part.get("text", "") if isinstance(part, dict) else str(part)
-                  for part in content
-              )
-          if not isinstance(content, str) or not content.strip():
-              raise SystemExit("LLM request returned no message content")
+          def extract_text(value):
+              if isinstance(value, str):
+                  return value
+              if isinstance(value, list):
+                  return "".join(filter(None, (extract_text(item) for item in value)))
+              if not isinstance(value, dict):
+                  return ""
+
+              for key in ("output_text", "text"):
+                  if isinstance(value.get(key), str) and value[key].strip():
+                      return value[key]
+
+              for key in ("message", "content", "parts", "output", "candidates", "choices"):
+                  text = extract_text(value.get(key))
+                  if text.strip():
+                      return text
+              return ""
+
+          content = extract_text(response)
+          if not content.strip():
+              keys = ", ".join(sorted(response)) if isinstance(response, dict) else type(response).__name__
+              raise SystemExit(f"LLM request returned no text content; response keys: {keys}")
 
           print("LLM connection test passed: HTTP 2xx and response content present.")
           PY
