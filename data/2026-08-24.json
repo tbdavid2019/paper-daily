@@ -1,0 +1,590 @@
+{
+  "date": "2026-08-24",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-24T03:11:37.439383Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 65,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 173,
+      "arxiv_keyword": 5,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 593,
+    "after_dedup": 508,
+    "window_start": "2026-08-20",
+    "window_candidates": 427,
+    "already_seen": 165,
+    "new_candidates": 262,
+    "selected_papers": 27,
+    "missing_published_at": 0,
+    "keyword_matched": 27
+  },
+  "papers": [
+    {
+      "id": "2608.21247",
+      "title": "Just Noticeable Difference Modeling for Token Compression in Vision-Language-Action Models",
+      "authors": [
+        "Zhuoyuan Li",
+        "Rui Zhao",
+        "Jin Wang",
+        "Hanwei Zhu",
+        "Cong Zhang"
+      ],
+      "abstract": "Token compression has become a key technique for reducing the inference cost of large foundation models, with approaches such as token pruning and KV-cache reuse widely adopted in vision-language models and recently explored for embodied agents. In embodied agents, tokens not only support perception and semantic understanding but also directly affect latency-sensitive closed-loop robot action prediction. Existing schemes typically guide compression using redundancy or importance cues, such as visual similarity, attention scores, and saliency. However, these cues only indirectly measure the key",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.21247",
+      "published_at": "2026-08-21T15:59:37Z",
+      "updated_at": "2026-08-21T15:59:37Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20791",
+      "title": "CertVLA: Certified Defense against Physical Visual Attacks for Vision-Language-Action Models",
+      "authors": [
+        "Hui Lu",
+        "Zhijie Peng",
+        "Yuqi Lin",
+        "Zaijia Yang",
+        "Jiaming He"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies are vulnerable to localized physical perturbations, yet existing certified patch defenses target discrete labels and cannot directly certify continuous, temporally correlated actions. We introduce CertVLA, a certified defense for closed-loop VLA control under bounded patch and texture attacks. CertVLA proposes a calibrated region of behaviorally consistent actions, while deterministic covering masks ensure that at least one checked prediction is attack-free. Specifically, CertVLA normalizes action disagreement by the benign variation of each mask pair and ",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.20791",
+      "published_at": "2026-08-21T07:09:03Z",
+      "updated_at": "2026-08-21T07:09:03Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20948",
+      "title": "Neural-Primitive: An Efficient End-to-end Local Planner with Primitive-based Imitation Learning for Autonomous Flight",
+      "authors": [
+        "Zhitao Liu",
+        "Guangtong Xu",
+        "Zihan Wang",
+        "Jialiang Hou",
+        "Chao Xu"
+      ],
+      "abstract": "Autonomous flight in unknown cluttered environments is hindered by the computation-quality-memory trilemma of onboard trajectory generation. In this paper, we propose an efficient end-to-end local planner via imitation learning. A lightweight offline-primitive-based dataset collection framework is designed to produce safe and high-quality trajectory primitives in non-convex environments. A compact neural network directly maps sensory inputs to polynomial coefficients that inherently encode higher-order dynamical information. The learned policy generates smooth, empirically collision-free and d",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.20948",
+      "published_at": "2026-08-21T10:13:44Z",
+      "updated_at": "2026-08-21T10:13:44Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20890",
+      "title": "A Collaborative Multi-Modality Interaction for VLA-based End-to-End Autonomous Driving",
+      "authors": [
+        "Jingtao Sun",
+        "Xiaohai He",
+        "Yike Zhang",
+        "Dong Huang",
+        "Yaonan Wang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have emerged as a powerful paradigm for end-to-end autonomous driving by jointly integrating perception, reasoning, and decision making within a unified multimodal framework. However, most existing VLA models formulate end-to-end autonomous driving as a visual question answering task, leading to unreliable and less interpretable decision reasoning. In addition, they fail to establish effective multi-modal interaction across heterogeneous sensors, thereby limiting robust scene perception and reliable driving reasoning in long-tail driving scenarios. To this e",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.20890",
+      "published_at": "2026-08-21T09:06:16Z",
+      "updated_at": "2026-08-21T09:06:16Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20546",
+      "title": "Koala Gripper: Co-designing Robotic Grippers and Data-Capture Devices for Scaling Dexterous Manipulation Learning",
+      "authors": [
+        "Amar Hajj-Ahmad",
+        "Zubin Kremer Guha",
+        "Tim Fofonoff",
+        "Zhi Ern Teoh",
+        "Ciarán T. O'Neill"
+      ],
+      "abstract": "As the demand for larger manipulation datasets grows, handheld robotic gripper data collection and the associated gripper designs become more vital. Current data collection device designs trend towards matching the morphologies of existing robotic grippers, sacrificing ergonomics and manipulation performance. In this paper, we propose a co-design framework that guides the simultaneous development of both data collection and robotic execution devices by weaving both platform constraints into the design process. Through this workflow, we present the Koala Gripper system, a data capture device an",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.20546",
+      "published_at": "2026-08-20T20:16:11Z",
+      "updated_at": "2026-08-20T20:16:11Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21290",
+      "title": "VT-MUSE: Multimodal Unified Sequential Visuotactile Representation Learning for Manipulation",
+      "authors": [
+        "Congsheng Xu",
+        "Qiaochu Yang",
+        "Fangyuan Shi",
+        "Yifan Han",
+        "Baijun Chen"
+      ],
+      "abstract": "We propose VT-MUSE, a Multimodal Unified SEquential representation learning framework for visuotactilemanipulation. Existing approaches often encode visual and tactile observations independently before fusion, limiting their ability to capture fine-grained cross-modal dependencies. Moreover, most methods focus on observations at the current time step and overlook the temporal evolution of contact. VT-MUSE addresses both limitations through a two-stage representation learning framework. In Stage I, modality specific encoders are jointly adapted via cross-modal temporal alignment and masked-view",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.21290",
+      "published_at": "2026-08-21T16:50:02Z",
+      "updated_at": "2026-08-21T16:50:02Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20936",
+      "title": "Graph-Operator World Models for Morphology-Parameter Generalization in Continuous Control",
+      "authors": [
+        "Xu Yang",
+        "Yiqin Yang",
+        "Qianchuan Zhao"
+      ],
+      "abstract": "World models for continuous control are commonly trained for a fixed physical system and can degrade when known morphology parameters such as link lengths, masses, damping, and actuation change. Existing approaches often provide these parameters as conditioning information, but leave unspecified which part of the learned transition should remain reusable and which part should change with morphology. We propose Graph-Operator World Models (GraphOp-WM), a structured world model for generalization across unseen morphology parameters within related articulated robot families. GraphOp-WM represents",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.20936",
+      "published_at": "2026-08-21T10:01:46Z",
+      "updated_at": "2026-08-21T10:01:46Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20891",
+      "title": "IMU-Free Body-Frame State Estimation with Sparse Scene Flow for Quadcopters",
+      "authors": [
+        "Daniel Grønhaug",
+        "Sofie Markeset",
+        "Mathias Kolberg"
+      ],
+      "abstract": "We present a vision-only state estimation system for X-configuration quadcopters equipped with a canonical stereo camera pair and no inertial sensors. The system operates entirely in the body frame, requiring only synchronised stereo images and motor thrust commands. A continuous-discrete extended Kalman filter on a composite manifold state $\\langle SE(3), \\mathbb{R}^3, \\ldots \\rangle$ maintains estimates of body-frame pose, velocity, angular velocity, gravity, and disturbances, using stationary scene points as implicit inertial references. Feature points are detected (FAST, Shi-Tomasi), track",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.20891",
+      "published_at": "2026-08-21T09:11:01Z",
+      "updated_at": "2026-08-21T09:11:01Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20735",
+      "title": "ForeTime-VLA: Causal Future-Token Distillation from a World Action Model for Conveyor-Belt Manipulation",
+      "authors": [
+        "Siyuan Ma",
+        "Yutian Zhang",
+        "Boshi Zhang",
+        "Qinglian Wu",
+        "Jiaqi Zhai"
+      ],
+      "abstract": "Manipulating moving objects requires a policy to anticipate contact events, yet vision-language-action (VLA) policies are commonly fine-tuned from the current observation alone. World action models (WAMs) learn predictive dynamics, but running a video-scale teacher or explicitly imagining future frames at deployment is costly. We introduce ForeTime-VLA, a dense pi0.5 policy that distills a future-aware, action-equivalent representation from a frozen Fast-WAM-derived teacher while remaining causal at inference. Offline, current and future video latents are compressed into a whitened 64-D target",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.20735",
+      "published_at": "2026-08-21T04:40:41Z",
+      "updated_at": "2026-08-21T04:40:41Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20556",
+      "title": "Logic-VLA: A Temporal Logic Conditioned Vision-Language-Action Model",
+      "authors": [
+        "Celina Shiyu Wang",
+        "Yiqi Zhao",
+        "Junjie Ye",
+        "Yue Wang",
+        "Jyotirmoy V. Deshmukh"
+      ],
+      "abstract": "Vision-language-action (VLA) models can follow natural-language (NL) task instructions, but such instructions may not precisely specify safety-critical or spatiotemporal requirements on the resulting behavior. We introduce Logic-VLA, a formal-requirement-aware VLA that conditions on Signal Temporal Logic (STL) specifications supplied at inference time. Logic-VLA uses a syntax-graph-based STL encoder pre-trained to capture temporal logic semantics. Policy adaptation proceeds in two stages: STL-conditioned supervised fine-tuning on satisfying demonstrations is followed by trajectory-level prefer",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.20556",
+      "published_at": "2026-08-20T20:35:07Z",
+      "updated_at": "2026-08-20T20:35:07Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21170",
+      "title": "Is Visual Prompting All You Need? Studying VLM Spatial Reasoning under Progressive Visual Scaffolds",
+      "authors": [
+        "Lars Benedikt Kaesberg",
+        "Tianyu Yang",
+        "Florian Valentin Wunderlich",
+        "Terry Ruas",
+        "Jan Philip Wahle"
+      ],
+      "abstract": "Vision-language models (VLMs) have advanced rapidly in multimodal reasoning, yet recent work shows that their failures often reflect an interaction between visual grounding and downstream reasoning. What remains less clear is how the visual presentation of a task shapes model performance and failure modes when the underlying reasoning problem is unchanged. We study this question in SPaRC, a benchmark for grid-based visual spatial planning, by introducing lightweight input-side scaffolds that preserve the visual modality while making spatial structure more accessible. Across multiple VLMs, thes",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.21170",
+      "published_at": "2026-08-21T14:40:26Z",
+      "updated_at": "2026-08-21T14:40:26Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21140",
+      "title": "A Modular Agent for Reliable and Auditable Spatial Relation Verification in CT Scans",
+      "authors": [
+        "Simon Vincent Abel",
+        "Heiko Hillenhagen",
+        "Michael Götz",
+        "Timo Ropinski",
+        "Ayhan Can Erdur"
+      ],
+      "abstract": "Reliable spatial understanding is an important prerequisite for future medical vision-language systems that aim to support radiological report generation and structured image understanding. While modern vision-language models (VLMs) show promising performance on many medical imaging tasks, recent evidence suggests they remain weak in controlled spatial reasoning and often fail to reliably ground spatial relations in image evidence. Given that radiological reasoning hinges on understanding the relative positions of anatomical structures and findings, this spatial weakness poses risks to diagnos",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.21140",
+      "published_at": "2026-08-21T14:16:46Z",
+      "updated_at": "2026-08-21T14:16:46Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21031",
+      "title": "PhysCaP: Grounding Code-as-Policy Agent with Physics-Informed Exploration",
+      "authors": [
+        "Chen-Yu Lin",
+        "Jing-Wen Chen",
+        "Hsueh-En Chang",
+        "Hung-An Chen",
+        "Sheng-Hsun Chang"
+      ],
+      "abstract": "We present PhysCaP, a Physics-Informed Code-as-Policy agent for active perception in robotic manipulation. While vision-language-action policies excel at imitating demonstrations, they rely on passive observation and fail to infer latent physical properties critical for manipulation. PhysCaP augments code-as-policy frameworks with a physics-informed exploration layer that enables explicit information-seeking through interaction. It introduces training-free physical property extraction modules that estimate object mass and stiffness from robot proprioception without additional sensors. To balan",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.21031",
+      "published_at": "2026-08-21T12:28:58Z",
+      "updated_at": "2026-08-21T12:28:58Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20784",
+      "title": "Rethinking Demonstration Unlearning in Imitation Learning for Robotics",
+      "authors": [
+        "Jiazhuo Li",
+        "Yu Zhang",
+        "Yiming Fei",
+        "Kangkang Dong",
+        "Xiaojun Zhu"
+      ],
+      "abstract": "Imitation learning for robotics depends on human demonstrations, some of which people may later ask to remove. Retraining without them is the natural reference, but its cost grows with policy and dataset scale, motivating cheaper operators that edit a trained policy. Metrics inherited from machine unlearning, such as forgetting loss or a single membership attack, do not establish what an edit removed from a policy acting in closed loop. We therefore introduce a retrain-calibrated audit that reads demonstration unlearning along two axes: behavior, whether the edited policy acts like one retrain",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.20784",
+      "published_at": "2026-08-21T06:53:55Z",
+      "updated_at": "2026-08-21T06:53:55Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21136",
+      "title": "Stream3Dv2: Geometric-Semantic Fusion Enhanced Streaming Zero-Shot 3D Scene Understanding",
+      "authors": [
+        "Jie Xu",
+        "Na Zhao"
+      ],
+      "abstract": "Recently, open-vocabulary zero-shot 3D scene understanding using vision foundation models has emerged as a promising alternative to data-intensive supervised methods. However, deploying these models in real-world scenarios is severely hindered by their inability to efficiently handle streaming RGB-D inputs and their inherent vulnerability to noise 2D segmentation masks. To address these critical limitations, we propose Stream3Dv2, a novel training-free framework designed for robust streaming 3D perception. Stream3Dv2 processes sequential data through an original nested local-to-historical arch",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.21136",
+      "published_at": "2026-08-21T14:13:02Z",
+      "updated_at": "2026-08-21T14:13:02Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21355",
+      "title": "ViTacPhys: Physical Property-Aware Grasping from Human Visual-Tactile Demonstrations",
+      "authors": [
+        "Yiwen Liu",
+        "Yujun Zhu",
+        "Kui Jia",
+        "Zhao Liao",
+        "Yangwei You"
+      ],
+      "abstract": "Recent vision-based action models have demonstrated strong capabilities in complex manipulation, but they rarely leverage explicit object physical properties to adapt their policies. We introduce ViTacPhys, a visual-tactile framework and data acquisition system that estimates object mass and friction-coefficient classes, together with continuous stiffness, from human manipulation demonstrations. Trained on data from 60 rigid and deformable objects, ViTacPhys combines temporal visual-tactile modeling, cross-attention multimodal fusion, and a semantic prior derived from a vision-language model. ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.21355",
+      "published_at": "2026-08-21T17:58:10Z",
+      "updated_at": "2026-08-21T17:58:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21204",
+      "title": "Beyond Imitation: Self-Improving Robot Policies via Off-Policy Q-Planning",
+      "authors": [
+        "Varun Giridhar",
+        "Anant Khandelwal",
+        "Jeremy A. Collins",
+        "Ignat Georgiev",
+        "Animesh Garg"
+      ],
+      "abstract": "Behaviour Cloning (BC) has driven remarkable progress in robot manipulation, yet it is fundamentally limited by its inability to self-improve: a policy that fails cannot learn from that failure without additional human demonstrations. Reinforcement Learning fine-tuning offers a path to self-improvement but has proven difficult to scale to the multi-billion-parameter models underpinning modern robot policies. We propose Q-Planning, which equips a large visuomotor BC policy with a small off-policy Q-function. Because a Q-function estimates value rather than imitates actions, it can be trained on",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.21204",
+      "published_at": "2026-08-21T15:18:37Z",
+      "updated_at": "2026-08-21T15:18:37Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.21083",
+      "title": "Teaching is a Process: The TOSS Framework for Modeling Human Teaching Decisions in Human-Interactive Robot Learning",
+      "authors": [
+        "Bernhard Hilpert",
+        "Kim Baraka",
+        "Joost Broekens"
+      ],
+      "abstract": "Successful Human-Robot Teaching assumes alignment between robot processing needs and human teaching intent. To better understand this alignment, this work seeks to uncover the underlying logic that humans intuitively apply when teaching. Through an exploratory, bottom-up study with N=34, participants observing two distinct robot Reinforcement Learning (RL) scenarios, we analyze 204 intuitive teaching responses across early, middle, and late learning phases. Results reveal that teaching decisions consist of a nuanced, interconnected network of Triggers (situational catalysts), Objectives (subje",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.21083",
+      "published_at": "2026-08-21T13:28:03Z",
+      "updated_at": "2026-08-21T13:28:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20909",
+      "title": "Decoupling Policy Extraction for Offline Reinforcement Learning",
+      "authors": [
+        "Xuyao Lin",
+        "Yixiang Shan",
+        "Jinru Duan",
+        "Tao Yang",
+        "Xinyu Zhao"
+      ],
+      "abstract": "Offline RL methods commonly jointly train the actor and critic, where the critic is used to guide the actor toward higher-value actions. This coupled learning process is well motivated in online RL, where an improved actor collects new data that can further update the actor and the critic. However, training data remains fixed in offline RL, making actor-side policy improvement unable to generate new data to validate or correct the critic. Moreover, retaining this coupled paradigm leads to two related challenges. Firstly, actor updates can drift toward high-valued but potentially out-of-distrib",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.20909",
+      "published_at": "2026-08-21T09:26:53Z",
+      "updated_at": "2026-08-21T09:26:53Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20817",
+      "title": "GhostTac: Manipulating Tactile Sensors without Physical Contact",
+      "authors": [
+        "Kun Wang",
+        "Xuancun Lu",
+        "Ruochen Zhou",
+        "Kai Wang",
+        "Tongjun Ye"
+      ],
+      "abstract": "Tactile sensors are integral to modern robotic systems, enabling robots to perceive and interact with the physical environment through tactile feedback. However, the physical-layer security of tactile sensors has received little attention. We present GhostTac, the first contactless attack, to the best of our knowledge, that manipulates tactile sensing through electromagnetic interference (EMI). GhostTac exploits nonlinear rectification and limited-bandwidth amplification, converting carefully crafted EMI signals into persistent DC offsets that bypass onboard filtering and induce stable measure",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.20817",
+      "published_at": "2026-08-21T07:39:19Z",
+      "updated_at": "2026-08-21T07:39:19Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20478",
+      "title": "EndoLIFT: Language-Disambiguated Latent-Conditioned Rectified Flow for Bidirectional Endoscopic Control",
+      "authors": [
+        "Chi Kit Ng",
+        "Yidong Zhang",
+        "Lui Siu Hing",
+        "Jinsong Lin",
+        "Tianchun Wu"
+      ],
+      "abstract": "Routine gastrointestinal endoscopy is intrinsically bidirectional: the instrument is advanced to reach target anatomy and later withdrawn or retroflexed for inspection, while an external cue may require earlier reversal. When the requested phase changes before the visual scene does, nearly identical observations can require opposite axial actions. We identify and formalize this ambiguity in bidirectional endoscopic control as intent aliasing. We propose EndoLIFT (Endoscopic Language-Instruction Flow with Trajectory Latents), a vision-language-action policy that combines explicit language-based",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.20478",
+      "published_at": "2026-08-20T18:09:52Z",
+      "updated_at": "2026-08-20T18:09:52Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20433",
+      "title": "Humanoid Musical Robots as Experimental Interfaces for Music-Evoked Emotion",
+      "authors": [
+        "Vincent K. M. Cheung",
+        "Jia-Yeu Lin"
+      ],
+      "abstract": "Advances in technology have led to increasingly sophisticated musical humanoid robots. However, their use has largely been limited to performance and related research in human-robot interaction. In this position paper, we propose a novel perspective: musical humanoid robots as experimental interfaces for investigating music-evoked emotions. We argue that current research is constrained by paradigms relying on pre-recorded auditory stimuli, which fail to capture the multimodal, embodied, and interactive nature of real-world musical experience. Building on existing theories of music cognition an",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.20433",
+      "published_at": "2026-08-20T03:23:36Z",
+      "updated_at": "2026-08-20T03:23:36Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20975",
+      "title": "Belief Without Behavior: Measuring the Translation of Theory of Mind into Coordinated Social Action in Vision-Language Models",
+      "authors": [
+        "Tonglin Yan",
+        "Gregoire Sergeant-Perthuis",
+        "David Rudrauf"
+      ],
+      "abstract": "Effective social interaction requires agents to translate mental state inferences into coordinated behavioral signals across verbal and nonverbal channels simultaneously. Yet existing benchmarks evaluate theory of mind (ToM) reasoning and embodied behavior in isolation, leaving unmeasured the gap between social inference and social action. We introduce MOSAIC (Multimodal Orchestration of Social Action, Inference, and Communication), a controlled benchmark in which two embodied agents interact across cooperative and competitive scenarios requiring integration of verbal statements, spatial traje",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.20975",
+      "published_at": "2026-08-21T10:55:14Z",
+      "updated_at": "2026-08-21T10:55:14Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20743",
+      "title": "Is Multimodal Speculative Decoding Ready for Diffusion-Based Parallel Drafting? A Survey and Empirical Diagnosis",
+      "authors": [
+        "Yantao Li",
+        "Huanlin Gao",
+        "Fang Zhao",
+        "Chao Tan",
+        "Qiang Hui"
+      ],
+      "abstract": "Speculative decoding accelerates autoregressive generation by allowing a lightweight drafter to propose future tokens while a target model verifies them in parallel. Its lossless guarantee has motivated a line of work that pushes the drafter itself toward parallel generation. The most recent paradigm is block-parallel generative drafting, including diffusion-based methods such as DFlash and DSpark, achieving up to 3.6x speedup on common daily chatting tasks. While this transition is well studied in text-only LLMs, its applicability to multimodal models remains an open question. Existing multim",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.20743",
+      "published_at": "2026-08-21T05:03:10Z",
+      "updated_at": "2026-08-21T05:03:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20691",
+      "title": "Bridging Language and Spherical Space: Object-Centric Control for Text-to-Panorama Generation",
+      "authors": [
+        "Derui Li",
+        "Qian Qiao",
+        "Yuhao Sun",
+        "Wenhao Guo",
+        "Peng Lu"
+      ],
+      "abstract": "Panoramic image generation is increasingly important for immersive applications such as virtual reality, augmented reality, and 3D content creation. Unlike perspective images, panoramic images represent a viewer-centered $360^\\circ$ surrounding space, where directional expressions such as left, right, front, and behind play a central role in spatial understanding. However, existing text-to-panorama methods largely rely on implicit spatial reasoning and often fail to faithfully ground object-level directional descriptions in spherical panoramic scenes. A straightforward alternative is to introd",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.20691",
+      "published_at": "2026-08-21T02:59:34Z",
+      "updated_at": "2026-08-21T02:59:34Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20659",
+      "title": "Lift, Associate, and Fuse: A Decision-Centric Framework for 2D-to-3D Foundation Model Transfer",
+      "authors": [
+        "Wentao Sun",
+        "Yiping Chen",
+        "John S. Zelek",
+        "Jonathan Li"
+      ],
+      "abstract": "Methods that transfer predictions from two-dimensional foundation models into three-dimensional segmentation are commonly grouped by task or representation. Those groupings obscure the decisions that determine whether a system remains coherent across views: where image evidence is grounded, when observations become one identity, how semantic and granularity conflicts are handled, which information is fused, and what state survives for later queries. We introduce \\textbf{Lift, Associate, and Fuse (LAF)}, a decision-centric framework that represents a transfer system as five operators: \\textbf{G",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.20659",
+      "published_at": "2026-08-21T01:33:23Z",
+      "updated_at": "2026-08-21T01:33:23Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    },
+    {
+      "id": "2608.20548",
+      "title": "Keep Your Friends Close, and the Right Neighbours Closer: Disaster-Conditioned Kernel-Regularized Graph Attention for Building Damage Classification",
+      "authors": [
+        "Fuad Hasan",
+        "Chul Min Yeum"
+      ],
+      "abstract": "Disaster damage is spatial: buildings rarely fail in isolation. Yet using spatial context for damage classification remains surprisingly underexplored, and many pipelines still rely primarily on per-building appearance cues even when the dominant uncertainty is spatially structured. Complicating matters, the right neighbourhood is not the same across events. Floods, hurricanes, and wildfires can exhibit very different clustering behaviour, making spatial reasoning valuable but easy to misuse - naive context aggregation can improve visual coherence while oversmoothing boundaries or propagating ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.20548",
+      "published_at": "2026-08-20T20:20:10Z",
+      "updated_at": "2026-08-20T20:20:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-24T03:11:37.439383Z"
+    }
+  ]
+}
