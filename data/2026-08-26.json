@@ -1,0 +1,594 @@
+{
+  "date": "2026-08-26",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-26T03:13:20.005615Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 102,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 8,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 710,
+    "after_dedup": 631,
+    "window_start": "2026-08-22",
+    "window_candidates": 564,
+    "already_seen": 235,
+    "new_candidates": 329,
+    "selected_papers": 28,
+    "missing_published_at": 0,
+    "keyword_matched": 28
+  },
+  "papers": [
+    {
+      "id": "2608.24042",
+      "title": "Hierarchical Skill Retrieval for Data-Efficient Adaptation of Vision-Language-Action Models",
+      "authors": [
+        "Haoran Hao",
+        "Shahram Najam Syed",
+        "Jeff Schneider",
+        "Jeffrey Ichnowski"
+      ],
+      "abstract": "While Vision-Language-Action (VLA) models pretrained on large-scale robot datasets provide a strong foundation for robot manipulation, their performance can degrade when adapted to new tasks with limited task-specific demonstrations. Retrieval offers a practical way to reuse existing demonstrations for data-efficient adaptation, but existing methods often rely on visual similarity, state-action representations, or task-level language matching. These approaches may overlook the hierarchical structure of long-horizon manipulation tasks, where complete task matches are rare but reusable skills ar",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.24042",
+      "published_at": "2026-08-25T04:04:49Z",
+      "updated_at": "2026-08-25T04:04:49Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24115",
+      "title": "PonderPounce: A Pretrained MLLM as an Episode Context Engine for Robot Control",
+      "authors": [
+        "Suhwan Choi",
+        "Jaeyoon Jung",
+        "Sungkyung Kim",
+        "Yunsung Lee",
+        "Youngjae Yu"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) can integrate long visual histories, reason under partial observability, and infer behavior from a few examples. Yet vision-language-action (VLA) models generally inherit pretrained representations without using this contextual capacity as episode memory. Memory-dependent policies address this gap through purpose-built history mechanisms. PonderPounce instead reuses an MLLM's native causal context as robot memory. Ponder, a System2 MLLM, accumulates episode observations, demonstrations, and prior cognition in its native causal context and can generate s",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.24115",
+      "published_at": "2026-08-25T06:24:36Z",
+      "updated_at": "2026-08-25T06:24:36Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24885",
+      "title": "Do Robotic World Models Really Follow Actions? Diagnosing and Aligning Action-Conditioned Generation for Policy Learning",
+      "authors": [
+        "Sixiang Chen",
+        "Jiaming Liu",
+        "Jixian Wu",
+        "Yichen Guo",
+        "Tinghao Wang"
+      ],
+      "abstract": "Action-conditioned world models are increasingly used as learned simulators for policy evaluation and improvement, yet their effectiveness rests on an unverified assumption: generated futures faithfully reflect arbitrary valid actions. Existing benchmarks are typically confined to expert demonstrations, leaving off-expert action following inadequately evaluated. To address this gap, we introduce WorldEcho, which probes action following over a broader action distribution using visual integrity and SE(3) trajectory alignment. Our diagnosis shows that current world models reasonably execute exper",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24885",
+      "published_at": "2026-08-25T17:59:49Z",
+      "updated_at": "2026-08-25T17:59:49Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24603",
+      "title": "Gripper-aware Vision Language Action Models",
+      "authors": [
+        "Hanyi Zhang",
+        "Zihong Luo",
+        "Tianyu Li",
+        "Khang Nguyen",
+        "Basu Hela"
+      ],
+      "abstract": "Vision language action models (VLAs) have advanced general purpose robotic grasping and manipulation by enabling robots to interpret visual observations and natural language instructions to generate executable action sequences. However, existing VLAs often implicitly assume gripper invariance, despite grasping strategies being inherently embodiment-dependent. Different gripper types, such as parallel-jaw and suction, usually require distinct interaction strategies to achieve the same grasping objective. Moreover, current datasets for VLAs predominantly rely on parallel-jaw grippers, limiting g",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.24603",
+      "published_at": "2026-08-25T14:24:51Z",
+      "updated_at": "2026-08-25T14:24:51Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23839",
+      "title": "Resilience Matters for Embodied Agents System: New Metrics, Systematic Evaluation, and Optimization",
+      "authors": [
+        "Yapeng Liu",
+        "Yuanzhao Zhai",
+        "Xudong Gong",
+        "Dawei Feng",
+        "Bo Ding"
+      ],
+      "abstract": "Embodied Agents System (EAS) are increasingly deployed in open-world physical domains, where reliability directly dictates deployment quality and human-agent trust. However, existing evaluations rely on outcome-centric metrics as success rate or safety scores that collapse diverse execution trajectories into coarse scores, obscuring the dynamic processes underlying agent behavior. Therefore, they ignore a critical property of EAS -- which we define as the Resilience -- that reflects how EASs recover, stabilize, and extend under perturbations and across iterative updates. The lack of resilience",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.23839",
+      "published_at": "2026-08-24T21:26:11Z",
+      "updated_at": "2026-08-24T21:26:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24130",
+      "title": "Syn2RealTrack: Bridging the Gap Between Synthetic and Real-World Datasets for Online Multi-View Multi-Target Tracking",
+      "authors": [
+        "Duong Nguyen-Ngoc Tran",
+        "Ngoc Doan-Minh Huynh",
+        "Cu Quoc Le",
+        "Hoang-Khang Nguyen",
+        "Long Hoang Pham"
+      ],
+      "abstract": "Multi-camera 3D perception systems for warehouse scenes are trained largely on synthetic data and evaluated on physically captured environments. The resulting synthetic-to-real gap, which corrupts ground-plane localization and cross-camera identity association, is usually treated as one deficiency for a single domain-adaptation module to absorb; we argue instead that it enters the pipeline at three separable points: the camera calibration, the object shape prior, and the assumption that the object census is known, each admitting a different local remedy. Our online pipeline, Syn2RealTrack, fol",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24130",
+      "published_at": "2026-08-25T06:48:50Z",
+      "updated_at": "2026-08-25T06:48:50Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24572",
+      "title": "Fiber Optic Sensing Glove for High Performance Dexterous Manipulation Capture",
+      "authors": [
+        "J. D. Peiffer",
+        "Taylor Niehues",
+        "Li Guan",
+        "Ziyi Kou",
+        "Ergys Ristani"
+      ],
+      "abstract": "Capturing hand pose during dexterous manipulation remains difficult: vision-based methods degrade under occlusion and challenging lighting, while sensorized gloves, though occlusion-free, are prone to drift and magnetic interference and rarely match motion-capture accuracy. We introduce a fiber optic sensing glove for full hand pose tracking that targets these failure modes, using multi-core shape-sensing fibers that capture each fiber's full 3D shape rather than curvature alone. A novel pipeline registers each reconstructed fiber shape to a common hand reference frame, and a new inverse-kinem",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24572",
+      "published_at": "2026-08-25T13:59:35Z",
+      "updated_at": "2026-08-25T13:59:35Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24217",
+      "title": "CARO: Contact-Agnostic Residual Observation for Zero-Shot Robust Quadruped Locomotion",
+      "authors": [
+        "Zihan Yang",
+        "Shixuan Han",
+        "Kexin Guo",
+        "Xiang Yu"
+      ],
+      "abstract": "We propose CARO, a contact-agnostic residual observation framework for policy adaptation. CARO embeds a fixed-base Euler--Lagrange model into the reinforcement learning control loop and constructs a torque-level residual observation without requiring torque sensors, explicit contact estimation, or vision-based measurements of the floating-base position and linear velocity. A disturbance observer extracts a structured signal representing dynamics mismatch, while the policy learns to exploit this feedback for online adaptation. CARO is trained under the same terrain, command, and domain-randomiz",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24217",
+      "published_at": "2026-08-25T08:23:24Z",
+      "updated_at": "2026-08-25T08:23:24Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24101",
+      "title": "TrAct: Bridging Robot Control and Visual Prediction with Visual Tracks",
+      "authors": [
+        "Zhi Cao",
+        "Howard Ji",
+        "Kevin Zhang",
+        "Kuangzhi Ge",
+        "Li Fei-Fei"
+      ],
+      "abstract": "Robot actions are inherently embodiment-specific and only weakly aligned with image-space visual changes, limiting their effectiveness as conditioning signals for robot world models. In contrast, visual tracks provide an embodiment-agnostic representation of how task-relevant points move through a scene, offering dense image-space guidance for accurate and spatially precise future video prediction. Building on this observation, we propose TrAct, a world-model-based robot decision-making framework that uses visual tracks as an intermediate interface between control and prediction. TrAct consist",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24101",
+      "published_at": "2026-08-25T06:00:01Z",
+      "updated_at": "2026-08-25T06:00:01Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24741",
+      "title": "One-Shot Learning from Demonstration of Contact-Rich Robotic Manipulation by Identifying Physical Interactions",
+      "authors": [
+        "A. H. G. Overbeek",
+        "H. van der Kooij",
+        "M. Vlutters"
+      ],
+      "abstract": "Learning from Demonstration (LfD) allows robots to learn manipulation tasks directly from humans, thereby supporting the versatile application of robots. Most LfD methods do not explicitly model the physical interactions between a robot and its environment, such as the making and breaking of contact, while these are crucial during manipulation tasks. Because the same basic physical interactions recur often, they can be a basis for robust, generalizable, and adaptive task reproduction. We propose an LfD method that explicitly uses what physical interactions take place where and when. Using that",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24741",
+      "published_at": "2026-08-25T15:48:03Z",
+      "updated_at": "2026-08-25T15:48:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24525",
+      "title": "RoG-DAgger: Rollout-Guided Post-Training for End-to-End Driving",
+      "authors": [
+        "Liangyu Zhong",
+        "Joachim Sicking",
+        "Fabian Hueger",
+        "Hanno Gottschalk"
+      ],
+      "abstract": "Recent end-to-end driving systems demonstrate strong performance on closed-loop benchmarks, yet are still predominantly trained on fixed expert-collected data using open-loop imitation learning. This training-inference mismatch leaves the policy vulnerable in policy-induced states, where accumulated errors can lead to safety-critical failures. A promising post-training approach to overcome this issue is Dataset Aggregation (DAgger), which gathers expert demonstrations in policy-induced states and subsequently fine-tunes the policy on the resulting aggregated dataset. Existing driving DAgger pi",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24525",
+      "published_at": "2026-08-25T13:11:44Z",
+      "updated_at": "2026-08-25T13:11:44Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24242",
+      "title": "A Durable Vision-Based Tactile Fingertip for Robotic Manipulation",
+      "authors": [
+        "F. Richard Cottrell",
+        "Megha H. Tippur",
+        "Edward H. Adelson"
+      ],
+      "abstract": "Currently available commercial vision-based tactile sensors provide rich contact information but remain vulnerable to abrasion and repeated concentrated loading, limiting their use in demanding robotic applications. This work presents a durable tactile fingertip comprising a soft silicone gel with a nonpigmented, textured, thin thermoplastic-polyurethane protective film and a replaceable sensing cartridge. Durability was evaluated using two accelerated laboratory procedures: a rotating-drum sanding test and a repetitive probe test applying 39.2 N (4.0 kgf) at 45 cycles per minute. Under the de",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24242",
+      "published_at": "2026-08-25T08:45:32Z",
+      "updated_at": "2026-08-25T08:45:32Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24199",
+      "title": "NVIDIA Cosmos-H-Dreams: Real-Time Generative Physics Simulation for Surgical Robotics",
+      "authors": [
+        "Javier Gamazo Tejero",
+        "Lukas Zbinden",
+        "Keyur Sheth",
+        "Raghavendra K M",
+        "Nadim Daher"
+      ],
+      "abstract": "Generative simulation for surgical robotics still lacks real-time interaction. Physical-robot experiments, often involving animal or cadaver labs, are time-consuming, costly, and difficult to reproduce, while classical simulators struggle to capture photorealistic appearance and deformable-tissue dynamics. We address this gap with Cosmos-H-Dreams, an integrated real-time surgical world-model system combining an action-conditioned generative model, a teacher-to-student distillation recipe, and a deployment stack built on the NVIDIA FlashDreams streaming-inference library. Starting from Cosmos-H",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24199",
+      "published_at": "2026-08-25T08:09:40Z",
+      "updated_at": "2026-08-25T08:09:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24162",
+      "title": "Robust Slip Detection and Material Classification via Spatiotemporal Transformers on a Uniformly-Illuminated Visuo-Tactile Sensor",
+      "authors": [
+        "Ziyang Ma",
+        "Yuhao Sun",
+        "Zichen Ai",
+        "Xiangyang Ji",
+        "Bin Fang"
+      ],
+      "abstract": "Tactile sensing is central to robotic manipulation, among which slip detection stands out as a quintessential and critical task. However, existing slip datasets are predominantly limited to binary classification, lacking fine-grained directional perception. To address this limitation, we propose a visuo-tactile sensor featuring customized uniform RGB illumination, alongside a unified perception framework. At the hardware level, the sensor achieves high-precision, sub-millimeter depth reconstruction. Based on this capability, we collect a multi-task visuo-tactile dataset encompassing 15 objects",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24162",
+      "published_at": "2026-08-25T07:25:27Z",
+      "updated_at": "2026-08-25T07:25:27Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24026",
+      "title": "NeurRAFT: Robot Motion Planning via Anchor-Level Flow Matching with Clearance-Aware Preference Tuning",
+      "authors": [
+        "Sibo Tian",
+        "Chang Liu",
+        "Minghui Zheng",
+        "Xiao Liang"
+      ],
+      "abstract": "Recent end-to-end neural motion planners generate trajectories from raw sensor observations, avoiding the privileged geometric models required by classical planners. However, collision-free planning in cluttered environments remains challenging. We present NeurRAFT, a generative planning framework based on anchor-level flow matching and clearance-aware preference tuning. Unlike prior neural planners that model dense waypoint sequences and spend capacity on redundant local details and smoothness, NeurRAFT operates on compact anchor waypoints. We train the planner using a Jacobian-weighted loss ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.24026",
+      "published_at": "2026-08-25T03:31:24Z",
+      "updated_at": "2026-08-25T03:31:24Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23994",
+      "title": "Bridging Teacher Expectations and Robot Learning via Coupling Dynamics",
+      "authors": [
+        "Evan Dallas",
+        "Sean Dallas",
+        "Wing-Yue Geoffrey Louie"
+      ],
+      "abstract": "Human-robot teaching focuses on enabling nontechnical experts to customize robots according to their needs after deployment. With recent advances in machine learning, human-robot teaching is no longer confined to offline learning where the data gathering step from a human teacher is separated from when the robot learns. Instead, more recent approaches for human-robot teaching focus on coupling human teaching with robot learning. This coupling impacts the structure, timing, and content of the teaching and learning interaction. However, it is currently unclear how such coupling dynamics affect h",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.23994",
+      "published_at": "2026-08-25T02:34:26Z",
+      "updated_at": "2026-08-25T02:34:26Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23924",
+      "title": "Dynamical System-Based Imitation Learning and Neuroadaptive Control for Trajectory Recovery in Autonomous Ships",
+      "authors": [
+        "Yeyson A. Becerra-Mora",
+        "José Ángel Acosta"
+      ],
+      "abstract": "Repetitive maritime operations can be effectively learned using the Imitation Learning (IL) paradigm, which transfers human expertise directly to Unmanned Surface Vehicle (USV) control systems. Dynamical Systems (DS) are widely used to model non-linear human demonstrations while offering inherent stability guarantees. However, real-world execution under persistent marine perturbations reveals a critical trade-off: standard DS-based IL approaches prioritize global target convergence at the expense of localized trajectory reproduction fidelity. To address this limitation, we present a hybrid lea",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.23924",
+      "published_at": "2026-08-25T00:04:39Z",
+      "updated_at": "2026-08-25T00:04:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23831",
+      "title": "Learning to Act While Waiting: RL Finetuning of Generalist Robot Policies Under Inference Latency",
+      "authors": [
+        "Brian Zhu",
+        "Momen Khalil",
+        "E Harrison",
+        "Emanuele Poggi",
+        "Philipp Schmitt"
+      ],
+      "abstract": "While reinforcement learning (RL) allows generalist robot policies to continually improve during deployment, the large model size of modern generalist policies, such as VLAs, poses a fundamental obstacle to effective RL improvement. In particular, their severe inference latency---which can lead to pauses or jerky movements---can alter the effective environment dynamics and, if not correctly accounted for, break the Markov assumption that RL relies on, causing standard RL algorithms to fail completely. In this work, we introduce a latency-aware framework, Asynchronous RL with Intermediate Infor",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.23831",
+      "published_at": "2026-08-24T21:19:50Z",
+      "updated_at": "2026-08-24T21:19:50Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24534",
+      "title": "Neurosymbolic Alignment for Physiologically-Safe Clinical Language Models",
+      "authors": [
+        "Abdulhady Abas Abdullah",
+        "Erik Cambria",
+        "Milena Zivkovic"
+      ],
+      "abstract": "Clinical LLMs can generate recommendations that are factually plausible yet physiologically unsafe. We investigate whether safety alignment can be improved by grounding preference optimization in structured physiological knowledge rather than text-only supervision. Methods: We propose Neurosymbolic Alignment, a training-time framework that couples a 7B clinical LLM with an HGNN-based Physiological World Model over an 847K-node biomedical knowledge graph. Candidate responses are scored using homeostatic constraints, multi-hop path plausibility, and drug-interaction penalties, and the resulting ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.24534",
+      "published_at": "2026-08-25T13:20:03Z",
+      "updated_at": "2026-08-25T13:20:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23706",
+      "title": "Do LLMs Understand Limit Order Book Dynamics?",
+      "authors": [
+        "Junxiao Chen",
+        "Paul Glasserman"
+      ],
+      "abstract": "A large language model (LLM) trained on synthetic limit order book (LOB) data achieves near perfect scores in generating valid sequences of LOB events. However, the LLM's implicit world model fails to learn the state of the LOB. This deficiency leads to biased estimates and spurious predictability in using the LLM to forecast future LOB events. Our analysis uses novel tests of an LLM's world model, extending prior work from deterministic settings to the stochastic dynamics needed for the LOB.",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.23706",
+      "published_at": "2026-08-24T18:01:27Z",
+      "updated_at": "2026-08-24T18:01:27Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24877",
+      "title": "From Seeing to Acting: Smart Glasses as First-Person Intelligence Platforms",
+      "authors": [
+        "Jiangning Zhang",
+        "Haojun Chen",
+        "Yong Liu"
+      ],
+      "abstract": "Smart glasses are evolving from capture and display accessories into first-person intelligence platforms that connect human perception, persistent context, and digital or physical action. Their on-body viewpoint aligns with the wearer's vision, audition, motion, and hand-object interaction, but must operate under tight energy, thermal, privacy, and feedback constraints. Despite rapid progress in augmented reality, egocentric vision, multimodal models, human-computer interaction, and embodied intelligence, the literature remains fragmented across devices, tasks, and benchmarks. \\textit{The key ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24877",
+      "published_at": "2026-08-25T17:56:54Z",
+      "updated_at": "2026-08-25T17:56:54Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24855",
+      "title": "LeFlow: Generative Latent Flow Planning for World Models",
+      "authors": [
+        "Hsiang-Wei Huang",
+        "Jianxu Shangguan",
+        "Junbin Lu",
+        "Jenq-Neng Hwang"
+      ],
+      "abstract": "Latent world models are inherently strong encoders that transform image pixel to latent embedding, yet existing world models still rely on online trajectory optimization for action planning: for every state-goal pair, an iterative optimizer is run from scratch to search for optimal action sequences, treating the world model as a black-box simulator. This approach pays the full iterative optimization cost anew at every replanning step and reuses no planning experience across queries. In this work, we ask whether planning itself can be amortized once a latent world model has been learned. We pre",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24855",
+      "published_at": "2026-08-25T17:42:30Z",
+      "updated_at": "2026-08-25T17:42:30Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24680",
+      "title": "Game2World Engine: Unlocking In-the-Wild Gameplay Videos for World Model Training",
+      "authors": [
+        "Wenxuan Shen",
+        "Dongna Jin",
+        "Dongping Chen"
+      ],
+      "abstract": "Video games provide a scalable source of training data for video world models, offering diverse environments, complex interactions, and abundant in-the-wild gameplay videos. However, raw gameplay footage entangles the game world with screen-space interfaces, introducing game-specific biases and irrelevant dynamics that hinder world-model training. To address this problem, we introduce GameUI-Taxonomy and G2WEngine, a full-stack framework that formalizes gameplay UI grounding and removal. G2WEngine automatically extracts reusable UI assets from real gameplay videos and synthesizes temporally co",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24680",
+      "published_at": "2026-08-25T15:13:32Z",
+      "updated_at": "2026-08-25T15:13:32Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.24212",
+      "title": "NeoWorld-Pro: Programming Interactive Scenes from Monocular Images for Embodied Simulation",
+      "authors": [
+        "Yumeng He",
+        "Yichen Song",
+        "Xiaotian Yang",
+        "Weijia Zhang",
+        "Zanwei Zhou"
+      ],
+      "abstract": "The advancement of Embodied AI necessitates high-quality simulation assets that faithfully mirror the real world. However, transforming raw visual observations into simulation-ready scenes remains challenging due to the lack of physical grounding and scene-level interactivity in current image-to-URDF methods. We propose NeoWorld-Pro, a framework that reformulates monocular scene reconstruction as procedural programming for interactive 3D environments. Leveraging the zero-shot reasoning and code synthesis capabilities of MLLMs, NeoWorld-Pro converts a single RGB image into executable programs s",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.24212",
+      "published_at": "2026-08-25T08:19:39Z",
+      "updated_at": "2026-08-25T08:19:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23927",
+      "title": "GlanceWAM: Sparse Test-Time Imagination for World-Action Models",
+      "authors": [
+        "Linhan Wang",
+        "Zijian An",
+        "Mingyuan Zhang",
+        "Chen Dai",
+        "Yi Xu"
+      ],
+      "abstract": "Video generative models provide rich physical priors for robot learning, yet existing world-action models (WAMs) face a fundamental trade-off: synchronous video generation at control rate is latency-prohibitive, while abandoning test-time visual imagination sacrifices task success. We show that visual imagination achieves both real-time inference and superior success rates when generated asynchronously off the critical path and consumed directly in latent space. We introduce GlanceWAM, which decouples imagination from control within a single video DiT: an asynchronous proposer glances ahead on",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.23927",
+      "published_at": "2026-08-25T00:19:09Z",
+      "updated_at": "2026-08-25T00:19:09Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23845",
+      "title": "Object Counting Across Modalities: Taxonomies, Benchmarks, Applications, and Open Challenges",
+      "authors": [
+        "Joana Konadu Owusu",
+        "Shivanand Venkanna Sheshappanavar"
+      ],
+      "abstract": "Object-counting methods have rapidly shifted from class-specific density regression to open-vocabulary, foundation-model-backed counters. These methods now enumerate instances from various visual and textual prompts. While this shift marks major conceptual progress, our survey argues that claims of universal generality have outpaced the evaluative infrastructure. Most progress metrics rely on a few saturated benchmarks that models exploit for statistical regularities. Newly introduced diagnostic datasets reveal systematic failures in semantic grounding, temporal identity, and spatial reasoning",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.23845",
+      "published_at": "2026-08-24T21:32:56Z",
+      "updated_at": "2026-08-24T21:32:56Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23790",
+      "title": "Primate vision reveals a missing principle for robust dynamic AI",
+      "authors": [
+        "Matteo Dunnhofer",
+        "Christian Micheloni",
+        "Kohitij Kar"
+      ],
+      "abstract": "How does an intelligent visual system combine what objects look like with how they move while remaining robust as appearance changes? We addressed this question by comparing human perception and neural activity in macaque inferior temporal cortex with representations from image- and video-based neural networks spanning recognition, segmentation, optic-flow processing and predictive world modeling. Temporal integration improved object representations, but most video recognition models generalized poorly when appearance was disrupted while motion structure was preserved. Humans and macaque IT re",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.23790",
+      "published_at": "2026-08-24T19:38:54Z",
+      "updated_at": "2026-08-24T19:38:54Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    },
+    {
+      "id": "2608.23720",
+      "title": "Platonic Representation Hypothesis on World Models",
+      "authors": [
+        "Wenhow Li",
+        "Chengwei MA",
+        "Hui Xiong",
+        "Ying-Cong Chen",
+        "Lei Zhang"
+      ],
+      "abstract": "World models have demonstrated significant potential for perceiving and simulating complex environments. Despite their strong performance, the fundamental nature of their learned representations remains poorly understood. In this paper, we investigate the Platonic Representation Hypothesis within this domain by proposing the Predictive Consistency Assumption: we posit that the optimization of a shared state transition objective acts as a selective pressure that encourages heterogeneous models to converge toward a shared latent structure. Through systematic experiments with the DINO World Model",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.23720",
+      "published_at": "2026-08-24T18:08:30Z",
+      "updated_at": "2026-08-24T18:08:30Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-26T03:13:20.005615Z"
+    }
+  ]
+}
