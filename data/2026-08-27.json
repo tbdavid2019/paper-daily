@@ -1,0 +1,656 @@
+{
+  "date": "2026-08-27",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-08-27T12:42:41.248743Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 137,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 13,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 750,
+    "after_dedup": 647,
+    "window_start": "2026-08-23",
+    "window_candidates": 612,
+    "already_seen": 322,
+    "new_candidates": 290,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 30
+  },
+  "papers": [
+    {
+      "id": "2608.26067",
+      "title": "StreamPI: Streaming Multimodal Temporal Modeling for Vision-Language-Action Models",
+      "authors": [
+        "Zhe Liu",
+        "Jinghua Hou",
+        "Yuxiang Lu",
+        "Zhenya Yang",
+        "Xianzhe Fan"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have demonstrated effectiveness in robot manipulation, yet state-of-the-art models such as pi0.5 operate under a single-frame paradigm, limiting their ability to retain past observations and develop precise spatial perception. In this paper, we propose StreamPI, a streaming multimodal temporal modeling framework that equips single-frame VLA with temporal reasoning capability without introducing any additional parameters. One core design is instruction-anchored temporal modeling. It treats each (visual observation, language instruction) pair as an atomic temp",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.26067",
+      "published_at": "2026-08-26T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-08-26T17:33:19Z",
+      "priority": 50.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25547",
+      "title": "A Tendon-Driven Five-Fingered Hand with Distributed Tactile Perception for Dexterous Manipulation",
+      "authors": [
+        "Huayang Chen",
+        "Longhui Qin"
+      ],
+      "abstract": "To apply the techniques of embodied artificial intelligence to human-oid robots for complex manipulations, dexterous robotic hands are indispensable, which are restricted by the dexterity and tactile perception capability. In this work, we proposed a novel design of tendon-driven five-fingered hand with dis-tributed tactile perception. With a soft-rigid-hybrid structure employed, both compliance and operational force are endowed to the hand. Dual-modality tactile sensing elements are distributed on the distal and middle phalanges of all five fingers, enabling the simultaneous detection of stat",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.25547",
+      "published_at": "2026-08-26T09:01:36Z",
+      "updated_at": "2026-08-26T09:01:36Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.24959",
+      "title": "GaussVLA: Geometry-Aware Spatial Reasoning for Vision-Language-Action Model",
+      "authors": [
+        "Md Selim Sarowar",
+        "Md Tanvir Islam",
+        "Sungho Kim",
+        "Sangtae Ahn"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models encode visual observations as flat 2D patch tokens that carry no intrinsic geometric structure, and augmenting them with dense monocular depth injects per-pixel scalar values that encode neither surface orientation nor geometric confidence. This leaves the policy with limited structured spatial reasoning for action prediction. We propose GaussVLA, a Mamba-based VLA that incorporates two custom modules: Gaussian Spatial Tokenizer (GST) to lift frozen semantic and depth features into compact 3D Gaussian tokens, pools geometrically salient regions with learned ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.24959",
+      "published_at": "2026-08-25T06:28:28Z",
+      "updated_at": "2026-08-25T06:28:28Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25864",
+      "title": "MA-VLA: Multi-Arm Vision-Language-Action Model for Collaboration and Compositional Generalization",
+      "authors": [
+        "Zaibin Zhang",
+        "Junlan Xiao",
+        "Zhongbo Zhang",
+        "Yifan Wang",
+        "Li Kang"
+      ],
+      "abstract": "Multi-arm collaboration is becoming a core capability in embodied manipulation. Recent vision-language-action (VLA) models integrate perception, language, and control, but most represent language as a single global instruction and do not provide an explicit mechanism for assigning and composing arm-specific behaviors. This design limits transfer to collaboration patterns that differ from those observed during training. We present MA-VLA, a unified framework for multi-arm collaboration via atomic action assignment. MA-VLA decomposes cooperative behavior into mid-level atomic prompts and allocat",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.25864",
+      "published_at": "2026-08-26T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-26T14:38:04Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25927",
+      "title": "Code World Model: Coding Agent as World Brain",
+      "authors": [
+        "Yiwen Chen",
+        "Guosheng Lin",
+        "Chi Zhang"
+      ],
+      "abstract": "World models aim to simulate how complex environments evolve under actions and events, yet existing video-based world models primarily learn dynamics from visual observations, which reveal outcomes rather than the underlying knowledge, rules, and mechanisms governing world evolution. This makes it difficult to maintain persistent consequences and support coherent, open-ended evolution. We introduce Code World Model, a framework that separates world evolution from visual realization by combining the reasoning and coding capabilities of language models with the generative priors of video models.",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.25927",
+      "published_at": "2026-08-26T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-08-26T15:37:33Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25479",
+      "title": "4DStreamCtrl: Interactive Video Generation with Online 4D Control",
+      "authors": [
+        "Shiqian Li",
+        "Chenguo Lin",
+        "Zhiguang Liu",
+        "Yu Tang",
+        "Jiarong Ou"
+      ],
+      "abstract": "Generative video models now synthesize footage nearly indistinguishable from reality. Their promise as interactive tools hinges on fine-grained control of how objects and the camera move over time, yet each existing approach captures only part of this: camera-parameter methods steer the viewpoint but cannot move objects, 2D-trajectory methods act in the image plane and ignore depth and occlusion, and recent 3D methods add geometry but run only offline at a fixed length. In particular, none combines 3D-consistent control of both camera and objects with real-time, streaming generation. Here we s",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.25479",
+      "published_at": "2026-08-26T07:49:39Z",
+      "updated_at": "2026-08-26T07:49:39Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25308",
+      "title": "V-Link: Recovering Lost Visual Representations in Action DiT for Vision-Language-Action Models",
+      "authors": [
+        "Yehao Lu",
+        "Jiarui Yang",
+        "Yuning Su",
+        "Yufeng Xie",
+        "Yu Zhong"
+      ],
+      "abstract": "Vision-language-action (VLA) models provide a scalable path toward generalist robotic manipulation by integrating visual perception, language understanding, and continuous action control. However, we reveal a critical limitation of VLA architectures: the action expert has limited access to the 3D geometric and 2D semantic information available in VLM features. This accessibility gap weakens perceptual grounding and limits performance on fine-grained robotic manipulation. To address this issue, we propose V-Link, which explicitly recovers visual representations during the vision-language (VL) t",
+      "sources": [
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.25308",
+      "published_at": "2026-08-26T02:32:18Z",
+      "updated_at": "2026-08-26T02:32:18Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.26103",
+      "title": "Zero-WAM: In-Context World-Action Modeling from Human Videos for Open-Ended Task Generalization",
+      "authors": [
+        "Jiaming Zhou",
+        "Qihang Zhang",
+        "Gangwei Xu",
+        "Cunxin Fan",
+        "Yujie Zhao"
+      ],
+      "abstract": "Zero-shot cross-task generalization, where a policy must execute manipulation tasks never seen during training, remains a central challenge in robot learning. In large language models, a novel task can be performed simply by specifying it in the context, without any parameter update. This form of in-context learning (ICL) turns generalization into a problem of task specification. To achieve cross-task generalization, we bring this paradigm to robotic manipulation, and argue that the natural task specification for manipulation is a human video: unlike language, it provides rich visual cues abou",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.26103",
+      "published_at": "2026-08-26T17:59:34Z",
+      "updated_at": "2026-08-26T17:59:34Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.26053",
+      "title": "$R^3$: Training Robots to Reason in Natural Language via Reinforcement Learning",
+      "authors": [
+        "Lehong Wu",
+        "Yuxiao Qu",
+        "Zheyuan Hu",
+        "Ivan Zhang",
+        "Limin Wei"
+      ],
+      "abstract": "Reasoning in language allows foundation models to spend more test-time compute on hard problems, such as those requiring decomposition, constraint tracking, and prediction of future consequences. Whether this mechanism can improve robotic manipulation remains unclear, where long-horizon tasks require tracking partial progress, reasoning about object relations, recovering from mistakes, and steering noisy low-level policies. In this paper, we study whether VLMs can be trained to reason directly in natural language to guide low-level manipulation policies. We introduce $R^3$, a simple post-train",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.26053",
+      "published_at": "2026-08-26T17:25:10Z",
+      "updated_at": "2026-08-26T17:25:10Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25798",
+      "title": "TacForcing: Streaming Action Generation with Execution-Time Tactile Feedback",
+      "authors": [
+        "Jianbo Zhou",
+        "Boyuan Zhao",
+        "Yuzheng Zhang",
+        "Yiyang Chen",
+        "Wenxin Chen"
+      ],
+      "abstract": "Contact-rich manipulation requires adapting to contact states that can evolve substantially within an action horizon. However, chunk-based vision-language-action models predict complete action chunks from observations collected before execution, leaving tactile conditioning stale during execution. Existing tactile-reactive approaches typically rely on separate high-frequency controllers, which increase both architectural and training complexity. In this paper, we introduce TacForcing, a streaming action-generation framework that effectively incorporates execution-time tactile feedback. Instead",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.25798",
+      "published_at": "2026-08-26T13:48:52Z",
+      "updated_at": "2026-08-26T13:48:52Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25572",
+      "title": "ConfAL-WM: Confidence-Guided Active Learning for Action-Conditioned World Models",
+      "authors": [
+        "Xiang Liu",
+        "Sen Cui",
+        "Changshui Zhang"
+      ],
+      "abstract": "Action-conditioned world models have become an important foundation for embodied prediction, planning, and synthetic data generation, but their errors under new task and scene distributions are often concentrated in localized spatiotemporal regions such as robot arms, manipulated objects, contact areas, and occluded objects. This paper presents ConfAL-WM, a confidence-guided active learning framework for post-training embodied world models. Built upon EVAC, we attach a lightweight confidence probe to UNet decoder features and predict dense confidence maps in the latent space. These maps are ag",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.25572",
+      "published_at": "2026-08-26T09:29:08Z",
+      "updated_at": "2026-08-26T09:29:08Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25395",
+      "title": "A Taxonomy of Construction Task Activities for Robot Workers",
+      "authors": [
+        "Sadman Sakib",
+        "Zhangyi None Peng",
+        "Yujie Pang",
+        "Yu Otsuki",
+        "Mohammad Abdullah Al Faruque"
+      ],
+      "abstract": "Recent vision-language-action models offer a path toward robots with broader repertoires than conventional task-specific systems. Construction deployment, however, requires a precise inventory of worker activities and the capabilities needed to execute them. We present TARCAT, an occupation-grounded taxonomy derived from 91 O*NET tasks across seven high-employment construction occupations and 30 instructional videos of physical work. TARCAT defines 41 action primitives in 12 groups and three classes and provides a mechanism for composing parameterized primitive sequences into reusable skills. ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2608.25395",
+      "published_at": "2026-08-26T05:42:54Z",
+      "updated_at": "2026-08-26T05:42:54Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25142",
+      "title": "SkyDrive: Learning to Drive in a New City from Aerial Traffic Monitoring",
+      "authors": [
+        "Weijiang Xiong",
+        "Lan Feng",
+        "Alexandre Alahi",
+        "Nikolas Geroliminis"
+      ],
+      "abstract": "Autonomous driving has made remarkable progress through imitation learning with massive human demonstration data. However, a trained planner often degrades severely when applied to a new environment zero-shot, because of domain shifts in traffic regulations, road layout and driving behaviors. Therefore, adapting a trajectory planner to a new city typically requires resource-demanding local data collection with a vehicle sensor suite. In this work, we show that driving behavior can be learned from a scalable and efficient alternative. We introduce \\emph{SkyDrive}, a framework that utilizes dron",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.25142",
+      "published_at": "2026-08-25T20:47:09Z",
+      "updated_at": "2026-08-25T20:47:09Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25872",
+      "title": "VISTA: Visually Inferred Spatial ConTact Attention for Contact-Rich Manipulation",
+      "authors": [
+        "Jiayi Chen",
+        "Wenlong Dong",
+        "Yan Huang",
+        "Xianglin Chen",
+        "Zijian Lin"
+      ],
+      "abstract": "Contact-rich manipulation requires precise interaction feedback. While vision-centric imitation learning is prevalent, external visual observations provide indirect and ambiguous cues about contact states, particularly under occlusion or subtle object--gripper interactions; dedicated tactile or force sensors can provide rich contact information but introduce additional hardware complexity, calibration requirements, and deployment costs. To bridge this gap, we propose VISTA-Policy, an imitation learning paradigm that utilizes the Visual Deformation Field (VDF), a 3D displacement representation ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25872",
+      "published_at": "2026-08-26T14:44:29Z",
+      "updated_at": "2026-08-26T14:44:29Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25757",
+      "title": "LM-X: Explainable Action Modeling with Progress, Event, and Uncertainty Prediction for Generalist Robot Manipulation",
+      "authors": [
+        "Jin Lou",
+        "Jingxuan Zhu",
+        "Andong Chen",
+        "Xupeng Wang",
+        "Yuan Xu"
+      ],
+      "abstract": "Generalist vision--language--action (VLA) policies learn long-horizon behavior mainly through short-horizon action prediction and reveal little beyond sampled commands. This creates two coupled bottlenecks: a single action target must implicitly absorb task progress, intermediate intent, and local reliability, while these control states remain hidden during execution. Inspired by functional principles of biological sensorimotor control, we introduce LM-X , which organizes prediction across task, event, and motor scales without claiming anatomical correspondence. Three explicitly supervised sig",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25757",
+      "published_at": "2026-08-26T13:05:29Z",
+      "updated_at": "2026-08-26T13:05:29Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25666",
+      "title": "PRISM: Projection-Integrated Sampling-Based MPC with Bayesian Cost Tuning for Bimanual Manipulation",
+      "authors": [
+        "Alinjar Dan",
+        "Iryna Hurova",
+        "Karl Kruusamäe",
+        "Arun Kumar Singh"
+      ],
+      "abstract": "Bimanual manipulation in cluttered, contact-rich environments remains challenging because it requires coordinated motion generation, interaction-aware planning, and reliable execution under tight kinematic constraints. We present PRISM, a projection-integrated sampling-based Model Predictive Control (MPC) framework that uses a GPU-accelerated physics simulator as an online world model for complex dual-arm manipulation.   The main algorithmic contribution is a QP-guided control sampling strategy that decouples trajectory exploration from kinematic feasibility. At each MPC step, sampled joint-ve",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25666",
+      "published_at": "2026-08-26T11:47:12Z",
+      "updated_at": "2026-08-26T11:47:12Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25659",
+      "title": "GaussianDream++: Efficient 3D Gaussian World Modeling for Robotic Manipulation",
+      "authors": [
+        "Yuqing Jiang",
+        "Zijian Zhang",
+        "Weitao Zhou",
+        "Jiawei Wang",
+        "Junjie He"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies have advanced language-conditioned robotic manipulation, yet action-imitation objectives provide only weak supervision for metric 3D structure and short-horizon physical evolution. Geometry-enhanced policies mainly improve current-scene grounding, whereas predictive policies often model future dynamics in RGB or latent spaces and may incur substantial deployment cost. GaussianDream demonstrates that training-time current Gaussian reconstruction and future Gaussian prediction provide effective 3D supervision, but its dense VGGT/TGE-based prefix jointly carr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25659",
+      "published_at": "2026-08-26T11:41:55Z",
+      "updated_at": "2026-08-26T11:41:55Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25610",
+      "title": "Advantage-Driven Explicit Memory for Social Navigation",
+      "authors": [
+        "Yeonsoo Park",
+        "Mattia Racca",
+        "Guillaume Bono",
+        "Steeven Janny",
+        "Gianluca Monaci"
+      ],
+      "abstract": "Robot policies are predominantly learned with classical parametric variants of imitation learning or RL, where training stores the agent's behavior exclusively in the policy's network parameters, putting a heavy burden on the representation learning algorithm. We propose a new navigation agent equipped with non-parametric memory which explicitly indexes prior steps leading to critical events. The advantages are twofold: first, it allows the policy to outsource some of its behavior into an explicit memory; second, it encourages a form of continual learning by allowing an agent to collect data f",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25610",
+      "published_at": "2026-08-26T10:27:08Z",
+      "updated_at": "2026-08-26T10:27:08Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25585",
+      "title": "RA-VLA: Retrieval-Augmented VLA for Test-Time Adaptation",
+      "authors": [
+        "Sanghwan Jang",
+        "Minjin Jeon",
+        "Minsoo Kim",
+        "Seongjin Choi",
+        "Dongha Kim"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models provide a versatile foundation for general robotic manipulation, yet they exhibit significant brittleness when confronted with novel task distributions. While In-Context Imitation Learning (ICIL) offers a training-free alternative, existing frameworks suffer from an adaptation bottleneck that hinders the effective translation of expert context to executable actions. This failure originates from superficial retrieval mechanisms and an inherent behavioral inertia that anchors the policy to its pre-trained priors. To address these limitations, we present RA-VLA",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25585",
+      "published_at": "2026-08-26T09:52:30Z",
+      "updated_at": "2026-08-26T09:52:30Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25196",
+      "title": "Longitudinal Robot Learning from Demonstration with Care Providers in a Home Environment",
+      "authors": [
+        "Nina Moorman",
+        "Julianna Schalkwyk",
+        "Vriksha Srihari",
+        "Qingyu Xiao",
+        "Kamel Alrashedy"
+      ],
+      "abstract": "Learning from demonstration (LfD) methods enable non-expert end users to teach robots novel skills without explicit programming. However most evaluations of the usability of LfD with non-experts has been conducted in controlled laboratory environments with a robotics experimenter present. In this work we identify non-expert end users' key barriers when teaching robots via demonstration without live robotics expert feedback in a home environment. In our human subjects experiment we support the non-expert end users through two forms of demonstrator guidance developed in prior work: pre-training ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25196",
+      "published_at": "2026-08-25T22:21:09Z",
+      "updated_at": "2026-08-25T22:21:09Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.24479",
+      "title": "WarpSAC: Towards the Pinnacle of Scalable Off-policy RL by Rethinking Exploration and Exploitation",
+      "authors": [
+        "Zihao Wu",
+        "Hongyao Tang",
+        "Yi Ma",
+        "Huizhong Song",
+        "Pengyi Li"
+      ],
+      "abstract": "Massively parallel simulation changes the data regime in which off-policy reinforcement learning (RL) is trained, challenging stabilizers designed for data-limited replay. Through controlled experiments across eight benchmark families, we show that these stabilizers are data-regime-dependent: parameter normalization helps with narrow replay coverage but restricts value fitting when data are abundant, while clipped double-Q can be relaxed in high-throughput manipulation. Age-biased replay weighting improves learning efficiency across regimes, especially with limited network capacity.   Based on",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2608.24479",
+      "published_at": "2026-08-25T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.26058",
+      "title": "One Policy, Many Embodiments: Unified Camera-Centric Action Geometry Pre-training for Heterogeneous Embodied Manipulation",
+      "authors": [
+        " Xiaomi Embodied Intelligence Team",
+        "University of Macau",
+        " :",
+        "Shaoqing Xu",
+        "Fang Li"
+      ],
+      "abstract": "Scaling generalist vision-language-action (VLA) policies is severely bottlenecked by the inherent heterogeneity of embodied data, which spans diverse robot morphologies, camera configurations, and low-level action spaces. Existing paradigms typically address this mismatch through explicit action retargeting, human-to-robot video synthesis, or dataset-specific adaptation branches, fundamentally hindering the joint learning of a unified policy. We introduce UCAG-P, a camera-centric unified action formulation that structurally aligns heterogeneous embodied datasets into a shared geometric action ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.26058",
+      "published_at": "2026-08-26T17:27:36Z",
+      "updated_at": "2026-08-26T17:27:36Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25642",
+      "title": "EgoNav: Bridging Learned Waypoints and Geometry-Aware Local Control for Robust Indoor Navigation",
+      "authors": [
+        "Jing Wang",
+        "Shiqi Zhao",
+        "Hairong Qu",
+        "Peng Yin"
+      ],
+      "abstract": "Image-goal navigation using lightweight topological maps is a practical paradigm for indoor robot deployment: the map requires only geotagged images, and localization relies on visual matching rather than precise pose estimation. However, learned waypoint predictors can produce targets that violate geometric constraints or deviate from the global path. Executing these waypoints safely further requires a local planner capable of collision avoidance, yet existing systems either lack one or rely on fixed parameters that cannot adapt to confined spaces. To address these limitations while retaining",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25642",
+      "published_at": "2026-08-26T11:13:07Z",
+      "updated_at": "2026-08-26T11:13:07Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25192",
+      "title": "CRESSim-Neo: A Batched GPU Simulation Engine for Surgical Robotics and Robot Learning",
+      "authors": [
+        "Yafei Ou",
+        "Ahnaf Naheen",
+        "Tleukhan Mussin",
+        "Hans Jarales",
+        "Melwin Moncy"
+      ],
+      "abstract": "We introduce CRESSim-Neo, a batched GPU simulation engine for surgical robotics and robot learning. CRESSim-Neo combines position-based simulation of rigid bodies, deformable tissues, fluids, and strands with batched rendering, surgery-specific sensing, and a GPU-resident data pipeline. The engine supports applications including tissue manipulation, fluid suction, suturing, cable-driven robots, and ultrasound image synthesis. Direct access to physics and rendering buffers enables GPU-resident robot learning and zero-copy PyTorch integration using DLPack. We demonstrate CRESSim-Neo across rigid",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25192",
+      "published_at": "2026-08-25T22:17:00Z",
+      "updated_at": "2026-08-25T22:17:00Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25102",
+      "title": "ROS2 Connect: A new ROS2 over WAN Solution",
+      "authors": [
+        "Daniel Schott",
+        "Lakshminarasimhan Srinivasan",
+        "Christian Herrmann",
+        "Andreas Nüchter"
+      ],
+      "abstract": "The Robot Operating System 2 (ROS2) has become a widely adopted framework for the development of distributed robotic systems. However, its communication architecture, based on DDS and RTPS, relies on multicast discovery mechanisms that are typically unavailable in wide-area network (WAN) environments, making remote operation challenging. This work presents ROS2 Connect, a WebSocket-based communication framework that enables transparent and secure ROS2 interaction across routed networks without requiring modifications to network infrastructure or DDS configurations. The proposed client-server a",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2608.25102",
+      "published_at": "2026-08-25T19:52:47Z",
+      "updated_at": "2026-08-25T19:52:47Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.26009",
+      "title": "Imitation Learning for Connection-Tableau Construction",
+      "authors": [
+        "Fredrik Rømming",
+        "Mantas Bakšys",
+        "Martin S. Fixman",
+        "Sean B. Holden"
+      ],
+      "abstract": "An automated theorem prover builds a proof step by step, choosing at each point what to add and what to remove. We cast this construction as a policy acting in a transition system induced by a formal calculus, which fixes which steps are sound: for clausal connection tableaux, leanCoP-style search and plCoP/rlCoP-style planning then become stateful policies over one interface, and policy-learning methods apply directly. We equip such policies with a graph neural network that scores proof edits from structure that transfers across problems, train it by imitation learning from found proofs, and ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.26009",
+      "published_at": "2026-08-26T16:53:25Z",
+      "updated_at": "2026-08-26T16:53:25Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25936",
+      "title": "One Symptom, Three Levers: A Critical Review of On-Policy Self-Distillation",
+      "authors": [
+        "Justin Robert",
+        "Raheel Qader"
+      ],
+      "abstract": "On-policy distillation trains a language model on its own generations while a teacher scores them token by token. It combines the dense supervision of imitation learning with the on-policy sampling of reinforcement learning. But it requires a second, larger model to act as teacher. On-Policy Self-Distillation (OPSD) removes that cost. The teacher is the model itself, conditioned on privileged information the student will not have at test time, such as a reference solution, a plan, or environment feedback. The teacher is no stronger than the student, only better informed. Early results were pro",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.25936",
+      "published_at": "2026-08-26T15:52:19Z",
+      "updated_at": "2026-08-26T15:52:19Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25832",
+      "title": "Skill Issue: Are Skills Language-Invariant in LLMs?",
+      "authors": [
+        "Bobby Cheng",
+        "Adam Gaber",
+        "Zhengyuan Liu",
+        "Catherine Arnett",
+        "Omer Goldman"
+      ],
+      "abstract": "Large language models access knowledge inconsistently across languages, but to what extent do they differ in their skill sets when interacting with different languages? This work quantifies cross-lingual skill inconsistency orthogonally from knowledge and general benchmark performance. We do this via multilingual self-play: two instances of the same model compete in a text-based game, each interacting through a different language interface. Since the model, opponent, rules, state space, and available actions remain fixed, this setting isolates the effect of language on the model's realized beh",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.25832",
+      "published_at": "2026-08-26T14:12:29Z",
+      "updated_at": "2026-08-26T14:12:29Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25518",
+      "title": "Agentic Game Development as a Verifiable Trajectory Data Engine for Scaling World Models",
+      "authors": [
+        "Pengfei Zhou",
+        "Hexin Wang",
+        "Zhengfeiyang Zhang",
+        "Yixing Ma",
+        "Zhenglin Wan"
+      ],
+      "abstract": "A common strategy for scaling world models is to train on more crawled video with more compute. We argue that this strategy is inefficient: scaling world models also requires a recursive data engine that offers grounded reward signals. The success of code agents illustrates why this matters. As code is executable, compilers and runtimes can provide high-quality rewards for Reinforcement Learning (RL) post-training of LLMs. By contrast, spatial generation still relies largely on fuzzy proxies such as CLIP scores. These signals are fuzzy and biased, making them hard to support RL post-training. ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2608.25518",
+      "published_at": "2026-08-26T08:28:39Z",
+      "updated_at": "2026-08-26T08:28:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    },
+    {
+      "id": "2608.25956",
+      "title": "4DGS-WAM: Bridging Past and Future with an Object-Centric World Action Model based on 4D Gaussian Splatting",
+      "authors": [
+        "Yueen Ma",
+        "Zenglin Xu",
+        "Irwin King"
+      ],
+      "abstract": "Current world action models (WAMs) typically operate on 2D visual data. These models can achieve exceptional visual quality, but they lack explicit spatial structure for individual objects and repeatedly process redundant background content. Although point clouds can represent the world in 3D space, they can be difficult to align and accumulate across viewpoints. In this paper, we leverage an explicit 4D Gaussian Splatting (4DGS) representation that separately models dynamic objects and the static background of a scene. For dynamic objects, we use a policy model to predict future actor actions",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2608.25956",
+      "published_at": "2026-08-26T16:16:57Z",
+      "updated_at": "2026-08-26T16:16:57Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-08-27T12:42:41.248743Z"
+    }
+  ]
+}
