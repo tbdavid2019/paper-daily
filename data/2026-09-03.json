@@ -1,0 +1,474 @@
+{
+  "date": "2026-09-03",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-09-03T07:06:02.408948Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 136,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 5,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 741,
+    "after_dedup": 669,
+    "window_start": "2026-08-30",
+    "window_candidates": 642,
+    "already_seen": 335,
+    "new_candidates": 307,
+    "selected_papers": 22,
+    "missing_published_at": 0,
+    "keyword_matched": 22
+  },
+  "papers": [
+    {
+      "id": "2609.02634",
+      "title": "Latent Cluster Analysis for Vision-Language-Action Models",
+      "authors": [
+        "Theodor Wulff",
+        "Sergio Lanza",
+        "Tamara Bila",
+        "Angelo Cangelosi",
+        "Stefan Wermter"
+      ],
+      "abstract": "Vision-Language-Action (VLA) Models are increasingly used in robotics for their ability to ground language and perception into action, yet the internal representations driving their behaviour remain poorly understood. We propose LAVLA, a framework for latent cluster analysis of VLA models, and conduct a layer-wise study of the state-of-the-art GR00T N1.5 model, with particular focus on its action decoder. To better characterise the latent space during action diffusion, we introduce a cross-attention-based embedding-weighting method that amplifies relevant features while suppressing less inform",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.02634",
+      "published_at": "2026-09-02T14:10:47Z",
+      "updated_at": "2026-09-02T14:10:47Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02531",
+      "title": "Spatially Aware World Action Model via Geometric Latent Diffusion",
+      "authors": [
+        "Javier Alejandro Lopetegui Gonzalez",
+        "Paul Pacaud",
+        "Cordelia Schmid"
+      ],
+      "abstract": "World Action Models (WAMs) leverage the capabilities of large-scale pretrained video diffusion models to jointly predict future observations and actions, inheriting rich visual and physical priors from internet-scale video. This has made them a promising paradigm for robot policy learning, yet the prevailing models operate exclusively on RGB observations and do not leverage 3D information. To bridge this gap, we introduce a Spatially Aware World Action Model (SA-WAM), which repurposes a pretrained video model for joint action, RGB, and depth prediction, enabling 3D-aware world modeling and act",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.02531",
+      "published_at": "2026-09-02T12:42:37Z",
+      "updated_at": "2026-09-02T12:42:37Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02542",
+      "title": "World-Model-Augmented Visual Locomotion for Humanoids on Foothold-Constrained Terrain",
+      "authors": [
+        "Yuxi Liu",
+        "Lijun Han",
+        "Ziming Wang",
+        "Ao Zhang",
+        "Cong Yang"
+      ],
+      "abstract": "Foothold-constrained terrain is characterized by sparse, discontinuous, or geometrically restricted feasible foot contacts, as encountered on stepping stones, across gaps, and on narrow stair treads. On such terrain, a single misstep often leaves little room to recover, so policies that base foot-placement decisions primarily on the immediately visible terrain are prone to failure. We ask whether a learned predictive summary of near-future observations and rewards can provide the anticipatory information required in such settings. We present World-Model-Augmented Visual Locomotion (WM-LOCO), w",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02542",
+      "published_at": "2026-09-02T12:57:01Z",
+      "updated_at": "2026-09-02T12:57:01Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.01938",
+      "title": "One Demonstration, Many Objects: Generalizing Manipulation via Local Contact Geometry",
+      "authors": [
+        "Satvik Sharma",
+        "Samrat Sahoo",
+        "Huang Huang",
+        "Fei-Fei Li Jiajun Wu",
+        "Dorsa Sadigh"
+      ],
+      "abstract": "Dexterous manipulation with multi-fingered robot hands promises human-level dexterity, but collecting large-scale dexterous robot hand data remains difficult. Learning from human demonstrations has emerged as a scalable alternative to robot teleoperation, providing strong priors on object interaction and contact strategies. Recent sim-to-real RL methods incorporate such priors, but often (i) omit rewards that explicitly incentivize precise contact, yielding weak real-world performance, and/or (ii) generalize poorly to unseen object instances. We propose DemoMimic (Dexterous Motion Mimic), a po",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.01938",
+      "published_at": "2026-09-01T23:04:35Z",
+      "updated_at": "2026-09-01T23:04:35Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02886",
+      "title": "SolarWM: Open Data and Scalable Training for Long-Horizon Video World Models",
+      "authors": [
+        "Junchao Huang",
+        "Guian Fang",
+        "Shengju Qian",
+        "Xianghao Kong",
+        "Zhuoran Zhao"
+      ],
+      "abstract": "We introduce SolarWM, a fully open foundation for building interactive video world models from data preparation through long-horizon inference. Training across heterogeneous data sources and video backbones is challenging: datasets differ in temporal scale, camera geometry, visual quality, motion, and captioning styles, while video generators use distinct representations and architectures. Naive data mixing and model-specific implementations therefore produce inconsistent supervision and make results difficult to reproduce and compare. SolarWM addresses this coupling with a reconfigurable mult",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.02886",
+      "published_at": "2026-09-02T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-02T17:59:41Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02861",
+      "title": "Towards Trustworthy Autonomous Robots: An Explainable AI-Based Decision Framework",
+      "authors": [
+        "Cagri Temel"
+      ],
+      "abstract": "Autonomous robots powered by deep learning face a fundamental auditability challenge: when incidents occur, investigators cannot reconstruct why the system made specific decisions. This paper presents TRACE (Transparent Reasoning Architecture for Credible Execution), a decision framework that ensures every autonomous action can be traced back to sensor evidence through documented causal chains. The framework organizes decision-making into four auditable layers: Semantic Perception for evidence-grounded entity recognition, Belief Reasoning for probabilistic state estimation with causal graphs, ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.02861",
+      "published_at": "2026-09-02T17:44:25Z",
+      "updated_at": "2026-09-02T17:44:25Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02350",
+      "title": "LookStep: Efficient Vision-Language Navigation with Linguistic Foresight and Event Driven Memory",
+      "authors": [
+        "Kun-Yang Yu",
+        "Yingzhe Li",
+        "Hongyu Xu",
+        "Shi-Yu Tian",
+        "Zhi Zhou"
+      ],
+      "abstract": "Vision-Language Navigation (VLN) requires an embodied agent to follow natural-language instructions in unseen environments. Recent progress has been largely driven by Multimodal Large Language Models (MLLMs). Existing methods follow a next-step action prediction paradigm, supervising only the expert action, which requires a high quantity of data for training. They also rely on cognitive maps, accumulated historical frames, or external 3D tools to maintain states, leading to high computational and memory overhead. To realize resource efficiency VLN, we propose LookStep, a unified end-to-end fra",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.02350",
+      "published_at": "2026-09-02T09:24:08Z",
+      "updated_at": "2026-09-02T09:24:08Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02046",
+      "title": "Modeling What Changes: Sparse, Residual World Models for Object-Centric Manipulation",
+      "authors": [
+        "Param Thakkar",
+        "Parsika Paresh Shah",
+        "Manisha Sushant Gote"
+      ],
+      "abstract": "Monolithic world models predict the entire next state at every step, spending capacity re-predicting the static majority of a scene and injecting error into it. We ask whether explicitly modeling change (a per-object change gate plus a residual delta head that perturbs only the objects the gate flags) is a more effective and interpretable bias for physical prediction and control. On a MuJoCo tabletop pushing benchmark scaling from 3 to 8 objects, the sparse/residual model predicts next-state poses 2.5 to 4.6 times more accurately than a dense multilayer perceptron at 8.6 to 11.1 times fewer pa",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.02046",
+      "published_at": "2026-09-02T03:20:09Z",
+      "updated_at": "2026-09-02T03:20:09Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02341",
+      "title": "Towards Zero-Shot Transfer Across Embodiments For Driving VLAs",
+      "authors": [
+        "Caio Azevedo",
+        "Stefano Sabatini",
+        "Sascha Hornauer",
+        "Fabien Moutarde"
+      ],
+      "abstract": "Vision-Language-Action models (VLAs) have shown strong potential in autonomous driving by leveraging multimodal pretraining for instruction following, visual reasoning, and scene-level generalization. In robotic manipulation, scaling VLA fine-tuning across multiple robot setups--especially when unifying representations across embodiments--has been shown to improve in-dataset performance and cross-embodiment generalization; in autonomous driving, however, VLAs remain largely trained on individual datasets and are rarely evaluated for zero-shot transfer to unseen datasets and camera rigs; furthe",
+      "sources": [
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.02341",
+      "published_at": "2026-09-02T09:17:54Z",
+      "updated_at": "2026-09-02T09:17:54Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02134",
+      "title": "Unified Motion Retargeting for Humanoids with Learned Point Cloud Correspondence",
+      "authors": [
+        "Hanyang Cao",
+        "Yuetong Fang",
+        "Taesoo Kwon",
+        "Runyi Yu",
+        "Ji Ma"
+      ],
+      "abstract": "Humanoid learning increasingly relies on transforming vast and diverse human motion data into high-quality robot reference trajectories. However, retargeting human motion to humanoid robots is challenging due to substantial differences in morphology, degrees of freedom, joint ranges, and kinematic constraints between humans and robots. Existing retargeting methods typically address these differences by defining human-robot correspondence through hand-crafted sparse keypoints or body-part pairs. As a result, retargeting quality depends heavily on manual semantic design, limiting scalability acr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02134",
+      "published_at": "2026-09-02T05:43:19Z",
+      "updated_at": "2026-09-02T05:43:19Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02688",
+      "title": "From Proxy Learning to Driving Decisions: A Transfer-Based Framework for Evaluating Future-Aware Autonomous Driving Planners",
+      "authors": [
+        "Yikai Wu"
+      ],
+      "abstract": "Future-aware representations and world models are increasingly used in proposal-based autonomous-driving planners to improve trajectory selection. However, improvements in proxy objectives or restricted subsets are often interpreted as planning gains without verifying proposal ordering, selected trajectories, full-scale utility, and critical driving components. We propose the Proxy-to-Decision Transfer (PDT) Framework, an analysis framework that evaluates when learned future information supports a reliable driving-performance improvement claim. Its Decision-Transfer Decomposition Module locali",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02688",
+      "published_at": "2026-09-02T14:55:14Z",
+      "updated_at": "2026-09-02T14:55:14Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02653",
+      "title": "HINT: Human-Intent Inception for Long-Horizon Robot Manipulation",
+      "authors": [
+        "Mingyu Mei",
+        "Haojie Xu",
+        "Shihao Jin",
+        "Zibo Dai",
+        "Qihao Cheng"
+      ],
+      "abstract": "Humans can perform complex manipulations given a simple intent through an overall instruction, while continuously adapting to evolving visual observations. However, current vision-language action (VLA) models and other action policies struggle to realize this high-level intelligent behavior under dense, evolving visual inputs and sparse language guidance. Visual correlations can then dominate semantic intent, leading actions to follow visual shortcuts rather than human goals. We present HINT (Human-INTent INcepTion), an agentic framework inspired by the human manipulation principles: semantic ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02653",
+      "published_at": "2026-09-02T14:26:30Z",
+      "updated_at": "2026-09-02T14:26:30Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02546",
+      "title": "ZETA: A Controlled Study of Zero-Shot Cross-Embodiment VLA Transfer for Tabletop Manipulation",
+      "authors": [
+        "Mi Yan",
+        "Wenhao Zhang",
+        "Zhiqi Zhang",
+        "Yu Peng",
+        "Tangxinyu Wang"
+      ],
+      "abstract": "Zero-shot generalization to unseen embodiments is important for generalizable vision-language-action (VLA) models as robot hardware evolves and task-specific data collection remains costly. However, a systematic understanding of this problem remains limited, in part because the literature lacks a unified zero-shot transfer definition and controlled evaluation settings that isolate embodiment changes from differences in tasks, scenes, or protocols. To address this gap, we first distinguish strict zero-shot transfer, where the target embodiment is absent from all training data, from pretrain-exp",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02546",
+      "published_at": "2026-09-02T13:00:18Z",
+      "updated_at": "2026-09-02T13:00:18Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02402",
+      "title": "A Physics-Consistent Benchmark for Contact-Rich Human-Robot Interaction in Assistive Care",
+      "authors": [
+        "Chengxiao He",
+        "Shanghai Yuan",
+        "Liuqun Fan",
+        "Shenzhen Zhu"
+      ],
+      "abstract": "Conventional task-level evaluation asks whether a robot policy completes a specified action, but can miss failures that emerge only during physical human contact. This limitation is critical in contact-rich assistive tasks, where meaningful evaluation requires a physically responsive human, interaction-quality assessment beyond task success, and a leak-free observer-scorer protocol. We introduce a physics-consistent benchmark for contact-rich human-robot interaction, instantiated in robot-assisted bathing. The benchmark combines a deformable, passively responding human, physics-aware scores al",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02402",
+      "published_at": "2026-09-02T10:14:32Z",
+      "updated_at": "2026-09-02T10:14:32Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02358",
+      "title": "Humanoid Safe Stop via Learned Stoppability Value",
+      "authors": [
+        "Junfeng Long",
+        "Pieter Abbeel",
+        "Koushil Sreenath",
+        "Roberto Horowitz",
+        "Guanya Shi"
+      ],
+      "abstract": "Humanoid robots responding to emergency stop commands typically execute a fixed maneuver, without reasoning about whether a safe stop is actually feasible from the current state. We cast emergency stopping as a reach-avoid problem and propose Safe-Stop, a task-agnostic framework that pairs a learned stop policy with learned stoppability estimators. The estimators are complementary: a stop-probability estimator supervised by the actual outcomes of the fixed stop policy, and a reach-avoidance estimator supervised by a Hamilton-Jacobi backup over physical state. The first captures emergent stoppi",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02358",
+      "published_at": "2026-09-02T09:29:39Z",
+      "updated_at": "2026-09-02T09:29:39Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02306",
+      "title": "Contact-Constrained Lower-Limb Joint-Offset Calibration for Humanoid Robots",
+      "authors": [
+        "Kaixiang Lu",
+        "Haiyu Lan",
+        "Chunxiao Qiao",
+        "You Li",
+        "Chengyuan Luo"
+      ],
+      "abstract": "Accurate joint encoder offsets are essential for kinematic consistency in humanoid lower limbs, yet existing calibration methods typically require external motion-capture systems or fiducial targets. We present a self-contained calibration framework exploiting only onboard joint encoders and a pelvis-mounted IMU during static double-support contact. The inter-foot transform from forward kinematics must stay constant when both feet are fixed; minimizing its posture-dependent dispersion yields a nonlinear least-squares problem over the 12-dimensional offset vector. A Hessian eigenstructure analy",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02306",
+      "published_at": "2026-09-02T08:51:37Z",
+      "updated_at": "2026-09-02T08:51:37Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02222",
+      "title": "FOCUS: Foot Observation Confidence for Robust Humanoid Proprioceptive Odometry",
+      "authors": [
+        "Kaixin Feng",
+        "Angsong Li",
+        "Shaopeng Zhang",
+        "Enyu Li",
+        "Peiwen Lin"
+      ],
+      "abstract": "Foot forward kinematics (FK) is widely used to improve proprioceptive legged odometry by providing reliable velocity constraints during foot support. Existing contact-aided estimators generally rely on binary contact decisions to determine whether the FK measurements of an entire foot should be trusted. However, contact does not necessarily imply FK reliability. Dynamic locomotion often involves partial support, toe dragging, and foot slip, causing binary contact decisions to accumulate significant drift over long trajectories. To address this limitation, we propose FOCUS (Foot Observation Con",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.02222",
+      "published_at": "2026-09-02T07:34:55Z",
+      "updated_at": "2026-09-02T07:34:55Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02885",
+      "title": "Discriminative World Models for Web Agents",
+      "authors": [
+        "Kelvin Li",
+        "Dhruv Pendharkar",
+        "Anish Pahilajani",
+        "Chuyi Shang",
+        "Leon Oks"
+      ],
+      "abstract": "Recent web agents use world models for test-time action selection by sampling candidate actions, predicting the resulting web states, and ranking them with a ranker model or a Process Reward Model (PRM). These world models are typically trained via supervised next-state prediction to generate fixed representations like HTML or AXTree snapshots. However, this objective is misaligned with the downstream ranker, which relies on predicted states being discriminative across candidates to accurately score them. To address this, we introduce predicted-state matching, a training objective where the pr",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.02885",
+      "published_at": "2026-09-02T17:59:40Z",
+      "updated_at": "2026-09-02T17:59:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02797",
+      "title": "Dutch Books for Language Models",
+      "authors": [
+        "Isaiah Andrews",
+        "Suproteem Sarkar"
+      ],
+      "abstract": "People increasingly use language models to support life decisions. Many such decisions involve a probabilistic forecast: How likely is a major life event, a natural disaster, or an economic outcome? Users of language models may implicitly trust that these forecasts fall out of a coherent world model. In this paper, we evaluate the coherence of language model probabilistic forecasts through a procedure that builds on a theorem due to de Finetti. We elicit forecasts from language models across events generated from stock returns data. We then use linear programs to compute the largest Dutch-book",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.02797",
+      "published_at": "2026-09-02T16:31:47Z",
+      "updated_at": "2026-09-02T16:31:47Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02339",
+      "title": "AGI Maze Prediction Datasets: A Compact Benchmark for Learning World Dynamics with Transformers",
+      "authors": [
+        "Alexey Potapov"
+      ],
+      "abstract": "World modeling requires a predictive model to maintain and update an internal state adequate for reasoning about the consequences of actions. We introduce the AGI Maze Prediction Datasets and Benchmark, a lightweight controlled testbed for studying this capability in Transformers and other predictive models. Derived from procedurally generated, stateful grid worlds, the benchmark comprises per-step transition prediction, fixed-horizon state prediction, and sequential textual-observation prediction. Source-maze-disjoint training and validation splits, together with greedy exact-match evaluation",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.02339",
+      "published_at": "2026-09-02T09:15:33Z",
+      "updated_at": "2026-09-02T09:15:33Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.01861",
+      "title": "Belief-Calibrated Optimization: An Explicit World Model for Agentic Optimization",
+      "authors": [
+        "Yuhan Chen",
+        "Zhihua Tian",
+        "Mahavir Dabas",
+        "Charith Peris",
+        "Rahul Gupta"
+      ],
+      "abstract": "The performance of an LLM agent depends on the scaffold around a frozen model. A common way to improve that scaffold is to use a coding agent as an optimizer: it reads current scores and traces and iteratively edits the source, producing a new candidate each round. Each edit is chosen according to a belief about how the environment will respond: what went wrong, and which change should help. That belief is typically implicit. It lives in the coding agent's reasoning on the current call, or remains latent in its parameters, rather than as something written down. Later calls therefore see scores",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.01861",
+      "published_at": "2026-09-01T20:47:04Z",
+      "updated_at": "2026-09-01T20:47:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    },
+    {
+      "id": "2609.02780",
+      "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+      "authors": [
+        "Jitai Hao",
+        "Ke Yang",
+        "Qiang Huang",
+        "Jun Yu"
+      ],
+      "abstract": "Streaming video understanding is a critical capability for real-world applications, including embodied intelligence, autonomous driving, industrial monitoring, surveillance and early warning, and wearable assistants. However, processing continuous video streams with multimodal large language models (MLLMs) is computationally expensive. Existing efforts have explored reducing streaming overhead through visual token pruning, token merging, quantization, on-demand frame retrieval, and context offloading. However, most existing methods overlook the dimension of model depth. Repeatedly executing fu",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.02780",
+      "published_at": "2026-09-02T16:14:48Z",
+      "updated_at": "2026-09-02T16:14:48Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-03T07:06:02.408948Z"
+    }
+  ]
+}
