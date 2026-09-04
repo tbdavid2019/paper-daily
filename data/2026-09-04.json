@@ -1,0 +1,651 @@
+{
+  "date": "2026-09-04",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-09-04T07:10:06.387150Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 164,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 6,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 770,
+    "after_dedup": 680,
+    "window_start": "2026-08-31",
+    "window_candidates": 657,
+    "already_seen": 376,
+    "new_candidates": 281,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 31
+  },
+  "papers": [
+    {
+      "id": "2609.03199",
+      "title": "RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning",
+      "authors": [
+        "Howard Qian",
+        "Yiting Chen",
+        "Yunfei Xie",
+        "Kejia Ren",
+        "Podshara Chanrungmaneekul"
+      ],
+      "abstract": "Robot learning increasingly depends on broad and diverse demonstrations, yet collecting robot data remains expensive and poorly suited to covering the long tail of real-world tasks. To address this bottleneck, we introduce RoboTok, an internet-scale data engine that, given a query human manipulation video, retrieves manipulation-relevant human demonstrations from web videos for training dexterous robot policies. Specifically, we learn a latent motion space from 3D hand trajectories expressed in estimated actor-centered reference frames. This representation enables manipulation behaviors to be ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.03199",
+      "published_at": "2026-09-02T22:31:43Z",
+      "updated_at": "2026-09-02T22:31:43Z",
+      "keyword_hits": 3,
+      "priority": 60.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03927",
+      "title": "Toward Unified Robot Learning: Bridging Representation, Vision-Language-Action, and World Models",
+      "authors": [
+        "Shaunak A. Mehta",
+        "Ananya Hazarika",
+        "Haochen Zhang",
+        "Fan Yang",
+        "Ryo Moriyama"
+      ],
+      "abstract": "For robots to operate reliably in real-world environments, they need to perceive their surroundings, act, and reason about the consequences of those actions. Rapid progress in the domains of representation learning, VLA models, and world models has significantly enhanced the capabilities of robot learning systems, enabling robots to work in increasingly complex environments. However, these paradigms are typically developed in isolation, resulting in fragmented systems that struggle with generalization, long-horizon temporal reasoning and planning, and deployment in unstructured environments. I",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03927",
+      "published_at": "2026-09-03T14:40:16Z",
+      "updated_at": "2026-09-03T14:40:16Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03892",
+      "title": "GraFT: A Training-Free Framework for Spatial Reasoning in Multimodal Large Language Models via 3D Scene Graphs",
+      "authors": [
+        "Junqing Du",
+        "Fernando Ropero",
+        "Erkin Turkoz",
+        "Yanfeng Zhang",
+        "Lu Liu"
+      ],
+      "abstract": "3D spatial reasoning underpins understanding and acting in the physical world, yet it remains unreliable in current multimodal large language models (MLLMs). These models falter at precise geometric measurement, at transforming between egocentric and allocentric viewpoints, and at grounding fine-grained appearance. The most common remedies fine-tune the model on large-scale curated spatial-reasoning datasets or attach dedicated encoders for 3D geometry, which typically couples the solution to costly supervision and a specific backbone. We instead introduce GraFT, a training-free framework that",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03892",
+      "published_at": "2026-09-03T14:11:56Z",
+      "updated_at": "2026-09-03T14:11:56Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.04147",
+      "title": "A Low-Cost, Open Platform for End-to-End Autonomous Driving on a Miniature Ackermann Vehicle",
+      "authors": [
+        "Gustavo Claudio Karl Couto",
+        "Eric Aislan Antonelo",
+        "Gabriel George Zipperer"
+      ],
+      "abstract": "This paper presents a low-cost, open experimental platform for research in end-to-end autonomous driving with miniature Ackermann vehicles. The platform combines a physical vehicle, a printed urban track, data collection tools, trajectory registration, and a Webots digital twin, enabling controlled experiments that connect simulation-based autonomous-driving methods to real-world execution. As a first baseline, we implement command-conditioned behavior cloning, in which a neural policy receives an on-board camera image and a high-level navigation command and outputs steering and speed. The sys",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.04147",
+      "published_at": "2026-09-03T17:40:20Z",
+      "updated_at": "2026-09-03T17:40:20Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03681",
+      "title": "WISE: World-model-guided Imagination Scheduling for Efficient Post-training of Vision-Language-Action Models",
+      "authors": [
+        "Chenhao Zhang",
+        "Hanyu Zhao",
+        "Hang Cheng",
+        "Tengfei Pan",
+        "Long Zeng"
+      ],
+      "abstract": "Post-training VLA policies typically rely on supervised fine-tuning with costly expert demonstrations or reinforcement learning with expensive and potentially unstable real-world exploration. World models offer a promising alternative by evaluating candidate behaviors through imagined futures, yet effective post-training requires more than accurate prediction: imagination must be scheduled where it is useful, bounded within reliable horizons, and translated into trustworthy policy supervision. In robotic manipulation, the value of imagination varies substantially across execution stages, while",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.03681",
+      "published_at": "2026-09-03T11:17:57Z",
+      "updated_at": "2026-09-03T11:17:57Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03497",
+      "title": "BRIDGE: An Open-Source Humanoid Platform via Morphology-Control Co-Design for Physical AI",
+      "authors": [
+        "Jianren Wang",
+        "Letian Qian",
+        "Zikai Wang",
+        "Weiwei Wu",
+        "Junjie Zong"
+      ],
+      "abstract": "Developing humanoid robots capable of leveraging human behavioral data is essential for general-purpose embodiment, yet conventional development remains bottlenecked by a decoupled paradigm that isolates hardware design from whole-body control. This approach leads to suboptimal systems that compromise human-like fluidity and agility. To bridge this gap, we introduce a data-driven morphology-control co-design framework that optimizes humanoid morphology for human-like movement. To quantify morphological fidelity, we also introduce a novel metric that jointly considers kinematic retargeting fide",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03497",
+      "published_at": "2026-09-03T08:01:19Z",
+      "updated_at": "2026-09-03T08:01:19Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03984",
+      "title": "MulDP: Multimodal Diffusion Policy for Autonomous Quadruped Parkour Navigation across Complex Terrains",
+      "authors": [
+        "Kangmai Hu",
+        "Yueqi Zhang",
+        "Peng Zhai",
+        "Xiaoyi Wei",
+        "Jiabin Hu"
+      ],
+      "abstract": "Quadruped robots have demonstrated impressive agility in parkour locomotion across complex terrains. However, most systems still rely on human intervention for high-level planning, and autonomous parkour navigation remains underexplored. The key challenges include fine-grained velocity regulation, long-horizon anticipatory behaviors, and tight coupling between perception and embodied execution. To address these challenges, we propose a Multimodal Diffusion Policy (MulDP) that integrates visual perception with robot proprioception and goal information to generate temporally coherent and anticip",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03984",
+      "published_at": "2026-09-03T15:19:17Z",
+      "updated_at": "2026-09-03T15:19:17Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03952",
+      "title": "WorldReward: Reward Modeling for Camera-Conditioned World Models",
+      "authors": [
+        "Yibin Wang",
+        "Zehan Wang",
+        "Junshu Tang",
+        "Zhimin Li",
+        "Yujie Zhou"
+      ],
+      "abstract": "Camera-conditioned world models generate interactive videos in which commanded actions should induce the expected scene changes while appearance, geometry, and temporal dynamics remain coherent. Existing rewards assess these requirements separately: geometry-based rewards estimate trajectory execution but cannot judge the visual quality of the executed motion, whereas image-based rewards measure frame quality without capturing action execution or temporal dynamics. We posit that a vision-language model (VLM) offers a shared reasoning space for relating actions to their visual outcomes. However",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03952",
+      "published_at": "2026-09-03T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-03T14:53:53Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.04070",
+      "title": "Continuous Actions from Discrete Minds: Latent-Aligned Planning for End-to-End Autonomous Driving",
+      "authors": [
+        "Ruoyu Yao",
+        "Yusen Xie",
+        "Qingzhao Liu",
+        "Pei Liu",
+        "Zewei Yang"
+      ],
+      "abstract": "Bridging the gap between the discrete reasoning of Vision-Language Models and the continuous, physics-constrained nature of autonomous driving remains a significant challenge. In this work, we introduce LaPla, a unified Vision-Language-Action (VLA) framework featuring latent-aligned planning to seamlessly ground semantic understanding in precise motion execution. We first design an action tokenizer based on a residual vector-quantized variational autoencoder (VQ-VAE), capturing vehicle kinematics and encoding trajectory features into a structured latent space. Rather than discrete codebook loo",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.04070",
+      "published_at": "2026-09-03T16:42:11Z",
+      "updated_at": "2026-09-03T16:42:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03889",
+      "title": "FWBC-VLA: Force-Aware Whole-Body Compensation for Contact-Rich Loco-Manipulation",
+      "authors": [
+        "Yutian Zhang",
+        "Siyuan Ma",
+        "Liwen Yang",
+        "Yang Li",
+        "Ce Hao"
+      ],
+      "abstract": "Contact-rich loco-manipulation requires a bridge between semantic action generation and physical interaction control. Existing Vision-language-action (VLA) models generate task-level actions from visual and linguistic observations, but cannot interpret the physical interactions induced by those actions. While the whole-body control (WBC) policy can stabilize the robot, it cannot distinguish task-relevant interaction forces from forces induced by external disturbances during manipulation. Although force/torque sensors provide direct measurements of physical interactions, retrofitting them entai",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03889",
+      "published_at": "2026-09-03T14:10:47Z",
+      "updated_at": "2026-09-03T14:10:47Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03774",
+      "title": "Rethinking World Models for Safety-Critical Embodied Systems",
+      "authors": [
+        "Kailang Ma",
+        "Heye Huang",
+        "Inhi Kim",
+        "Kitae Jang"
+      ],
+      "abstract": "World models have progressed from compact latent dynamics to generative, controllable, and interactive simulators of embodied environments. However, high predictive likelihood and visual fidelity do not necessarily ensure that a model preserves the evidence required for safe decision-making. This perspective identifies three structural mismatches in current world modeling: likelihood versus risk, prediction versus intervention, and finite-horizon prediction versus accumulated consequences. We propose the Risk-Informed World Model (RIWM) as a decision-centric research direction for safety-criti",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03774",
+      "published_at": "2026-09-03T12:44:44Z",
+      "updated_at": "2026-09-03T12:44:44Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03611",
+      "title": "FailBench: How Reliable are VLMs at Judging Robot Task Success?",
+      "authors": [
+        "Zaruhi Navasardyan",
+        "Tatul Danielyan",
+        "Hrant Davtyan"
+      ],
+      "abstract": "Vision-Language Models (VLMs) are increasingly used to evaluate robot manipulation outcomes, but existing benchmarks offer limited evidence of cross-domain generalization. We introduce FailBench, a benchmark for robot failure detection comprising 2,197 manipulation attempts across 14 public sources (12 real-world, 2 simulated). In FailBench, 75% of failures occur naturally, and six real-world sources come from non-failure-detection datasets. Evaluating 13 VLM-based detectors, we find the best model achieves only 0.77 mean balanced accuracy. Notably, models fine-tuned for failure detection cons",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03611",
+      "published_at": "2026-09-03T09:58:55Z",
+      "updated_at": "2026-09-03T09:58:55Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03602",
+      "title": "SV-WAM: An Efficient Surround-View World-Action Model for End-to-End Autonomous Driving",
+      "authors": [
+        "Jinyang Wang",
+        "Shiwei Li",
+        "Junjian Wang",
+        "Zhiqiang Deng",
+        "Jianbin Gao"
+      ],
+      "abstract": "World models (WMs) have demonstrated strong potential for end-to-end autonomous driving by learning predictive representations of future scene dynamics. However, generating future videos during inference introduces substantial computational overhead, leading many recent driving WMs to adopt a single front camera as input for efficient deployment. This design restricts spatial coverage in safety-critical maneuvers such as lane changes, merges, and turns. To address this limitation, we propose SV-WAM, a surround-view world-action model (WAM) that preserves full six-camera observations while main",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03602",
+      "published_at": "2026-09-03T09:47:51Z",
+      "updated_at": "2026-09-03T09:47:51Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03565",
+      "title": "Toward Physically Grounded JEPA World Models for Goal-Conditioned Robotic Planning",
+      "authors": [
+        "Muyuan Liu",
+        "Yue Huang",
+        "Zheng Liang",
+        "Xiang Gao"
+      ],
+      "abstract": "Action-conditioned JEPA world models enable planning toward visually specified goals without reconstructing future pixels, yet latent prediction alone does not explicitly encourage the learned representations to retain information relevant to robotic control. We introduce an end-to-end JEPA world model that augments latent prediction with inverse dynamics (IDM) and state alignment (SA). While inverse dynamics discourages latent collapse and makes latent transitions informative of the actions that produced them, state alignment grounds consecutive representations in their associated physical co",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03565",
+      "published_at": "2026-09-03T09:11:13Z",
+      "updated_at": "2026-09-03T09:11:13Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03483",
+      "title": "Air-Ground Collaborative Vision-and-Language Navigation via Shared Bird's-Eye Maps",
+      "authors": [
+        "Shuning Zhang",
+        "Liang Li",
+        "Yunheng Wang",
+        "Tao Wang",
+        "Yihang Kang"
+      ],
+      "abstract": "Air-ground collaborative Vision-and-Language Navigation (VLN) pairs an unmanned aerial vehicle (UAV) with a global bird's-eye view and an unmanned ground vehicle (UGV) with a local first-person view, yet the setting remains largely unexplored: existing training-free methods solve single-agent tasks but offer no collaboration mechanism, and a recent CARLA-Air evaluation found no stable cooperative behavior across five state-of-the-art VLA models; naive semantic communication or bidirectional coupling even degrades performance. We establish AGC-VLN (Air-Ground Collaborative VLN), the first train",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03483",
+      "published_at": "2026-09-03T07:38:41Z",
+      "updated_at": "2026-09-03T07:38:41Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03142",
+      "title": "Sensing Which Modality Matters: Evidence-Gated Regularization for Robust VLA Policies",
+      "authors": [
+        "Yue Yang",
+        "Diego Romeres",
+        "Chiori Hori",
+        "Gedas Bertasius",
+        "Daniel Szafir"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies fuse multimodal sensory inputs, but training on limited and homogeneous robot demonstrations encourages spurious inter-sensor correlations rather than task-relevant signal, a failure we term modality entanglement. Under real-world occlusions and distractors, this manifests as nuisance sensitivity to corruption of uninformative sensors and single-modality insufficiency when only one informative sensor remains intact. We propose Evidence-Gated Regularization (EGR), a modality-agnostic training objective that introduces zero inference-time overhead. EGR deriv",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03142",
+      "published_at": "2026-09-02T20:25:21Z",
+      "updated_at": "2026-09-02T20:25:21Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.04193",
+      "title": "GIFT: Guided Intermediate Feature Training via Action-Oriented Structural Supervision for Robotic Manipulation",
+      "authors": [
+        "Yupeng Zheng",
+        "Xiang Li",
+        "Songen Gu",
+        "Yuhang Zheng",
+        "Shuai Tian"
+      ],
+      "abstract": "Vision-language pre-training and predictive world modeling provide robot policies with rich semantic and dynamic visual features, but their native action and visual-prediction objectives may omit critical physical and task structure while retaining control-irrelevant visual redundancy. We call this mismatch between visual richness and control utility the action-sufficiency gap. We investigate whether this gap can be bridged by guiding intermediate features to preserve three control-relevant structure in robotic manipulation: geometry governing motion feasibility, affordance encoding instructio",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.04193",
+      "published_at": "2026-09-03T17:59:03Z",
+      "updated_at": "2026-09-03T17:59:03Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03906",
+      "title": "Revisiting Topological Graphs for Macro Action based Closed-loop Reinforcement Learning of Vision Language Navigation in Continuous Environment",
+      "authors": [
+        "Shuhao Ye",
+        "Sitong Mao",
+        "Yuxiang Cui",
+        "Yufei Wei",
+        "Xuan Yu"
+      ],
+      "abstract": "Vision-Language Navigation in Continuous Environments (VLN-CE) requires an agent to follow natural language instructions through unseen environments. Existing imitation learning (IL) pipelines struggle in this closed-loop setting: behavior cloning suffers from distribution shift, and DAgger's expert actions become ambiguous upon trajectory deviation. While Reinforcement Learning (RL) offers a natural paradigm to address this, directly applying RL to micro action spaces is sample-inefficient due to reward sparsity. To overcome this bottleneck, we reformulate VLN-CE as a Hierarchical Markov Deci",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03906",
+      "published_at": "2026-09-03T14:24:29Z",
+      "updated_at": "2026-09-03T14:24:29Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03591",
+      "title": "Scaling Bimanual Household Manipulation from 1,500 hours of Demonstrations to On-Policy Corrections",
+      "authors": [
+        "Jiafeng Xu",
+        "Qi Li",
+        "Yan Shen",
+        "Yiyu Ren",
+        "Travis Davies"
+      ],
+      "abstract": "Learning generalist policies for robust bimanual manipulation is bottlenecked by the scarcity of high quality large scale human demonstration data. In this work, we release 1,500 hours of diverse bimanual manipulation demonstrations covering everyday household tasks, and use this comprehensive corpus to train XR-2, a powerful vision-language-action (VLA) model. Enabled by a purpose built high throughput data pipeline and a carefully designed multi stage training paradigm, XR-2 attains strong manipulation performance in our systematic experiments while retaining favorable training efficiency an",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03591",
+      "published_at": "2026-09-03T09:37:09Z",
+      "updated_at": "2026-09-03T09:37:09Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03276",
+      "title": "R2S-Eval: Robot Evaluation with Real-to-Sim Calibration via Vision-Language Models",
+      "authors": [
+        "Yidi Wang",
+        "Feixiang Ruan",
+        "Ruoqu Chen",
+        "Jie Yin",
+        "Yang Yu"
+      ],
+      "abstract": "Evaluating robot manipulation policies is becoming increasingly important as generalist models, particularly vision-language-action (VLA) models, are deployed on physical robots. However, conventional real-world evaluation remains labor-intensive, unstable, and insufficiently informative. It requires repeated hardware trials, manual scene resets, and continuous operator monitoring, may produce different policy rankings across repeated evaluations, and primarily relies on success-rate metrics that provide limited information about execution quality. In contrast, humans assess robot performance ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03276",
+      "published_at": "2026-09-03T02:08:16Z",
+      "updated_at": "2026-09-03T02:08:16Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03225",
+      "title": "Long-Horizon Consistent and Interaction-Aware World Models for Multi-Style End-to-End Driving",
+      "authors": [
+        "Yuxuan Han",
+        "Kunyuan Wu",
+        "Liyunong Yang",
+        "Zilu Wang",
+        "Cansen Jiang"
+      ],
+      "abstract": "End-to-end autonomous driving has increasingly adopted world model-based reinforcement learning frameworks to improve learning efficiency through \\textit{imagined rollouts}. However, existing world models suffer from three key limitations: temporal inconsistency in long-horizon imagined rollouts, inadequate modeling of ego-environment interactions, and limited adaptability to diverse driving styles. To address these challenges, we propose \\textit{StyleDrive}, a world-model-based learning framework that jointly enforces long-horizon consistency, explicitly disentangles interactive traffic state",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03225",
+      "published_at": "2026-09-03T00:00:39Z",
+      "updated_at": "2026-09-03T00:00:39Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03891",
+      "title": "A hybrid pipeline for dynamic ontology-based semantic mapping",
+      "authors": [
+        "Konstantinos Dimitropoulos",
+        "Ioannis Hatzilygeroudis"
+      ],
+      "abstract": "Semantic mapping plays a crucial role in the ability of a robot to interact with objects, operate and navigate a complex environment. The most common pipeline for semantic mapping consists of geometric mapping and localization (SLAM), perception, semantic fusion and semantic representation. However, more recent works also integrate a form of prior knowledge in their application, most notably knowledge graphs or semantic scene graphs, to improve contextual understanding of the environment. In this paper, we present a hybrid pipeline for semantic mapping. Our system incorporates an external cali",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03891",
+      "published_at": "2026-09-03T14:11:21Z",
+      "updated_at": "2026-09-03T14:11:21Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03715",
+      "title": "MINERVA: How Small Can a Manipulation Policy Be and Still Solve LIBERO?",
+      "authors": [
+        "Kohei Sendai",
+        "Tatsuya Matsushima",
+        "Yusuke Iwasawa"
+      ],
+      "abstract": "Vision-language-action (VLA) models with billions of parameters now dominate the LIBERO manipulation benchmark, but the model capacity actually required by the benchmark remains unclear. We introduce MINERVA (MINimal Efficient Robotic Vision-Action policy), a family of deliberately compact visuomotor policies designed to measure this task-specific capacity floor. A 0.54M-parameter policy achieves 95.1% average success over 2,000 rollouts on the four standard LIBERO suites, only 2.4 points below the reported LeRobot $π_{0.5}$ result despite using 7,700$\\times$ fewer parameters. Performance satu",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03715",
+      "published_at": "2026-09-03T11:51:10Z",
+      "updated_at": "2026-09-03T11:51:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03623",
+      "title": "QLAUN: A Research-Oriented, Robust, Agile, Modular, and Affordable Torque-Controlled Quadruped Robot",
+      "authors": [
+        "Mohamad S. Moudallal",
+        "Noel J. Maalouf"
+      ],
+      "abstract": "QLAUN Bot (Quad-Legged Adaptive Unmanned Navigator Robot) is a torque-controlled quadruped robot that is research-oriented, cost-effective, and aimed at achieving simultaneous robustness and agility while being completely 3D-printed. It is a quadruped robot that is aimed at empowering robotics research at universities and research institutes in Lebanon and the MENA region. Using a novel electronics-free leg design strategy, we present a modular robot with interchangeable and easily replaceable legs. The 15 kg robot possesses 12 DoF (Degrees-of-Freedom) with three per leg, each paired with a co",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03623",
+      "published_at": "2026-09-03T10:12:50Z",
+      "updated_at": "2026-09-03T10:12:50Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03255",
+      "title": "Establishing a Dynamic Multimodal HRI Dataset for Engagement Analysis with a Humanoid Robot",
+      "authors": [
+        "Buwan Kim",
+        "Wonse Jo"
+      ],
+      "abstract": "This paper presents an experimental design for constructing a multimodal dataset to analyze user engagement in human-robot interaction (HRI). Prior studies have mainly relied on observable behavioral cues, with limited frameworks integrating physiological signals. We therefore propose a structured data-collection protocol to build a multimodal dataset that includes wearable physiological signals, behavioral data, and self-report measures under different levels of task complexity defined in this experiment.",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03255",
+      "published_at": "2026-09-03T01:29:44Z",
+      "updated_at": "2026-09-03T01:29:44Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03067",
+      "title": "GPU-Accelerated Astrodynamics World Models for Spacecraft Rendezvous and Proximity Operations",
+      "authors": [
+        "Duncan Eddy",
+        "Isaac R. Ward",
+        "Grace Ra Kim",
+        "Mykel J. Kochenderfer"
+      ],
+      "abstract": "World models are an emerging paradigm in representation learning in which an agent jointly learns state-action dynamics and observation models from offline trajectory data, enabling multi-step planning and trajectory prediction with uncertainty estimates. They have shown strong results in robotics and game environments, but, to the best of our knowledge, have not previously been applied to the space domain. This paper introduces a world model-based approach to cooperative and non-cooperative spacecraft rendezvous and proximity operations. First, we introduce an open-source, JAX-based Internati",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.03067",
+      "published_at": "2026-09-02T18:39:40Z",
+      "updated_at": "2026-09-02T18:39:40Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03834",
+      "title": "Semantic Bayesian World Models",
+      "authors": [
+        "Tommaso Soru"
+      ],
+      "abstract": "Knowledge graphs describe reality in crisp assertions, while the systems now consuming them, foundation models and autonomous agents, reason natively in probabilities. We argue that this mismatch is why the integration of language models and knowledge graphs remains a data-feeding pipeline rather than a unified reasoning architecture. We envision Semantic Bayesian World Models (SBWMs): a Web that describes the world not as a database of facts but as a shared, evolving fabric of beliefs over knowledge graphs, where ontological axioms constrain priors, observations update beliefs by Bayesian con",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.03834",
+      "published_at": "2026-09-03T13:35:11Z",
+      "updated_at": "2026-09-03T13:35:11Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03729",
+      "title": "Unfold The World: Factorize 4D Properties in Reinforcing Spatial Reasoning",
+      "authors": [
+        "Yijun Yang",
+        "Shenghe Zheng",
+        "Wenbo Li",
+        "Jianhui Liu",
+        "Haoze Sun"
+      ],
+      "abstract": "Despite the remarkable prowess of Vision-Language Models (VLMs) in general multimodal tasks, they remain fundamentally ``flat'' when reasoning about the physical world. We argue that this spatial bottleneck stems from a profound dimensional mismatch: while VLMs are trained to interpret 2D projections, true spatial reasoning demands the recovery of latent 3D geometry and temporal continuity. To conquer this high-dimensional complexity, we advocate a shift from monolithic learning to a ``divide and conquer'' paradigm. We present FactoSR, a factorized reinforcement learning framework that explici",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03729",
+      "published_at": "2026-09-03T12:01:02Z",
+      "updated_at": "2026-09-03T12:01:02Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03572",
+      "title": "Drive-HWM: Hierarchical World Models for Dynamic-Latent Guided Autonomous Driving",
+      "authors": [
+        "Zhaoxin Fan",
+        "Tianbao Zhang",
+        "Wenjun Wu",
+        "Xiaofeng Wang",
+        "Yeying Jin"
+      ],
+      "abstract": "World models offer a promising paradigm for autonomous driving by predicting how traffic scenes may evolve and using such predictions to support action generation. However, existing approaches either separate future prediction from action generation or jointly predict them at the same temporal scale, making it difficult to simultaneously achieve long-horizon anticipation and responsive, observation-grounded decision making. We present Drive-HWM, a hierarchical slow--fast world modeling framework that organizes future representation prediction and action generation at complementary temporal sca",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03572",
+      "published_at": "2026-09-03T09:21:19Z",
+      "updated_at": "2026-09-03T09:21:19Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    },
+    {
+      "id": "2609.03557",
+      "title": "Building Pretraining Data for World Models: An Unreal Engine-Based Pipeline for Action-Conditioned Video Generation",
+      "authors": [
+        "Haoyu Wang",
+        "Songchun Zhang",
+        "Haoran Li",
+        "Haoyang Huang",
+        "Zeyue Xue"
+      ],
+      "abstract": "Action-conditioned video models require large-scale visual data paired with control signals that are temporally aligned with the resulting scene transitions. Such supervision is difficult to obtain from ordinary real-world video because the actions that caused each visual change are typically unknown. We present a large-scale synthetic data production pipeline built on Unreal Engine for generating action-conditioned, multi-view video. To accommodate the different execution requirements of real-time physics and high-quality offline rendering, the pipeline executes trajectory generation and fina",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.03557",
+      "published_at": "2026-09-03T08:58:04Z",
+      "updated_at": "2026-09-03T08:58:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-04T07:10:06.387150Z"
+    }
+  ]
+}
