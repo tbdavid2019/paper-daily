@@ -1,0 +1,452 @@
+{
+  "date": "2026-09-07",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-09-07T07:15:24.015512Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 82,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 196,
+      "arxiv_keyword": 3,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 631,
+    "after_dedup": 549,
+    "window_start": "2026-09-03",
+    "window_candidates": 478,
+    "already_seen": 171,
+    "new_candidates": 307,
+    "selected_papers": 20,
+    "missing_published_at": 0,
+    "keyword_matched": 20
+  },
+  "papers": [
+    {
+      "id": "2609.05324",
+      "title": "RoboSPA: Can VLA Models Go Beyond Simple Scenes and Short-Horizon Tasks?",
+      "authors": [
+        "Zhenxuan Fan",
+        "Bo Zhang",
+        "Yutong Lin",
+        "Yuqian Yuan",
+        "Juekai Lin"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have shown promising progress in language-conditioned robotic manipulation. However, existing datasets and benchmarks mainly evaluate task completion under predefined settings, offering limited insight into model reasoning under increasing spatial and procedural complexity. We introduce \\textbf{RoboSPA} (\\textbf{Robo}t \\textbf{S}patial-\\textbf{P}rocedural \\textbf{A}ssessment), a large-scale robotic manipulation dataset and benchmark for diagnosing embodied reasoning in VLA models. \\texttt{RoboSPA} focuses on two core dimensions, Fine-Grained Spatial Reasonin",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.05324",
+      "published_at": "2026-09-04T16:19:01Z",
+      "updated_at": "2026-09-04T16:19:01Z",
+      "keyword_hits": 4,
+      "priority": 70.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05376",
+      "title": "What Matters, When? Diagnosing and Improving Conditional Visual Grounding in Visuomotor Imitation Policies",
+      "authors": [
+        "Vivek Chavan",
+        "Pengtao Xie",
+        "Yahuan Shi",
+        "Oliver Heimann",
+        "Kevin Haninger"
+      ],
+      "abstract": "Visuomotor imitation policies can achieve high performance under in-distribution visual conditions yet fail when visually similar objects or receptacles are introduced. We study this behavior as a problem of conditional visual grounding: the visual target required for successful control changes with the manipulation phase and, in more complex tasks, with the observed task state. Using Action Chunking with Transformers (ACT), we systematically introduce distractor objects and receptacles with controlled color and shape similarity and localize failures to picking and placement. We find that dist",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.05376",
+      "published_at": "2026-09-04T17:27:35Z",
+      "updated_at": "2026-09-04T17:27:35Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04355",
+      "title": "VLA-Precision: Asymmetric Co-Bootstrapping for Efficient Real-World Online RL of Vision-Language-Action Models",
+      "authors": [
+        "Chenyu Su",
+        "Zhaolong Shen",
+        "Yuan Qian",
+        "Chen Qian",
+        "Rui Zhang"
+      ],
+      "abstract": "Pretrained vision-language-action (VLA) models enable broad manipulation but remain unreliable in tasks demanding precision and repeatability. Applying real-world online reinforcement learning (RL) to VLA post-training enables autonomous trial-and-error improvement beyond demonstrations alone, but exposes two bottlenecks: 1) unreliable value signals can induce policy drift; 2) large-VLA overhead constrains throughput and sample efficiency. To address these challenges, we present VLA-Precision, an efficient real-world online RL framework featuring the Asymmetric Co-Bootstrapping (ACoB) algorith",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.04355",
+      "published_at": "2026-09-03T18:19:36Z",
+      "updated_at": "2026-09-03T18:19:36Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04277",
+      "title": "FailureSpot: Label-Efficient Timestamp-Level Failure Detection for Vision-Language-Action Models",
+      "authors": [
+        "Jie Ma",
+        "Zongxi Liu",
+        "Yi Zhu"
+      ],
+      "abstract": "Vision-language-action (VLA) policies have shown strong potential for general-purpose robotic manipulation, but they can still fail unpredictably during long-horizon execution, making reliable failure detection essential for safe deployment. Existing methods either rely on visual models that typically detect failures only after erroneous actions have occurred, or use lightweight proactive detectors trained on VLA internal representations. However, these proactive methods are often supervised with trajectory-level labels, causing normal pre-failure behavior in unsuccessful trajectories to be in",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.04277",
+      "published_at": "2026-09-03T00:04:06Z",
+      "updated_at": "2026-09-03T00:04:06Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05369",
+      "title": "Towards Neuro-Symbolic Procedural Reasoning for Long-Horizon Vision-Language-Action Manipulation",
+      "authors": [
+        "Vivek Chavan",
+        "Yahuan Shi",
+        "Oliver Heimann",
+        "Kevin Haninger",
+        "Jörg Krüger"
+      ],
+      "abstract": "Vision-language-action (VLA) models can execute short manipulation skills, but remain brittle in long-horizon procedures requiring persistent task state, dependency-aware reasoning, conditional decisions, and reliable grounding. We investigate a neuro-symbolic framework that combines learned VLA control with explicit task graphs and multimodal procedural memory. Task graphs encode action dependencies, valid transitions, and branch conditions, while memory maintains the active step, completed actions, textual context, and task-relevant visual evidence. Together, these structures guide object se",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.05369",
+      "published_at": "2026-09-04T17:14:50Z",
+      "updated_at": "2026-09-04T17:14:50Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04958",
+      "title": "MINT: A Unified Model for World-Space Camera and Hand Motion Estimation from Scalable Egocentric Pipeline Supervision",
+      "authors": [
+        "Zijie Zhu",
+        "Weiren Cai",
+        "Yizhou Wang",
+        "Zhenjie Yang",
+        "Yide Liu"
+      ],
+      "abstract": "Recovering camera and hand motion in world coordinates from egocentric video is a key capability for activity understanding, robot learning, and augmented reality. Existing systems typically decompose this problem into separate stages for camera motion, depth, hand reconstruction, and trajectory refinement, resulting in substantial computational overhead and preventing the joint modeling of camera and hand motion. We introduce MINT (Minting IN-the-Wild Trajectories), the first foundation model that directly produces complete world-space two-hand trajectories from ego-centric RGB video. From a ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.04958",
+      "published_at": "2026-09-04T10:05:11Z",
+      "updated_at": "2026-09-04T10:05:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04552",
+      "title": "Continual Field-Adaptive Models (CFAMs) for Post-Deployment Physical AI",
+      "authors": [
+        "Amarjot Singh",
+        "Tanmay R. Pancholi",
+        "Jainam Kothari",
+        "Shrirang Mahajan",
+        "Ketan Bansal"
+      ],
+      "abstract": "Unattended interactive autonomy - machines that step into danger in place of humans and complete tasks with human tools - remains a missing capability in mission-critical operations. These domains offer scarce training data and only onboard compute, yet deployed systems must face novelty without erasing prior competence.   We introduce Continual Field-Adaptive Models (CFAMs), which learn efficiently in the lab and continue learning after deployment through autonomous, gradient-free, on-device updates. CFAM uses a complementary learning architecture with a frozen slow-learning component and a f",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.04552",
+      "published_at": "2026-09-03T23:15:53Z",
+      "updated_at": "2026-09-03T23:15:53Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04860",
+      "title": "Mitigating Performance Discrepancy in Cross-Domain 3D Class-Incremental Learning",
+      "authors": [
+        "Jinge Ma",
+        "Gautham Vinod",
+        "Bruce Coburn",
+        "Jui-Feng Chi",
+        "Siddeshwar Raghavan"
+      ],
+      "abstract": "3D perception plays a crucial role in real-world applications such as autonomous driving, robotics, and AR/VR. In practical scenarios, 3D perception models need to continually adapt to newly emerging 3D object categories, making class-incremental learning (CIL) particularly important. However, unlike 2D images, 3D point clouds are inherently heterogeneous: objects from the same class may not only come from the clean CAD domain, but also from RGB-D camera scans of varying quality, video reconstructions, or even corrupted observations. We discover that such heterogeneity introduces a new challen",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.04860",
+      "published_at": "2026-09-04T08:20:00Z",
+      "updated_at": "2026-09-04T08:20:00Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04802",
+      "title": "Linguistic Trajectory Encoding for Efficient Long-Horizon Spatial Memory in Embodied Agents",
+      "authors": [
+        "Tianyidan Xie",
+        "Shenyi Wang",
+        "Qiang Tang",
+        "Mingjie Wang",
+        "Zhicheng Qiu"
+      ],
+      "abstract": "Embodied agents performing long-horizon tasks require a memory representation in which the state transitions of dynamic objects remain queryable in natural language across hours-to-days observation horizons. Existing systems either drop fine-grained motion (clip-level video-language embeddings), keep it only as raw coordinates (geometric SLAM), or organise it around immediate task context (agent working memories). None of them gives the agent a per-object timeline whose state transitions are themselves queryable in language. Our key contribution is \\textbf{Linguistic Trajectory Encoding} (LTE)",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.04802",
+      "published_at": "2026-09-04T07:00:48Z",
+      "updated_at": "2026-09-04T07:00:48Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05282",
+      "title": "Temporal Tactile Encoding and Compliance for Intent-Aware Robot-to-Human Bimanual Handover",
+      "authors": [
+        "Pasquale Marra",
+        "Stefano Berti",
+        "Gabriele Mario Caddeo",
+        "Lorenzo Natale"
+      ],
+      "abstract": "Reliable robot-to-human handover requires the robot to infer when the person is ready to receive the object, and release it safely, comfortably, and at the right time. This is challenging because visual observations alone may not disambiguate clear taking intent from accidental contact, weak grasping, wrong-direction forces, or transient interactions. In this work we treat human-robot handover as an intrinsically multimodal problem. Our approach couples a VLA model with a compliance controller that reduces interaction forces during object transfer. We finetune the VLA model with human demonstr",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.05282",
+      "published_at": "2026-09-04T15:34:47Z",
+      "updated_at": "2026-09-04T15:34:47Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05178",
+      "title": "LIBERO-RECOVER: Beyond Task Success Towards Failure Recovery in Robotic Manipulation Models",
+      "authors": [
+        "Lin Liu",
+        "Zhicheng Bao",
+        "Lu Zhang",
+        "Ziying Song",
+        "Wu Yang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) or World Action (WAM) models have recently demonstrated remarkable performance in robotic manipulation. On LIBERO, SOTA method have achieved nearly 100\\% success rates, seemingly suggesting that the models are ready for deployment in real world. However, near perfect performance on existing benchmarks can be misleading: success under ideal conditions does not imply real world robustness. Existing benchmarks primarily evaluate task completion from predefined initial states, while real world interactions inevitably involve failures such as failed grasps, collisions, ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.05178",
+      "published_at": "2026-09-04T14:15:27Z",
+      "updated_at": "2026-09-04T14:15:27Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05361",
+      "title": "Development of a Humanoid Robot Prototype for Multimodal Human-Robot Interaction",
+      "authors": [
+        "Thang Tran Viet",
+        "Thanh Nguyen Canh",
+        "Huy Uong Gia",
+        "Phuc Dinh Van",
+        "Son Tran Duc"
+      ],
+      "abstract": "Human-robot interaction (HRI) enables intuitive and intelligent collaboration between humans and robots in real-world environments. This paper introduces a humanoid robot prototype designed as a flexible testbed for developing and integrating artificial intelligence (AI) modules in HRI tasks. The system features a 12 degree-of-freedom (DOFs) dual-arm mechanism and a 2 DOFs head with an expressive LCD screen to express facial emotions. All hardware components are controlled by a custom-designed controller board with real-time AI processing supported by an onboard Jetson module. The system incor",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.05361",
+      "published_at": "2026-09-04T17:06:47Z",
+      "updated_at": "2026-09-04T17:06:47Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05300",
+      "title": "Human-Human & Human-Robot Interaction Transformer (H2INT) for Robot Navigation in Dense and Uncertain Crowds",
+      "authors": [
+        "Ao Shen",
+        "Kaixi Chen",
+        "Shiwei Liu",
+        "Fang Deng",
+        "Chen Chen"
+      ],
+      "abstract": "Safe robot navigation in dense crowds requires reasoning about pedestrian motion and how it may change in response to a robot. However, many learning-based approaches generate pedestrian motion independently of the robot or assume uniform reciprocity, omitting an important source of interaction uncertainty. This paper presents a Human-Human & Human-Robot Interaction Transformer (H2INT), a reinforcement learning framework that retains robot-conditioned changes in pedestrian motion during policy learning while allowing responsiveness to vary across pedestrians. Responsiveness affects the crowd d",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.05300",
+      "published_at": "2026-09-04T15:53:56Z",
+      "updated_at": "2026-09-04T15:53:56Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04893",
+      "title": "Reasoning Without Inference Cost: Latent Semantic Scaffolding for Robot VLA Policies",
+      "authors": [
+        "Andrew Ting Yan Li",
+        "Zhuo Li",
+        "Zhelin Yang",
+        "Zhipeng Dong",
+        "Quentin Rouxel"
+      ],
+      "abstract": "Vision-language-action (VLA) models are trained by imitation and capture what action to take but not why; adding causal reasoning improves manipulation, but current methods pay for it at inference time - generating reasoning tokens or rolling out predicted future states at every step, a cost that compounds over long horizons. We ask whether this benefit can instead be captured during training and discarded before deployment. We introduce Latent Semantic Scaffolding (LSS), an auxiliary loss applied during human-demonstration pretraining that aligns a VLA's action-token representations to text e",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.04893",
+      "published_at": "2026-09-04T08:49:31Z",
+      "updated_at": "2026-09-04T08:49:31Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04851",
+      "title": "Coupled Control and Wireless World Models for Resilient Remote Robotic Control",
+      "authors": [
+        "H. P. Madushanka",
+        "Sumudu Samarakoon",
+        "Mehdi Bennis"
+      ],
+      "abstract": "Remote robotic systems operating over wireless networks must maintain reliable control despite limited communication resources, changing channel conditions, and environmental disturbances.However, continuously transmitting high-dimensional sensory observations, such as camera images, increases communication overhead and energy consumption while reducing robustness under unreliable connectivity.To address these challenges, this paper proposes a resilient communication-aware remote robotic control framework based on coupled control and wireless Joint Embedding Predictive Architecture (JEPA) worl",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.04851",
+      "published_at": "2026-09-04T08:09:55Z",
+      "updated_at": "2026-09-04T08:09:55Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04759",
+      "title": "Dressing in Motion: A Human Motion-Aware Diffusion Policy for Robot-Assisted Dressing",
+      "authors": [
+        "Haoxiang Sun",
+        "Fangyuan Wang",
+        "Songhao Huang",
+        "Justina Y. W. Liu",
+        "Jihong Zhu"
+      ],
+      "abstract": "Robotic dressing assistance is a promising solution for supporting older adults with physical impairments in daily living. However, dressing under human motion remains challenging, as complex garment--human contact and occlusions make it difficult to generate actions aligned with arm movements. In this letter, we propose a visuomotor policy that learns dressing skills from static expert demonstrations and generalizes to dynamic user-motion scenarios. A diffusion policy tailored to garment--human interaction geometry learns from partially observed point clouds with varied arm postures. We then ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.04759",
+      "published_at": "2026-09-04T05:42:04Z",
+      "updated_at": "2026-09-04T05:42:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04364",
+      "title": "Scalable Edge-assisted Fusion and Path Prediction for Connected Autonomous Vehicles",
+      "authors": [
+        "Tyler Landle",
+        "Jackson Isenberg",
+        "Abhijit Chatterjee",
+        "Alexandros Daglis",
+        "Umakishore Ramachandran"
+      ],
+      "abstract": "The planning algorithms inside an Autonomous Vehicle (AV) rely on information from on-board sensors whose line of sight is limited by emerging traffic conditions and occlusions. Edge-assisted creation of a unified world model fusing information from AVs and Road Side Units (RSUs) in a geographical locale, and the prediction of AVs' future trajectories, can enhance the   planning algorithms inside AVs to improve quality metrics, such as better traffic flow and collision prevention. AVs participating in such enhancements are called Connected Autonomous Vehicles (CAVs). However, such information ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.04364",
+      "published_at": "2026-09-03T18:25:03Z",
+      "updated_at": "2026-09-03T18:25:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.05037",
+      "title": "How do LLMs Evaluate Perceived Moral Agency? Investigating Moral Decision-Making in Human-Artificial Agents Interactions",
+      "authors": [
+        "Fernanda Mansilla",
+        "Aloysius Tok",
+        "Bahia Guellaï",
+        "Farah Benamara",
+        "Nancy F. Chen"
+      ],
+      "abstract": "As LLMs take on roles requiring moral advice, understanding how they attribute moral agency becomes critical. Humans possess moral agency, the capacity to make ethically guided decisions and bear responsibility for their consequences, a well-established construct in moral psychology. Yet as artificial agents (AAs) such as robots, drones, and disembodied AI systems become increasingly embedded in smart city environments, the question of whether and how moral agency is attributed to them takes on new urgency. This paper presents, to the best of our knowledge, the first empirical study comparing ",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.05037",
+      "published_at": "2026-09-04T11:56:59Z",
+      "updated_at": "2026-09-04T11:56:59Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04894",
+      "title": "From Language Models to World-Acting Systems: Progress and Limits of Agentic AI across Digital, Social, Virtual, and Physical Environments",
+      "authors": [
+        "Linsen Zhu",
+        "Mengqing Cai"
+      ],
+      "abstract": "Large language models become consequential agents when surrounding systems let outputs change external state. Models now call tools, operate interfaces, delegate work, retain state, inhabit generated worlds, and control robots or laboratory equipment. Such advances are often narrated as one march toward autonomy, conflating model competence, system integration, persistence, and safe authority. This critical review synthesizes primary research and official technical specifications available by 31 August 2026. We organize the evidence along delegated authority, temporal persistence, and environm",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.04894",
+      "published_at": "2026-09-04T08:52:28Z",
+      "updated_at": "2026-09-04T08:52:28Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    },
+    {
+      "id": "2609.04911",
+      "title": "TourPhysics: Bringing Physics to World Models for Exploration and Manipulation from a Single Image",
+      "authors": [
+        "Xin Zhang",
+        "Yabo Chen",
+        "Zixuan Duan",
+        "Haibin Huang",
+        "Chi Zhang"
+      ],
+      "abstract": "Interactive visual world models must distinguish observation from physical intervention. Camera motion reveals new surfaces, whereas intervention changes object motion, contact, and deformation. Current video world models are largely driven by appearance priors and often lose physical or spatial consistency over long horizons. We present TourPhysics, an online framework initialized from a single image and a declarative physical configuration. TourPhysics extends PhysOmni, our ACM Multimedia 2026 work, from finite physics-grounded video synthesis to persistent exploration and manipulation. Tour",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.04911",
+      "published_at": "2026-09-04T09:15:03Z",
+      "updated_at": "2026-09-04T09:15:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-07T07:15:24.015512Z"
+    }
+  ]
+}
