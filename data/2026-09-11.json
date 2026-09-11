@@ -1,0 +1,580 @@
+{
+  "date": "2026-09-11",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-09-11T07:13:36.711100Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 200,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 6,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 806,
+    "after_dedup": 717,
+    "window_start": "2026-09-07",
+    "window_candidates": 673,
+    "already_seen": 398,
+    "new_candidates": 275,
+    "selected_papers": 27,
+    "missing_published_at": 0,
+    "keyword_matched": 27
+  },
+  "papers": [
+    {
+      "id": "2609.11697",
+      "title": "ActSafeGuard: Differentiable and Training-Aligned Constraint Enforcement for Flow-Matching Policies",
+      "authors": [
+        "Jianming Ma",
+        "Rongjun Jin",
+        "Xiaxi Si",
+        "Yang Zhang",
+        "Yiheng Li"
+      ],
+      "abstract": "Vision-Language-Action (VLA) and World-Action Models (WAMs) have demonstrated strong capabilities in general-purpose robotic manipulation, yet their generated actions may violate hard physical constraints and therefore be unsafe or infeasible for deployment. Existing safety approaches either optimize statistical safety objectives without deterministic per-step guarantees or correct unsafe actions only during inference, creating a mismatch between policy training and execution. We introduce ActSafeGuard, a differentiable and training-aligned safeguard layer for flow-matching based policies. Act",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.11697",
+      "published_at": "2026-09-10T15:21:47Z",
+      "updated_at": "2026-09-10T15:21:47Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10895",
+      "title": "ReactHuman: A Physics-Grounded Benchmark for Human-Like Reactive Decision-Making in Embodied Multimodal LLMs",
+      "authors": [
+        "Yizhan Li",
+        "Jianxin You",
+        "Mengyang Xiong",
+        "Yinhuan Chen",
+        "Zicheng Zhao"
+      ],
+      "abstract": "Reacting to sudden physical hazards (catching a slipping plate, dodging a falling knife) is both a meaningful test of embodied intelligence and a hard requirement for deploying multimodal large language models (MLLMs) as the decision coreof household robots. Existing evaluations, however, probe intuitive physics passively through question answering over videos, or target deliberate, long-horizon tasks such as navigation and rearrangement; none measure whether a model can turn physical understanding into immediate, safety-critical action. We introduce ReactHuman, the first physics-grounded benc",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.10895",
+      "published_at": "2026-09-09T22:56:21Z",
+      "updated_at": "2026-09-09T22:56:21Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11753",
+      "title": "SEED-UMI: Sharing the Exoskeleton between human and robot for onE-to-one Dexterous demonstration",
+      "authors": [
+        "Tengbo Yu",
+        "Jiahao Wu",
+        "Daohan Li",
+        "Bingxu Chen",
+        "Hao Liu"
+      ],
+      "abstract": "Imitation learning for dexterous hands is bottlenecked by the difficulty of collecting contact-rich demonstrations that transfer faithfully to the robot. Prior wearable-exoskeleton systems record only on the human side and retarget via open-loop mappings calibrated in free space, which degrade under contact. We present SEED-UMI, a framework in which both the human and the robot wear the same exoskeleton: joint encoders become a physically shared measurement, and wrist cameras mounted to the exoskeleton observe the same outer mechanism during both human data collection and robot policy rollouts",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11753",
+      "published_at": "2026-09-10T16:08:58Z",
+      "updated_at": "2026-09-10T16:08:58Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11499",
+      "title": "Recursive Code World Models: Building Complex Worlds through Recursive Scene Programs",
+      "authors": [
+        "Zhiqi Li",
+        "Yuxuan Liao",
+        "Bo Zhu"
+      ],
+      "abstract": "Code world models represent worlds as executable programs, but this representation alone does not determine how to construct a complex world. We introduce Recursive Code World Models (RCWM), a framework for reconstructing complex 3D worlds in code from a single reference image. RCWM couples a Recursive Scene Program (RSP) representation with a construction solver that recursively calls itself. An RSP represents the executable world as compositional scene code, while each solver call follows the same complete process: establish the whole, recursively reconstruct unresolved parts, and revisit th",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.11499",
+      "published_at": "2026-09-10T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-10T13:05:06Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11548",
+      "title": "World in World: Explore the World with World Models",
+      "authors": [
+        "Chenxi Song",
+        "Yanming Yang",
+        "Chi Zhang"
+      ],
+      "abstract": "Autoregressive video world models enable interactive, long-horizon exploration, but flexible control remains challenging. Exploring a source video from new viewpoints requires the generated rollout to remain synchronised with the recorded event, place observed content in the requested view, plausibly complete newly exposed regions, and recover previously generated appearance on revisits. Existing methods typically address these requirements through task-specific modules or additional training. We present World in World, a training-free inference-time interface that converts heterogeneous contr",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.11548",
+      "published_at": "2026-09-10T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-10T13:42:26Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11737",
+      "title": "ORCH: Organizational Principles Enable Collective Intelligence in Embodied AI",
+      "authors": [
+        "Zhengran Ji",
+        "Jonathan Hyun",
+        "Boyuan Chen"
+      ],
+      "abstract": "Collective intelligence depends not only on the capabilities of individual members, but also on how those members are organized. Yet artificial multi-agent systems are typically assembled using fixed organizational structures, even when the physical tasks they perform impose fundamentally different coordination requirements. Here we show that principles from human organization theory can be operationalized to organize large, heterogeneous collectives of embodied artificial agents. We introduce ORCH (Organizing Roles and Coordination Hierarchies), which constructs task-specific hierarchical org",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.11737",
+      "published_at": "2026-09-10T15:52:35Z",
+      "updated_at": "2026-09-10T15:52:35Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11308",
+      "title": "2AM: Grounding Agent-Side Memory as Guidance for Steerable Action Models in Long-Horizon Manipulation",
+      "authors": [
+        "Yutong Hu",
+        "Fengjiao Chen",
+        "Xuezhi Cao",
+        "Renaud Detry"
+      ],
+      "abstract": "Long-horizon robot manipulation requires memory, but not necessarily inside the action policy. To address such tasks, current agentic systems often combine VLAs with planners and geometric tools, sometimes using additional depth or calibrated geometry. These systems confound attribution: gains may come from richer observations or alternative motor tools, while failures may stem from either the policy or an under-specified language interface. We isolate this question through a deliberately constrained design: less tool breadth, but greater interface bandwidth. 2AM makes a multimodal Agent the s",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.11308",
+      "published_at": "2026-09-10T09:35:56Z",
+      "updated_at": "2026-09-10T09:35:56Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10986",
+      "title": "A Mathematical Theory of Pragmatic Information",
+      "authors": [
+        "Kai Niu",
+        "Ping Zhang"
+      ],
+      "abstract": "We propose a pragmatic information theory unifying communication, control, and decision-making. Its core is the isoteleia mapping, formalizing equifinality: distinct semantic paths leading to the same optimal action are pragmatically equivalent. This induces a three-tier hierarchy of syntactic, semantic, and pragmatic information, each abstraction discarding task-irrelevant distinctions. We develop pragmatic entropy, up/down mutual information, channel capacity, and rate-distortion, and prove three coding theorems generalizing Shannon's classical results. We introduce pragmatic value (VoI) and",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.10986",
+      "published_at": "2026-09-10T02:04:44Z",
+      "updated_at": "2026-09-10T02:04:44Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10915",
+      "title": "IMLE-VLA: Fast Single-Step Action Generation for Vision-Language-Action Policies",
+      "authors": [
+        "Kian Hosseinkhani",
+        "Qinhe Peng",
+        "George Shramko",
+        "Mehran Aghabozorgi",
+        "Jianing Qian"
+      ],
+      "abstract": "Vision-language-action (VLA) policies leverage pretrained vision-language backbones to achieve strong cross-task generalization. A leading design couples this backbone with a dedicated continuous action head trained via diffusion or flow matching. However, such heads rely on iterative multi-step sampling, for example 10 Euler steps in $π_{0.5}$. This creates an inference bottleneck that produces stop-and-go movement in the robot and slower task completion. We introduce IMLE-VLA, which replaces the iterative action head with a single-step conditional generator trained via conditional Implicit M",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.10915",
+      "published_at": "2026-09-10T00:00:32Z",
+      "updated_at": "2026-09-10T00:00:32Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10706",
+      "title": "HuRo: Robotizing Human Videos for Scalable VLA Pretraining",
+      "authors": [
+        "Jinho Jeong",
+        "Se June Joo",
+        "Jaehyun Kang",
+        "Dongyun Kim",
+        "Yena Kim"
+      ],
+      "abstract": "Human video datasets have emerged as a compelling alternative to expensive real-robot data, offering rich diversity at scale. To bridge the human-to-robot embodiment gap, existing approaches either robotize videos in task-matched settings or address observation and action alignment separately at scale. In this work, we systematically examine whether robotized human videos can provide effective and scalable supervision for pretraining vision-language-action (VLA) policies. To this end, we develop a robotization pipeline that converts heterogeneous human videos into robot-aligned observations an",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.10706",
+      "published_at": "2026-09-09T18:02:05Z",
+      "updated_at": "2026-09-09T18:02:05Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11900",
+      "title": "MindTopo: Can Foundation Models Reason in Topological Space?",
+      "authors": [
+        "Yunfei Ge",
+        "Anbang Liu",
+        "Qineng Wang",
+        "Johnalbert Garnica",
+        "Jianwen Lyu"
+      ],
+      "abstract": "Spatial reasoning depends not only on metric properties such as distance, angle, and shape, but also on topological relations that remain invariant under continuous deformation. Cognitive science identifies these relations as foundational to spatial understanding, yet foundation-model evaluations largely focus on metric or viewpoint-dependent relations. We introduce MindTopo, a benchmark of topological intuition across five properties grounded in cognitive science and formal topology: continuity, separation, order, enclosure, and knots. MindTopo evaluates each property at two cognitive levels.",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.11900",
+      "published_at": "2026-09-10T17:54:32Z",
+      "updated_at": "2026-09-10T17:54:32Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11310",
+      "title": "Your Model Already Knows Don't Teach It, Learn to Ask It: Soft Prompting for Few-Shot Adaptation of Vision-Language Models",
+      "authors": [
+        "Gautam Rajendrakumar Gare",
+        "Siyi Li",
+        "Hewei Wang",
+        "Cesar Daniel Hernandez",
+        "Wei Zhao"
+      ],
+      "abstract": "We address few-shot object detection with vision-language models (VLMs) in out-of-domain settings such as aerial, industrial, and medical imagery, using only ten annotated images for supervision. Existing adaptation methods are discrete prompt optimization and LoRA fine-tuning. We revisit a third option: soft prompting, where a small number of continuous prompt tokens are optimized while the pretrained backbone remains frozen.   We identify two key design choices. First, placing prompt tokens at the cross-modal boundary between visual and text tokens outperforms other placements (10.0 vs. 8.4 ",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.11310",
+      "published_at": "2026-09-10T09:38:11Z",
+      "updated_at": "2026-09-10T09:38:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11172",
+      "title": "Beyond Visual Quality: Evaluating Physical Consistency under Ego-Motion with EgoGenEval",
+      "authors": [
+        "Yilin Long",
+        "Chenming Zhu",
+        "Zitang Gou",
+        "Jingli Lin",
+        "Tai Wang"
+      ],
+      "abstract": "Recent visual generators produce high-fidelity images yet often violate physical consistency under ego-motion, limiting their use for spatial reasoning and embodied planning. Existing benchmarks largely focus on isolated images or single-step quality, leaving this challenge underexplored. We introduce EgoGenEval, a geometry-grounded, pose-free benchmark designed to evaluate the physical consistency of visual generators under ego-motion, and organize our study into two parts. (1) EgoGenEval contains 1,400 cases and 2,360 target views spanning single-step and multi-step ego-motion. It separately",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.11172",
+      "published_at": "2026-09-10T07:19:50Z",
+      "updated_at": "2026-09-10T07:19:50Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11775",
+      "title": "Rapid Learning of Dexterous In-Hand Pen Writing through Real-Time Jacobian Estimation",
+      "authors": [
+        "Kai Stewart",
+        "Yasunori Toshimitsu",
+        "Robert K. Katzschmann"
+      ],
+      "abstract": "Dexterous in-hand manipulation of a grasped object with an anthropomorphic hand is an unsolved frontier for robot dexterity. The contact-richness and highly dynamic nature of object-hand interactions tend to require extensive modeling or data-collection efforts for learning-based approaches. Modern simulators used for reinforcement learning (RL) cannot fully replicate the required contact complexity, while collecting dexterous demonstrations for imitation learning (IL) remains an open problem. In this research, we present an embodied control approach based on real-time task Jacobian estimation",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11775",
+      "published_at": "2026-09-10T16:29:00Z",
+      "updated_at": "2026-09-10T16:29:00Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10918",
+      "title": "ObstaDiff: Generalizable Diffusion Policy Learning via Obstacle-aware Representations",
+      "authors": [
+        "Jiawen Wang",
+        "Kevin Yao",
+        "Khalid Jawed"
+      ],
+      "abstract": "Imitation learning has achieved impressive results in robotic manipulation, yet most existing approaches assume clean backgrounds and lack explicit mechanisms for obstacle-aware motion generation. Extending such policies to cluttered, real-world scenes with unstructured obstacles remains a key generalization challenge. We present ObstaDiff, a decomposed diffusion-policy framework with a lightweight obstacle-aware visual encoder. ObstaDiff extracts a structured target-obstacle-background representation, enabling the downstream alignment policy to generate end-effector trajectories toward a targ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.10918",
+      "published_at": "2026-09-10T00:06:39Z",
+      "updated_at": "2026-09-10T00:06:39Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11875",
+      "title": "UniMPA: A Unified Memory-Prediction-Action Model via Action-Grounded Transition Modeling",
+      "authors": [
+        "Wei Li",
+        "Rui Shao",
+        "Jie He",
+        "Lingsen Zhang",
+        "Ziwei Liu"
+      ],
+      "abstract": "Recent advances in Vision-Language-Action (VLA) models have improved robotic manipulation, yet observation-to-action learning remains limited by a fundamental transition realizability gap, manifested in three tightly coupled problems: (i) Transition ambiguity. Visually similar current observations may correspond to different manipulation phases and imply different subsequent transitions. (ii) Prediction--execution mismatch. A visually plausible predicted future observation does not necessarily correspond to a physically realizable transition. (iii) Experience--realization mismatch. A historica",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11875",
+      "published_at": "2026-09-10T17:45:03Z",
+      "updated_at": "2026-09-10T17:45:03Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11733",
+      "title": "Reflex-Informed Neuromuscular Reinforcement Learning for Muscle-Driven Locomotion",
+      "authors": [
+        "Jian Zhou",
+        "Xingyu Zhang",
+        "Rui Ma",
+        "Yu Cao",
+        "Shane Xie"
+      ],
+      "abstract": "Muscle-driven locomotion provides a physically grounded approach to generating realistic human movement. However, achieving both physiological plausibility and adaptability to changes in musculoskeletal capacity and external disturbances remains a fundamental challenge. To address this limitation, we propose a Reflex-Informed Neuromuscular Reinforcement Learning framework for muscle-driven locomotion. Within this framework, a fixed phase-dependent reflex controller serves as the underlying neuromuscular control mechanism, while the reinforcement learning policy produces four biomechanically me",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11733",
+      "published_at": "2026-09-10T15:47:26Z",
+      "updated_at": "2026-09-10T15:47:26Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11553",
+      "title": "CAP: Continuously Adaptive Perception-Blind Humanoid Locomotion via Learned Denoising",
+      "authors": [
+        "Hongjin Chen",
+        "Zijun Xu",
+        "Shihao Ma",
+        "Yi Zhao",
+        "Xilai Liu"
+      ],
+      "abstract": "Humanoid locomotion across complex terrain demands forward-looking exteroception to anticipate obstacles, yet this signal is unreliable in real-world deployment, failing partially and intermittently. Existing perceptive policies often assume that depth observations remain clean and in-distribution, while recent attempts to unify perceptive and blind control typically route or switch between separate sub-policies, leaving recoverable information in partially corrupted depth unexploited. We instead propose CAP, a single-stage humanoid locomotion policy that recovers this signal with a perceptive",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11553",
+      "published_at": "2026-09-10T13:45:10Z",
+      "updated_at": "2026-09-10T13:45:10Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11445",
+      "title": "FARM: Reading Failure Signals from the Internal Predictive States of a Frozen Robotic World Model",
+      "authors": [
+        "Haoran Pei",
+        "Mingrui Luo",
+        "Senbao Wang",
+        "Haoran Lv",
+        "Jie Guo"
+      ],
+      "abstract": "Reliable robot deployment requires online failure monitoring, yet existing monitors mainly derive risk from proxy signals or train dedicated monitoring components. We ask whether the internal predictive states of a frozen pretrained robotic world model already contain directly decodable failure information. Failure-Aware Readout from World Models (FARM) trains only a 33,985-parameter supervised readout over frozen VLA-JEPA predictive states, producing step-wise failure scores and causal trajectory risk. Five-fold out-of-fold evaluation across seven source tasks reaches 85.68/88.59 pooled AUROC",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11445",
+      "published_at": "2026-09-10T12:14:37Z",
+      "updated_at": "2026-09-10T12:14:37Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11361",
+      "title": "GeoTrussRover: Morphological Computation with Contact-Semantic Control Primitives",
+      "authors": [
+        "Muyuan Ma",
+        "Yi Zhang",
+        "Yang Yang",
+        "Xuanyan Zheng",
+        "Ruiqi Hu"
+      ],
+      "abstract": "Reconfigurable robots can change their contact geometry when a fixed body cannot negotiate an obstacle. A variable-geometry truss (VGT) distributes this shape change through a load-bearing structure, but coupling it to a mobile base creates a high-dimensional coordination problem. GeoTrussRover combines an electrically actuated VGT, a wheeled base, and contact-semantic morphology planning and control. We solve one source traversal and extract four contact-semantic primitives that describe coordination among 21 members. Physics-constrained projection adapts them to unseen step heights with the ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11361",
+      "published_at": "2026-09-10T10:48:58Z",
+      "updated_at": "2026-09-10T10:48:58Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11357",
+      "title": "Morphology-Aware Human Motion Retargeting for Wheeled-Humanoid Loco-Manipulation",
+      "authors": [
+        "Chenbo Xia",
+        "Chao Ye"
+      ],
+      "abstract": "Human-to-humanoid retargeting has largely been studied on legged platforms, while comparatively few wheeled-humanoid systems support coupled locomotion and manipulation from general human motion. Building on GMR's configurable general-motion retargeting and BeyondMimic's physically simulated R1 Pro learning framework, we present a reproducible pipeline that converts multi-dataset SMPLX motion into executable loco-manipulation behavior for the Galaxea R1 Pro wheeled humanoid. The robot has a planar three-wheel base, a serial torso, and two arms but no leg joints, so human lower-body motion must",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11357",
+      "published_at": "2026-09-10T10:40:31Z",
+      "updated_at": "2026-09-10T10:40:31Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11270",
+      "title": "Beyond Noise Steering: Dual-Latent Space Reinforcement Learning for Generative Robot Policy",
+      "authors": [
+        "Pengfei Zhang",
+        "Teng Sun",
+        "Xianchao Xiu"
+      ],
+      "abstract": "Pretrained generative robot policies learn expressive action priors from demonstrations. However, existing reinforcement learning methods only steer the noisy space but fail to modulate intermediate action representations during the generation process, resulting in performance degradation and inefficiency. To address this limitation, we propose a novel Dual-Latent Space Reinforcement Learning (DLSRL) framework, which complements initial-noise steering with representation-level control inside the frozen generator. Specifically, our actor network predicts two distinct latent variables: an initia",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11270",
+      "published_at": "2026-09-10T09:04:04Z",
+      "updated_at": "2026-09-10T09:04:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11225",
+      "title": "Harness Robotic OS: A Unified Embodied-Agent Runtime for Closed-Loop Quadruped Inspection",
+      "authors": [
+        "Yaoyuan Yan",
+        "Zhiyou Heng",
+        "Haoxiang Jie",
+        "Gang Liu",
+        "Hongjie Yan"
+      ],
+      "abstract": "Autonomous property inspection requires more than robust robot navigation: a deployable system must connect heterogeneous sensing, reusable autonomy capabilities, multimodal scene understanding, human interaction, and enterprise response within a traceable operational loop. Existing quadruped inspection systems commonly integrate these functions through task-specific interfaces, making contextual coordination, knowledge reuse, and controlled adaptation difficult. This paper presents \\textit{Harness Robotic OS} (HROS), a unified embodied-agent runtime, and Argos, its realization for residential",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11225",
+      "published_at": "2026-09-10T08:25:46Z",
+      "updated_at": "2026-09-10T08:25:46Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11059",
+      "title": "Gait-Dependent Effects on Quadruped Locomotion for Load-Carrying using Passive Mechanism",
+      "authors": [
+        "Giovanni B. Dessy",
+        "Claudio Semini",
+        "Victor Barasuol"
+      ],
+      "abstract": "Passive mechanical interfaces offer a lightweight alternative to actuated manipulators for quadruped payload carrying, but their impedance directly couples the payload dynamics with the locomotion pattern. This paper analyzes how passive-arm stiffness-damping selection affects payload-carrying locomotion under different gait and payload conditions. We compare damped and underdamped passive-arm impedance configurations in simulation during flat-ground locomotion. For crawl gaits, where the support polygon remains well defined, the results show that underdamped impedance increases passive-joint ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.11059",
+      "published_at": "2026-09-10T04:05:12Z",
+      "updated_at": "2026-09-10T04:05:12Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11873",
+      "title": "The Last AI Built by Humans: Toward Genuine Recursive Self-Improvement",
+      "authors": [
+        "Yi Duan",
+        "Ying Liu",
+        "Zirui Tang",
+        "Haodong Chen",
+        "Jun Zhou"
+      ],
+      "abstract": "Recursive self-improvement (RSI) enables AI systems to turn experience and feedback into persistent changes that improve both their capabilities and the process of future improvement. We first use the Headroom-Closed Index (HCI) to reveal the problems of existing LLMs, then introduce the RSI concept and its development roadmap: from improvement-execution autonomy, improvement-strategy autonomy, experience-acquisition autonomy, and environment-adaptation autonomy, to recursive meta-improvement. Next we examine RSI across scenarios (e.g., scientific discovery, embodied intelligence, software eng",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.11873",
+      "published_at": "2026-09-10T17:44:23Z",
+      "updated_at": "2026-09-10T17:44:23Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.11660",
+      "title": "Autonomy, Social Norms, and Alignment: Towards a Developmental Framework for Autonomous Artificial Agents",
+      "authors": [
+        "Marica Notte",
+        "Ludovica Marinucci",
+        "Vieri Giuliano Santucci"
+      ],
+      "abstract": "In recent years, artificial intelligence has made extraordinary progress thanks to large-scale models capable of generalization and the generation of complex outputs. However, transferring this potential into embodied agents reveals a significant limitation: the most advanced systems rely on pre-existing datasets and human feedback strategies that are powerful but insufficient in dynamic or unknown contexts. To adapt, an agent must acquire knowledge through direct interaction with its environment. One strategy to address this challenge involves introducing higher-level mechanisms, such as intr",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.11660",
+      "published_at": "2026-09-10T15:02:52Z",
+      "updated_at": "2026-09-10T15:02:52Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    },
+    {
+      "id": "2609.10873",
+      "title": "When Validation Stops Learning: Auditing Update Admission for Continual Embodied Agents",
+      "authors": [
+        "Qinzhen Ma",
+        "Ruihai Wu"
+      ],
+      "abstract": "Independent evaluation can reject harmful policy updates yet also prevent useful continual learning. We argue that update admission must be assessed through both error control and retained learning opportunities at a stated interaction budget. We identify a concrete failure: a range-based confidence gate cannot certify unchanged old-task behavior within otherwise substantial budgets. A standard paired-binomial construction reduces this burden when outcome disagreements are rare. We also specify certified historical-reference promotion and a round-level missed-opportunity metric. In a construct",
+      "sources": [
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.10873",
+      "published_at": "2026-09-09T22:25:16Z",
+      "updated_at": "2026-09-09T22:25:16Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "first_seen_at": "2026-09-11T07:13:36.711100Z"
+    }
+  ]
+}
