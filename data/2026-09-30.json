@@ -1,0 +1,678 @@
+{
+  "date": "2026-09-30",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-09-30T08:18:10.189520Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 250,
+      "arxiv_cs.AI": 250,
+      "arxiv_cs.CV": 250,
+      "arxiv_keyword": 26,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 876,
+    "after_dedup": 754,
+    "window_start": "2026-09-26",
+    "window_candidates": 746,
+    "already_seen": 153,
+    "new_candidates": 593,
+    "selected_papers": 30,
+    "missing_published_at": 0,
+    "keyword_matched": 100
+  },
+  "papers": [
+    {
+      "id": "2609.36915",
+      "title": "AeroManip-VLA: Scalable Vision-Language-Action Learning for Aerial Manipulation with RL-Generated Demonstrations",
+      "authors": [
+        "Rui Huang",
+        "Yanlin Mu",
+        "Lidong Li",
+        "Yucong Wang",
+        "Zichen Yan"
+      ],
+      "abstract": "Aerial manipulators extend robotic manipulation into 3D workspaces that are difficult for ground-based robots to access, creating new opportunities for general-purpose manipulation. However, extending Vision-Language-Action (VLA) models to aerial robots introduces distinct challenges due to the tight coupling between manipulation and flight, continuously changing observations, and safety-critical physical interactions. These challenges demand diverse training data and systematic policy evaluation, yet collecting demonstrations and evaluating policies directly on physical aerial platforms are c",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.36915",
+      "published_at": "2026-09-29T07:34:54Z",
+      "updated_at": "2026-09-29T07:34:54Z",
+      "keyword_hits": 3,
+      "priority": 45.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38140",
+      "title": "Breaking the Uniformity Trap: Scaling Video Diffusion Model via SplitMoE",
+      "authors": [
+        "Yu Xu",
+        "Yuxin Zhang",
+        "Xiao Yang",
+        "Haotian Yang",
+        "Yizhi Wang"
+      ],
+      "abstract": "Mixture-of-Experts (MoE), popularized by large language models, is a promising paradigm for scaling visual generative models. However, conventional token-wise MoE routes tokens independently within a homogeneous expert pool and regularizes expert usage toward uniformity, making it poorly matched to video data that is spatiotemporally redundant and semantically long-tailed. We show that existing visual MoEs fall into a uniformity trap: semantically under-organized routing, compounded by uniform expert-usage regularization, scatters coherent patches across disparate experts, causing routing frag",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38140",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-29T17:55:19Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36352",
+      "title": "StructRL: Online Structured Reinforcement Learning for Long-Horizon Vision-Language-Action Tasks",
+      "authors": [
+        "Ziyi Yin",
+        "Sangmin Woo",
+        "Kang Zhou",
+        "Sungyeon Kim",
+        "Aosong Feng"
+      ],
+      "abstract": "Vision-language-action (VLA) models perform well on shorter-horizon manipulation tasks but still struggle with long-horizon tasks that require multiple dependent manipulations from a single command. Online reinforcement learning (RL) can improve these policies through environment interaction, yet many existing methods provide reward only after the complete task succeeds. However, such terminal supervision is sparse and does not distinguish early failures from rollouts that make substantial partial progress. We propose StructRL, an online RL framework that constructs structured intermediate sup",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.36352",
+      "published_at": "2026-09-28T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-28T22:34:43Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38057",
+      "title": "EVO-WAM: Evolving World Action Models through Video-Action Verification",
+      "authors": [
+        "Shiyang Zhou",
+        "Xionghao Wu",
+        "Wenbo Li",
+        "Shenghe Zheng",
+        "Jiyao Zhang"
+      ],
+      "abstract": "Improving robot policies on new tasks without collecting additional expert demonstrations remains a central challenge in robot learning. World action models (WAMs) use broad video priors to jointly predict future videos and actions, offering a potential source of supervision for adapting to new tasks. However, generated videos may fail to depict task completion, and even visually successful videos may be paired with inconsistent actions that lead to execution failure. We propose EVO-WAM, a framework that adapts WAMs to unseen tasks by learning from their own generated video-action trajectories",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38057",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-29T17:25:35Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38059",
+      "title": "WorldLine: Action-Driven Visual Simulation for Robotic Manipulation",
+      "authors": [
+        "Shenghe Zheng",
+        "Wenbo Li",
+        "Jiyao Zhang",
+        "Bin Xia",
+        "Haoyang Huang"
+      ],
+      "abstract": "Real-world robot learning is constrained by the cost of collecting experience and evaluating candidate behaviors. Video generation models offer a scalable foundation for visual simulators that predict action outcomes before physical execution. Yet they often favor visual plausibility over accurate action following and coherent robot--object dynamics, while action-conditioned simulators depend on scarce, embodiment-specific data that are difficult to share across incompatible control spaces. We introduce WorldLine, an action-driven visual simulator that decouples transferable dynamics learning ",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38059",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-29T17:26:22Z",
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37552",
+      "title": "Wrench-ACT: Enhancing Robot Policies for Contact Rich Behavior Using Direct Wrench Control",
+      "authors": [
+        "Johannes Hechtl",
+        "Yannik Blei",
+        "Simon Ball",
+        "Reihaneh Mirjalili",
+        "Michael Krawez"
+      ],
+      "abstract": "While contact-rich manipulation requires deliberate regulation of interaction forces, recent approaches to robot manipulation learning predominantly represent actions as target positions or poses. Even methods that incorporate force sensing either use it solely as an observation or, when predicting forces as part of the output, rely on a hybrid force controller. In this paper, we propose an imitation learning policy that predicts wrenches as its sole action output for direct use by a pure force controller. Our studies suggest that force-domain imitation learning depends critically on data coll",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.37552",
+      "published_at": "2026-09-29T13:29:06Z",
+      "updated_at": "2026-09-29T13:29:06Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37250",
+      "title": "V-JEPA Policy: Building Effective World-Action Models on Predictive Visual Latents",
+      "authors": [
+        "Yang Zhang",
+        "Jiangyuan Zhao",
+        "Chenyou Fan",
+        "Jiayu Hu",
+        "Xiu Yuan"
+      ],
+      "abstract": "World-action models (WAMs) couple future visual-state prediction with action generation. By adapting video generators or image-editing models pretrained at scale, a prominent line of recent WAMs inherits both predictive knowledge and the models in which it was learned. We ask whether a predictive visual latent space induced by large-scale predictive pretraining can instead provide a sufficient foundation for effective WAM learning without inheriting a complete pretrained visual generative model. To answer this question, we introduce V-JEPA Policy, a simple framework that builds a WAM on the la",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.37250",
+      "published_at": "2026-09-29T11:03:02Z",
+      "updated_at": "2026-09-29T11:03:02Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36575",
+      "title": "EquivDP3: A SIM(3)-Invariant Point-Cloud Encoder for Data-Efficient Humanoid Loco-Manipulation",
+      "authors": [
+        "Abu Hanif Muhammad Syarubany",
+        "Chang D. Yoo"
+      ],
+      "abstract": "Visuomotor policies for humanoid loco-manipulation must generalize across object poses and lighting from only a handful of demonstrations. 3D Diffusion Policy (DP3) conditions a diffusion-based action generator on point-cloud features, but its PointNet-style encoder has no built-in equivariance to the rotations, translations, and scalings (SIM(3)) that manipulation tasks respect. EquiBot closed this gap for wheeled manipulators with a SIM(3)-equivariant Vector Neuron Network (VNN) encoder. We extend this to a substantially more complex embodiment, the 43-joint Unitree G1 humanoid, and propose ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.36575",
+      "published_at": "2026-09-29T02:54:01Z",
+      "updated_at": "2026-09-29T02:54:01Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36416",
+      "title": "FineART: Fine-grained Annotated Robotic Trajectory Dataset and Vision-Language-Action Model for Bimanual Manipulation",
+      "authors": [
+        "Jade Choghari",
+        "Pepijn Kooijmans",
+        "Mansi Agarwal",
+        "Yusuf Umut Ciftci",
+        "Aseem Doriwala"
+      ],
+      "abstract": "Robots operating in real-world environments must execute complex, multi-step bimanual tasks over long horizons rather than single, isolated actions. Current manipulation datasets struggle to support this capability: although single-arm datasets reach hundreds of thousands of trajectories, they typically provide only one high-level instruction per episode while the rare bimanual effort that does label subtasks annotates only a fraction of its hours. We present FineART, a densely annotated bimanual manipulation dataset of 40,543 episodes, 1,718 hours, and 533,913 subtasks across 151 tasks. We al",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.36416",
+      "published_at": "2026-09-29T00:13:29Z",
+      "updated_at": "2026-09-29T00:13:29Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37655",
+      "title": "Exemplar2VQA: A Scalable Exemplar-Driven Visual Question Answering Generation Framework via Multi-Agent Coding",
+      "authors": [
+        "Jiayu Ying",
+        "Qijian Tian",
+        "Ruijie Xu",
+        "Xinnan Zhu",
+        "Daoguo Dong"
+      ],
+      "abstract": "Advancing spatial intelligence in Multimodal Large Language Models (MLLMs) is bottlenecked by the scarcity of complex, scalable 3D question-answer (QA) data. While manual annotation is labor-intensive, directly utilizing LLMs to synthesize these QA pairs often fails due to their inherent deficiencies in spatial and geometric computation. We introduce Exemplar2VQA, a scalable exemplar-driven visual question answering generation framework that rapidly synthesizes large-scale spatial QA pairs in simulated environments via multi-agent coding. By equipping collaborative agents with a meticulously d",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.37655",
+      "published_at": "2026-09-29T14:17:49Z",
+      "updated_at": "2026-09-29T14:17:49Z",
+      "keyword_hits": 4,
+      "priority": 40.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38172",
+      "title": "Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation",
+      "authors": [
+        "Zihan Wang",
+        "Zhen Wu",
+        "Pieter Abbeel",
+        "Rocky Duan",
+        "Jitendra Malik"
+      ],
+      "abstract": "Teaching humanoids loco-manipulation skills, such as carrying diverse objects, via visual imitation is a promising path toward generalist robots. However, collecting diverse, high-quality interaction videos, such as clips that clearly show a person's full body and unoccluded interactions with objects, poses a practical barrier to scaling this approach. We propose PRISM, a real-to-sim-to-real framework that overcomes this limitation by amplifying a handful of real videos into a large, diverse training set. PRISM first generates hundreds of diverse \"counterfactual\" human-object interaction video",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38172",
+      "published_at": "2026-09-29T17:59:45Z",
+      "updated_at": "2026-09-29T17:59:45Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38046",
+      "title": "EgoAlign: Bridging the Human-Humanoid Gap for Long-Range Loco-Manipulation",
+      "authors": [
+        "Yiming Jiang",
+        "Chen Jin",
+        "Chongyang Xu",
+        "Yilun Chen",
+        "Aimin Hao"
+      ],
+      "abstract": "Egocentric human demonstrations offer an accessible source of task experience, but differences in body scale and controller response, together with missing robot states, limit their value as humanoid training supervision. We present EgoAlign, a data-construction framework that converts these demonstrations into action and state supervision compatible with a general-purpose, continuous whole-body controller, without collecting physical-robot demonstrations. Using the target-robot model and simulator, EgoAlign guides demonstration collection through execution feedback. It preserves locomotion re",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.38046",
+      "published_at": "2026-09-29T17:18:42Z",
+      "updated_at": "2026-09-29T17:18:42Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37810",
+      "title": "Explore, Execute, Evolve: A Skill Acquisition and Reuse Loop for Embodied Agents",
+      "authors": [
+        "Sicheng Xie",
+        "Yitong Chen",
+        "Haidong Cao",
+        "Shunlin Lu",
+        "Zuxuan Wu"
+      ],
+      "abstract": "Vision-language-action and world-action models have demonstrated impressive capabilities in robotics, yet generalization to unseen tasks remains challenging. More recently, general-purpose multimodal agents have shown great potential for zero-shot robotic task solving. However, they often incur high execution costs by reasoning and exploring the physical world from scratch. To reduce these costs, we introduce RoboSkill, a framework that connects skill acquisition and reuse through an Explore, Execute, Evolve loop. Within this loop, the agent explores to gather task-relevant information, execut",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37810",
+      "published_at": "2026-09-29T15:25:43Z",
+      "updated_at": "2026-09-29T15:25:43Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37519",
+      "title": "Video2STL: Grounding VLM-Generated Temporal Specifications for Robot Learning",
+      "authors": [
+        "Merve Atasever",
+        "Keyan Azbijari",
+        "Cagan Bakirci",
+        "Bo-Ruei Huang",
+        "Tolga Izdas"
+      ],
+      "abstract": "Video-based policy learning is particularly promising, as it illustrates target behaviors without requiring action annotations or embodiment-matched demonstrations. A central challenge is deciding what information should be transferred from the video to the robot. Existing approaches commonly convert visual observations into scalar similarity or value signals, or ask foundation models to directly generate reward code. These approaches can make the temporal structure of a task difficult to inspect, ground, and reuse. We present Video2STL, a framework that converts observation-only videos into p",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37519",
+      "published_at": "2026-09-29T13:10:14Z",
+      "updated_at": "2026-09-29T13:10:14Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37398",
+      "title": "Direct Experience World-Model Optimization: Learning the World Beyond Action Imitation",
+      "authors": [
+        "Xiangcheng Zhan",
+        "Zirui Chen",
+        "Yicheng Zhao",
+        "Ziteng Gao",
+        "Shuo Yang"
+      ],
+      "abstract": "World-Action Models (WAMs) couple action generation with predictions of how physical interactions unfold. However, current post-deployment learning paradigms typically improve behavior without requiring better world predictions. Especially in dexterous manipulation, small execution errors can compound in high-dimensional action spaces, hindering policy improvement and pushing interactions beyond the world model's training distribution. Motivated by this, we propose Direct Experience World-Model Optimization (DEWO), a post-deployment learning paradigm for WAMs that, alongside action imitation, ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37398",
+      "published_at": "2026-09-29T12:41:41Z",
+      "updated_at": "2026-09-29T12:41:41Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37181",
+      "title": "EgoHumanoid-V2: Human-to-Humanoid Transfer of Coordinated Whole-Body Skills for Loco-Manipulation",
+      "authors": [
+        "Jin Chen",
+        "Yiming Jiang",
+        "Chongyang Xu",
+        "Modi Shi",
+        "Shijia Peng"
+      ],
+      "abstract": "Human demonstrations capture diverse scenes and rich whole-body skills without requiring robot teleoperation. Prior work on egocentric transfer has emphasized scene generalization in loco-manipulation under decoupled control, leaving direct transfer of coordinated whole-body skills less explored. We present EgoHumanoid-V2, the first egocentric human-to-humanoid skill transfer framework for coordinated whole-body loco-manipulation. At its core, coarse-to-fine action alignment combines kinematic reference correction with dynamics-aware refinement. It improves end-effector pose accuracy while pre",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37181",
+      "published_at": "2026-09-29T10:05:10Z",
+      "updated_at": "2026-09-29T10:05:10Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36540",
+      "title": "Reactive Real-Time Flow Policies via Asynchronous Distribution Alignment",
+      "authors": [
+        "Moritz Zoellner",
+        "Reece O'Mahoney",
+        "Ioannis Havoutis",
+        "Rohan Paleja"
+      ],
+      "abstract": "Generalist robot policies such as vision-language-action models (VLAs) have achieved remarkable generalization, but their inference delays can conflict with the demands of real-time control. Asynchronous execution avoids pauses between action chunks by predicting the next sequence of actions while the robot carries out the previous one. In this paper, we study whether asynchronous execution produces the same action distribution as the original VLA. We find that, for non-Markovian demonstrations, asynchronous execution can produce a fundamentally different action distribution, which can limit t",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.36540",
+      "published_at": "2026-09-29T02:30:04Z",
+      "updated_at": "2026-09-29T02:30:04Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36934",
+      "title": "VLALight: A Vision-Language-Action Model for Traffic Signal Control",
+      "authors": [
+        "Pan Zhang",
+        "Siqi Lai",
+        "Kemu Dong",
+        "Hao Liu"
+      ],
+      "abstract": "Traffic signal control (TSC) is essential for improving urban mobility and reducing congestion. Although roadside cameras are widely deployed at signalized intersections and provide rich visual observations of evolving traffic, existing TSC methods typically rely on manually engineered traffic states or separate perception modules, creating a gap between physical observations and control decisions. We present VLALight, the first vision-language-action (VLA) model for end-to-end traffic signal control from multi-view roadside videos. VLALight directly maps visual observations to coordinated sig",
+      "sources": [
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.36934",
+      "published_at": "2026-09-29T07:48:08Z",
+      "updated_at": "2026-09-29T07:48:08Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36171",
+      "title": "SkillWeaver: Agentic Exploration over Neural Interaction Skills for Scalable Robot Data Generation",
+      "authors": [
+        "He Zhu",
+        "Lusen Zhao",
+        "Kwan Man Cheng",
+        "Su Li",
+        "Katerina Fragkiadaki"
+      ],
+      "abstract": "Large-scale demonstrations have driven unprecedented progress in robot learning, yet collecting robot data through teleoperation is expensive and difficult to scale to diverse environments and long-horizon tasks. Simulation offers a scalable alternative, but existing data-generation pipelines often rely on open-loop controllers, scripted skill sequences, or task-specific programs. We introduce SkillWeaver, an agentic framework that autonomously generates robot experience by exploring over Neural Interaction Skills (NIS): reusable, parameterized, closed-loop policies that expose learned physica",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.36171",
+      "published_at": "2026-09-28T19:41:42Z",
+      "updated_at": "2026-09-28T19:41:42Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.36851",
+      "title": "RoXDrive: Closed-Loop Reinforcement Learning for End-to-End Autonomous Driving via Action-Faithful Rollouts",
+      "authors": [
+        "Hongbin Lin",
+        "Chaoda Zheng",
+        "Yiming Yang",
+        "Xiangyu Li",
+        "Shijia Chen"
+      ],
+      "abstract": "End-to-end autonomous driving policies are commonly trained via imitation learning on logged demonstrations without observing the consequences of their own actions, leading to causal confusion in closed-loop real-world deployment. To address this issue, reinforcement learning (RL) post-training offers a promising alternative by leveraging world models as interactive training environments to enable future scene generation for policy improvement. Nevertheless, existing approaches either rely on reconstruction-based simulators, offering limited counterfactual interaction, or adopt synthetic simul",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.36851",
+      "published_at": "2026-09-29T06:59:50Z",
+      "updated_at": "2026-09-29T06:59:50Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38154",
+      "title": "LongLive-Plug: Once-for-All Distillation for Video Generation",
+      "authors": [
+        "Shuai Yang",
+        "Luozhou Wang",
+        "Wei Huang",
+        "ZhiFei Chen",
+        "Bohan Zhang"
+      ],
+      "abstract": "Video diffusion models are increasingly developed into specialized models for diverse downstream tasks, and this development often includes a distillation stage, for example to accelerate sampling or to improve long-video generation. This stage is typically repeated for every specialized model. We introduce LongLive-Plug, a once-for-all distillation framework that learns reusable capabilities as LoRAs on a base model for training-free, plug-and-play deployment to compatible downstream models. These capabilities include single-pass classifier-free guidance, few-step sampling, and long-context e",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38154",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-29T17:58:49Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37441",
+      "title": "Anisotropic Representations Improve Planning in JEPA World Models",
+      "authors": [
+        "Mingu Kang",
+        "Yoori Oh",
+        "Sookyung Kim",
+        "Joonseok Lee"
+      ],
+      "abstract": "Latent world models learn action-conditioned dynamics in representation space and often score candidate actions by Euclidean distance to a goal representation. Joint training typically regularizes the representation to prevent collapse, but the resulting representation geometry also determines how terminal errors are weighted during planning. We show that accurate prediction and noncollapsed representations do not guarantee a task-aligned latent planning cost: isotropic Gaussian regularization can induce a geometry that ranks feasible outcomes differently from the task cost. To address this mi",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2609.37441",
+      "published_at": "2026-09-29T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-09-29T13:00:37Z",
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38178",
+      "title": "Skill-Space Shooting for Autonomous Robot Policy Improvement",
+      "authors": [
+        "Zihang Rui",
+        "Renhao Wang",
+        "Haoxu Huang",
+        "Yang Gao"
+      ],
+      "abstract": "Robots deployed in the physical world must be able to improve beyond their initial training as they encounter new situations and failures. For this improvement to scale across tasks, it must make effective use of experience without requiring human demonstration of each correction. Recent agentic systems offer a way to reduce this reliance on human effort by using foundation models to autonomously compose learned behaviors to complete tasks. Yet completing tasks this way does not itself teach a task policy to overcome its own failures; that requires turning these behaviors into learnable correc",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.38178",
+      "published_at": "2026-09-29T17:59:55Z",
+      "updated_at": "2026-09-29T17:59:55Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.38163",
+      "title": "Rethinking Representations for World-Action Modeling",
+      "authors": [
+        "Haoyi Jiang",
+        "Liu Liu",
+        "Xinjiang Wang",
+        "Zhihao Sun",
+        "Zequn Chen"
+      ],
+      "abstract": "World-action models jointly learn robot policies and predict future observations, making the representation space an interface between control and prediction. We study the design of this space through controlled comparisons, finding that neither reconstruction fidelity nor pre-trained perceptual features alone ensure effective policy learning. These findings motivate ReWAM, a representation-centric world-action model built on pre-trained DINO features. Feature Calibration and a Temporal Representation Bottleneck organize these features into compact world states suited to dynamics modeling. Act",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.38163",
+      "published_at": "2026-09-29T17:59:22Z",
+      "updated_at": "2026-09-29T17:59:22Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37677",
+      "title": "Learning Expressive and Compositional Motion Representation via Spectral Skills",
+      "authors": [
+        "Feiyang Wu",
+        "Chenxiao Gao",
+        "Chen Yang",
+        "Ye Zhao",
+        "Bo Dai"
+      ],
+      "abstract": "Robotic foundation models offer a promising path toward general-purpose humanoid robot control, often through hierarchical architectures. However, their effectiveness depends on the command interface between the planner and the controller, which must support accurate execution while remaining easy to predict, and ideally allow new behaviors to be composed from prior ones. In this work, we introduce spectral skills, a latent representation of this interface that meets these requirements through predictive representation learning. By design, spectral skills compactly encode short motion segments",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.37677",
+      "published_at": "2026-09-29T14:27:49Z",
+      "updated_at": "2026-09-29T14:27:49Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37591",
+      "title": "Credit-Guided Policy Improvement for Test-time Adaptive Vision-Language Navigation",
+      "authors": [
+        "Yang Li",
+        "Sijia Zhang",
+        "Yihan Li",
+        "Aming WU",
+        "Zihao Zhang"
+      ],
+      "abstract": "Test-time adaptation for vision-language navigation (TTA-VLN) enables pretrained policies to adapt online to unseen environments using only test-time observations and interaction history. However, distribution shifts can distort local action preferences and lead to off-course decisions. Existing methods rely on predictive uncertainty, trajectory-level feedback, or accumulated adaptation experience to correct such deviations. These signals, however, do not directly reveal whether an executed action supports instruction-guided progress toward the goal. Moreover, a plausible corrective signal doe",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37591",
+      "published_at": "2026-09-29T13:46:11Z",
+      "updated_at": "2026-09-29T13:46:11Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37554",
+      "title": "Risk-Aware Semantic Grounding for Trustworthy LLM-Based Robot Planning",
+      "authors": [
+        "Łukasz Sobczak",
+        "Nur Keleşoğlu",
+        "Sławomir Piotr Nowak"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly used as high-level planners in robot navigation, but their outputs may become unreliable when instructions are ambiguous, unsupported by the environment, or semantically inconsistent. This paper presents a Risk-Aware Semantic Grounding framework for trustworthy LLM-based robot planning. Unlike existing LLM-based planners that primarily optimize plan generation, we formulate semantic grounding reliability as a multi-dimensional risk estimation problem. The proposed architecture explicitly models grounding uncertainty through ambiguity, hallucination",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37554",
+      "published_at": "2026-09-29T13:30:04Z",
+      "updated_at": "2026-09-29T13:30:04Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37530",
+      "title": "RawVLA: Embodied Neural Image Signal Processor For Robotic Manipulation",
+      "authors": [
+        "Shuhong Liu",
+        "Heng Zhou",
+        "Lingfeng Qian",
+        "Yuhao Fang",
+        "Xianbao Hou"
+      ],
+      "abstract": "Vision-language-action (VLA) models typically operate on RGB images produced by a fixed camera image signal processor (ISP), leaving the imaging pipeline outside the learning and evaluation loop. We systematically examine the consequences of this overlooked design choice across five fundamental ISP dimensions: gain, sensor noise, chromatic response, tonal response, and bit depth. Our analysis reveals that RAW-to-RGB processing materially shapes both action prediction and manipulation success, with different ISP dimensions exerting substantially different effects. Guided by these findings, we i",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2609.37530",
+      "published_at": "2026-09-29T13:16:37Z",
+      "updated_at": "2026-09-29T13:16:37Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37165",
+      "title": "Disentangling Spurious Correlations in Vision-Language-Action Models via Predicting Domain-Invariant Latent Lookahead",
+      "authors": [
+        "Junghyun Kim",
+        "Ngseo Kim",
+        "ChungWoo Lee",
+        "Seoyeon Lee",
+        "Woo-Jeong Baek"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models remain brittle under visual distribution shifts, often relying on spurious correlations tied to domain-specific factors rather than task-relevant structure. We propose Domain-Invariant Latent Lookahead (DILL), a representation-learning framework that mitigates shortcut learning in VLA policies. Our key idea is to supervise policies with domain-invariant future latents learned from domain-transformed trajectory data. A Task-Domain Encoder is trained with contrastive objectives and Gaussian disentanglement regularization to separate task-relevant structure fro",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2609.37165",
+      "published_at": "2026-09-29T09:56:17Z",
+      "updated_at": "2026-09-29T09:56:17Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    },
+    {
+      "id": "2609.37070",
+      "title": "Predictive Safety Curricula for Robust Legged Locomotion",
+      "authors": [
+        "Ivan Ovinnikov",
+        "Pascal Sutter",
+        "Christian Gehring",
+        "Jordis Herrmann"
+      ],
+      "abstract": "Rare but consequential failures can persist in learned locomotion policies for legged robots even when average task performance is high, in part because standard curricula primarily adapt task difficulty rather than the distribution of safety-critical experience. We introduce Predictive Safety Curricula (PSC), a framework for allocating locomotion training experience using learned predictions of future safety cost. PSC trains a distributional safety critic from policy rollouts and uses its predictions to prioritize both terrain contexts and previously encountered randomized events. The resulti",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2609.37070",
+      "published_at": "2026-09-29T09:06:17Z",
+      "updated_at": "2026-09-29T09:06:17Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "first_seen_at": "2026-09-30T08:18:10.189520Z"
+    }
+  ]
+}
