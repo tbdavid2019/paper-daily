@@ -1,7 +1,7 @@
 {
   "date": "2026-10-01",
   "topic": "embodied_ai",
-  "crawled_at": "2026-10-01T08:41:36.814926Z",
+  "crawled_at": "2026-10-01T09:15:50.713911Z",
   "stats": {
     "sources": {
       "huggingface": 100,
@@ -13,11 +13,11 @@
       "alphaxiv": 0
     },
     "total_crawled": 878,
-    "after_dedup": 760,
+    "after_dedup": 757,
     "window_start": "2026-09-27",
-    "window_candidates": 750,
-    "already_seen": 177,
-    "new_candidates": 573,
+    "window_candidates": 748,
+    "already_seen": 174,
+    "new_candidates": 574,
     "selected_papers": 30,
     "missing_published_at": 0,
     "keyword_matched": 94
