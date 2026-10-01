@@ -17,6 +17,7 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlsplit
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -156,6 +157,33 @@ def extract_text(value: Any) -> str:
     return ""
 
 
+def http_error_summary(error: urllib.error.HTTPError, api_key: str) -> str:
+    """Return a short provider error without exposing credentials or payloads."""
+    detail = ""
+    try:
+        response = json.loads(error.read(2048).decode("utf-8", errors="replace"))
+    except (UnicodeDecodeError, json.JSONDecodeError):
+        response = None
+
+    if isinstance(response, dict):
+        provider_error = response.get("error")
+        if isinstance(provider_error, dict):
+            detail = str(provider_error.get("message", ""))
+        elif isinstance(provider_error, str):
+            detail = provider_error
+        if not detail:
+            detail = str(response.get("message") or response.get("detail") or "")
+
+    if api_key:
+        detail = detail.replace(api_key, "[redacted]")
+    detail = " ".join(detail.split())[:300]
+    host = urlsplit(error.url).hostname or "configured endpoint"
+    summary = f"LLM endpoint {host} returned HTTP {error.code} {error.reason}"
+    if detail:
+        summary += f": {detail}"
+    return summary
+
+
 def call_llm(
     base_url: str,
     api_key: str,
@@ -197,7 +225,21 @@ def call_llm(
             if not text:
                 raise RuntimeError("LLM returned no text content")
             return text
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, json.JSONDecodeError, RuntimeError) as exc:
+        except urllib.error.HTTPError as exc:
+            summary = http_error_summary(exc, api_key)
+            if exc.code < 500 and exc.code != 429:
+                guidance = (
+                    "Check the API key status, model access, and provider IP restrictions."
+                    if exc.code in (401, 403)
+                    else "Check the request and model configuration."
+                )
+                raise RuntimeError(
+                    f"{summary}. {guidance}"
+                ) from exc
+            last_error = RuntimeError(summary)
+            if attempt < retries - 1:
+                time.sleep(2**attempt)
+        except (urllib.error.URLError, TimeoutError, json.JSONDecodeError, RuntimeError) as exc:
             last_error = exc
             if attempt < retries - 1:
                 time.sleep(2**attempt)
