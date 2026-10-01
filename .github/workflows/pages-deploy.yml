@@ -9,6 +9,8 @@ on:
       - '_layouts/**'
       - 'assets/**'
       - 'index.md'
+      - 'feed.xml'
+      - '_posts/**'
       - '.github/workflows/pages-deploy.yml'
   workflow_dispatch:
 

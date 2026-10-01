@@ -5,7 +5,8 @@
 
 GitHub Actions 於工作日自動從多個公開來源抓取論文，去重後將本專案第一次發現的相關論文保存為結構化 JSON，再交由 LLM 產生繁體中文研究摘要，最後建置並部署到 GitHub Pages。
 
-Blog：[https://tbdavid2019.github.io/paper-daily/](https://tbdavid2019.github.io/paper-daily/)
+Blog：[https://tbdavid2019.github.io/paper-daily/](https://tbdavid2019.github.io/paper-daily/)  
+RSS 訂閱：[https://tbdavid2019.github.io/paper-daily/feed.xml](https://tbdavid2019.github.io/paper-daily/feed.xml)
 
 > 🙏 **致謝**：感謝 [voidful](https://github.com/voidful) 建立本專案的原始版本，完成多來源論文聚合、去重、排序與 GitHub Actions 每日自動化的核心架構。現在的可配置主題與 first-seen 增量流程，都是建立在這個扎實基礎之上。
 
@@ -24,6 +25,7 @@ Blog：[https://tbdavid2019.github.io/paper-daily/](https://tbdavid2019.github.i
 - 📊 **預排序優先級** — 基於關鍵字命中、多來源交叉、社群熱度、追蹤作者
 - 📝 **LLM 研究摘要** — 取每日優先度最高的論文，產生有來源連結的繁體中文報告
 - 🌐 **GitHub Pages Blog** — Jekyll 建置，支援首頁文章索引與每日文章頁
+- 📡 **RSS 訂閱支援** — 支援標準 RSS 2.0 Feed (`/feed.xml`) 與瀏覽器專屬導覽樣式，方便 Feedly、Inoreader、NetNewsWire、Reeder 讀者直接訂閱
 - 🔐 **安全的 Actions Secret** — LLM API key 只透過 GitHub Secret 注入 workflow
 - 🤖 **Agent-Ready** — 提供標準 JSON 與可安裝的 `SKILL.md`
 
@@ -40,7 +42,10 @@ paper-daily/
 ├── _config.yml              ← Jekyll 與 Blog 設定
 ├── _layouts/                ← Blog layout
 ├── _posts/                  ← LLM 產生的每日文章
-├── assets/css/style.css     ← Blog 樣式
+├── assets/
+│   ├── css/style.css        ← Blog 樣式
+│   └── feed.xsl             ← 瀏覽器友善的 RSS 樣式表
+├── feed.xml                 ← RSS 2.0 訂閱 Feed
 ├── index.md                 ← Blog 首頁
 ├── scripts/
 │   ├── crawl.py              ← 爬蟲主程式

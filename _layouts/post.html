@@ -9,4 +9,22 @@ layout: default
   <div class="post-body">
     {{ content }}
   </div>
+  <footer class="post-footer">
+    <div class="post-subscribe-card">
+      <div class="post-subscribe-text">
+        <h3>訂閱 888每日論文雷達</h3>
+        <p>工作日每日定時自動追蹤、精選與總結具身智能領域論文，透過 RSS 即時接收更新。</p>
+      </div>
+      <div class="post-subscribe-actions">
+        <a class="btn-primary" href="{{ '/feed.xml' | relative_url }}">
+          <svg class="rss-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M4 11a9 9 0 0 1 9 9" />
+            <path d="M4 4a16 16 0 0 1 16 16" />
+            <circle cx="5" cy="19" r="1" fill="currentColor" />
+          </svg>
+          <span>訂閱 RSS</span>
+        </a>
+      </div>
+    </div>
+  </footer>
 </article>

@@ -6,6 +6,7 @@
     <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ site.description }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | absolute_url }}">
   </head>
   <body>
     <header class="site-header">
@@ -14,7 +15,17 @@
           <span class="brand-mark">PD</span>
           <span>{{ site.title }}</span>
         </a>
-        <a class="nav-link" href="{{ '/' | relative_url }}">文章總覽</a>
+        <nav class="nav-group" aria-label="主要導覽">
+          <a class="nav-link" href="{{ '/' | relative_url }}">文章總覽</a>
+          <a class="nav-link nav-rss" href="{{ '/feed.xml' | relative_url }}" title="訂閱 RSS Feed" aria-label="訂閱 RSS Feed">
+            <svg class="rss-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+              <circle cx="5" cy="19" r="1" fill="currentColor" />
+            </svg>
+            <span>RSS 訂閱</span>
+          </a>
+        </nav>
       </div>
     </header>
 
@@ -26,7 +37,17 @@
       <div class="shell footer-row">
         <span>888每日論文雷達 -- Embodied AI</span>
         <a class="footer-credit" href="https://david888.com">https://david888.com 技術提供</a>
-        <a href="https://github.com/{{ site.repository }}">GitHub repository</a>
+        <div class="footer-links">
+          <a class="footer-rss-link" href="{{ '/feed.xml' | relative_url }}">
+            <svg class="rss-icon" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 11a9 9 0 0 1 9 9" />
+              <path d="M4 4a16 16 0 0 1 16 16" />
+              <circle cx="5" cy="19" r="1" fill="currentColor" />
+            </svg>
+            <span>RSS Feed</span>
+          </a>
+          <a href="https://github.com/{{ site.repository }}">GitHub repository</a>
+        </div>
       </div>
     </footer>
   </body>

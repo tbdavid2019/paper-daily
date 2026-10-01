@@ -3,6 +3,8 @@ description: 由每日研究資料與 LLM 生成的繁體中文研究摘要。
 lang: zh-Hant
 timezone: Asia/Taipei
 markdown: kramdown
+url: "https://tbdavid2019.github.io"
+baseurl: "/paper-daily"
 permalink: /posts/:year/:month/:day/:title/
 show_excerpts: true
 repository: tbdavid2019/paper-daily
