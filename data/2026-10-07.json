@@ -1,7 +1,7 @@
 {
   "date": "2026-10-07",
   "topic": "embodied_ai",
-  "crawled_at": "2026-10-07T10:04:21.725983Z",
+  "crawled_at": "2026-10-07T10:06:27.910594Z",
   "stats": {
     "sources": {
       "huggingface": 100,
@@ -49,44 +49,12 @@
         "relevance_prob": 0.95,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 1.06,
+        "novelty_score": 1.05,
         "recommendation": "highly_relevant",
-        "latency_ms": 121.5,
+        "latency_ms": 168.8,
         "model": "jev-1.13.0"
       },
-      "decision_score": 73.9,
-      "first_seen_at": "2026-10-07T08:30:07.274369Z"
-    },
-    {
-      "id": "2610.07525",
-      "title": "ReDex: Repairing Sim-to-Real Dexterous Policies by Finger-Level Compliant Interaction",
-      "authors": [
-        "Jinzhou Li",
-        "Hadi Tabatabaee",
-        "Kelin Yu",
-        "Yuyin Sun",
-        "Cheng-Hao Kuo"
-      ],
-      "abstract": "Dexterous manipulation policies trained in simulation often fail to transfer to the real world because of errors in contact timing and force regulation. Yet these policies can retain useful multi-finger coordination for task progression. We propose ReDex, a framework for adapting a simulation-trained base policy to the real world by correcting local contact failures and incorporating tactile feedback. Starting from a proprioception-only base policy, ReDex allows a human operator to physically correct contact failures at selected fingers under compliant control during real-world rollouts, while",
-      "sources": [
-        "arxiv_cs.RO"
-      ],
-      "url": "https://arxiv.org/abs/2610.07525",
-      "published_at": "2026-10-05T23:47:05Z",
-      "updated_at": "2026-10-05T23:47:05Z",
-      "keyword_hits": 5,
-      "priority": 50.0,
-      "decision": {
-        "provider": "jev",
-        "relevance_prob": 0.98,
-        "primary_category": "simulation_sim2real",
-        "category_confidence": 0.7,
-        "novelty_score": 0.94,
-        "recommendation": "highly_relevant",
-        "latency_ms": 405.4,
-        "model": "jev-1.13.0"
-      },
-      "decision_score": 73.30000000000001,
+      "decision_score": 73.75,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -114,12 +82,44 @@
         "relevance_prob": 0.97,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 0.96,
+        "novelty_score": 0.98,
         "recommendation": "highly_relevant",
-        "latency_ms": 103.4,
+        "latency_ms": 152.6,
         "model": "jev-1.13.0"
       },
-      "decision_score": 73.19999999999999,
+      "decision_score": 73.5,
+      "first_seen_at": "2026-10-07T08:30:07.274369Z"
+    },
+    {
+      "id": "2610.07525",
+      "title": "ReDex: Repairing Sim-to-Real Dexterous Policies by Finger-Level Compliant Interaction",
+      "authors": [
+        "Jinzhou Li",
+        "Hadi Tabatabaee",
+        "Kelin Yu",
+        "Yuyin Sun",
+        "Cheng-Hao Kuo"
+      ],
+      "abstract": "Dexterous manipulation policies trained in simulation often fail to transfer to the real world because of errors in contact timing and force regulation. Yet these policies can retain useful multi-finger coordination for task progression. We propose ReDex, a framework for adapting a simulation-trained base policy to the real world by correcting local contact failures and incorporating tactile feedback. Starting from a proprioception-only base policy, ReDex allows a human operator to physically correct contact failures at selected fingers under compliant control during real-world rollouts, while",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.07525",
+      "published_at": "2026-10-05T23:47:05Z",
+      "updated_at": "2026-10-05T23:47:05Z",
+      "keyword_hits": 5,
+      "priority": 50.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.71,
+        "novelty_score": 0.95,
+        "recommendation": "highly_relevant",
+        "latency_ms": 237.2,
+        "model": "jev-1.13.0"
+      },
+      "decision_score": 73.45,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -146,12 +146,12 @@
         "relevance_prob": 0.97,
         "primary_category": "robot_manipulation",
         "category_confidence": 0.96,
-        "novelty_score": 0.95,
+        "novelty_score": 0.97,
         "recommendation": "highly_relevant",
-        "latency_ms": 432.4,
+        "latency_ms": 235.3,
         "model": "jev-1.13.0"
       },
-      "decision_score": 73.05,
+      "decision_score": 73.35,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -178,46 +178,13 @@
         "provider": "jev",
         "relevance_prob": 0.97,
         "primary_category": "simulation_sim2real",
-        "category_confidence": 0.73,
-        "novelty_score": 0.94,
+        "category_confidence": 0.7,
+        "novelty_score": 0.92,
         "recommendation": "highly_relevant",
-        "latency_ms": 112.4,
+        "latency_ms": 197.2,
         "model": "jev-1.13.0"
       },
-      "decision_score": 72.9,
-      "first_seen_at": "2026-10-07T08:30:07.274369Z"
-    },
-    {
-      "id": "2610.07511",
-      "title": "MobileVISTA: Generative Data Augmentation for Pose Generalization in Mobile Manipulation",
-      "authors": [
-        "Suzannah Wistreich",
-        "Stephen Tian",
-        "Isabella Huang",
-        "Vitor Campagnolo Guizilini",
-        "Sergey Zakharov"
-      ],
-      "abstract": "Mobile manipulators such as humanoid robots are increasingly deployed in dynamic, unstructured environments to perform dexterous manipulation tasks. However, end-to-end manipulation policies trained to imitate demonstration data collected from a single robot pose are brittle: even centimeter-scale deviations in robot pose at deployment can drive ego-centric observations and end-effector trajectories out of the training distribution, leading to sharp drops in performance. We introduce MobileVISTA, a data generation framework that transforms demonstrations captured at canonical poses into divers",
-      "sources": [
-        "arxiv_cs.RO",
-        "arxiv_cs.CV"
-      ],
-      "url": "https://arxiv.org/abs/2610.07511",
-      "published_at": "2026-10-05T23:24:26Z",
-      "updated_at": "2026-10-05T23:24:26Z",
-      "keyword_hits": 3,
-      "priority": 45.0,
-      "decision": {
-        "provider": "jev",
-        "relevance_prob": 0.98,
-        "primary_category": "robot_manipulation",
-        "category_confidence": 0.98,
-        "novelty_score": 0.9,
-        "recommendation": "highly_relevant",
-        "latency_ms": 178.5,
-        "model": "jev-1.13.0"
-      },
-      "decision_score": 72.7,
+      "decision_score": 72.6,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -245,12 +212,12 @@
         "relevance_prob": 0.96,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 0.95,
+        "novelty_score": 0.94,
         "recommendation": "highly_relevant",
-        "latency_ms": 99.1,
+        "latency_ms": 168.9,
         "model": "jev-1.13.0"
       },
-      "decision_score": 72.65,
+      "decision_score": 72.5,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -275,12 +242,12 @@
         "relevance_prob": 0.96,
         "primary_category": "robot_manipulation",
         "category_confidence": 1.0,
-        "novelty_score": 0.95,
+        "novelty_score": 0.94,
         "recommendation": "highly_relevant",
-        "latency_ms": 138.8,
+        "latency_ms": 186.7,
         "model": "jev-1.13.0"
       },
-      "decision_score": 72.65,
+      "decision_score": 72.5,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -308,12 +275,45 @@
         "relevance_prob": 0.97,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 0.91,
+        "novelty_score": 0.9,
         "recommendation": "highly_relevant",
-        "latency_ms": 115.1,
+        "latency_ms": 213.2,
         "model": "jev-1.13.0"
       },
-      "decision_score": 72.44999999999999,
+      "decision_score": 72.3,
+      "first_seen_at": "2026-10-07T08:30:07.274369Z"
+    },
+    {
+      "id": "2610.07511",
+      "title": "MobileVISTA: Generative Data Augmentation for Pose Generalization in Mobile Manipulation",
+      "authors": [
+        "Suzannah Wistreich",
+        "Stephen Tian",
+        "Isabella Huang",
+        "Vitor Campagnolo Guizilini",
+        "Sergey Zakharov"
+      ],
+      "abstract": "Mobile manipulators such as humanoid robots are increasingly deployed in dynamic, unstructured environments to perform dexterous manipulation tasks. However, end-to-end manipulation policies trained to imitate demonstration data collected from a single robot pose are brittle: even centimeter-scale deviations in robot pose at deployment can drive ego-centric observations and end-effector trajectories out of the training distribution, leading to sharp drops in performance. We introduce MobileVISTA, a data generation framework that transforms demonstrations captured at canonical poses into divers",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.07511",
+      "published_at": "2026-10-05T23:24:26Z",
+      "updated_at": "2026-10-05T23:24:26Z",
+      "keyword_hits": 3,
+      "priority": 45.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.96,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 182.4,
+        "model": "jev-1.13.0"
+      },
+      "decision_score": 72.15,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -339,10 +339,10 @@
         "provider": "jev",
         "relevance_prob": 0.98,
         "primary_category": "robot_manipulation",
-        "category_confidence": 0.8,
+        "category_confidence": 0.77,
         "novelty_score": 0.83,
         "recommendation": "highly_relevant",
-        "latency_ms": 136.2,
+        "latency_ms": 198.3,
         "model": "jev-1.13.0"
       },
       "decision_score": 71.65,
@@ -372,12 +372,12 @@
         "relevance_prob": 0.97,
         "primary_category": "locomotion_humanoid",
         "category_confidence": 0.61,
-        "novelty_score": 0.85,
+        "novelty_score": 0.83,
         "recommendation": "highly_relevant",
-        "latency_ms": 111.2,
+        "latency_ms": 156.2,
         "model": "jev-1.13.0"
       },
-      "decision_score": 71.55,
+      "decision_score": 71.25,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -405,12 +405,44 @@
         "relevance_prob": 0.97,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 0.84,
+        "novelty_score": 0.83,
         "recommendation": "highly_relevant",
-        "latency_ms": 102.4,
+        "latency_ms": 167.3,
         "model": "jev-1.13.0"
       },
-      "decision_score": 71.4,
+      "decision_score": 71.25,
+      "first_seen_at": "2026-10-07T08:30:07.274369Z"
+    },
+    {
+      "id": "2610.08541",
+      "title": "Micro Neural Policies for Safe Real-Time Robotic Control",
+      "authors": [
+        "Hongpeng Cao",
+        "Riccardo Curcio",
+        "Daniele Ottaviano",
+        "Marco Caccamo"
+      ],
+      "abstract": "In this paper, we investigate the synthesis of Micro Neural Policies (MNP) to enable safe and robust real-time robotic control on computationally constrained embedded devices. We demonstrate that integrating Evolution Strategy (ES) and Statistical Model Checking (SMC)-based verification for policy search can drastically reduce neural network size without compromising safety and robustness. We conduct a large-scale training and evaluation of MNP on Cartpole and Quadrotor control tasks, varying control frequencies and network architectures. After validating these policies in simulation, we evalu",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.08541",
+      "published_at": "2026-10-06T15:29:28Z",
+      "updated_at": "2026-10-06T15:29:28Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.95,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.46,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 150.0,
+        "model": "jev-1.13.0"
+      },
+      "decision_score": 71.2,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -440,7 +472,7 @@
         "category_confidence": 1.0,
         "novelty_score": 0.82,
         "recommendation": "highly_relevant",
-        "latency_ms": 102.2,
+        "latency_ms": 165.0,
         "model": "jev-1.13.0"
       },
       "decision_score": 71.1,
@@ -472,75 +504,44 @@
         "category_confidence": 1.0,
         "novelty_score": 0.82,
         "recommendation": "highly_relevant",
-        "latency_ms": 103.9,
+        "latency_ms": 163.7,
         "model": "jev-1.13.0"
       },
       "decision_score": 71.1,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
-      "id": "2610.08541",
-      "title": "Micro Neural Policies for Safe Real-Time Robotic Control",
+      "id": "2610.08133",
+      "title": "VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models",
       "authors": [
-        "Hongpeng Cao",
-        "Riccardo Curcio",
-        "Daniele Ottaviano",
-        "Marco Caccamo"
+        "Owen Du",
+        "Yang Yue",
+        "Jie Zhang",
+        "Jiaqi Pi",
+        "Chi Bene Chen"
       ],
-      "abstract": "In this paper, we investigate the synthesis of Micro Neural Policies (MNP) to enable safe and robust real-time robotic control on computationally constrained embedded devices. We demonstrate that integrating Evolution Strategy (ES) and Statistical Model Checking (SMC)-based verification for policy search can drastically reduce neural network size without compromising safety and robustness. We conduct a large-scale training and evaluation of MNP on Cartpole and Quadrotor control tasks, varying control frequencies and network architectures. After validating these policies in simulation, we evalu",
+      "abstract": "Vision-Language-Action (VLA) models achieve strong robotic manipulation performance but incur high computational costs from processing long token sequences at every control step, limiting real-time deployment. Visual token pruning offers a direct solution, as visual patches dominate the input sequence and contain considerable redundancy. Existing approaches, however, either rely on indirect training-free heuristics, such as attention scores and motion thresholds, or require costly fine-tuning of the base VLA model. We introduce VLA-ACL (Action Consistency Learning), which learns a lightweight ",
       "sources": [
         "arxiv_cs.RO",
-        "arxiv_cs.AI"
+        "arxiv_cs.CV",
+        "arxiv_keyword"
       ],
-      "url": "https://arxiv.org/abs/2610.08541",
-      "published_at": "2026-10-06T15:29:28Z",
-      "updated_at": "2026-10-06T15:29:28Z",
-      "keyword_hits": 1,
-      "priority": 25.0,
+      "url": "https://arxiv.org/abs/2610.08133",
+      "published_at": "2026-10-06T10:47:43Z",
+      "updated_at": "2026-10-06T10:47:43Z",
+      "keyword_hits": 2,
+      "priority": 50.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.95,
-        "primary_category": "simulation_sim2real",
-        "category_confidence": 0.49,
-        "novelty_score": 0.87,
+        "relevance_prob": 0.97,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 1.0,
+        "novelty_score": 0.81,
         "recommendation": "highly_relevant",
-        "latency_ms": 139.7,
+        "latency_ms": 214.5,
         "model": "jev-1.13.0"
       },
-      "decision_score": 71.05,
-      "first_seen_at": "2026-10-07T08:30:07.274369Z"
-    },
-    {
-      "id": "2610.07117",
-      "title": "R2RI: A Multi-View Event and RGB Dataset for Robot-to-Robot Interaction",
-      "authors": [
-        "Gabriele Magrini",
-        "Riccardo Catalini",
-        "Federico Becattini",
-        "Guido Borghi",
-        "Pietro Pala"
-      ],
-      "abstract": "Understanding and modeling interactions between autonomous agents is a fundamental challenge in robotics, with broad implications for collaborative systems, social robotics, and human-robot coexistence. Although the study of robot interactions has emerged as a compelling research direction, progress has been severely hampered by the absence of large-scale benchmarks. In this paper, we introduce Robot-to-Robot Interaction (R2RI), the first dataset specifically designed to address the Robot-Robot Interaction (RRI) task. R2RI consists of different humanoid robots and realistic interactions modele",
-      "sources": [
-        "arxiv_cs.RO",
-        "arxiv_cs.CV"
-      ],
-      "url": "https://arxiv.org/abs/2610.07117",
-      "published_at": "2026-10-05T17:02:13Z",
-      "updated_at": "2026-10-05T17:02:13Z",
-      "keyword_hits": 1,
-      "priority": 25.0,
-      "decision": {
-        "provider": "jev",
-        "relevance_prob": 0.93,
-        "primary_category": "robot_manipulation",
-        "category_confidence": 0.58,
-        "novelty_score": 0.9,
-        "recommendation": "highly_relevant",
-        "latency_ms": 109.7,
-        "model": "jev-1.13.0"
-      },
-      "decision_score": 70.7,
+      "decision_score": 70.94999999999999,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -570,44 +571,43 @@
         "category_confidence": 1.0,
         "novelty_score": 0.79,
         "recommendation": "highly_relevant",
-        "latency_ms": 405.1,
+        "latency_ms": 223.4,
         "model": "jev-1.13.0"
       },
       "decision_score": 70.65,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
-      "id": "2610.08133",
-      "title": "VLA-ACL: Action-Consistent Visual Token Pruning for Efficient Vision-Language-Action Models",
+      "id": "2610.07117",
+      "title": "R2RI: A Multi-View Event and RGB Dataset for Robot-to-Robot Interaction",
       "authors": [
-        "Owen Du",
-        "Yang Yue",
-        "Jie Zhang",
-        "Jiaqi Pi",
-        "Chi Bene Chen"
+        "Gabriele Magrini",
+        "Riccardo Catalini",
+        "Federico Becattini",
+        "Guido Borghi",
+        "Pietro Pala"
       ],
-      "abstract": "Vision-Language-Action (VLA) models achieve strong robotic manipulation performance but incur high computational costs from processing long token sequences at every control step, limiting real-time deployment. Visual token pruning offers a direct solution, as visual patches dominate the input sequence and contain considerable redundancy. Existing approaches, however, either rely on indirect training-free heuristics, such as attention scores and motion thresholds, or require costly fine-tuning of the base VLA model. We introduce VLA-ACL (Action Consistency Learning), which learns a lightweight ",
+      "abstract": "Understanding and modeling interactions between autonomous agents is a fundamental challenge in robotics, with broad implications for collaborative systems, social robotics, and human-robot coexistence. Although the study of robot interactions has emerged as a compelling research direction, progress has been severely hampered by the absence of large-scale benchmarks. In this paper, we introduce Robot-to-Robot Interaction (R2RI), the first dataset specifically designed to address the Robot-Robot Interaction (RRI) task. R2RI consists of different humanoid robots and realistic interactions modele",
       "sources": [
         "arxiv_cs.RO",
-        "arxiv_cs.CV",
-        "arxiv_keyword"
+        "arxiv_cs.CV"
       ],
-      "url": "https://arxiv.org/abs/2610.08133",
-      "published_at": "2026-10-06T10:47:43Z",
-      "updated_at": "2026-10-06T10:47:43Z",
-      "keyword_hits": 2,
-      "priority": 50.0,
+      "url": "https://arxiv.org/abs/2610.07117",
+      "published_at": "2026-10-05T17:02:13Z",
+      "updated_at": "2026-10-05T17:02:13Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.97,
-        "primary_category": "vla_foundation_model",
-        "category_confidence": 1.0,
-        "novelty_score": 0.79,
+        "relevance_prob": 0.93,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.57,
+        "novelty_score": 0.89,
         "recommendation": "highly_relevant",
-        "latency_ms": 416.2,
+        "latency_ms": 199.8,
         "model": "jev-1.13.0"
       },
-      "decision_score": 70.65,
+      "decision_score": 70.55000000000001,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -632,12 +632,12 @@
         "relevance_prob": 0.96,
         "primary_category": "vla_foundation_model",
         "category_confidence": 0.94,
-        "novelty_score": 0.79,
+        "novelty_score": 0.8,
         "recommendation": "highly_relevant",
-        "latency_ms": 100.8,
+        "latency_ms": 173.7,
         "model": "jev-1.13.0"
       },
-      "decision_score": 70.25,
+      "decision_score": 70.4,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -663,15 +663,15 @@
       "priority": 40.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.84,
+        "relevance_prob": 0.85,
         "primary_category": "vla_foundation_model",
-        "category_confidence": 0.99,
-        "novelty_score": 1.08,
+        "category_confidence": 0.98,
+        "novelty_score": 1.09,
         "recommendation": "highly_relevant",
-        "latency_ms": 118.0,
+        "latency_ms": 211.7,
         "model": "jev-1.13.0"
       },
-      "decision_score": 69.80000000000001,
+      "decision_score": 70.35,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -699,12 +699,12 @@
         "relevance_prob": 0.96,
         "primary_category": "vla_foundation_model",
         "category_confidence": 1.0,
-        "novelty_score": 0.76,
+        "novelty_score": 0.77,
         "recommendation": "highly_relevant",
-        "latency_ms": 110.4,
+        "latency_ms": 168.2,
         "model": "jev-1.13.0"
       },
-      "decision_score": 69.8,
+      "decision_score": 69.95,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -726,15 +726,15 @@
       "priority": 25.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.95,
+        "relevance_prob": 0.96,
         "primary_category": "vla_foundation_model",
-        "category_confidence": 0.82,
-        "novelty_score": 0.64,
+        "category_confidence": 0.76,
+        "novelty_score": 0.62,
         "recommendation": "highly_relevant",
-        "latency_ms": 155.6,
+        "latency_ms": 167.9,
         "model": "jev-1.13.0"
       },
-      "decision_score": 67.6,
+      "decision_score": 67.7,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -758,15 +758,15 @@
       "priority": 25.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.86,
+        "relevance_prob": 0.87,
         "primary_category": "autonomous_driving_navigation",
-        "category_confidence": 0.84,
-        "novelty_score": 0.48,
+        "category_confidence": 0.86,
+        "novelty_score": 0.46,
         "recommendation": "highly_relevant",
-        "latency_ms": 109.2,
+        "latency_ms": 172.9,
         "model": "jev-1.13.0"
       },
-      "decision_score": 61.599999999999994,
+      "decision_score": 61.699999999999996,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -790,13 +790,13 @@
         "provider": "jev",
         "relevance_prob": 0.77,
         "primary_category": "vla_foundation_model",
-        "category_confidence": 0.32,
-        "novelty_score": 0.64,
+        "category_confidence": 0.26,
+        "novelty_score": 0.63,
         "recommendation": "highly_relevant",
-        "latency_ms": 111.6,
+        "latency_ms": 296.9,
         "model": "jev-1.13.0"
       },
-      "decision_score": 60.4,
+      "decision_score": 60.25,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -824,12 +824,12 @@
         "relevance_prob": 0.68,
         "primary_category": "vla_foundation_model",
         "category_confidence": 0.95,
-        "novelty_score": 0.6,
+        "novelty_score": 0.63,
         "recommendation": "highly_relevant",
-        "latency_ms": 120.3,
+        "latency_ms": 184.4,
         "model": "jev-1.13.0"
       },
-      "decision_score": 56.2,
+      "decision_score": 56.650000000000006,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -856,10 +856,10 @@
         "provider": "jev",
         "relevance_prob": 0.49,
         "primary_category": "vla_foundation_model",
-        "category_confidence": 0.44,
+        "category_confidence": 0.45,
         "novelty_score": 0.93,
         "recommendation": "highly_relevant",
-        "latency_ms": 105.0,
+        "latency_ms": 177.1,
         "model": "jev-1.13.0"
       },
       "decision_score": 53.550000000000004,
@@ -887,15 +887,15 @@
       "priority": 25.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.23,
+        "relevance_prob": 0.28,
         "primary_category": "vla_foundation_model",
-        "category_confidence": 0.71,
-        "novelty_score": 0.91,
+        "category_confidence": 0.7,
+        "novelty_score": 0.9,
         "recommendation": "highly_relevant",
-        "latency_ms": 110.4,
+        "latency_ms": 191.0,
         "model": "jev-1.13.0"
       },
-      "decision_score": 42.85,
+      "decision_score": 44.7,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -922,10 +922,10 @@
         "provider": "jev",
         "relevance_prob": 0.15,
         "primary_category": "non_embodied",
-        "category_confidence": 0.94,
-        "novelty_score": 0.86,
+        "category_confidence": 0.92,
+        "novelty_score": 0.9,
         "recommendation": "highly_relevant",
-        "latency_ms": 107.7,
+        "latency_ms": 176.1,
         "model": "jev-1.13.0"
       },
       "decision_score": 0.6000000000000001,
@@ -953,15 +953,15 @@
       "priority": 25.0,
       "decision": {
         "provider": "jev",
-        "relevance_prob": 0.11,
+        "relevance_prob": 0.1,
         "primary_category": "non_embodied",
-        "category_confidence": 0.87,
-        "novelty_score": 0.65,
+        "category_confidence": 0.89,
+        "novelty_score": 0.67,
         "recommendation": "interesting",
-        "latency_ms": 102.3,
+        "latency_ms": 185.9,
         "model": "jev-1.13.0"
       },
-      "decision_score": 0.44000000000000006,
+      "decision_score": 0.4,
       "first_seen_at": "2026-10-07T08:30:07.274369Z"
     },
     {
@@ -991,7 +991,7 @@
         "category_confidence": 0.78,
         "novelty_score": 1.09,
         "recommendation": "skip",
-        "latency_ms": 124.5,
+        "latency_ms": 165.1,
         "model": "jev-1.13.0"
       },
       "decision_score": 0.2,
