@@ -45,6 +45,8 @@ jobs:
         env:
           SCOUT_DATE: ${{ inputs.date || '' }}
           PAPER_TOPIC: ${{ inputs.topic || 'embodied_ai' }}
+          JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
+          CLEF_BASE_URL: ${{ vars.CLEF_BASE_URL || 'https://clef.aiurl.tw/v1/systemone' }}
 
       - name: Commit and push data
         run: |

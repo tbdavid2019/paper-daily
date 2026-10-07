@@ -23,10 +23,11 @@ RSS 訂閱：[https://tbdavid2019.github.io/paper-daily/feed.xml](https://tbdavi
 - 🧭 **可切換主題** — 預設 `embodied_ai`，亦可選擇 `general_ai` 或自訂 profile
 - 🎛️ **研究者可配置** — 分類、關鍵字、作者、收錄門檻與篇數上限都由 JSON 控制
 - 📊 **預排序優先級** — 基於關鍵字命中、多來源交叉、社群熱度、追蹤作者
+- 🧠 **雙軌決策模型篩選 (System 1)** — 支援 TypeSafe AI Jev 主力極速評分，自 Host Clef-Flash 無縫 Fallback 備援，杜絕假陽性並進行語意重排序
 - 📝 **LLM 研究摘要** — 取每日優先度最高的論文，產生有來源連結的繁體中文報告
 - 🌐 **GitHub Pages Blog** — Jekyll 建置，支援首頁文章索引與每日文章頁
 - 📡 **RSS 訂閱支援** — 支援標準 RSS 2.0 Feed (`/feed.xml`) 與瀏覽器專屬導覽樣式，方便 Feedly、Inoreader、NetNewsWire、Reeder 讀者直接訂閱
-- 🔐 **安全的 Actions Secret** — LLM API key 只透過 GitHub Secret 注入 workflow
+- 🔐 **安全的 Actions Secret** — LLM API key 與 JEV API key 只透過 GitHub Secret 注入 workflow
 - 🤖 **Agent-Ready** — 提供標準 JSON 與可安裝的 `SKILL.md`
 
 ---
@@ -49,6 +50,7 @@ paper-daily/
 ├── index.md                 ← Blog 首頁
 ├── scripts/
 │   ├── crawl.py              ← 爬蟲主程式
+│   ├── decision.py           ← Jev 主力 + Clef 備援決策模型篩選器
 │   └── generate_blog.py      ← LLM 摘要與 Markdown 產生器
 ├── config/
 │   ├── README.md             ← 完整設定與 demo 使用說明

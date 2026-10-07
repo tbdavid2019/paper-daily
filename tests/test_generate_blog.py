@@ -13,6 +13,25 @@ class GenerateBlogTest(unittest.TestCase):
         selected = generate_blog.select_papers(papers, 2)
         self.assertEqual([paper["id"] for paper in selected], ["high", "middle"])
 
+    def test_select_papers_prioritizes_decision_score(self):
+        papers = [
+            {"id": "high_prio_no_dec", "priority": 99, "decision_score": 0.0},
+            {"id": "lower_prio_high_dec", "priority": 10, "decision_score": 85.5},
+        ]
+        selected = generate_blog.select_papers(papers, 2)
+        self.assertEqual([paper["id"] for paper in selected], ["lower_prio_high_dec", "high_prio_no_dec"])
+
+    def test_compact_paper_includes_decision_metadata(self):
+        paper = {
+            "id": "2609.12345",
+            "title": "Robot Policy",
+            "decision": {"relevance_prob": 0.95, "primary_category": "robot_manipulation"},
+            "decision_score": 88.0,
+        }
+        compact = generate_blog.compact_paper(paper)
+        self.assertIn("decision", compact)
+        self.assertEqual(compact["decision_score"], 88.0)
+
     def test_extracts_openai_message_content(self):
         response = {
             "choices": [{"message": {"content": "## 今日概況\nOK"}}]

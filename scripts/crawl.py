@@ -23,6 +23,11 @@ import xml.etree.ElementTree as ET
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
+try:
+    from scripts import decision
+except ImportError:
+    import decision
+
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
@@ -522,6 +527,20 @@ def main():
         if p["keyword_hits"] >= min_keyword_hits
         or (include_tracked and p.get("tracked_author"))
     ]
+
+    # 決策模型評估與重排序（Jev 主力 + Clef 備援）
+    decision_client = decision.DecisionClient()
+    decision_evaluated = 0
+    if decision_client.is_available and os.environ.get("DECISION_ENABLED", "1") not in ("0", "false", "no"):
+        max_papers = max(0, int(SELECTION.get("max_papers", 0)))
+        eval_limit = max_papers if max_papers else 30
+        candidates_to_eval = final[:eval_limit]
+        if candidates_to_eval:
+            print(f"\n🧠 啟動決策模型評估 (Jev 主力 + Clef 備援，評估前 {len(candidates_to_eval)} 篇)...")
+            evaluated = decision.evaluate_papers(candidates_to_eval, topic_name=TOPIC_NAME, client=decision_client)
+            final = decision.rerank_papers(evaluated) + final[eval_limit:]
+            decision_evaluated = sum(1 for p in evaluated if "decision" in p)
+
     max_papers = max(0, int(SELECTION.get("max_papers", 0)))
     if max_papers:
         final = final[:max_papers]
@@ -546,6 +565,7 @@ def main():
             "already_seen": len(window) - len(newly_seen),
             "new_candidates": len(newly_seen),
             "selected_papers": len(final),
+            "decision_evaluated": decision_evaluated,
             "missing_published_at": missing_published_at,
             "keyword_matched": len(relevant),
         },
@@ -569,8 +589,17 @@ def main():
     print(f"   New candidates: {len(newly_seen)}; already seen: {len(window) - len(newly_seen)}")
     print(f"   Keyword matched: {len(relevant)}")
     print(f"   Top 5:")
-    for p in final[:5]:
-        print(f"   {p['priority']:5.0f} | {p['keyword_hits']}kw | {p['title'][:65]}")
+    if decision_evaluated > 0:
+        print(f"   🧠 決策模型已完成評估: {decision_evaluated} 篇")
+        for p in final[:5]:
+            dec = p.get("decision", {})
+            cat = dec.get("primary_category", "")
+            rec = dec.get("recommendation", "")
+            score = p.get("decision_score", 0.0)
+            print(f"   score:{score:4.1f} | {rec:15} | {cat:22} | {p['title'][:50]}")
+    else:
+        for p in final[:5]:
+            print(f"   {p['priority']:5.0f} | {p['keyword_hits']}kw | {p['title'][:65]}")
 
     if len(final) == 0:
         print("\nℹ️  No new topic-matching papers were discovered in this run.")
