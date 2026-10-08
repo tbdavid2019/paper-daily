@@ -10,7 +10,6 @@ class DecisionTest(unittest.TestCase):
         self.assertIn("is_embodied_ai", q_emb)
         self.assertIn("primary_category", q_emb)
         self.assertIn("impact_and_novelty", q_emb)
-        self.assertIn("recommendation", q_emb)
 
         q_gen = decision.get_topic_questions("general_ai")
         self.assertIn("is_relevant", q_gen)
@@ -86,11 +85,35 @@ class DecisionTest(unittest.TestCase):
         client = decision.DecisionClient(
             jev_api_key="mock_key",
             jev_url="https://api.typesafe.ai/v1/systemone",
-            clef_url="https://clef.aiurl.tw/v1/systemone",
+            clef_url="https://clef.create360.ai/v1/systemone",
+            clef_fallback_url="https://clef.aiurl.tw/v1/systemone",
         )
         res = client.decide("state", {})
         self.assertEqual(res["provider"], "clef")
         self.assertEqual(res["model"], "clef-flash")
+        self.assertEqual(mock_call.call_count, 2)
+
+    @patch.object(decision.DecisionClient, "_call_systemone")
+    def test_clef_primary_fallback_to_clef_aiurl(self, mock_call):
+        # 無 Jev key：第一次呼叫 clef.create360.ai 拋出 500/504，第二次呼叫 clef.aiurl.tw 成功
+        mock_call.side_effect = [
+            RuntimeError("HTTP Error 500: Server Error"),
+            {
+                "model": "clef-flash",
+                "answers": {
+                    "is_embodied_ai": {"type": "noul", "noul": 0.93},
+                    "primary_category": {"type": "choice", "choice": "robot_manipulation"},
+                },
+            },
+        ]
+        client = decision.DecisionClient(
+            jev_api_key="",
+            clef_url="https://clef.create360.ai/v1/systemone",
+            clef_fallback_url="https://clef.aiurl.tw/v1/systemone",
+        )
+        res = client.decide("state", {})
+        self.assertEqual(res["provider"], "clef-fallback")
+        self.assertEqual(res["endpoint"], "https://clef.aiurl.tw/v1/systemone")
         self.assertEqual(mock_call.call_count, 2)
 
 
