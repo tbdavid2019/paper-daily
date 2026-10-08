@@ -6,60 +6,127 @@ topic: "embodied_ai"
 ---
 ## 今日概況
 - **日期**：2026-10-08
-- **主題**：具身智慧 (Embodied Intelligence)
-- **收錄數量**：本次爬取總計 1,524 篇論文，經去重與候選篩選後，涵蓋 60 篇重點評估文獻，本文精選並推薦其中最具代表性的 18 篇突破與核心研究。
+- **主題**：具身智能（Embodied Intelligence）
+- **收錄數量**：本次爬取總計 1,524 篇論文，經去重與候選篩選後，評估 250 篇，其中 136 篇通過決策門檻，並精選出最具代表性的研究成果。
 
 ## Must-Read
-### 1. Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data
-- **作者**：Songbo Hu, Qiayuan Liao, Yufeng Chi, Kevin Zakka, Yakun Sophia Shao
-- **連結**：[arXiv:2610.09117](https://arxiv.org/abs/2610.09117)
-- **來源**：arxiv_cs.RO, arxiv_cs.LG
-- **技術突破與啟發**：本篇研究突破人形機器人在具備視覺與本體感覺下，難以規劃接觸密集之全身操作的瓶頸。Workhorse 直接從完全不需機器人的真人示範中學習全身協同操作。透過視覺規劃器預測軀幹、雙腕與雙足等五連桿目標，並利用強化學習全身追蹤器在機器人上執行。兩者皆在相同的真實人類姿勢上獨立訓練，不須繁瑣的重標定（retargeting），並透過互相模仿彼此部署時產生的誤差來增強訓練數據。這為具身智慧領域提供了無需大量機器人本體資料即可實現具備強健性之全身移動操作的新思路。
-
-### 2. RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments
-- **作者**：Zhiqin Yang, Chenxin Li, Xiaomeng Hu, Yibin Liu, Weidong Huang
-- **連結**：[arXiv:2610.10409](https://arxiv.org/abs/2610.10409)
-- **來源**：arxiv_cs.RO, arxiv_cs.LG
-- **技術突破與啟發**：通用代理人目前已能自主編寫程式、使用工具並完成複雜的數位任務，但其能力究竟能延伸至實體世界到什麼程度？本研究推出了 RobotWorld，這是一個充滿挑戰的模擬測試平台，旨在評估代理人透過機器人介面將指令與觀察轉化為實體任務執行的能力。其涵蓋 84 項橫跨操作、移動操作、移動、駕駛與空中控制的任務，並帶有明確的互動預算與可執行成功檢查。對研究者的啟發在於，透過系統性分析執行軌跡與任務結果，能有效診斷多模態代理人跨本體與實體互動的盲點。
-
-### 3. Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment
-- **作者**：Xiao Zhang, Yuxin Chen, Zhixuan Liang, Guojian Zhan, Chenran Li
-- **連結**：[arXiv:2610.09369](https://arxiv.org/abs/2610.09369)
-- **來源**：arxiv_cs.RO, arxiv_cs.LG
-- **技術突破與啟發**：擴散策略（Diffusion Policies）原先被期望能完美恢復多模態動作分佈，但作者發現在資料集模態平衡及批次內對稱性皆受保障時，擴散策略仍經常坍縮（collapse）至單一模態。分析顯示，獨立的動作-雜訊配對會增加擴散路徑之間的混合與交叉，進而產生平均化的去噪反應並抑制模態特定行為。本篇提出的「混相擴散策略」（Immiscible Diffusion Policy）透過無標籤的雜訊指派，成功解決了機器人規劃中的模態坍縮問題，對提升具身策略在多峰決策上的表現具備高度啟發性。
-
-### 4. OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework
-- **作者**：Yifan Wu, Qin Li, Nan Min, Guojin Zhong, Haoyu Zhao
-- **連結**：[arXiv:2610.10384](https://arxiv.org/abs/2610.10384)
-- **來源**：arxiv_cs.RO
-- **技術突破與啟發**：觸覺回饋為具身代理人提供了視覺以外不可或缺的物理資訊，但現今的視覺-觸覺-語言-動作（VTLA）政策仍缺乏跨模擬與真實環境的統一評估基準。OpenViTac 填補了此空白，建立了一個用於評估機器人策略的視觸覺操作基準，將接觸密集型操作系統化地歸納為四大觸覺相關能力。這有助於加速觸覺多模態模型在模擬與真實世界的對齊與遷移研究。
+- **On-Demand Robotic Assembly via Differentiable Geometric Part Repair**
+  - **作者**：Millicent Schlafly, Fabio Schaub, Diogo Costa Pais, Luca Lelli, Janne Dvorak
+  - **連結**：[arXiv:2610.09777](https://arxiv.org/abs/2610.09777)
+  - **來源**：`arxiv_cs.RO`
+  - **技術突破與啟發**：本文提出端到端的自動化管線，透過生成式 AI 代理將使用者指令轉化為 3D 幾何結構，並結合梯度基底的修復階段（透過圖注意力網路代理進行反向傳播），解決數位設計與機器人組裝限制間的落差。此研究對具身操作（Robot Manipulation）帶來重要啟發，展示了如何將可微分幾何代理與生成模型結合，實現動態、高精度的自訂實體結構組裝。
 
 ## Highly Relevant
-- **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**：結合摺紙啟發輪胎與主動感測幾何控制的緊湊型移動機器人，利用 IMU 與融合節點將 LiDAR 投影至 RGB-D 深度流。[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
-- **Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control**：提出 ResGAC，結合幾何導納控制（GAC）與殘餘強化學習，解決人形機器人全身運動中的浮動基座震盪與動態耦合問題。[arXiv:2610.09479](https://arxiv.org/abs/2610.09479)
-- **Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies**：透過代理人框架將場景重建、政策開發與真實機器人執行緊密連結，自動化修復與對齊機器人工作空間的模擬環境。[arXiv:2610.10479](https://arxiv.org/abs/2610.10479)
-- **Factorized Tactile Representation and Control for Sim-to-Real Manipulation**：提出因式分解的觸覺表示與控制框架，將接觸反應拆分為幾何、力分佈與時間變化，以橋接觸覺模擬與真實裝置。[arXiv:2610.10510](https://arxiv.org/abs/2610.10510)
-- **SearchWorld: Spatial Value-Grounded Imagination for UAV Object Search via World Models**：利用世界模型在城市環境下進行無人機（UAV）物件搜尋的空間價值接地想像，突破部分可觀測性限制。[arXiv:2610.09335](https://arxiv.org/abs/2610.09335)
-- **Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation**：探討視覺-語言-動作模型（VLA）透過繼承祖先 VLM 能力所產生的黑箱對抗修補攻擊與安全性漏洞。[arXiv:2610.09708](https://arxiv.org/abs/2610.09708)
-- **RobotAPO: Adversarial Physics Preference Optimization for Robotic Manipulation Video Generation**：針對機器人操作影片生成引入對抗物理偏好最佳化，解決視覺真實但違反物理交互的盲點。[arXiv:2610.09454](https://arxiv.org/abs/2610.09454)
-- **EmbodiedRSI: Active Continual Robot Learning Through Hypothesis-Guided Co-Evolution**：提出自主演化的代理人框架，解決基底模型在面對環境與指令改變時的效能退化，提升主動探索效率。[arXiv:2610.10498](https://arxiv.org/abs/2610.10498)
-- **RFPO: Rectified Flow Policy Optimization for Embodied Control**：提出基於流模型的控制政策最佳化框架，解決少步驟離散化間距問題，確保在粗糙數值積分下的控制可靠性。[arXiv:2610.10453](https://arxiv.org/abs/2610.10453)
-- **TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning**：推出大規模包含 500 小時人類視覺與觸覺同步互動資料集，為視覺-觸覺學習提供充沛的物理監督訊號。[arXiv:2610.10288](https://arxiv.org/abs/2610.10288)
-- **HuMBLE: Human Motion-Driven Behavior Learning for Embodied Locomotion**：平衡指令追蹤強健性與仿生學特徵，從人類運動資料中即時合成具備轉向能力的移動政策。[arXiv:2610.10489](https://arxiv.org/abs/2610.10489)
-- **Point It, Strike It: Direction-Conditioned Dynamic Manipulation of Deformable Linear Objects**：探討可變形線狀物體（DLO）的單揮擊動態操作，納入 3D 位置與抵達方向的目標條件化控制。[arXiv:2610.09573](https://arxiv.org/abs/2610.09573)
-- **Co-Evolving Robot Orchestrators and Policies through Deployment**：探討在真實世界部署中，如何透過協同演化來優化 VLA 政策與 VLM 協調器（Orchestrator）之間的互動。[arXiv:2610.09228](https://arxiv.org/abs/2610.09228)
-- **Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models**：深入分析並量化 VLA 模型對指令措辭的高度敏感性，指出單一字詞替換即可造成大幅度的成功率波動。[arXiv:2610.10526](https://arxiv.org/abs/2610.10526)
+- **LLA-MPPI: Rapidly Adaptive Whole-body Control of Legged Robots with GPU-Accelerated Parallel Simulations**
+  - **作者**：Sebin Jung, Maitham F. AL-Sunni, Juan Alvarez-Padilla, Zachary Manchester, Changliu Liu
+  - **連結**：[arXiv:2610.10465](https://arxiv.org/abs/2610.10465)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：引入前瞻與回顧式自適應模型預測路徑積分控制（LLA-MPPI），透過 GPU 批次化模擬器庫實現四足機器人的快速全身適應控制。
+
+- **Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data**
+  - **作者**：Songbo Hu, Qiayuan Liao, Yufeng Chi, Kevin Zakka, Yakun Sophia Shao
+  - **連結**：[arXiv:2610.09117](https://arxiv.org/abs/2610.09117)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.LG`
+  - **摘要重點**：直接從無機器人的真實人類示範中學習全身人形機械人移動操作（Loco-Manipulation），透過視覺規劃器與強化學習追蹤器協同訓練，並在真實 Unitree G1 上驗證。
+
+- **PhysEvo: Astra Can Act, Let It**
+  - **作者**：Wenqing Tian, Zeyu Zhang, Zhaocheng Liu, Fengwei Liu, Qiang Liu
+  - **連結**：[arXiv:2610.08995](https://arxiv.org/abs/2610.08995)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.AI`
+  - **摘要重點**：提出圍繞單一凍結模型的物理遞歸自我改進（RSI）框架，讓任務代理與元代理協同診斷故障並改進技能與工具。
+
+- **Borrowed Eyes: Markerless Nano-UAV Flight with an Active Quadruped Observer**
+  - **作者**：Alejandro Lorite Mora, Dimitrios Arapis, Andrés Faíña
+  - **連結**：[arXiv:2610.09967](https://arxiv.org/abs/2610.09967)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：利用具備手臂相機的四足機器人作為主動觀測者，為無 GPS 環境下的微型無人機（Nano-UAV）提供無標記的視覺定位與即時導航支援。
+
+- **Robotic Boomerang Throwing via Model-Based Release Design**
+  - **作者**：Yang Liu, Colin Jones, Aude Billard
+  - **連結**：[arXiv:2610.10472](https://arxiv.org/abs/2610.10472)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：針對具有空氣動力學升力的迴力標投擲任務，提出基於模型的釋放狀態設計框架，克服機械臂在動態捕捉與高速運動上的限制。
+
+- **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**
+  - **作者**：Namai Chandra, Jaison Jose, Kavi Arya, Shivaram Kalyanakrishnan
+  - **連結**：[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：結合摺紙啟發輪胎與主動感測幾何控制，透過車體俯仰角變化掃描 LiDAR 並與 IMU 及 RGB-D 進行感測融合，提升移動機器人在緊湊空間中的適應力。
+
+- **HULK: Learning Whole-Body Forceful Loco-Manipulation for Humanoids**
+  - **作者**：An Dang, Arturo Flores Alvarez, Yu-Ming Chen, Conor Mc Gartoll, Helen Sun
+  - **連結**：[arXiv:2610.08970](https://arxiv.org/abs/2610.08970)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.LG`
+  - **摘要重點**：針對人形機器人搬運重物時的質心偏移與負載挑戰，結合模型預測控制（MPC）與強化學習訓練雙教師架構，實現強力的全身移動操作。
+
+- **MagCilia: A Compact Magnetociliary Tactile Sensor with 3D Force Sensing for Robotic Contact Perception and Grasping Feedback**
+  - **作者**：Yu Feng, Hao Wu, Haotian Guo, Haoming Liu, William Su
+  - **連結**：[arXiv:2610.09536](https://arxiv.org/abs/2610.09536)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：結合彈性磁毛結構與霍爾感測器的微型觸覺感應器，並透過因果歷史融合迴歸（CHFR）實現高精度的 3D 觸覺接觸感知。
+
+- **Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control**
+  - **作者**：Joohwan Seo, Xiaofeng Guo, Jinkun Cao, Roberto Horowitz, Rocky Duan
+  - **連結**：[arXiv:2610.09479](https://arxiv.org/abs/2610.09479)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：提出 ResGAC，結合幾何導納控制（GAC）與殘差強化學習，解決人形機器人在全身運動時末端執行器的精確 SE(3) 追蹤難題。
+
+- **ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration**
+  - **作者**：Liyan Chen, Hairong Yin, Huangying Zhan, Yi Xu, Raymond A. Yeh
+  - **連結**：[arXiv:2610.09518](https://arxiv.org/abs/2610.09518)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.CV`
+  - **摘要重點**：引入基於語義不確定性引導探索的主動開放詞彙 3D 地圖建構系統，支援動態環境下的線上語言特徵適應。
+
+- **FoldBack: Self-Correcting Masked Generative Policy for Long-Horizon Garment Folding**
+  - **作者**：Lipeng Zhuang, Shiyu Fan, Yingdong Ru, Zhuo He, Florent P. Audonnet
+  - **連結**：[arXiv:2610.10462](https://arxiv.org/abs/2610.10462)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.AI`
+  - **摘要重點**：為長視距衣物摺疊任務提出具備自我修正機制的遮罩生成策略，能在抓取失敗時精準執行重試與回滾。
+
+- **RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments**
+  - **作者**：Zhiqin Yang, Chenxin Li, Xiaomeng Hu, Yibin Liu, Weidong Huang
+  - **連結**：[arXiv:2610.10409](https://arxiv.org/abs/2610.10409)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.LG`
+  - **摘要重點**：建立包含 84 項任務的模擬測試平台，用於全面評估多模態代理在跨本體（操作、移動、駕駛、飛行）控制上的表現。
+
+- **Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies**
+  - **作者**：Yihan Li, Yating Feng, Shengjiu Sun, Jianing Chen, Hao Ren
+  - **連結**：[arXiv:2610.10479](https://arxiv.org/abs/2610.10479)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.CV`
+  - **摘要重點**：提出將場景重建、策略開發與真實機器人執行透過代理框架緊密連結的 Real-to-Sim-to-Real 方法。
+
+- **OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework**
+  - **作者**：Yifan Wu, Qin Li, Nan Min, Guojin Zhong, Haoyu Zhao
+  - **連結**：[arXiv:2610.10384](https://arxiv.org/abs/2610.10384)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：打造跨模擬與真實環境的統一視覺-觸覺操作基準（OpenViTac），填補觸覺導向機器人策略評估的缺口。
+
+- **Contact-Aware Imitation Learning Through Contact Factorization**
+  - **作者**：Jiho Hong, Daeun Song, Sanghyun Kim, Mingyo Seo
+  - **連結**：[arXiv:2610.09533](https://arxiv.org/abs/2610.09533)
+  - **來源**：`arxiv_cs.RO`
+  - **摘要重點**：提出 FACE 框架，將任務意圖與環境相依的接觸因素進行因果分解，提升接觸豐富操作（Contact-rich Manipulation）的泛化能力。
+
+- **SearchWorld: Spatial Value-Grounded Imagination for UAV Object Search via World Models**
+  - **作者**：Yatai Ji, Zhengqiu Zhu, Yong Zhao, Yue Hu, Fanglong Yao
+  - **連結**：[arXiv:2610.09335](https://arxiv.org/abs/2610.09335)
+  - **來源**：`arxiv_cs.AI`, `arxiv_cs.LG`
+  - **摘要重點**：利用世界模型進行空間價值為基礎的想像，解決無人機在未知都市環境中進行物件搜尋時的部分可觀測性問題。
+
+- **Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment**
+  - **作者**：Xiao Zhang, Yuxin Chen, Zhixuan Liang, Guojian Zhan, Chenran Li
+  - **連結**：[arXiv:2610.09369](https://arxiv.org/abs/2610.09369)
+  - **來源**：`arxiv_cs.RO`, `arxiv_cs.LG`
+  - **摘要重點**：分析並解決擴散策略在機器人規劃中常發生的模態崩潰問題，透過無標籤雜訊分配保留多模態動作分佈。
 
 ## Interesting
-- **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**：利用結構輕量、成本低廉且具備摺紙機械變形的輪胎設計來改變 chassis 俯仰角，藉此被動帶動 LiDAR 掃描 elevations，提供了一種非傳統且巧妙的硬體感測融合思路。[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
+- **Borrowed Eyes (arXiv:2610.09967)**：使用移動四足機器人作為主動觀測載體來協助微型無人機定位，這類「異質機器人協作（Heterogeneous Robot Collaboration）」巧妙地利用大負載機器人的感測優勢來補足微型機器人的硬體極限，是一個極具巧思的系統整合方向。
+- **Robotic Boomerang Throwing (arXiv:2610.10472)**：挑戰空氣動力學動態複雜的迴力標投擲任務，將機械臂控制與非直覺物理飛行軌跡結合，展現了模型基底設計在極端動態操作中的獨特價值。
 
 ## Idea Sparks
-1. **跨模態擴散策略中的「路徑交叉」與多峰坍縮防範**
-   - 觀察：近期研究指出獨立雜訊配對會導致擴散策略在多模態動作分佈上產生坍縮，這顯示傳統擴散模型的噪聲排布可能不適用於動作空間高度耦合的機器人控制。
-   - 後續問題：若將流匹配（Flow Matching）或整流流（Rectified Flow）引入多峰動作生成中，是否能比傳統擴散模型更有效地防止模態平均化？
-2. **VLA 模型的語言敏感性與「先重述再行動」的魯棒性設計**
-   - 觀察：VLA 模型對指令替換表現出驚人的敏感度，相同的語意僅因換句話說就可能使成功率從 100% 跌至 2%。
-   - 後續問題：在 VLA 部署前端加入輕量級的指令正規化或同義句擴增引導模組，是否能實質提升模型在開放世界部署時的語意泛化能力？
-3. **視觸覺（Visuo-Tactile）大規模資料集與模擬遷移**
-   - 觀察：隨著 TouchScale 等大型視觸覺資料集的出現，觸覺回饋正逐漸從獨立感測走向與視覺、語言深度融合的通用代理人架構。
-   - 後續問題：如何有效對齊跨不同觸覺硬體裝置（如 GelSight 等）的物理反應與高維特徵表示，才能使觸覺基礎模型達到類似視覺模型的跨平台零樣本泛化？
+- **跨論文趨勢一：從「單一動態補償」走向「多模態感測與模擬融合（Sim-and-Real Tactile & Whole-Body Integration）」**
+  - 觀察到近期如 *OpenViTac*（arXiv:2610.10384）與 *MagCilia*（arXiv:2610.09536）等研究，正積極將觸覺與視覺、模擬與真實環境做更深度的統一整合。
+  - **具體後續問題**：當觸覺反饋引入高動態的全身人形機器人控制（如 *HULK* 或 *ResGAC*）時，如何避免過高的感測延遲並實現高頻率的閉環控制？
+- **跨論文趨勢二：基於生成式模型與世界模型的「主動自我修復與探索（Active Self-Correction & Exploration）」**
+  - 如 *PhysEvo*（arXiv:2610.08995）、*FoldBack*（arXiv:2610.10462）與 *SearchWorld*（arXiv:2610.09335）均強調代理在面對長視距任務或未知干擾時，具備自主診斷、重試或基於世界模型的想像規劃能力。
+  - **具體後續問題**：這些基於代理（Agentic）的自我修復機制，能否在即時性要求極高的具身控制迴圈中（如 50Hz 以上）實現端到端的輕量化部署？
