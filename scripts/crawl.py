@@ -522,25 +522,84 @@ def main():
 
     min_keyword_hits = max(0, int(SELECTION.get("min_keyword_hits", 0)))
     include_tracked = bool(SELECTION.get("include_tracked_authors", True))
-    final = [
-        p for p in newly_seen
-        if p["keyword_hits"] >= min_keyword_hits
-        or (include_tracked and p.get("tracked_author"))
-    ]
 
-    # 決策模型評估與重排序（Jev 主力 + Clef 備援）
+    # 候選池初篩評分：
+    # 讓 cs.RO/cs.SY（機器人本體領域）、關鍵字命中、社群高讚、追蹤作者等高潛力論文排在前面
+    def candidate_pre_score(p: dict) -> float:
+        s = 0.0
+        if any(src.startswith("arxiv_cs.RO") or src.startswith("arxiv_cs.SY") for src in p.get("sources", [])):
+            s += 30.0
+        s += p.get("keyword_hits", 0) * 15.0
+        if p.get("tracked_author"):
+            s += 40.0
+        s += min(p.get("upvotes", 0), 50) * 1.5
+        s += (len(p.get("sources", [])) - 1) * 10.0
+        if p.get("trending_rank"):
+            s += max(0, 20 - p["trending_rank"])
+        return s
+
+    candidates_ranked = sorted(newly_seen, key=candidate_pre_score, reverse=True)
+
+    # 決策模型評估與語意分類（Jev 主力 + Clef 備援）
     decision_client = decision.DecisionClient()
     decision_evaluated = 0
+    decision_accepted = 0
+
     if decision_client.is_available and os.environ.get("DECISION_ENABLED", "1") not in ("0", "false", "no"):
         max_papers = max(0, int(SELECTION.get("max_papers", 0)))
-        # 擴大決策評估池：評估前 90 篇初篩候選（或 max_papers 的 1.5 倍），讓 Clef 全量語意淘金
-        eval_limit = max(max_papers * 3 // 2, 90) if max_papers else 90
-        candidates_to_eval = final[:eval_limit]
+        # 候選池上限：預設評估前 250 篇（或 max_papers 的 4 倍），涵蓋所有 cs.RO 與具身相關候選
+        candidate_cap = int(os.environ.get("DECISION_MAX_CANDIDATES", "250"))
+        eval_limit = max(max_papers * 4, candidate_cap) if max_papers else candidate_cap
+        
+        # 優先納入 pre_score > 0 的候選論文
+        pre_matched = [p for p in candidates_ranked if candidate_pre_score(p) > 0]
+        if len(pre_matched) < eval_limit:
+            candidates_to_eval = pre_matched + [p for p in candidates_ranked if p not in pre_matched][:eval_limit - len(pre_matched)]
+        else:
+            candidates_to_eval = pre_matched[:eval_limit]
+
         if candidates_to_eval:
-            print(f"\n🧠 啟動決策模型高通量評估 (Jev 主力 + Clef 備援，評估候選池前 {len(candidates_to_eval)} 篇)...")
-            evaluated = decision.evaluate_papers(candidates_to_eval, topic_name=TOPIC_NAME, client=decision_client, candidate_limit=eval_limit)
-            final = decision.rerank_papers(evaluated) + final[eval_limit:]
+            batch_size = int(os.environ.get("DECISION_BATCH_SIZE", "25"))
+            max_workers = int(os.environ.get("DECISION_MAX_WORKERS", "5"))
+            print(f"\n🧠 啟動決策模型高通量分批分類 (候選池共 {len(candidates_to_eval)} 篇，每批 {batch_size} 篇)...")
+            evaluated = decision.evaluate_papers(
+                candidates_to_eval,
+                topic_name=TOPIC_NAME,
+                client=decision_client,
+                candidate_limit=len(candidates_to_eval),
+                batch_size=batch_size,
+                max_workers=max_workers,
+            )
             decision_evaluated = sum(1 for p in evaluated if "decision" in p)
+
+            # 依據 Clef 語意分類過濾真・具身智慧論文
+            def is_embodied_paper(p: dict) -> bool:
+                dec = p.get("decision")
+                if dec:
+                    cat = dec.get("primary_category", "")
+                    prob = float(dec.get("relevance_prob", 0.0) or 0.0)
+                    if cat == "non_embodied" and prob < 0.35:
+                        return False
+                    if cat in ("robot_manipulation", "vla_foundation_model", "locomotion_humanoid", "simulation_sim2real") or prob >= 0.40:
+                        return True
+                # 未取得決策時保底規則
+                return p.get("keyword_hits", 0) >= min_keyword_hits or bool(p.get("tracked_author"))
+
+            accepted_papers = [p for p in evaluated if is_embodied_paper(p)]
+            decision_accepted = len(accepted_papers)
+            final = decision.rerank_papers(accepted_papers)
+        else:
+            final = [
+                p for p in newly_seen
+                if p["keyword_hits"] >= min_keyword_hits
+                or (include_tracked and p.get("tracked_author"))
+            ]
+    else:
+        final = [
+            p for p in newly_seen
+            if p["keyword_hits"] >= min_keyword_hits
+            or (include_tracked and p.get("tracked_author"))
+        ]
 
     max_papers = max(0, int(SELECTION.get("max_papers", 0)))
     if max_papers:
@@ -567,6 +626,7 @@ def main():
             "new_candidates": len(newly_seen),
             "selected_papers": len(final),
             "decision_evaluated": decision_evaluated,
+            "decision_accepted": decision_accepted,
             "missing_published_at": missing_published_at,
             "keyword_matched": len(relevant),
         },

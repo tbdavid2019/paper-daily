@@ -51,6 +51,9 @@ jobs:
           JEV_API_KEY: ${{ secrets.JEV_API_KEY }}
           CLEF_BASE_URL: ${{ vars.CLEF_BASE_URL || 'https://clef.create360.ai/v1/systemone' }}
           CLEF_FALLBACK_URL: ${{ vars.CLEF_FALLBACK_URL || 'https://clef.aiurl.tw/v1/systemone' }}
+          DECISION_BATCH_SIZE: '25'
+          DECISION_MAX_WORKERS: '5'
+          DECISION_MAX_CANDIDATES: '250'
 
       - name: Commit and push data
         run: |

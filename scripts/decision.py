@@ -336,9 +336,10 @@ def evaluate_papers(
     topic_name: str = "embodied_ai",
     client: DecisionClient | None = None,
     max_workers: int | None = None,
-    candidate_limit: int = 100,
+    candidate_limit: int = 250,
+    batch_size: int = 25,
 ) -> list[dict[str, Any]]:
-    """並行評估一組論文，並將決策結果附加至各 paper 物件。
+    """分批並行評估一組論文，並將決策結果附加至各 paper 物件。
 
     回傳附加了 `decision` 與 `decision_score` 的論文列表。
     """
@@ -353,13 +354,17 @@ def evaluate_papers(
     eval_candidates = papers[:candidate_limit]
     remaining = papers[candidate_limit:]
 
-    # 如果有 Jev 或 Clef (create360) 高速端點，可開並行 worker；若退回 CPU 備援，預設 worker 較少
     if max_workers is None:
-        max_workers = 4
+        max_workers = int(os.environ.get("DECISION_MAX_WORKERS", "5"))
+
+    batch_size = int(os.environ.get("DECISION_BATCH_SIZE", str(batch_size)))
+    num_batches = (len(eval_candidates) + batch_size - 1) // batch_size if eval_candidates else 0
 
     logger.info(
-        "Evaluating %d candidate papers with Decision Model (topic=%s, workers=%d)...",
+        "Evaluating %d candidate papers in %d batches (batch_size=%d, topic=%s, workers=%d)...",
         len(eval_candidates),
+        num_batches,
+        batch_size,
         topic_name,
         max_workers,
     )
@@ -380,14 +385,32 @@ def evaluate_papers(
     start_time = time.time()
     evaluated_papers: list[dict[str, Any]] = []
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        future_map = {executor.submit(_eval_one, p): p for p in eval_candidates}
-        for future in as_completed(future_map):
-            paper, decision = future.result()
-            if decision:
-                paper["decision"] = decision
-                paper["decision_score"] = calculate_decision_score(decision)
-            evaluated_papers.append(paper)
+    for b_idx in range(num_batches):
+        batch = eval_candidates[b_idx * batch_size : (b_idx + 1) * batch_size]
+        b_start = time.time()
+        with ThreadPoolExecutor(max_workers=max_workers) as executor:
+            future_map = {executor.submit(_eval_one, p): p for p in batch}
+            for future in as_completed(future_map):
+                paper, decision = future.result()
+                if decision:
+                    paper["decision"] = decision
+                    paper["decision_score"] = calculate_decision_score(decision)
+                evaluated_papers.append(paper)
+        b_elapsed = time.time() - b_start
+        embodied_count = sum(
+            1 for p in batch
+            if p.get("decision", {}).get("primary_category") in (
+                "robot_manipulation", "vla_foundation_model", "locomotion_humanoid", "simulation_sim2real"
+            ) or p.get("decision", {}).get("relevance_prob", 0.0) >= 0.45
+        )
+        logger.info(
+            "Batch %d/%d (%d papers) completed in %.2fs (Identified %d Embodied AI papers)",
+            b_idx + 1,
+            num_batches,
+            len(batch),
+            b_elapsed,
+            embodied_count,
+        )
 
     elapsed = time.time() - start_time
     logger.info("Completed decision evaluation for %d papers in %.2fs", len(evaluated_papers), elapsed)

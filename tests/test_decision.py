@@ -116,6 +116,35 @@ class DecisionTest(unittest.TestCase):
         self.assertEqual(res["endpoint"], "https://clef.aiurl.tw/v1/systemone")
         self.assertEqual(mock_call.call_count, 2)
 
+    @patch.object(decision.DecisionClient, "decide")
+    def test_evaluate_papers_in_batches(self, mock_decide):
+        mock_decide.return_value = {
+            "provider": "clef",
+            "model": "clef-flash",
+            "answers": {
+                "is_embodied_ai": {"type": "noul", "noul": 0.92},
+                "primary_category": {"type": "choice", "choice": "robot_manipulation"},
+                "impact_and_novelty": {"type": "score", "score": 1.1},
+            },
+        }
+        client = decision.DecisionClient(clef_url="https://mock")
+        papers = [{"id": f"p{i}", "title": f"Paper {i}", "abstract": "Robotics"} for i in range(7)]
+        # Evaluate 7 papers in batches of 3
+        evaluated = decision.evaluate_papers(
+            papers,
+            client=client,
+            candidate_limit=7,
+            batch_size=3,
+            max_workers=2,
+        )
+        self.assertEqual(len(evaluated), 7)
+        self.assertEqual(mock_decide.call_count, 7)
+        for p in evaluated:
+            self.assertIn("decision", p)
+            self.assertIn("decision_score", p)
+            self.assertEqual(p["decision"]["primary_category"], "robot_manipulation")
+
 
 if __name__ == "__main__":
     unittest.main()
+
