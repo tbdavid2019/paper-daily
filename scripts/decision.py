@@ -336,7 +336,7 @@ def evaluate_papers(
     topic_name: str = "embodied_ai",
     client: DecisionClient | None = None,
     max_workers: int | None = None,
-    candidate_limit: int = 35,
+    candidate_limit: int = 100,
 ) -> list[dict[str, Any]]:
     """並行評估一組論文，並將決策結果附加至各 paper 物件。
 

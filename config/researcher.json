@@ -11,8 +11,8 @@
   ],
   "current_projects": [],
   "report": {
-    "target_papers": 10,
-    "must_read_threshold": 80,
+    "target_papers": 18,
+    "must_read_threshold": 74,
     "highly_relevant_threshold": 60,
     "language": "auto"
   }

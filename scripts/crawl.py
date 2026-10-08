@@ -533,11 +533,12 @@ def main():
     decision_evaluated = 0
     if decision_client.is_available and os.environ.get("DECISION_ENABLED", "1") not in ("0", "false", "no"):
         max_papers = max(0, int(SELECTION.get("max_papers", 0)))
-        eval_limit = max_papers if max_papers else 30
+        # 擴大決策評估池：評估前 90 篇初篩候選（或 max_papers 的 1.5 倍），讓 Clef 全量語意淘金
+        eval_limit = max(max_papers * 3 // 2, 90) if max_papers else 90
         candidates_to_eval = final[:eval_limit]
         if candidates_to_eval:
-            print(f"\n🧠 啟動決策模型評估 (Jev 主力 + Clef 備援，評估前 {len(candidates_to_eval)} 篇)...")
-            evaluated = decision.evaluate_papers(candidates_to_eval, topic_name=TOPIC_NAME, client=decision_client)
+            print(f"\n🧠 啟動決策模型高通量評估 (Jev 主力 + Clef 備援，評估候選池前 {len(candidates_to_eval)} 篇)...")
+            evaluated = decision.evaluate_papers(candidates_to_eval, topic_name=TOPIC_NAME, client=decision_client, candidate_limit=eval_limit)
             final = decision.rerank_papers(evaluated) + final[eval_limit:]
             decision_evaluated = sum(1 for p in evaluated if "decision" in p)
 
