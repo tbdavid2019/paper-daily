@@ -5,78 +5,61 @@ date: 2026-10-08 00:00:00 +0000
 topic: "embodied_ai"
 ---
 ## 今日概況
-
 - **日期**：2026-10-08
-- **主題**：具身智慧 (Embodied AI)
-- **收錄數量與資料統計**：本次檢索原始爬取共 871 篇論文（涵蓋 Hugging Face、arXiv cs.RO、cs.AI、cs.CV 與關鍵字），經過去重與視窗篩選後，獲得 342 篇新候選論文。經模型評估與篩選，本次精選出 30 篇具代表性研究，涵蓋人形機器人全身控制、機器人操作、多模態感知與視覺語言動作（VLA）模型等核心領域。
+- **主題**：具身智慧 (Embodied Intelligence)
+- **收錄數量**：本次爬取總計 1,524 篇論文，經去重與候選篩選後，涵蓋 60 篇重點評估文獻，本文精選並推薦其中最具代表性的 18 篇突破與核心研究。
 
 ## Must-Read
+### 1. Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data
+- **作者**：Songbo Hu, Qiayuan Liao, Yufeng Chi, Kevin Zakka, Yakun Sophia Shao
+- **連結**：[arXiv:2610.09117](https://arxiv.org/abs/2610.09117)
+- **來源**：arxiv_cs.RO, arxiv_cs.LG
+- **技術突破與啟發**：本篇研究突破人形機器人在具備視覺與本體感覺下，難以規劃接觸密集之全身操作的瓶頸。Workhorse 直接從完全不需機器人的真人示範中學習全身協同操作。透過視覺規劃器預測軀幹、雙腕與雙足等五連桿目標，並利用強化學習全身追蹤器在機器人上執行。兩者皆在相同的真實人類姿勢上獨立訓練，不須繁瑣的重標定（retargeting），並透過互相模仿彼此部署時產生的誤差來增強訓練數據。這為具身智慧領域提供了無需大量機器人本體資料即可實現具備強健性之全身移動操作的新思路。
 
-目前資料未提供評分達到 80 分以上的 Must-Read 門檻論文，所有精選論文皆落在高度相關（Highly Relevant）區間。
+### 2. RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments
+- **作者**：Zhiqin Yang, Chenxin Li, Xiaomeng Hu, Yibin Liu, Weidong Huang
+- **連結**：[arXiv:2610.10409](https://arxiv.org/abs/2610.10409)
+- **來源**：arxiv_cs.RO, arxiv_cs.LG
+- **技術突破與啟發**：通用代理人目前已能自主編寫程式、使用工具並完成複雜的數位任務，但其能力究竟能延伸至實體世界到什麼程度？本研究推出了 RobotWorld，這是一個充滿挑戰的模擬測試平台，旨在評估代理人透過機器人介面將指令與觀察轉化為實體任務執行的能力。其涵蓋 84 項橫跨操作、移動操作、移動、駕駛與空中控制的任務，並帶有明確的互動預算與可執行成功檢查。對研究者的啟發在於，透過系統性分析執行軌跡與任務結果，能有效診斷多模態代理人跨本體與實體互動的盲點。
+
+### 3. Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment
+- **作者**：Xiao Zhang, Yuxin Chen, Zhixuan Liang, Guojian Zhan, Chenran Li
+- **連結**：[arXiv:2610.09369](https://arxiv.org/abs/2610.09369)
+- **來源**：arxiv_cs.RO, arxiv_cs.LG
+- **技術突破與啟發**：擴散策略（Diffusion Policies）原先被期望能完美恢復多模態動作分佈，但作者發現在資料集模態平衡及批次內對稱性皆受保障時，擴散策略仍經常坍縮（collapse）至單一模態。分析顯示，獨立的動作-雜訊配對會增加擴散路徑之間的混合與交叉，進而產生平均化的去噪反應並抑制模態特定行為。本篇提出的「混相擴散策略」（Immiscible Diffusion Policy）透過無標籤的雜訊指派，成功解決了機器人規劃中的模態坍縮問題，對提升具身策略在多峰決策上的表現具備高度啟發性。
+
+### 4. OpenViTac: Learning and Benchmarking Visuo-Tactile Policies in a Unified Sim-and-Real Framework
+- **作者**：Yifan Wu, Qin Li, Nan Min, Guojin Zhong, Haoyu Zhao
+- **連結**：[arXiv:2610.10384](https://arxiv.org/abs/2610.10384)
+- **來源**：arxiv_cs.RO
+- **技術突破與啟發**：觸覺回饋為具身代理人提供了視覺以外不可或缺的物理資訊，但現今的視覺-觸覺-語言-動作（VTLA）政策仍缺乏跨模擬與真實環境的統一評估基準。OpenViTac 填補了此空白，建立了一個用於評估機器人策略的視觸覺操作基準，將接觸密集型操作系統化地歸納為四大觸覺相關能力。這有助於加速觸覺多模態模型在模擬與真實世界的對齊與遷移研究。
 
 ## Highly Relevant
-
-1. **Workhorse: Learning Robust Whole-Body Humanoid Loco-Manipulation from Human Data**
-   - **作者**：Songbo Hu, Qiayuan Liao, Yufeng Chi, Kevin Zakka, Yakun Sophia Shao
-   - **來源**：[arXiv:2610.09117](https://arxiv.org/abs/2610.09117)
-   - **摘要證據**：針對人形機器人難以從具體 RGB 與本體感覺規劃接觸豐富的全體操作，本研究提出 Workhorse，從無機器人的真實人類示範中學習。透過視覺規劃器預測五連桿目標（軀幹、雙手腕、雙腳），並以強化學習全體追蹤器在機器人上執行，兩者分開訓練且無需重新標定。實機部署於 Unitree G1 上成功執行箱子分類。
-
-2. **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**
-   - **作者**：Namai Chandra, Jaison Jose, Kavi Arya, Shivaram Kalyanakrishnan
-   - **來源**：[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
-   - **摘要證據**：探討緊湊型移動機器人在嚴格負載與成本限制下恢復場景幾何的方法。該研究設計了採用摺紙啟發車輪的移動機器人，利用車輪動態改變感測幾何與底盤俯仰角，藉此帶動 2D LiDAR 掃描中繼高程，並結合 IMU 姿態資訊，將 LiDAR 投影至 RTAB-Map 的 RGB-D 深度串流中。
-
-3. **Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control**
-   - **作者**：Joohwan Seo, Xiaofeng Guo, Jinkun Cao, Roberto Horowitz, Rocky Duan
-   - **來源**：[arXiv:2610.09479](https://arxiv.org/abs/2610.09479)
-   - **摘要證據**：為解決人形機器人在全體運動中因浮動基座震盪、重力與動態耦合導致末端執行器追蹤困難的問題，提出 ResGAC 全身控制器。該方法結合幾何導納控制（GAC）提供結構化 $\text{SE}$ 任務空間回授，並利用殘餘強化學習（Residual RL）補償未建模動態，協調共用關節位置動作空間中的平衡與移動。
-
-4. **Contact-Aware Imitation Learning Through Contact Factorization**
-   - **作者**：Jiho Hong, Daeun Song, Sanghyun Kim, Mingyo Seo
-   - **來源**：[arXiv:2610.09533](https://arxiv.org/abs/2610.09533)
-   - **摘要證據**：指出接觸豐富的操作任務中，互動力量易隨表面幾何、方向與摩擦力微幅變化，使得直接基於原始力量測量的策略難以遷移。研究引入 FACE（Contact-Factorized Imitation Learning Framework），將預期任務行為與環境相依的接觸因素分離，以改善模仿學習的泛化能力。
-
-5. **Immiscible Diffusion Policy: Preserving Multimodal Robot Actions through Label-Free Noise Assignment**
-   - **作者**：Xiao Zhang, Yuxin Chen, Zhixuan Liang, Guojian Zhan, Chenran Li
-   - **來源**：[arXiv:2610.09369](https://arxiv.org/abs/2610.09369)
-   - **摘要證據**：分析擴散策略（Diffusion Policies）在機器人規劃中常退化為單一模態（即使資料集模態平衡且對稱）的現象，發現獨立動作-雜訊配對會增加擴散路徑間的混合與交叉，進而壓抑模態特異性行為。該文針對此現象提出不相容擴散策略以保留多模態動作。
-
-6. **RoboPace: Contact-Aware Time-Optimal Retiming for Action-Chunk Policies**
-   - **作者**：Mimo Shirasaka, Takehiko Ohkawa, Takuya Okubo, Nicola Scianca, Tatsuya Matsushima
-   - **來源**：[arXiv:2610.09696](https://arxiv.org/abs/2610.09696)
-   - **摘要證據**：探討將人類示範資料應用於視覺語言動作（VLA）政策時，人類時間步調無法直接套用於機器人的問題（人類柔韌手部能耐受快速接觸，但機器人可能因過衝而失控；反之機器人在自由空間可移動更快）。研究提出 RoboPace，協調執行速度與接觸安全性。
-
-7. **Point It, Strike It: Direction-Conditioned Dynamic Manipulation of Deformable Linear Objects**
-   - **作者**：Yi Yang, Xiang Fei, Lehong Wang, Zilin Dai, Ruogu Li
-   - **來源**：[arXiv:2610.09573](https://arxiv.org/abs/2610.09573)
-   - **摘要證據**：探討具備方向條件的可變形線性物件（如繩索）動態操作。任務不僅要求繩尖到達特定 3D 位置，更指定其到達方向。針對繩索動態難以建模且缺乏示範的挑戰，延伸現有方法以處理跨工作空間與不同繩索的單揮擊繩索打擊任務。
-
-8. **RLHND: Video Foundation Models as Physically Grounded Hand Trackers for Robot Learning**
-   - **作者**：Seungjun Moon, Subin Jeon, Sangwoo Kim, Hanbyul Joo, Jinwoo Shin
-   - **來源**：[arXiv:2610.09455](https://arxiv.org/abs/2610.09455)
-   - **摘要證據**：指出現有從人類影片中學習機器人政策的手部追蹤器多半從裁切畫面迴歸姿態，缺乏手部運動與物件互動先驗，導致估計不準確且缺乏實體物理線索。研究提出 RLHND，利用影片基礎模型從單眼自我視角中同時估計手部姿態與逼真的觸覺資訊。
-
-9. **Targeted Modality Dropout for Real-Robot Manipulation Robust to Intermittent Vision Loss**
-   - **作者**：Genki Shikada, Kazuki Osamura, Masaru Ide, Tetsuya Ogata, Kanata Suzuki
-   - **來源**：[arXiv:2610.09566](https://arxiv.org/abs/2610.09566)
-   - **摘要證據**：針對多模態模仿學習政策在訓練時容易過度依賴視覺等單一優勢模態，導致推理時視覺遺失會癱瘓執行的問題，提出標的模態丟棄（Targeted Modality Dropout, TMD）法。透過注意力機制評估各模態依賴性，並選擇性丟棄最具支配力的模態，結合熵正規化在雙臂機器人上驗證可提升視覺遺失時的成功率。
-
-10. **YUBI-STAG: Contact and Semantic-Rich Alignment for VLAs via Automated Video-Language Grounding**
-   - **作者**：Masatoshi Tateno, Takehiko Ohkawa, Yueh-HuaWu, Hanlong Li, Tatsuya Matsushima
-   - **來源**：[arXiv:2610.09718](https://arxiv.org/abs/2610.09718)
-   - **摘要證據**：為解決視覺語言動作（VLA）模型需要精細指令與物理互動對齊，但現有機器人示範僅提供粗略任務描述、忽略接觸細節（如使用哪個夾爪、接觸哪個物件、如何抓取與移動）的問題，提出 YUBI-STAG 框架進行時空標註與基礎化，為示範數據豐富化互動語意。
+- **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**：結合摺紙啟發輪胎與主動感測幾何控制的緊湊型移動機器人，利用 IMU 與融合節點將 LiDAR 投影至 RGB-D 深度流。[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
+- **Precise SE(3) End-Effector Tracking in Whole-Body Humanoid Control**：提出 ResGAC，結合幾何導納控制（GAC）與殘餘強化學習，解決人形機器人全身運動中的浮動基座震盪與動態耦合問題。[arXiv:2610.09479](https://arxiv.org/abs/2610.09479)
+- **Agentic RSR: Real-to-Sim-to-Real through Scene Reconstruction and Execution-Grounded Robot Policies**：透過代理人框架將場景重建、政策開發與真實機器人執行緊密連結，自動化修復與對齊機器人工作空間的模擬環境。[arXiv:2610.10479](https://arxiv.org/abs/2610.10479)
+- **Factorized Tactile Representation and Control for Sim-to-Real Manipulation**：提出因式分解的觸覺表示與控制框架，將接觸反應拆分為幾何、力分佈與時間變化，以橋接觸覺模擬與真實裝置。[arXiv:2610.10510](https://arxiv.org/abs/2610.10510)
+- **SearchWorld: Spatial Value-Grounded Imagination for UAV Object Search via World Models**：利用世界模型在城市環境下進行無人機（UAV）物件搜尋的空間價值接地想像，突破部分可觀測性限制。[arXiv:2610.09335](https://arxiv.org/abs/2610.09335)
+- **Black-Box Adversarial Patch Attacks on VLAs via Ancestor VLM Exploitation**：探討視覺-語言-動作模型（VLA）透過繼承祖先 VLM 能力所產生的黑箱對抗修補攻擊與安全性漏洞。[arXiv:2610.09708](https://arxiv.org/abs/2610.09708)
+- **RobotAPO: Adversarial Physics Preference Optimization for Robotic Manipulation Video Generation**：針對機器人操作影片生成引入對抗物理偏好最佳化，解決視覺真實但違反物理交互的盲點。[arXiv:2610.09454](https://arxiv.org/abs/2610.09454)
+- **EmbodiedRSI: Active Continual Robot Learning Through Hypothesis-Guided Co-Evolution**：提出自主演化的代理人框架，解決基底模型在面對環境與指令改變時的效能退化，提升主動探索效率。[arXiv:2610.10498](https://arxiv.org/abs/2610.10498)
+- **RFPO: Rectified Flow Policy Optimization for Embodied Control**：提出基於流模型的控制政策最佳化框架，解決少步驟離散化間距問題，確保在粗糙數值積分下的控制可靠性。[arXiv:2610.10453](https://arxiv.org/abs/2610.10453)
+- **TouchScale: 500 Hours of Human Vision and Touch for Visual-Tactile Learning**：推出大規模包含 500 小時人類視覺與觸覺同步互動資料集，為視覺-觸覺學習提供充沛的物理監督訊號。[arXiv:2610.10288](https://arxiv.org/abs/2610.10288)
+- **HuMBLE: Human Motion-Driven Behavior Learning for Embodied Locomotion**：平衡指令追蹤強健性與仿生學特徵，從人類運動資料中即時合成具備轉向能力的移動政策。[arXiv:2610.10489](https://arxiv.org/abs/2610.10489)
+- **Point It, Strike It: Direction-Conditioned Dynamic Manipulation of Deformable Linear Objects**：探討可變形線狀物體（DLO）的單揮擊動態操作，納入 3D 位置與抵達方向的目標條件化控制。[arXiv:2610.09573](https://arxiv.org/abs/2610.09573)
+- **Co-Evolving Robot Orchestrators and Policies through Deployment**：探討在真實世界部署中，如何透過協同演化來優化 VLA 政策與 VLM 協調器（Orchestrator）之間的互動。[arXiv:2610.09228](https://arxiv.org/abs/2610.09228)
+- **Rephrase Before You Act: Characterizing and Mitigating Language Sensitivity in Vision-Language-Action Models**：深入分析並量化 VLA 模型對指令措辭的高度敏感性，指出單一字詞替換即可造成大幅度的成功率波動。[arXiv:2610.10526](https://arxiv.org/abs/2610.10526)
 
 ## Interesting
-
-- **Origami-Inspired Mechanisms for Sensor Geometry Adaptation**: `2610.09828` 透過摺紙結構動態調整車輪幾何來驅動 LiDAR 掃描視角，展現了機械結構與感測器佈局共同設計的簡潔巧思，適合受限於成本與負載的行動載具參考。
-- **Immiscible Diffusion Policy**: `2610.09369` 指出擴散政策在無意間退化為單一模態的數學路徑交叉問題，對依賴 Diffusion 進行多模態動作生成的模型設計提供了底層防範思路。
+- **Enhancing Robotic Perception and Adaptability through Sensor Fusion and Origami-Inspired Designs**：利用結構輕量、成本低廉且具備摺紙機械變形的輪胎設計來改變 chassis 俯仰角，藉此被動帶動 LiDAR 掃描 elevations，提供了一種非傳統且巧妙的硬體感測融合思路。[arXiv:2610.09828](https://arxiv.org/abs/2610.09828)
 
 ## Idea Sparks
-
-1. **從人類示範到機器人執行的動態與時間適應（Temporal and Dynamic Retiming）**
-   - *跨論文觀察*：`2610.09117`（Workhorse）透過視覺規劃器與強化學習追蹤器分開訓練來處理人形機器人全體操作，而 `2610.09696`（RoboPace）則探討動作區塊政策中的接觸感知時間最佳化重排。兩者皆指向人類示範資料在物理限制、時間步調與接觸動態上的不匹配問題。
-   - *具體後續問題*：能否將接觸感知的時間重排（RoboPace）與無機器人的人類示範追蹤策略（Workhorse）結合，設計出一個在訓練階段即自動最佳化速度與接觸安全性的端到端學習框架？
-
-2. **多模態對齊與感測器退化防禦（Multimodal Robustness and Grounding）**
-   - *跨論文觀察*：`2610.09566`（TMD）關注政策在視覺遺失時對單一模態過度依賴的防禦，而 `2610.09718`（YUBI-STAG）與 `2610.09455`（RLHND）則專注於從人類影片中提取並對齊更豐富的物理與接觸語意。
-   - *具體後續問題*：在結合影片基礎模型與觸覺/語意基礎化（YUBI-STAG/RLHND）時，引入模態主動丟棄訓練（TMD）是否能有效防止模型過度依賴視覺，進而提升具身代理在真實世界感測器部分失效時的強韌度？
+1. **跨模態擴散策略中的「路徑交叉」與多峰坍縮防範**
+   - 觀察：近期研究指出獨立雜訊配對會導致擴散策略在多模態動作分佈上產生坍縮，這顯示傳統擴散模型的噪聲排布可能不適用於動作空間高度耦合的機器人控制。
+   - 後續問題：若將流匹配（Flow Matching）或整流流（Rectified Flow）引入多峰動作生成中，是否能比傳統擴散模型更有效地防止模態平均化？
+2. **VLA 模型的語言敏感性與「先重述再行動」的魯棒性設計**
+   - 觀察：VLA 模型對指令替換表現出驚人的敏感度，相同的語意僅因換句話說就可能使成功率從 100% 跌至 2%。
+   - 後續問題：在 VLA 部署前端加入輕量級的指令正規化或同義句擴增引導模組，是否能實質提升模型在開放世界部署時的語意泛化能力？
+3. **視觸覺（Visuo-Tactile）大規模資料集與模擬遷移**
+   - 觀察：隨著 TouchScale 等大型視觸覺資料集的出現，觸覺回饋正逐漸從獨立感測走向與視覺、語言深度融合的通用代理人架構。
+   - 後續問題：如何有效對齊跨不同觸覺硬體裝置（如 GelSight 等）的物理反應與高維特徵表示，才能使觸覺基礎模型達到類似視覺模型的跨平台零樣本泛化？
