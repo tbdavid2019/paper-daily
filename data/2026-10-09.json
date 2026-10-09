@@ -1,0 +1,2014 @@
+{
+  "date": "2026-10-09",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-10-09T08:50:31.830362Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 350,
+      "arxiv_cs.AI": 350,
+      "arxiv_cs.CV": 350,
+      "arxiv_cs.LG": 350,
+      "arxiv_cs.SY": 0,
+      "arxiv_keyword": 24,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 1524,
+    "after_dedup": 1230,
+    "window_start": "2026-10-05",
+    "window_candidates": 1203,
+    "already_seen": 497,
+    "new_candidates": 706,
+    "selected_papers": 60,
+    "decision_evaluated": 250,
+    "decision_accepted": 137,
+    "missing_published_at": 0,
+    "keyword_matched": 90
+  },
+  "papers": [
+    {
+      "id": "2610.11667",
+      "title": "Autonomous thermodynamic cycles via robotic mobility and sensing",
+      "authors": [
+        "Sofia Kuperman",
+        "Ezra Ben-Abu",
+        "Yaron Veksler",
+        "Anna Zigelman",
+        "Sefi Givli"
+      ],
+      "abstract": "Thermodynamic cycles are the foundation of energy conversion across natural and engineered systems, transforming heat into useful work. However, these cycles traditionally operate between fixed thermal reservoirs, restricting them to specific locations and temperature differences. Here, we introduce autonomous thermodynamic cycles enabled by robotic mobility and sensing, allowing robots to perform thermodynamic cycles by accessing spatially varying temperature fields. We experimentally realize this concept using multistable gas-filled capsules that circulate within the system across a thermal ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11667",
+      "published_at": "2026-10-08T10:39:27Z",
+      "updated_at": "2026-10-08T10:39:27Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.89,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.69,
+        "novelty_score": 1.25,
+        "recommendation": "must_read",
+        "latency_ms": 220.0,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 84.35,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10846",
+      "title": "Cross-Embodiment Robot Foundation World Models with Latent Actions",
+      "authors": [
+        "Huang Huang",
+        "Sriram Yenamandra",
+        "Arjun Majumdar",
+        "Elie Aljalbout",
+        "Tushar Nagarajan"
+      ],
+      "abstract": "The diversity of robot embodiments and action spaces makes it challenging to build robot world models that generalize across different embodiments. We introduce the Latent Action-Conditioned Robot World Model (LAC-WM), which operates within a learned unified latent action space shared across diverse embodiments. This unified action space improves the world model's performance when adapted to previously unseen robot embodiments. We compare LAC-WM with an Explicit Action-Conditioned World Model (EAC-WM), which conditions on explicit motion labels. Our results show that explicit action conditioni",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10846",
+      "published_at": "2026-10-07T19:51:22Z",
+      "updated_at": "2026-10-07T19:51:22Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.97,
+        "novelty_score": 0.99,
+        "recommendation": "highly_relevant",
+        "latency_ms": 188.2,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 74.05000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12468",
+      "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
+      "authors": [
+        "Junyan Li",
+        "Ruizhi Li",
+        "Yu Liu",
+        "Xiangshuo Liu",
+        "Mingchao Sun"
+      ],
+      "abstract": "We present DreamTrue, a multi-view, cross-embodiment robot world model for action-faithful and physically plausible video prediction. Training such a model on existing robot datasets faces two obstacles: imprecise calibration can impair action following, while limited coverage of unsuccessful interactions can bias predictions toward successful outcomes. To improve action following across embodiments, we render action trajectories into image-space conditions and introduce offline geometric calibration to align these conditions with the target videos. To broaden interaction coverage, we introduc",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12468",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-10-08T17:59:51Z",
+      "priority": 40.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.69,
+        "novelty_score": 0.98,
+        "recommendation": "highly_relevant",
+        "latency_ms": 182.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.9,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12007",
+      "title": "REACT: Rolling Denoising and Dual Decoupling for Reactive Robot Control with VLA Models",
+      "authors": [
+        "Houlong Xiong",
+        "Zhenqi Qiu",
+        "Zechen Wang",
+        "Suohang Zhang",
+        "Yiyu Ren"
+      ],
+      "abstract": "Flow-based vision-language-action (VLA) models generate action chunks for temporally coherent robot motion, but chunked control creates a fundamental closed-loop trade-off: long chunks provide smooth execution, whereas frequent replanning improves reactivity at the cost of action discontinuities. We introduce REACT, a rolling-denoising framework that makes flow-based VLAs more reactive while preserving long-horizon context. Instead of regenerating entire action chunks from scratch, REACT maintains a persistent action buffer with staggered flow timesteps. At each control step, the full horizon ",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.12007",
+      "published_at": "2026-10-08T14:09:46Z",
+      "updated_at": "2026-10-08T14:09:46Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.97,
+        "novelty_score": 0.98,
+        "recommendation": "highly_relevant",
+        "latency_ms": 192.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.9,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12099",
+      "title": "UNITAS: A 3D-Native World Action Model for Embodied Manipulation",
+      "authors": [
+        "Ruixiang Wang",
+        "Yongyi Su",
+        "Wenlve Zhou",
+        "Bo Yue",
+        "Hengyan Liu"
+      ],
+      "abstract": "World action models (WAMs) aim to answer a coupled physical question: given a task instruction, what motion should the robot execute, and how will that motion change the surrounding world? Most existing WAMs build on pretrained video generators and represent world evolution through images or visual latents. Robotic interaction, however, takes place in metric three-dimensional space, while images are view-dependent projections whose pixel distances do not directly encode physical distances. We introduce UNITAS, to our knowledge the first 3D-native world action model that unifies observations, a",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12099",
+      "published_at": "2026-10-08T15:02:50Z",
+      "updated_at": "2026-10-08T15:02:50Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.96,
+        "novelty_score": 0.98,
+        "recommendation": "highly_relevant",
+        "latency_ms": 227.8,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.9,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11248",
+      "title": "SimVLA: Zero-Shot Sim-to-Real VLA Learning for Mobile Manipulation",
+      "authors": [
+        "Kyoungin Baik",
+        "Youngwoon Lee"
+      ],
+      "abstract": "Large-scale, diverse datasets have driven the success of LLMs and VLMs. But VLAs for robotics remain limited by the cost and complexity of real-world data collection. While simulation offers a scalable alternative, its potential for sim-to-real VLA learning in mobile manipulation remains largely underexplored. We introduce SimVLA, an end-to-end framework that trains VLAs entirely on synthetic simulation data without teleoperation for mobile manipulation. SimVLA is first pre-trained on two complementary simulation-derived datasets: SimAction, a large-scale robot action dataset spanning 35 diver",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11248",
+      "published_at": "2026-10-08T04:52:35Z",
+      "updated_at": "2026-10-08T04:52:35Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.99,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.51,
+        "novelty_score": 0.95,
+        "recommendation": "highly_relevant",
+        "latency_ms": 253.2,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11945",
+      "title": "TACROSS: An Efficient and Low-Cost Scalable Human Touch System Across Heterogeneous Tactile Sensors for Dexterous Robot Learning",
+      "authors": [
+        "Bo Chen",
+        "Huanzhang Hu",
+        "Junyang Ma",
+        "Bo Yue",
+        "Fangdi Yu"
+      ],
+      "abstract": "Collecting tactile demonstrations on robots is costly and slow, motivating the use of lower-cost human tactile gloves for scalable data collection. However, human capacitive/piezoresistive gloves and robotic tactile sensors differ fundamentally in transduction principle, sensor layout, spatial resolution, and dynamic response, making alignment of raw sensor channels ill-posed. To address this problem, we present TACROSS, a scalable system for learning from human touch and transferring it to robots that bridges this heterogeneity by aligning tactile streams at the level of contact events rather",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.11945",
+      "published_at": "2026-10-08T13:34:31Z",
+      "updated_at": "2026-10-08T13:34:31Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.97,
+        "recommendation": "highly_relevant",
+        "latency_ms": 166.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.75,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11971",
+      "title": "CAPABLE: Capability-Aware Policy Adaptation via Behavioral Latent Encoding",
+      "authors": [
+        "Mohammad Khoshnazar",
+        "Mohammad Dehghani Tezerjani",
+        "Deyuan Qu",
+        "Zhiyuan Gao",
+        "Yanxiang Zhan"
+      ],
+      "abstract": "Vision-language-action (VLA) policies assume the embodiment on which they were trained and can fail when a joint fault changes how commanded actions are physically executed. Existing fault-recovery methods often require task-specific retraining, fault labels, explicit diagnosis, or privileged embodiment information. We introduce CAPABLE, a unified capability-aware adaptation framework for frozen VLAs that integrates self-supervised capability inference with residual reinforcement learning. CAPABLE infers capability, how much of the commanded motion each joint actually realizes and how that mot",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.11971",
+      "published_at": "2026-10-08T13:46:52Z",
+      "updated_at": "2026-10-08T13:46:52Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.95,
+        "novelty_score": 0.97,
+        "recommendation": "highly_relevant",
+        "latency_ms": 192.8,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.75,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12123",
+      "title": "PIER: An Evidence-Gated Execution Interface for Robotic Manipulation",
+      "authors": [
+        "Zoe Li",
+        "Anze Wang",
+        "Zhongyu Chen",
+        "Jingran Hu"
+      ],
+      "abstract": "Generating a plausible robot action does not establish that current observations justify its execution. Motivated by exploratory observations of high-confidence visual outputs under severe occlusion, we present PIER, an execution-authorization interface that separates evidence checks, decision provenance, and stage-scoped re-observation from hardware control. The deterministic gate evaluates declared visual and tactile inputs, while its caller maintains a budget of at most one re-observation per stage. We evaluate the implementation using 1,600 threshold-grid cases and 1,200 paired synthetic t",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12123",
+      "published_at": "2026-10-08T15:16:38Z",
+      "updated_at": "2026-10-08T15:16:38Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.99,
+        "novelty_score": 0.97,
+        "recommendation": "highly_relevant",
+        "latency_ms": 198.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.75,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12046",
+      "title": "SkillWeave: Weaving Heterogeneous Demonstrations into Long-Horizon Manipulation Skills",
+      "authors": [
+        "Ryosei Tamura",
+        "Xiaoxiang Dong",
+        "Uksang Yoo",
+        "Yuemin Mao",
+        "Romina Mir"
+      ],
+      "abstract": "Dexterous manipulation requires both large-scale task progression and precise contact-rich interaction, making it challenging to collect demonstrations that effectively support both regimes. We present SkillWeave, a heterogeneous demonstration framework for long-horizon dexterous manipulation that combines teleoperation for coarse reaching and transport with kinesthetic teaching for precise, contact-rich skills. To address the visual mismatch introduced by the demonstrator's presence during kinesthetic data collection, we propose an object-mask-conditioned diffusion policy that uses offline ob",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12046",
+      "published_at": "2026-10-08T14:33:48Z",
+      "updated_at": "2026-10-08T14:33:48Z",
+      "keyword_hits": 3,
+      "priority": 30.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.99,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.94,
+        "recommendation": "highly_relevant",
+        "latency_ms": 170.2,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.7,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12451",
+      "title": "VersaCamVLA: Camera-Configurable VLA Policies for Robotic Manipulation",
+      "authors": [
+        "Boyao Han",
+        "Chen Shi",
+        "Jingjing Qian",
+        "ZhuoTan Tian",
+        "Li Jiang"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have emerged as powerful foundations for robotic manipulation, but their reliance on fixed camera configurations during training makes them brittle to changes in camera count or pose during deployment. To overcome these limitations, we propose VersaCamVLA, a camera-configurable framework that decouples camera-set representation from action learning. VersaCamVLA learns a unified scene-token interface that maps an arbitrary, variable set of posed RGB views into fixed-size latent scene tokens. This is achieved via multi-signal target-view prediction and Wrist-A",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12451",
+      "published_at": "2026-10-08T17:58:47Z",
+      "updated_at": "2026-10-08T17:58:47Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.65,
+        "novelty_score": 0.96,
+        "recommendation": "highly_relevant",
+        "latency_ms": 231.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.6,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11771",
+      "title": "PathTime-VLA: Path-Time Decoupling for Factorized Post-Training of Vision-Language-Action Policies",
+      "authors": [
+        "Qing Huang",
+        "Yifei Yang",
+        "Ziqing Zou",
+        "Anzhe Chen",
+        "Zhenjie Zhu"
+      ],
+      "abstract": "Vision-Language-Action (VLA) policies typically predict actions at fixed time intervals, coupling the route a robot follows with its execution pace. This coupling complicates adaptation from teleoperation: useful geometric guidance comes with timing shaped by interface delays and operator behavior. Our key insight is to bring the path-time parameterization of classical motion planning into the learned action representation of a VLA. We introduce PathTime-VLA, which represents motion as a progress-indexed interaction path $X(s)$ and a positive interval-time profile. The latter defines a monoton",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11771",
+      "published_at": "2026-10-08T11:53:50Z",
+      "updated_at": "2026-10-08T11:53:50Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 1.0,
+        "novelty_score": 0.96,
+        "recommendation": "highly_relevant",
+        "latency_ms": 193.2,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.6,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10748",
+      "title": "TAPNAV: Humanoid Navigation through Tactile Active Perception",
+      "authors": [
+        "Huaze Liu",
+        "Zhenyu Wu",
+        "Jaehwi Jang",
+        "Junjie Sheng",
+        "Andrew Collins"
+      ],
+      "abstract": "Navigation in vision-denied environments is challenging for humanoid robots because proprioceptive odometry drifts and localization uncertainty accumulates rapidly. We present TAPNAV, a tactile active-perception framework that enables humanoid navigation toward a goal by actively probing surrounding structures without relying on vision. TAPNAV maintains a pose belief from odometry, IMU, and tactile contact observations, and couples uncertainty-aware global route planning with information-gain-driven local probing. The global planner searches for routes that keep predicted localization uncertai",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10748",
+      "published_at": "2026-10-07T18:14:37Z",
+      "updated_at": "2026-10-07T18:14:37Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.96,
+        "recommendation": "highly_relevant",
+        "latency_ms": 261.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.6,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10601",
+      "title": "Teaching a Robot Dog New Tricks: Diverse Quadruped Skills via Combined Reinforcement and Imitation Learning with Adversarial Task Selection",
+      "authors": [
+        "Lemon Foxmere",
+        "Anthony Furman",
+        "Yizheng Du",
+        "Oliver Chang",
+        "Leilani Gilpin"
+      ],
+      "abstract": "Reinforcement Learning (RL) has enabled legged robots to perform a range of skills in single-task settings. However, applications such as farm robotics or space exploration require diverse skills such as locomotion, digging, or close-range surveying. Training an end-to-end policy to address this problem remains difficult due to challenges such as sample inefficiency and gradient conflict between tasks in multi-task learning. We propose a three-stage method that trains a single policy to perform distinct tasks such as walking, digging, and hopping, and compose them into novel behaviors such as ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10601",
+      "published_at": "2026-10-06T23:16:34Z",
+      "updated_at": "2026-10-06T23:16:34Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.99,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 238.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.55000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12369",
+      "title": "Embodied Turing Machines: Stateful Code for Robot Recursive Self-Improvement",
+      "authors": [
+        "Kairui Hu",
+        "Siyuan Hu",
+        "Fangzhou Hong",
+        "Zhaoxi Chen",
+        "Ziwei Liu"
+      ],
+      "abstract": "Most robot policies keep a model in the control loop: a VLA maps observations to actions, and an Agent Harness, such as Agent-as-Policy or Harness VLA queries a VLM for decision making at run time. We propose a different view: the embodied world is an Embodied Turing Machine, whose tape is the robot and environment state and rules are the policy. If this state can be represented accurately, the decision making can be written entirely in code. We therefore propose Code-Only-as-Policy (COAP): code measures and tracks the robot, environment, and task state from camera images and proprioception, a",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12369",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-10-08T17:29:08Z",
+      "priority": 40.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 1.0,
+        "novelty_score": 0.97,
+        "recommendation": "highly_relevant",
+        "latency_ms": 182.0,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.35,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11054",
+      "title": "A Reconfigurable Fabric Based Pneumatic Actuator with Button Fastened Constraint Modules for Multi Mode Actuation",
+      "authors": [
+        "Kentaro Kimura",
+        "Hiroki Ishizuka",
+        "Yusuke Sakaue",
+        "Sei Ikeda",
+        "Osamu Oshiro"
+      ],
+      "abstract": "Soft pneumatic actuators are widely used in soft robotics. However, their actuation modes are typically fixed by internal chamber designs or reinforcements, making post fabrication reconfiguration difficult. This paper presents a reconfigurable fabric-based pneumatic actuator that enables rapid, tool free, and reusable switching among multiple actuation modes by attaching constraint fabric modules to a buttoned textile sleeve. By rearranging low-stretch constraint parts on a single actuator body, the proposed system realizes four actuation modes isotropic expansion, contraction, bending, and t",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11054",
+      "published_at": "2026-10-08T01:07:26Z",
+      "updated_at": "2026-10-08T01:07:26Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.97,
+        "recommendation": "highly_relevant",
+        "latency_ms": 182.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.35,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12157",
+      "title": "Instance-anchored interaction evidence: Grounding robot plans in human pointing and handling",
+      "authors": [
+        "Xinliang Xiao",
+        "Bowen Yang",
+        "Wenjing Zhang",
+        "Li Yang",
+        "Wei Zhou"
+      ],
+      "abstract": "A robot that assists people must often act on what a person has shown rather than said: which of several identical cartons was pointed at, or which box was handled. The plan is executed from the final scene, whereas the evidence occurs earlier, possibly on objects that have since moved. We propose instance-anchored interaction evidence (IAE), which registers every object of the final scene to its public identifier, keeps each identity through the video by backward mask propagation, and describes every frame by the geometry between hands, forearms and these instances. An evidence network traine",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12157",
+      "published_at": "2026-10-08T15:37:43Z",
+      "updated_at": "2026-10-08T15:37:43Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.94,
+        "recommendation": "highly_relevant",
+        "latency_ms": 223.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.30000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12241",
+      "title": "From Language to Motion: Task-Conditioned Focal-Stack Trajectory Integration for Microscopic Robots",
+      "authors": [
+        "Junjie Xie",
+        "Chuxuan He",
+        "Junkai Huang",
+        "Heng Zhang",
+        "Angen Ye"
+      ],
+      "abstract": "Microscopic robots require accurate task geometry despite changes in language, parts, and focus. We present a semantic-to-physical framework that maps instructions to constrained geometric operators, reuses frozen open-vocabulary perception, and integrates locally reliable focal-plane trajectories by confidence weighting and dynamic programming. Calibrated multi-view geometry connects 2-D paths to physical execution. Prompt, unseen-part, and geometry reconfiguration tests yield 6.30-6.59-pixel RMSE. Relative to part-specific U-Net training with 20-100 labels, the proposed zero-new-label config",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12241",
+      "published_at": "2026-10-08T16:21:42Z",
+      "updated_at": "2026-10-08T16:21:42Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.8,
+        "novelty_score": 0.96,
+        "recommendation": "highly_relevant",
+        "latency_ms": 219.2,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.19999999999999,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11283",
+      "title": "Being-M0.7: A Latent World-Action Model for Humanoid Robots",
+      "authors": [
+        "Junpeng Yue",
+        "Boyuan Li",
+        "Yuxuan Wang",
+        "Zepeng Wang",
+        "Yuhui Fu"
+      ],
+      "abstract": "Humanoid loco-manipulation requires coordinated locomotion and manipulation informed by future scene evolution and whole-body motion, yet learning these capabilities is constrained by scarce robot demonstrations. Human video and motion datasets offer scalable supervision, but many contain only video or motion rather than paired video-motion data. Moreover, human motion does not directly specify executable robot actions. We present Being-M0.7, a latent world-action model that transfers visual-motion priors learned from mixed-modality human data to humanoid control through pre-training, robot mi",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.11283",
+      "published_at": "2026-10-08T05:49:24Z",
+      "updated_at": "2026-10-08T05:49:24Z",
+      "keyword_hits": 3,
+      "priority": 60.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.41,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 248.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12424",
+      "title": "RoboRSI: Stable, efficient, and reusable robot self-evolution in complex real-world environments",
+      "authors": [
+        "Zimo Wen",
+        "Yijin Chen",
+        "Yuxuan Cao",
+        "Wendi Chen",
+        "Yanwen Zou"
+      ],
+      "abstract": "A generalist robot should not only perform diverse tasks but also improve through experience, turning what it learns during execution into capabilities that later tasks can reuse. Robot agents that act through code can already repair programs from execution feedback, yet it remains a central challenge to organize this experience around the task structure that gives it meaning, so that each repair is attributed to the responsible capability, supported by execution evidence, and validated before it is reused. We introduce RoboRSI, a robot self-improvement system built on Top-Down Skill Refinemen",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.12424",
+      "published_at": "2026-10-08T17:55:12Z",
+      "updated_at": "2026-10-08T17:55:12Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.65,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 154.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12069",
+      "title": "LIVIN: Benchmarking Spatial and Embodied Intelligence in Digital Twins of Lived-In Homes",
+      "authors": [
+        "Peijun Xu",
+        "Chuansen Nie",
+        "Yiyang He",
+        "Yinuo Bai",
+        "Jingyang Liu"
+      ],
+      "abstract": "Realistic household simulation must capture not only diverse environments but also the lived-in object arrangements and spatial constraints that shape robot motion and interaction. Existing resources often trade off scale, real-world correspondence, and interaction readiness, leaving a gap in faithful, interactive replicas of how real homes are actually arranged. To this end, we introduce LIVIN, a benchmark for spatial and embodied intelligence built on digital twins of 30 diverse lived-in homes. These replicas preserve observed room layouts, furniture configurations, and everyday belongings. ",
+      "sources": [
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12069",
+      "published_at": "2026-10-08T14:47:30Z",
+      "updated_at": "2026-10-08T14:47:30Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.99,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 189.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12440",
+      "title": "Generative Neural Retargeting for Human-to-Robot Dexterous Manipulation",
+      "authors": [
+        "Dechen Gao",
+        "Yue Yang",
+        "Ben Abbatematteo",
+        "Nathan Godwin",
+        "Pengcheng Wang"
+      ],
+      "abstract": "Human demonstrations are a scalable data source for learning dexterous manipulation, but the embodiment gap prevents human motion from being executed directly on robots. Inverse kinematics (IK) retargets human motion to robots efficiently but ignores dynamics, often producing infeasible motions. Reinforcement learning (RL) and sampling-based model predictive control (MPC) are commonly employed to yield dynamically feasible motions, but both are sample-inefficient and sensitive to hyperparameters. RL suffers from costly and unstable training and tedious reward engineering; MPC avoids policy opt",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12440",
+      "published_at": "2026-10-08T17:57:58Z",
+      "updated_at": "2026-10-08T17:57:58Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 156.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12411",
+      "title": "GLIO2: A GPU-Parallelized Tightly-Coupled LiDAR-Inertial-GNSS System for Robust and Real-Time Global Localization and Mapping",
+      "authors": [
+        "Qi Zhang",
+        "Xikun Liu",
+        "Qijun Qin",
+        "Xiangru Wang",
+        "Junzhe Wang"
+      ],
+      "abstract": "Globally consistent, real-time state estimation in large-scale, perceptually degraded environments is essential for autonomous vehicles and aerial robots, and requires fusing LiDAR, inertial, and GNSS measurements. Existing fusion methods, however, share a scan-to-map front-end with two failure modes. First, each scan is aligned to an incrementally built map that drifts under degeneracy, and once the estimate diverges the error is irrecoverable. Second, even without divergence, a registration biased by dynamic objects or wrong correspondences is propagated as a single pose constraint with an o",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12411",
+      "published_at": "2026-10-08T17:49:33Z",
+      "updated_at": "2026-10-08T17:49:33Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.99,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 186.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12470",
+      "title": "Dex-One2Many: Learning Dexterous Manipulation from a Single Human Demonstration",
+      "authors": [
+        "Jusuk Lee",
+        "Sungha Kim",
+        "Yeonsoo Park",
+        "Jonguk Cheon",
+        "Yoonkyo Jung"
+      ],
+      "abstract": "While learning dexterous manipulation from a single human video offers a promising alternative to costly robot demonstrations, many recent methods predominantly imitate demonstrated motions. Such strict motion matching often limits generalization to initial object poses, goal poses, and grasps not shown in the video. Alternatively, discovering a policy via reinforcement learning (RL) allows for broad generalization, but without prior guidance, it struggles with high-dimensional exploration in complex, multi-stage tasks. To address these coupled generalization and exploration challenges, we pre",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12470",
+      "published_at": "2026-10-08T17:59:58Z",
+      "updated_at": "2026-10-08T17:59:58Z",
+      "keyword_hits": 2,
+      "priority": 35.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.99,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.9,
+        "recommendation": "highly_relevant",
+        "latency_ms": 223.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.1,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10855",
+      "title": "OmniHOI: Dexterous Hand-Object Interaction from Monocular Human Video",
+      "authors": [
+        "Ting Mao",
+        "Yanming Shao",
+        "Ziheng Wang",
+        "Haoyu Liu",
+        "Yiqun Wang"
+      ],
+      "abstract": "Monocular videos of human manipulation provide abundant dexterous demonstrations, yet reconstructing hand-object interaction from a single view and transferring it to robot hands remain difficult, limiting their direct use for robot execution. Prior methods either require task-specific RL training, limiting scalability, or assume clean motion-capture trajectories and thus cannot operate directly on video. We present OmniHOI, a pipeline that turns an RGB video of hand-object interaction into an interaction-faithful trajectory on dexterous hands. The key idea is to enforce physical consistency u",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10855",
+      "published_at": "2026-10-07T19:59:12Z",
+      "updated_at": "2026-10-07T19:59:12Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.95,
+        "recommendation": "highly_relevant",
+        "latency_ms": 179.0,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.05,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12435",
+      "title": "VioLA: Learning Generalist Humanoid Control Policies from Human Data",
+      "authors": [
+        "Mert Albaba",
+        "Jens Beißwenger",
+        "Anna Manasyan",
+        "Daniel Marta",
+        "Michael J. Black"
+      ],
+      "abstract": "Teaching a humanoid to follow instructions with its whole body runs into two obstacles. Its action space is large and tightly coupled: legs, arms, and fingers must move together while the robot keeps its balance, which makes joint-level actions hard to learn. And humanoid demonstrations are scarce, so current humanoid generalist policies do not follow new instructions out of the box and are fine-tuned on teleoperated demonstrations of each task before deployment. Human demonstrations exist in far larger numbers, but a person's motion is not a robot command. We remove both obstacles by changing",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.12435",
+      "published_at": "2026-10-08T17:57:27Z",
+      "updated_at": "2026-10-08T17:57:27Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.84,
+        "novelty_score": 0.92,
+        "recommendation": "highly_relevant",
+        "latency_ms": 164.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11505",
+      "title": "DAMP: Humanoid Locomotion via Denoised Belief Learning and Adversarial Motion Priors",
+      "authors": [
+        "Puying Shen",
+        "Wenhao Cui",
+        "Huaxing Huang",
+        "Bangyu Qin",
+        "Shengtao Li"
+      ],
+      "abstract": "Humanoid robots possess the structural capability to traverse complex terrains. However, achieving stable t raversal without relying on perceived information remains challenging, particularly in complex environments. This paper introduces DAMP, a reinforcement learning framework aimed at achieving robust and naturalistic humanoid locomotion over challenging terrains, with the assumption that no perceived information is available. The framework leverages recurrent neural networks to capture temporal dependencies and implicitly infer privileged and other task-relevant latent information. By alig",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11505",
+      "published_at": "2026-10-08T08:42:45Z",
+      "updated_at": "2026-10-08T08:42:45Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.92,
+        "recommendation": "highly_relevant",
+        "latency_ms": 213.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12457",
+      "title": "SpatialHarness: Test-Time Spatial Scaffolding for Fine Robotic Manipulation",
+      "authors": [
+        "Jiayu Wang",
+        "Yue Yu",
+        "Bin Zhu",
+        "Zhiyao Yang",
+        "Jingjing Chen"
+      ],
+      "abstract": "Frontier multimodal foundation models (e.g., GPT-6 Astra) have recently shown strong potential for direct robotic control, yet their performance on fine manipulation remains limited. We argue that an important source of failure is not necessarily insufficient policy capability, but insufficient spatial observability, where task-critical spatial relationships may be poorly revealed by the existing physical camera setup. We introduce SpatialHarness, a test-time embodied harness that provides test-time spatial scaffolding for fine robotic manipulation without policy fine-tuning or changes to the ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12457",
+      "published_at": "2026-10-08T17:59:20Z",
+      "updated_at": "2026-10-08T17:59:20Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.92,
+        "novelty_score": 0.92,
+        "recommendation": "highly_relevant",
+        "latency_ms": 190.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 73.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12386",
+      "title": "ARC: A Reasoning Recipe for Robot Foundation Models",
+      "authors": [
+        "Gokul Puthumanaillam",
+        "Tao Sun",
+        "Elie Aljalbout",
+        "Moritz Reuss",
+        "Zhaoshuo Li"
+      ],
+      "abstract": "The prevailing approach to improving robot foundation models (RFMs) relies on larger models, more robot demonstrations, and costly training at scale. We show that there exists an effective and efficient complementary approach: the right reasoning recipe can substantially improve the zero-shot task performance of existing state-of-the-art RFMs. We refer to this recipe as ARC. It consists of three key ingredients: a reasoning trace, a scalable automatic labeling pipeline, and a strategy for adapting pretrained RFMs to use these traces for control. First, we find that effective reasoning traces s",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2610.12386",
+      "published_at": "2026-10-08T17:38:04Z",
+      "updated_at": "2026-10-08T17:38:04Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 1.0,
+        "novelty_score": 0.94,
+        "recommendation": "highly_relevant",
+        "latency_ms": 210.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.9,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11956",
+      "title": "Reliability-Aware Future Conditioning for Temporally Robust Robot Manipulation",
+      "authors": [
+        "Mohammad Khoshnazar",
+        "Mohammad Dehghani Tezerjani",
+        "Zhiyuan Gao",
+        "Deyuan Qu",
+        "Max Gandyra"
+      ],
+      "abstract": "A generated video of a task the robot is about to perform is useful guidance only if it depicts the phase the robot is actually in. We show that temporal misalignment can turn a task-consistent generated future into actively harmful guidance. On CALVIN, a five-frame early shift nearly erases the benefit of generated futures, reducing success from 81.3% to 54.8% against 54.0% without futures; imposed timing shifts reduce it even further to 34.2%, 19.8 points below the future-free policy. We introduce Reliability-Aware Future Conditioning (RAFC), which treats this as a control problem rather tha",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.LG"
+      ],
+      "url": "https://arxiv.org/abs/2610.11956",
+      "published_at": "2026-10-08T13:40:48Z",
+      "updated_at": "2026-10-08T13:40:48Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.99,
+        "novelty_score": 0.91,
+        "recommendation": "highly_relevant",
+        "latency_ms": 167.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11480",
+      "title": "RoboAware: Learning to Coordinate Embodied Skills from Counterfactual Outcomes",
+      "authors": [
+        "Bohan Zhou",
+        "Xingbei Chen",
+        "Emily Huang",
+        "Weilin Ruan",
+        "Haojian Huang"
+      ],
+      "abstract": "Embodied coding agents can combine modular robot skills with frozen end-to-end policies, yet effective composition requires anticipating which policy family will succeed in the current physical state. We present RoboAware, which builds on coding agents' skill orchestration by learning only a state-conditioned responsibility coordinator from counterfactual outcomes. Inspired by the success of REPL, we propose the $P^5$ schema and formulate a hierarchical MDP based on it. $P^5$ organizes skills uniformly into five semantic stages, defining where responsibility can be compared. To address the lac",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.11480",
+      "published_at": "2026-10-08T08:25:49Z",
+      "updated_at": "2026-10-08T08:25:49Z",
+      "keyword_hits": 0,
+      "priority": 15.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.64,
+        "novelty_score": 0.91,
+        "recommendation": "highly_relevant",
+        "latency_ms": 187.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10637",
+      "title": "TacHair: Tactile Contact-Distribution Guided Online Correction for Robotic Hair Stroking and Perception",
+      "authors": [
+        "Ruiyi Hu",
+        "Yongqiang Zhao",
+        "Daniel Bak",
+        "Yupeng Wang",
+        "Xuyang Zhang"
+      ],
+      "abstract": "Hair stroking is common in daily grooming and personal care, and is also widely used in hair-product evaluation, motivating robots with similar physical interaction capabilities. Existing robotic hair-care and surface-following methods mainly rely on trajectory planning, compliance, force regulation, or tactile-conditioned policies, but deformable hair can remain in contact while gradually drifting across the end-effector, making local interaction difficult to regulate. We propose TacHair, a tactile contact-distribution guided online correction framework that represents high-resolution tactile",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10637",
+      "published_at": "2026-10-07T14:20:13Z",
+      "updated_at": "2026-10-07T14:20:13Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.91,
+        "recommendation": "highly_relevant",
+        "latency_ms": 208.7,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12140",
+      "title": "Leveraging Human-In-The-Loop Demonstrations in Reinforcement Learning for Digital Twin-Driven Robot Flexibility",
+      "authors": [
+        "Yuzhu Sun",
+        "Mien Van",
+        "Nguyen Minh Nhat",
+        "Stephen McIlvanna",
+        "Sean McLoone"
+      ],
+      "abstract": "Growing automation makes collaborative robots work in more variable environments, increasing the need for adaptation. We propose a human-in-the-loop online training framework combining a digital twin (DT), reinforcement learning (RL), and human demonstrations. Unlike DTs used mainly to generate synthetic data before task execution, our DT is synchronized with the physical system in real time through camera feeds, allowing the virtual robot to update its observations and policy from real-world feedback. A dual actor framework integrates imitation learning (IL) without adding a direct imitation ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12140",
+      "published_at": "2026-10-08T15:26:12Z",
+      "updated_at": "2026-10-08T15:26:12Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.64,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 225.1,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.75,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11508",
+      "title": "WARP-VLA: Wrist-Camera Adaptation for View-Robust Policy Execution in Vision-Language-Action Models",
+      "authors": [
+        "Junmyeong Lee",
+        "Dongmin Shin",
+        "Min-Gyu Park",
+        "Wooseok Jeon",
+        "Inho Chang"
+      ],
+      "abstract": "Despite recent advances in Vision-Language-Action models (VLAs) for robotic manipulation, their performance remains sensitive to changes in camera configuration. The problem becomes more evident in cross-setup deployment, as reproducing the exact camera pose used for training is nearly impossible. Unlike fixed external views, wrist views are more challenging because the camera moves with the robot, causing even small mounting variations to alter fine-grained geometric cues. To address this, we propose WARP-VLA, a camera-view robust VLA for diverse wrist camera configurations. WARP-VLA adopts a",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.CV",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2610.11508",
+      "published_at": "2026-10-08T08:44:26Z",
+      "updated_at": "2026-10-08T08:44:26Z",
+      "keyword_hits": 1,
+      "priority": 40.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.71,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 207.4,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.55000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11072",
+      "title": "Towards Path-Creative Navigation: Robot Navigation through Embodied Interaction",
+      "authors": [
+        "Haoyu Xi",
+        "Siwei Cheng",
+        "Xiangyuan Liu",
+        "Brenda Li",
+        "Wei Zhang"
+      ],
+      "abstract": "Autonomous navigation in cluttered and constrained environments typically assumes a fixed environment and searches only for paths within existing free space. However, a route can be blocked by an articulated structure, a movable object, or a pedestrian, and reaching the goal may therefore require appropriate embodied interaction with the environment. This paper formulates Path-Creative Navigation (PCN), a navigation paradigm in which the robot recovers free space by coordinating locomotion and embodied interaction, and addresses one class of PCN tasks with a mapless framework. The vision-LiDAR",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11072",
+      "published_at": "2026-10-08T01:30:53Z",
+      "updated_at": "2026-10-08T01:30:53Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.91,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 216.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.55000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11531",
+      "title": "RAGNAROK: Radar-Aided Gravity-Normalized Alignment for Robust Open Keyframe-based Radar-Visual-Kinematic-Inertial SLAM",
+      "authors": [
+        "Hanjun Kim",
+        "Chiyun Noh",
+        "Sangwoo Jung",
+        "Jaehyung Jung",
+        "Simon Boche"
+      ],
+      "abstract": "Legged robots offer superior mobility in unstructured environments, but reliable operation in such conditions requires robust state estimation. To address the vulnerability of proprioceptive estimators in rough terrain, recent methods have incorporated radar to provide velocity measurements. However, their limited yaw observability still leads to drift, and failure-aware fusion for adverse environments remains underexplored. In this letter, we present RAGNAROK, the first radar-visual-kinematic-inertial SLAM designed for robust operation in challenging environments. It integrates slip- and roll",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11531",
+      "published_at": "2026-10-08T08:58:27Z",
+      "updated_at": "2026-10-08T08:58:27Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 210.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.55000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12033",
+      "title": "Traceable World State: A Provenance-Aware State Representation and Deterministic Replay Framework for Robotic Systems",
+      "authors": [
+        "Zoe Li"
+      ],
+      "abstract": "Robotic systems operating over extended tasks must maintain a world state assembled from observations arriving at different times, with varying confidence and potential revisions. Conventional representations emphasize latest estimates, hindering fact provenance, decision reproduction, or execution auditing. We present Traceable World State (TWS), a middleware-neutral semantic representation and reference runtime for provenance-aware robot world state. A TWS snapshot captures entities, relations, observations, confidence, and revision metadata. Validated update operations transform snapshots i",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.12033",
+      "published_at": "2026-10-08T14:26:19Z",
+      "updated_at": "2026-10-08T14:26:19Z",
+      "keyword_hits": 0,
+      "priority": 15.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.96,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.49,
+        "novelty_score": 0.94,
+        "recommendation": "highly_relevant",
+        "latency_ms": 261.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.5,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12299",
+      "title": "Multi-Agent Egocentric World Model with Fine-Grained Embodied Interaction",
+      "authors": [
+        "Dahyun Chung",
+        "Siyoon Jin",
+        "Hyunwook Choi",
+        "Honggyu An",
+        "Junyoung Seo"
+      ],
+      "abstract": "Egocentric world models predict first-person observations conditioned on an agent's actions, but most focus on a single agent. Real embodied settings often involve multiple agents that act and interact within a shared environment. Existing multi-agent world models rely on coarse actions like locomotion, camera control, or discrete commands, leaving fine-grained embodied interactions underexplored. We formulate multi-agent egocentric world modeling as synchronized ego-stream generation for multiple agents interacting through fine-grained actions in a shared world. This requires cross-view actio",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.AI",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12299",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-10-08T16:50:04Z",
+      "priority": 50.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.34,
+        "novelty_score": 0.91,
+        "recommendation": "highly_relevant",
+        "latency_ms": 165.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.44999999999999,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12126",
+      "title": "SuperNav: An Agentic Navigation System for Any Task in Any Scene",
+      "authors": [
+        "Jinkai Zhang",
+        "Jingyi Xu",
+        "Yuanhong Yu",
+        "Jiarui Guo",
+        "Ruizhen Hu"
+      ],
+      "abstract": "General-purpose service robots need navigation systems that can handle diverse human requests in unfamiliar environments, combining task generality with scene generality. Some existing methods fine-tune multimodal large language models (MLLMs) to predict navigation actions, making their behavior dependent on the coverage of navigation training data and potentially limiting generalization to new requests and environments. Our key insight is to let the MLLM focus on interpreting requests, understanding scenes, and making decisions while preserving its general-purpose capabilities and delegating ",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO",
+        "arxiv_cs.CV"
+      ],
+      "url": "https://arxiv.org/abs/2610.12126",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "keyword_hits": 0,
+      "updated_at": "2026-10-08T15:19:40Z",
+      "priority": 30.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.81,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 220.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.4,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12089",
+      "title": "ManiUnit: A Manipulation Skill Dataset and Benchmark for Long-Horizon Tasks",
+      "authors": [
+        "Guoting Wei",
+        "Dawei Yan",
+        "Xia Yuan",
+        "Gengming Zhang",
+        "Yelin He"
+      ],
+      "abstract": "Long-horizon mobile manipulation requires a robot to navigate multi-room environments and execute a sequence of manipulation skills under a single natural language instruction. Learning and evaluating these skills present three challenges: similar observations under a fixed task instruction may make skill selection ambiguous; even when a preceding skill succeeds, the robot state inherited by the next skill may deviate from its demonstrated starting states and affect execution; and task-level metrics hinder skill-specific diagnosis, while early failures leave later skills untested. We therefore",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12089",
+      "published_at": "2026-10-08T15:00:04Z",
+      "updated_at": "2026-10-08T15:00:04Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 185.1,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.4,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11591",
+      "title": "Acting from Belief, Looking When Needed: A Bayesian Spatial World Model for Navigation under Intermittent Perception",
+      "authors": [
+        "Feihong Yang",
+        "Xiang Long",
+        "Jincheng Yu",
+        "Jianfei Zhang",
+        "Guangjun Ge"
+      ],
+      "abstract": "Robot navigation commonly uses wide-coverage, high-frequency sensing to reduce partial observability; this reliance becomes restrictive when another task temporarily redirects a shared sensor from navigation, interrupting navigation-relevant observations. We study navigation under intermittent perception: acting from an internal spatial belief and looking again only when execution needs a new observation, potentially freeing the shared sensor for other tasks between navigation observations. ALONE, a Bayesian spatial world model, propagates a structured spatial belief using executed actions and",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11591",
+      "published_at": "2026-10-08T09:42:02Z",
+      "updated_at": "2026-10-08T09:42:02Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 179.8,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.4,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12431",
+      "title": "Control-Ready Uncertainty for Trajectory Diffusion",
+      "authors": [
+        "Zhiwei Xue",
+        "Jia Yue Kam",
+        "Jinhang Qiu",
+        "Yifeng Cheng",
+        "Ege Gursoy"
+      ],
+      "abstract": "Diffusion models can represent complex, multimodal trajectory distributions, but extracting uncertainty from them typically requires costly Monte Carlo sampling. This limits their use in real-time control, where robots must rapidly assess risk and maintain safety margins. We introduce Score-Curvature for Online Precision Estimation (SCOPE), a lightweight module that augments diffusion trajectory models with control-ready uncertainty. SCOPE learns a structured precision matrix around each nominal trajectory by distilling score-curvature information and producing calibrated Gaussian tubes with l",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12431",
+      "published_at": "2026-10-08T17:57:01Z",
+      "updated_at": "2026-10-08T17:57:01Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.95,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.6,
+        "novelty_score": 0.96,
+        "recommendation": "highly_relevant",
+        "latency_ms": 209.0,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.4,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11657",
+      "title": "YOCO: You Only Calibrate Once! Fast Mocap Calibration for Dexterous Teleoperation",
+      "authors": [
+        "Yu Zhang",
+        "Yunqi Li",
+        "Yushi Du",
+        "Yi Ma",
+        "Yanchao Yang"
+      ],
+      "abstract": "Dexterous teleoperation requires reliable human-hand state estimations. However, common low-cost motion-capture gloves and markerless trackers often exhibit biases that vary across users, glove fit, and recording sessions, degrading retargeting and demonstration quality. We present YOCO, a fast few-shot, fine-tuning-free calibration framework that corrects biased hand-pose streams from a small set of paired raw and target poses. Instead of optimizing a separate model for every operator or session, YOCO conditions a calibration HyperNet on the paired examples and predicts LoRA-style updates for",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11657",
+      "published_at": "2026-10-08T10:34:05Z",
+      "updated_at": "2026-10-08T10:34:05Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.96,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.93,
+        "recommendation": "highly_relevant",
+        "latency_ms": 216.4,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.35,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12172",
+      "title": "Unifying Policy Learning and State Prediction through Spatial Language Modeling",
+      "authors": [
+        "Minye Wu",
+        "Zehao Wang",
+        "Tinne Tuytelaars"
+      ],
+      "abstract": "Learning how actions change scene geometry can provide complementary supervision for goal-directed manipulation. We introduce Spatial Language Modeling, which represents scene contours, goals, action targets, and future states with a shared vocabulary of discrete coordinates and semantic tokens. A task-specific grammar organizes these elements into spatial sequences, allowing one autoregressive Transformer to learn action generation and action-conditioned state prediction through a common next-token objective. We train the model from scratch using random-play transition pretraining followed by",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.12172",
+      "published_at": "2026-10-08T15:43:08Z",
+      "updated_at": "2026-10-08T15:43:08Z",
+      "keyword_hits": 1,
+      "priority": 25.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.95,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.8,
+        "novelty_score": 0.95,
+        "recommendation": "highly_relevant",
+        "latency_ms": 177.1,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.25,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11168",
+      "title": "PMTRM: Pseudo-Memory Temporal Re-encoding Module for Embodied Policy Learning",
+      "authors": [
+        "Changchuan Yang",
+        "Haoxuan Xu",
+        "Wenbo Chen",
+        "Shuai Ren",
+        "Jianlong Zheng"
+      ],
+      "abstract": "Robotic manipulation often contains repeated motions whose local observations look similar at different phases. When these phases require different actions, a policy that relies mainly on the current observation may repeat completed motions or switch phases at the wrong time. To address this phase ambiguity, we present the Pseudo-Memory Temporal Re-encoding Module (PMTRM), a lightweight plug-in module with only 7.61M parameters that encodes a bounded history of executed states and actions into a latent sequence for existing policies. To help distinguish phases, a temporal heterogeneity objecti",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.11168",
+      "published_at": "2026-10-08T03:25:12Z",
+      "updated_at": "2026-10-08T03:25:12Z",
+      "keyword_hits": 0,
+      "priority": 15.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.87,
+        "recommendation": "highly_relevant",
+        "latency_ms": 224.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.25,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12196",
+      "title": "MAP2: Model- and Acceleration-Based Pursuit with MPC and Gaussian Process Residual Learning for Autonomous Racing",
+      "authors": [
+        "Weizhan Huang",
+        "Cheng Hu",
+        "Edoardo Ghignone",
+        "Nicolas Baumann",
+        "Yiqin Wang"
+      ],
+      "abstract": "Autonomous racing requires accurate trajectory tracking near the handling limits of a vehicle while maintaining low computational latency. Geometric controllers are computationally efficient, but the Ackermann steering geometry becomes invalid under limit-handling conditions. Model- and Acceleration-based Pursuit (MAP) preserves the simplicity of geometric approaches while leveraging tire dynamics. Yet MAP remains fundamentally a geometric controller that relies on Ackermann steering geometry, and its tire model may not fully capture the vehicle's actual dynamic response. This paper presents M",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12196",
+      "published_at": "2026-10-08T15:52:50Z",
+      "updated_at": "2026-10-08T15:52:50Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.96,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.69,
+        "novelty_score": 0.92,
+        "recommendation": "highly_relevant",
+        "latency_ms": 241.8,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.2,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11322",
+      "title": "USDCraft: Geometrically Grounded Programmatic Modeling of Articulated 3D Assets for Simulation",
+      "authors": [
+        "Chuanrui Zhang",
+        "Zaijia Yang",
+        "Duomin Wang",
+        "Lu Shi",
+        "Daquan Zhou"
+      ],
+      "abstract": "Geometrically faithful and functional articulated 3D assets are essential for real-to-sim robot manipulation, where policies trained in simulation must transfer to physical objects. Recent mesh-based methods learn to infer articulation from annotated 3D assets, but deployment remains challenging when real-world objects fall outside the training distribution or their meshes are incomplete or corrupted. To address these limitations, we formulate articulated asset reconstruction as programmatic modeling grounded in partial geometric evidence and introduce USDCraft, a framework in which a pretrain",
+      "sources": [
+        "huggingface",
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11322",
+      "published_at": "2026-10-08T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-10-08T06:23:24Z",
+      "priority": 35.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.89,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 260.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.15,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12272",
+      "title": "Walking on Roofs: Exploring the Potential of Walking Robots for Construction Work on Roofs",
+      "authors": [
+        "Bjoern-Felix Dettmar",
+        "Arne Roennau"
+      ],
+      "abstract": "This paper investigates the feasibility of deploying quadruped walking robots for the automation of work in roof environments. While quadrupeds have demonstrated versatility across various domains, their large-scale deployment remains limited, partly due to lack of application-specific designs. Roof environments represent a novel and unexplored use case, combining high safety risks for human workers with repetitive, strenuous tasks that could benefit from robotic assistance. A dedicated test rig of a roof's surface was designed to evaluate the baseline performance of a commercial quadruped, th",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12272",
+      "published_at": "2026-10-08T16:36:19Z",
+      "updated_at": "2026-10-08T16:36:19Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.86,
+        "recommendation": "highly_relevant",
+        "latency_ms": 229.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.1,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12185",
+      "title": "RESETTLE: Robotic Recovery through Disagreement-Triggered Retrieval and Efficient Corrective Control",
+      "authors": [
+        "Yuxin Chen",
+        "Senqiao Yang",
+        "Zixuan Wang",
+        "Jinhui Ye",
+        "Changsheng Lu"
+      ],
+      "abstract": "Reliable robotic manipulation requires timely intervention to correct emerging deviations and restore progress after execution errors. However, recovery methods based on repeated vision-language reasoning or iterative online optimization can incur substantial latency, delaying intervention. To address these challenges, we introduce RESETTLE(Robotic rEcovery through diSagrEement-Triggered reTrievaL and Efficient Corrective Control), a model-agnostic framework that provides computationally efficient recovery at the action-execution interface of frozen robot policies. RESETTLE triggers recovery w",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12185",
+      "published_at": "2026-10-08T15:49:03Z",
+      "updated_at": "2026-10-08T15:49:03Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.86,
+        "recommendation": "highly_relevant",
+        "latency_ms": 218.4,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.1,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11943",
+      "title": "STAG: A Sparse Traversability-Aware Graph Representation from Grid-Based Costmaps for Robotic Navigation",
+      "authors": [
+        "Gabriel Manuel Garcia",
+        "Stéphanie Aravecchia",
+        "Miguel Angel Olivares-Mendez"
+      ],
+      "abstract": "Autonomous rovers navigating large unstructured environments need efficient global planning that accounts for terrain traversability. However, searching dense grid-based costmaps becomes computationally expensive as the mapped area grows. We introduce STAG, a Sparse Traversability-Aware Graph that converts costmaps into compact graphs. STAG combines a medial-axis topological backbone, representative nodes for homogeneous traversability regions, and transition nodes near strong traversability gradients. Edges encode geometry and traversability to account for path length and terrain difficulty. ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11943",
+      "published_at": "2026-10-08T13:33:38Z",
+      "updated_at": "2026-10-08T13:33:38Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.86,
+        "recommendation": "highly_relevant",
+        "latency_ms": 216.9,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.1,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11141",
+      "title": "Distributed Relative Localization Based on Ultra-WideBand and LiDAR for Multi-robot with Limited Communication",
+      "authors": [
+        "Zhiqiang Cao",
+        "Ran Liu",
+        "Billy Pik Lik Lau",
+        "Chau Yuen",
+        "U-Xuan Tan"
+      ],
+      "abstract": "Relative localization is crucial for a multi-robot system to collaboratively perform tasks, such as exploration and formation. However, this is highly challenging for homogeneous robots with similar appearance in GPS-denied and communication-limited environments. In this paper, we propose a fully distributed relative position estimation approach for a team of robots based on onboard UWB and LiDAR sensors, in which LiDAR is utilized to obtain the position of anonymous objects in Line-of-Sight (LOS), and UWB is used for ranging between robots. We construct two graphs, namely UWB connection graph",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11141",
+      "published_at": "2026-10-08T03:06:13Z",
+      "updated_at": "2026-10-08T03:06:13Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 1.0,
+        "novelty_score": 0.86,
+        "recommendation": "highly_relevant",
+        "latency_ms": 189.6,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.1,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12368",
+      "title": "LiteNWM: Efficient Latent World Models for Onboard Visual Navigation in the Wild",
+      "authors": [
+        "Linkai Liu",
+        "Yuntian Zhang",
+        "Zhenshan Bing",
+        "Chen Chen",
+        "Lingjuan Lyu"
+      ],
+      "abstract": "Direct visual navigation policies generate trajectories efficiently but do not explicitly evaluate their future consequences. Generative navigation world models provide this foresight through visual rollouts, which are costly when evaluating multiple candidates. We present LiteNWM, a latent navigation world model that shares visual encoding across candidates and jointly predicts their action-conditioned future representations at multiple horizons, while a learned scorer uses these predictions to select trajectories. In offline evaluations on RECON, SCAND, and SACSoN, LiteNWM reduces macro-aver",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12368",
+      "published_at": "2026-10-08T17:29:04Z",
+      "updated_at": "2026-10-08T17:29:04Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.99,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 217.3,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.10905",
+      "title": "Informationally Decoupled Trajectory Design for Sim-to-Real System Identification",
+      "authors": [
+        "Sangwoo Shin",
+        "Ashvin Anilkumar",
+        "Ryan Gao",
+        "Josiah P. Hanna"
+      ],
+      "abstract": "Sampling-based system identification estimates physically meaningful parameters by tuning a simulator to reproduce the target system dynamics, providing an interpretable approach to improving sim-to-real transfer. Yet when the collected trajectories do not distinguish the effects of different parameters, multiple parameter combinations can reproduce those trajectories, leading to unreliable parameter estimates. To address this challenge, we introduce an Informationally Decoupled Trajectory Design framework (IDTD), which formulates the objective for the exploration policy built on the Schur com",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.10905",
+      "published_at": "2026-10-07T21:02:51Z",
+      "updated_at": "2026-10-07T21:02:51Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 1.0,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 210.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11722",
+      "title": "From Solo to Ensemble: A Hierarchical Framework for Composable Multi-Agent Human-Object Interaction",
+      "authors": [
+        "Zekai Deng",
+        "Kangyi Chen",
+        "Ye Shi",
+        "Jingya Wang"
+      ],
+      "abstract": "Physics-based human-object interaction has achieved robust single-agent manipulation skills, yet extending them to multi-agent cooperative tasks remains challenging. Existing approaches typically adapt interaction policies through task-specific fine-tuning, which entangles low-level contact-rich execution with high-level coordination and limits reuse across object geometries, interaction types, and team sizes. We propose a hierarchical framework that converts a single-agent HOI policy into a reusable Object-oriented Motion Skill. Specifically, we reinterpret teacher rollouts as object-oriented",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11722",
+      "published_at": "2026-10-08T11:24:20Z",
+      "updated_at": "2026-10-08T11:24:20Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.88,
+        "recommendation": "highly_relevant",
+        "latency_ms": 224.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 72.0,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12404",
+      "title": "A Physics-Informed Collision Learning Framework for Collaborative Robot Motion Generation",
+      "authors": [
+        "Chen Cai",
+        "Steven Liu"
+      ],
+      "abstract": "Close-proximity multi-arm manipulation requires collision models that are both geometrically accurate and differentiable enough for real-time optimization. Classical geometry checkers provide reliable distances but are difficult to use inside gradient-based model predictive control, while conservative proxy models can restrict tightly coupled motion. We present PI-UDF, a physics-informed unified differentiable framework for body-to-body collision distance prediction between articulated robots. PI-UDF combines analytical forward kinematics with learnable link-geometry embeddings and a shared re",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12404",
+      "published_at": "2026-10-08T17:45:04Z",
+      "updated_at": "2026-10-08T17:45:04Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 1.0,
+        "novelty_score": 0.85,
+        "recommendation": "highly_relevant",
+        "latency_ms": 199.1,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.95,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11119",
+      "title": "FOCUS: From Privileged States to RGB-D with Controlled Modality Switching and Representation Alignment",
+      "authors": [
+        "Filip Grigorov",
+        "Kourosh Darvish",
+        "Nandita Vijaykumar"
+      ],
+      "abstract": "Vision-based reinforcement learning for robotic manipulation is sample-inefficient because RGB-D observations are high-dimensional and noisy. Privileged state information available in simulation can accelerate training, but its absence at test time creates a train-test modality gap. We propose FOCUS, a single-stage PPO framework that trains the critic on privileged state while automatically regulating whether the actor collects rollouts from RGB-D or privileged-state latents. Regulation is driven by the KL divergence between the action distributions induced by the two modalities, while represe",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11119",
+      "published_at": "2026-10-08T02:45:25Z",
+      "updated_at": "2026-10-08T02:45:25Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.96,
+        "novelty_score": 0.85,
+        "recommendation": "highly_relevant",
+        "latency_ms": 212.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.95,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11583",
+      "title": "SDPAD: A Fully Spike-Driven Pipeline for End-to-End Autonomous Driving",
+      "authors": [
+        "Chengjun Zhang",
+        "Yuhao Zhang",
+        "Jie Yang",
+        "Mohamad Sawan"
+      ],
+      "abstract": "End-to-end autonomous driving demands trajectory planners that are both highly accurate and cheap enough for edge deployment. State-of-the-art artificial neural network (ANN) planners meet the accuracy requirement at the cost of heavy dense computation, while spiking neural networks (SNNs)---though promising orders-of-magnitude energy savings through sparse, event-driven arithmetic---still lag far behind in planning accuracy. We present \\textbf{SDPAD}, a fully spike-driven end-to-end planning pipeline that closes this gap. SDPAD converts a pre-trained ANN perception stack into integer-spike fo",
+      "sources": [
+        "arxiv_cs.RO",
+        "arxiv_cs.AI"
+      ],
+      "url": "https://arxiv.org/abs/2610.11583",
+      "published_at": "2026-10-08T09:33:19Z",
+      "updated_at": "2026-10-08T09:33:19Z",
+      "keyword_hits": 0,
+      "priority": 15.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.93,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.73,
+        "novelty_score": 0.98,
+        "recommendation": "highly_relevant",
+        "latency_ms": 197.0,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.9,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11752",
+      "title": "2DGS-Planner: Rasterization-based Path Planning in 2D Gaussian Splatting Map",
+      "authors": [
+        "Jiwon Park",
+        "Dong-Uk Seo",
+        "Hyun Myung"
+      ],
+      "abstract": "Gaussian splatting provides an explicit and efficiently rasterizable scene representation for robot navigation. However, individual Gaussian primitives may not reliably represent obstacles as they are jointly optimized through alpha-composited rendering from a finite set of reconstruction views. We propose 2DGS-Planner, a path planner for ground robots that reads planning-relevant geometry from a 2D Gaussian splatting (2DGS) map through rasterization, rather than treating individual Gaussian primitives as obstacles. During offline roadmap construction, multi-view attribution converts rendered ",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11752",
+      "published_at": "2026-10-08T11:41:38Z",
+      "updated_at": "2026-10-08T11:41:38Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.99,
+        "novelty_score": 0.87,
+        "recommendation": "highly_relevant",
+        "latency_ms": 247.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.12245",
+      "title": "Fixed-Reference Pose Residuals for Measuring Cross-Dataset Cue Transfer in Human-Robot Interaction Anticipation",
+      "authors": [
+        "Bowen Yang",
+        "Xinliang Xiao",
+        "Wenjing Zhang",
+        "Li Yang",
+        "Wei Zhou"
+      ],
+      "abstract": "Social and service robots in public spaces need to anticipate which nearby person is about to approach and touch them, so that a response can be prepared before contact. It is largely unknown which cues support this anticipation when a model trained with one robot is used on another robot at a different site. We study this question with a fixed-reference pose residual (FRPR) model: a geometry predictor built from the person's bounding box and mask is trained and frozen, and a temporal network then learns from body pose an additive correction to its logit, so that every prediction splits exactl",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.12245",
+      "published_at": "2026-10-08T16:23:25Z",
+      "updated_at": "2026-10-08T16:23:25Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.97,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.29,
+        "novelty_score": 0.87,
+        "recommendation": "highly_relevant",
+        "latency_ms": 191.5,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.85,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    },
+    {
+      "id": "2610.11622",
+      "title": "Learning Language-Conditioned Traversability Representations for Adaptive Visual Navigation",
+      "authors": [
+        "Senda Chen",
+        "Changxu Cheng",
+        "Fangdi Li",
+        "Tao Wang",
+        "Wuyue Zhao"
+      ],
+      "abstract": "Traversability is essential for visual navigation but varies with robot capabilities and user preferences. Conventional pipelines often rely on explicit costmaps or segmentation masks with predefined criteria, requiring hand-crafted rules and careful tuning. Moreover, viewpoint-dependent segmentation masks complicate asynchronous planning under perception latency. We present LaTraNav, a framework that learns language-conditioned traversability representations for adaptive visual navigation. Its asynchronous architecture combines a slow vision-language model that produces latent representations",
+      "sources": [
+        "arxiv_cs.RO"
+      ],
+      "url": "https://arxiv.org/abs/2610.11622",
+      "published_at": "2026-10-08T10:03:10Z",
+      "updated_at": "2026-10-08T10:03:10Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "jev",
+        "relevance_prob": 0.98,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.97,
+        "novelty_score": 0.84,
+        "recommendation": "highly_relevant",
+        "latency_ms": 245.1,
+        "model": "jev-1.13.0",
+        "endpoint": "https://api.typesafe.ai/v1/systemone"
+      },
+      "decision_score": 71.80000000000001,
+      "first_seen_at": "2026-10-09T08:50:31.830362Z"
+    }
+  ]
+}

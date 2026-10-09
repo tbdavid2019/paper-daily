@@ -1,6 +1,14 @@
 {
-  "latest": "2026-10-08",
+  "latest": "2026-10-09",
   "entries": [
+    {
+      "date": "2026-10-09",
+      "topic": "embodied_ai",
+      "file": "2026-10-09.json",
+      "total_papers": 60,
+      "keyword_matched": 90,
+      "crawled_at": "2026-10-09T08:50:31.830362Z"
+    },
     {
       "date": "2026-10-08",
       "topic": "embodied_ai",
