@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-12",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-11-12T09:39:31.467075Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 178,
+      "arxiv_cs.AI": 350,
+      "arxiv_cs.CV": 305,
+      "arxiv_cs.LG": 350,
+      "arxiv_cs.SY": 0,
+      "arxiv_keyword": 8,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 1291,
+    "after_dedup": 990,
+    "window_start": "2026-11-08",
+    "window_candidates": 940,
+    "already_seen": 938,
+    "new_candidates": 2,
+    "selected_papers": 0,
+    "decision_evaluated": 2,
+    "decision_accepted": 0,
+    "missing_published_at": 0,
+    "keyword_matched": 0
+  },
+  "papers": []
+}
