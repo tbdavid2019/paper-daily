@@ -1,0 +1,1182 @@
+{
+  "date": "2026-11-24",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-11-24T12:24:17.916667Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 0,
+      "arxiv_cs.AI": 0,
+      "arxiv_cs.CV": 0,
+      "arxiv_cs.LG": 0,
+      "arxiv_cs.SY": 0,
+      "arxiv_keyword": 25,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 125,
+    "after_dedup": 123,
+    "window_start": "2026-11-20",
+    "window_candidates": 72,
+    "already_seen": 15,
+    "new_candidates": 57,
+    "selected_papers": 35,
+    "decision_evaluated": 57,
+    "decision_accepted": 35,
+    "missing_published_at": 0,
+    "keyword_matched": 30
+  },
+  "papers": [
+    {
+      "id": "2611.30989",
+      "title": "WorldLeague: Benchmarking Physical Agency",
+      "authors": [
+        "Xinyang Zhou",
+        "Qi Li",
+        "Xinchao Wang"
+      ],
+      "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce WorldLeague, a benchmark that compares AI systems on a common set of 60 simulated robot tasks by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in WorldSeek, rearrange objects in W",
+      "sources": [
+        "huggingface",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30989",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "updated_at": "2026-11-23T16:44:19Z",
+      "priority": 35.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9301,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.385,
+        "novelty_score": 1.113,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1387.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 73.899,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.31053",
+      "title": "ReWeave: Emergent Physical Task Topologies for Embodied Harness Optimization and Cross-Task Meta-Distillation",
+      "authors": [
+        "Yicheng Xu",
+        "Wencan Jiang",
+        "Zihao Zhu",
+        "Keru Zhou",
+        "Chang Zhou"
+      ],
+      "abstract": "Long-horizon embodied tasks involve physical dependencies that may only become clear through interaction. As task understanding deepens, past trials can reveal new information for adaptation and transfer. However, coarse progress feedback cannot identify which physical preconditions held, leaving search unguided, while task-specific optimization easily overfits to individual scenes, making cross-task transfer brittle. We introduce ReWeave, a framework that jointly optimizes an embodied agent harness and an emergent physical task topology from interaction without updating policy weights. Keepin",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.31053",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9538,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.463,
+        "novelty_score": 1.012,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1077.5,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 73.332,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30177",
+      "title": "Resource-Aware VLA-MPC Co-Location for Efficient Embodied AI",
+      "authors": [
+        "Zeyu Guo",
+        "Hao Lou",
+        "Yuhui Hao",
+        "Han Zhao",
+        "Zihan Liu"
+      ],
+      "abstract": "Recent advances in embodied artificial intelligence (EAI) have unleashed new potential in many frontiers. Current EAI systems often combine vision-language-action (VLA) inference with high frequency model predictive control (MPC). On mobile GPUs, these workloads are typically serialized, causing control deadline misses. We present Dubot, a framework that automatically schedules VLA inference and MPC on a single mobile GPU. Specifically, Dubot identifies concurrent opportunities and proposes three co-location mechanisms: spatial partitioning, block-level co-location, and intra-block fusion. By ",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30177",
+      "published_at": "2026-11-23T07:23:23Z",
+      "updated_at": "2026-11-23T07:23:23Z",
+      "keyword_hits": 2,
+      "search_keyword": "embodied artificial intelligence",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.957,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.434,
+        "novelty_score": 0.926,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1071.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 72.17,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29897",
+      "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+      "authors": [
+        "Yue Huang",
+        "Tianshan Zhang",
+        "Zeyu Zhang",
+        "Jayeon Kang",
+        "Akide Liu"
+      ],
+      "abstract": "Long-horizon, real-time controllable motion generation is essential for interactive animation and humanoid robotics, where an agent must respond to changing instructions and spatial goals while moving. Existing autoregressive diffusion methods generate motion incrementally, but bounded attention caches limit access to distant history, while repeated denoising introduces substantial inference overhead. We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates local attention, resumable recurrent states, and persistent content memory (PCM) for long-horizon contr",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.29897",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8822,
+        "primary_category": "locomotion_humanoid",
+        "category_confidence": 0.844,
+        "novelty_score": 1.099,
+        "recommendation": "highly_relevant",
+        "latency_ms": 958.2,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 71.773,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30209",
+      "title": "RoboAda: Adapting Frozen Robot Policies at Test Time to Physics They Cannot See",
+      "authors": [
+        "Yunbei Zhang",
+        "Zijian Jin",
+        "Shuaicheng Niu",
+        "Baian Chen",
+        "Weirui Ye"
+      ],
+      "abstract": "Pretrained robot policies decide what to do from camera images, yet some of the physics that decides whether their plans succeed is not visible. An object may look light but be 100 times heavier, and a weakened joint or a lagging controller leaves no trace in the image. When the physics at deployment differs from training, the plan is often still right but is executed as if nothing had changed. Training on such variations in advance cannot handle unseen changes, while adapting once deployed either changes the plan, leaving the miscalibrated commands in place, or updates a robot model by gradie",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30209",
+      "published_at": "2026-11-23T07:47:08Z",
+      "updated_at": "2026-11-23T07:47:08Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.944,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.419,
+        "novelty_score": 0.927,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1598.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 71.66499999999999,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.31115",
+      "title": "RUIBench: What Makes a Good Robot-Use Interface?",
+      "authors": [
+        "Yanzhe Chen",
+        "Zhijun Cao",
+        "Zechen Bai",
+        "Wenzheng Zeng",
+        "Kevin Yuchen Ma"
+      ],
+      "abstract": "Foundation models can reason about complex physical tasks, yet translating this intelligence into reliable robot execution remains challenging. We argue that a critical, often overlooked factor is the robot-use interface (RUI), which determines how agents express and execute physical actions. To systematically study its impact, we introduce RUIBench, comprising 30 manipulation tasks across five suites spanning world knowledge, in-context learning, discovery, dynamic interaction, and contact-rich manipulation. We further develop RUIKit, a unified framework that crosses six action abstractions w",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.31115",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9218,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.624,
+        "novelty_score": 0.937,
+        "recommendation": "highly_relevant",
+        "latency_ms": 866.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 70.92699999999999,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30637",
+      "title": "SWEEP-Bench: Do Embodied Policies Act on the Speed They See?",
+      "authors": [
+        "Hiroaki Honda",
+        "Koya Sakamoto",
+        "Shu Morikuni",
+        "Yusuke Iwasawa",
+        "Taiki Miyanishi"
+      ],
+      "abstract": "Robot policies must adapt to the speed of moving objects, yet existing benchmarks rarely measure this ability across diverse tasks and speeds. We introduce SWEEP-Bench, a simulation benchmark with 80 conveyor-belt manipulation tasks spanning 16 skill categories, each evaluated at 13 belt speeds (0.10-0.40 m/s). Objects are transported through physical contact with a visibly moving belt. Each task has a static counterpart, and each evaluation episode uses the same randomized scene at all 13 speeds. We fine-tune eight vision-language-action and world-action models on demonstrations spanning the ",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30637",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9388,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.721,
+        "novelty_score": 0.868,
+        "recommendation": "highly_relevant",
+        "latency_ms": 3223.3,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 70.572,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29096",
+      "title": "JEPA-Tuner: From Predictive Fine-Tuning to Asynchronous Execution of Vision-Language-Action Models",
+      "authors": [
+        "Jingxiang Qu",
+        "Tian Xie",
+        "Youngjin Hong",
+        "Changhyun Choi",
+        "Yang Katie Zhao"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models generate sequences of actions from visual observations, proprioceptive states, and language instructions. In embodied interaction, executing these actions influences subsequent observations and robot states, providing a natural predictive signal for policy learning. However, standard action-supervised fine-tuning does not explicitly capture these action-conditioned temporal dependencies in the guidance consumed by the action predictor. We introduce JEPA-Tuner, a predictive fine-tuning framework that regularizes the VLA's native policy guidance through action",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.29096",
+      "published_at": "2026-11-21T23:35:20Z",
+      "updated_at": "2026-11-21T23:35:20Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8772,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.929,
+        "novelty_score": 1.009,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1721.2,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 70.223,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28873",
+      "title": "NAT: Scaling Causal Neural Action Tokenizers Across Embodiments",
+      "authors": [
+        "Ahad Jawaid",
+        "Alexander Swerdlow",
+        "Yu Xiang"
+      ],
+      "abstract": "Action tokenizers let robot policies treat control as autoregressive next-token prediction. As these policies are trained on larger and more diverse datasets, they will need a universal tokenizer that can encode actions from many embodiments and data sources, including ones it has not seen. We study action tokenization at scale, training on 49k hours of action data from real-world robots, handheld grippers, simulation, and humans. We introduce Neural Action Tokenizer (NAT), a causal tokenizer whose decoder lets actions be executed as their tokens are generated. Across four simulation benchmark",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28873",
+      "published_at": "2026-11-21T15:43:07Z",
+      "updated_at": "2026-11-21T15:43:07Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9164,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.757,
+        "novelty_score": 0.899,
+        "recommendation": "highly_relevant",
+        "latency_ms": 2567.8,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 70.14099999999999,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29279",
+      "title": "A2I-VLA: A Two-Stage Vision-Language-Action model with Semantic-Physical Alignment and Integration",
+      "authors": [
+        "Kun Dai",
+        "Tianqi Wang",
+        "Haibo Lei",
+        "Chaoyang Li",
+        "Kai Zhang"
+      ],
+      "abstract": "Force and tactile feedback provide essential information about physical interactions in contact-rich manipulation that visual observations alone cannot reliably capture.However, integrating these signals into vision-language-action (VLA) models remains challenging owing to the representational gap between visual-language semantics and physical measurements.To address this challenge, we propose A2I-VLA, a two-stage VLA framework that first learns semantically Aligned force-tactile representations and then Integrates them into a VLA model.In Stage I, a cross-modal alignment loss is introduced to",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.29279",
+      "published_at": "2026-11-22T06:56:29Z",
+      "updated_at": "2026-11-22T06:56:29Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8809,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.859,
+        "novelty_score": 0.973,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1075.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 69.831,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28345",
+      "title": "Toward Adversarially Robust World Models",
+      "authors": [
+        "Ethan Rathbun",
+        "Jonathan Nöther",
+        "Christopher Amato",
+        "Alina Oprea",
+        "Goran Radanović"
+      ],
+      "abstract": "Latent dynamic world models have proven to be highly versatile tools for embodied artificial intelligence systems, enabling online action planning, safe policy evaluation, and scalable policy learning. However, this versatility makes world models a vulnerable and centralized point of failure as a compromised model can impact planning, evaluation, and training at once. Therefore it is critical that the security and robustness properties of world models are properly understood before they are universally deployed in embodied AI systems. In this work we take a unifying approach towards this under",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28345",
+      "published_at": "2026-11-20T21:51:44Z",
+      "updated_at": "2026-11-20T21:51:44Z",
+      "keyword_hits": 2,
+      "search_keyword": "embodied artificial intelligence",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9103,
+        "primary_category": "simulation_sim2real",
+        "category_confidence": 0.289,
+        "novelty_score": 0.876,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1953.5,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 69.55199999999999,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30632",
+      "title": "GeoMerge-OPD: Balanced Skill Integration in Vision-Language-Action Models",
+      "authors": [
+        "Le Yang",
+        "Haoyang Lyu",
+        "Honglei Jin",
+        "Wenshuo Chen",
+        "Jiawei Liang"
+      ],
+      "abstract": "Vision-language-action (VLA) models excel at individual robotic skills, yet integrating heterogeneous skills into a single policy remains a key challenge for general-purpose robotic control, especially in whole-body tasks with differing manipulation and locomotion requirements. Common multi-skill integration strategies, such as joint fine-tuning and parameter merging, can induce unintended actions during closed-loop execution, severely degrading individual skills. Task-conditioned analysis of expert updates reveals response energy concentrated in a few dominant directions and opposing expert r",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30632",
+      "published_at": "2026-11-23T12:59:07Z",
+      "updated_at": "2026-11-23T12:59:07Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8995,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.934,
+        "novelty_score": 0.903,
+        "recommendation": "highly_relevant",
+        "latency_ms": 906.0,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 69.525,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30495",
+      "title": "DexDuet: Learning Contact-Preserving Bimanual Dexterity from Human Demonstrations",
+      "authors": [
+        "Haoran Zhang",
+        "Haokai Ding",
+        "Han Zhou",
+        "Zuxing Lu",
+        "Heng Zhang"
+      ],
+      "abstract": "Human demonstrations provide a rich source of bimanual dexterous skills, yet transferring them to robot hands remains challenging. Existing methods primarily optimize object trajectory tracking, often overlooking how human hands interact with the object. Even with accurate tracking, robots may contact incorrect object parts or slide their fingers, resulting in unstable manipulation. We present DexDuet, a framework that learns contact-preserving bimanual dexterity from a single human demonstration. DexDuet employs two interaction rewards to preserve human hand-object configurations and contacts",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30495",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8831,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.933,
+        "novelty_score": 0.943,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1034.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 69.469,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30145",
+      "title": "RMR-VLA: Recurrent Memory Reasoning for Vision-Language-Action Models",
+      "authors": [
+        "Yiheng Du",
+        "Jingqi Tian",
+        "Xu Jiang",
+        "Jiexuan Zhang",
+        "Shuyu Wang"
+      ],
+      "abstract": "Long-horizon, history-dependent robotic manipulation often requires acting on visual cues that have disappeared, such as an object indicated earlier or a target hidden under a moving cup. The key challenge is to maintain what past evidence means for the next action as the scene changes. We introduce Recurrent Memory Reasoning (RMR), an explicit reasoning step that connects memory to action inside a vision-language-action model (VLA), with no external reasoning model. At each update, the VLA first infers an event from visual evidence, then revises the task state and grounds a subgoal in the cur",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30145",
+      "published_at": "2026-11-23T06:49:35Z",
+      "updated_at": "2026-11-23T06:49:35Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8661,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.782,
+        "novelty_score": 0.964,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1922.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 69.104,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.31126",
+      "title": "WeaveVLA: 3D Relational Grounding for Vision-Language-Action Models",
+      "authors": [
+        "Zien Wang",
+        "Yuhao Pan",
+        "Yunfeng Fan",
+        "Nan Cheng",
+        "Xin Xia"
+      ],
+      "abstract": "Vision-language-action (VLA) models leverage pretrained vision-language representations for instruction-conditioned robot control, yet their understanding of task-relevant 3D relations and how these relations evolve during manipulation remains largely implicit. To address this challenge, we introduce WeaveVLA, a framework that enhances VLA action generation by explicitly modeling task-relevant relative 3D relations and maintaining relational context across observations. WeaveVLA employs a task-conditioned sparse graph neural network to encode relative 3D relations among objects, the gripper, a",
+      "sources": [
+        "huggingface",
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.31126",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "updated_at": "2026-11-23T17:59:32Z",
+      "priority": 25.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8547,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.907,
+        "novelty_score": 0.954,
+        "recommendation": "highly_relevant",
+        "latency_ms": 862.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.498,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.31201",
+      "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+      "authors": [
+        "Xiao-Ming Wu",
+        "Kang Liao",
+        "Yuexiao Ma",
+        "Taolin Zhang",
+        "Mingqian Zhou"
+      ],
+      "abstract": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empiric",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.31201",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8639,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.785,
+        "novelty_score": 0.926,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1033.3,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.446,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28346",
+      "title": "Defending Vision-Language-Action Models against Transferable Attacks via Visual-Proprioceptive Consistency",
+      "authors": [
+        "Jiahao Wang",
+        "Ming F. Li",
+        "Han Xu"
+      ],
+      "abstract": "Vision-Language-Action (VLA) models have demonstrated strong capabilities in a wide range of robotic tasks. However, adversarial attacks in VLA models have shown strong transferability across robotic tasks, posing significant threats to robotic systems. Despite their different attack strategies, we observe that these transferable attacks share a common consequence: they disrupt the VLA model's perception towards the robot itself. Motivated by this observation, we propose a proprioception-grounded defense framework that leverages trusted proprioceptive information to detect and mitigate transfe",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28346",
+      "published_at": "2026-11-20T21:58:32Z",
+      "updated_at": "2026-11-20T21:58:32Z",
+      "keyword_hits": 3,
+      "search_keyword": "vision language action model",
+      "priority": 30.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8687,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.927,
+        "novelty_score": 0.912,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1182.4,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.428,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30813",
+      "title": "HIVE-Bench: Evaluating Patch-Level Visual Representations for Egocentric Robot Manipulation",
+      "authors": [
+        "Qiwei Liang",
+        "Zhengtu Liang",
+        "Minghao Lai",
+        "Yikeng Chen",
+        "Yiming Wang"
+      ],
+      "abstract": "Pretrained vision is a common start for robot learning, but most comparisons still score one pooled vector from a third-person image. Bimanual policies instead read dense patch tokens from cameras on the robot. We introduce HIVE-Bench: one shared flow-matching policy reads 20 encoders from seven families on 24 egocentric bimanual tasks, across adaptation, task sharing, and sweeps of data, model size, and layer. Keeping the patches matters. Averaging each view to one token removes most of the success, adaptation helps every pair we test, and one shared policy keeps most of the success of separa",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30813",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8578,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.779,
+        "novelty_score": 0.938,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1817.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.382,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30178",
+      "title": "Quantizing in the Loop: Drift-Aware Ultra-Low-Bit Vision-Language-Action Models",
+      "authors": [
+        "Yanlong Chen",
+        "Thongthornpatch Chamadol",
+        "Yichen Guo",
+        "Yunfei Gao",
+        "Mohan Liu"
+      ],
+      "abstract": "Deploying large vision-language-action (VLA) models on resource-constrained robots demands extreme compression, yet existing post-training quantization (PTQ) methods frequently collapse at ultra-low bit-widths ($\\le$ 2 bits). We trace this failure to two mismatches in standard pipelines. First, calibrating on static offline demonstrations induces distribution shift: minor quantization perturbations drive the policy into unseen states where uncalibrated errors compound. Second, minimizing the layer-wise weight reconstruction error is a flawed proxy, as action generation depends only on the repr",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30178",
+      "published_at": "2026-11-23T07:23:34Z",
+      "updated_at": "2026-11-23T07:23:34Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8229,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.88,
+        "novelty_score": 1.022,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1911.5,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.246,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28308",
+      "title": "Probing Invisible Actuation Shifts for Test-time Calibration of Visuomotor Policies",
+      "authors": [
+        "Jie Liu",
+        "Hui Xie",
+        "Qinfeng Feng",
+        "Joaquin Vanschoren"
+      ],
+      "abstract": "Visuomotor policies such as vision-language-action models (VLAs) and world action models (WAMs) are increasingly deployed on robots whose cameras and controllers differ from those used to collect their training data. Such deployment introduces two kinds of shifts. Visual shifts, such as a moved camera, change the observed images; actuation shifts, such as a retuned controller, latency or an added payload, change only how commanded actions translate into robot motion. Invisible to the policy, actuation shifts sharply degrade its success, even under domain randomization. In this work, we propose",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28308",
+      "published_at": "2026-11-20T20:51:55Z",
+      "updated_at": "2026-11-20T20:51:55Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8731,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.52,
+        "novelty_score": 0.887,
+        "recommendation": "highly_relevant",
+        "latency_ms": 867.8,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.229,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28289",
+      "title": "Intervention-Robust VLA: Diverse Demonstrations for Robot Deployment with Safety Filters",
+      "authors": [
+        "Tzu-Yuan Huang",
+        "Shao-Hsuan Chang",
+        "Dai-Jie Wu",
+        "Ralf Römer",
+        "Yung-Hui Li"
+      ],
+      "abstract": "Vision-Language-Action models (VLAs) have shown strong potential for learning complex robotic behaviors from demonstrations. However, learning safe behavior directly from data requires extensive coverage of safety-critical situations, which is often impractical in real-world settings. Test-time safety filters provide an alternative by correcting unsafe actions during deployment, but these interventions can drive the robot into states poorly covered by the training data, thereby degrading task performance. We introduce InteR-VLA, an intervention-robust framework for VLAs that leverages diverse ",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28289",
+      "published_at": "2026-11-20T20:12:56Z",
+      "updated_at": "2026-11-20T20:12:56Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.9007,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.872,
+        "novelty_score": 0.803,
+        "recommendation": "highly_relevant",
+        "latency_ms": 2134.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 68.07300000000001,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29338",
+      "title": "A Glimpse of Training VLMs as Foundation Models for Robotic Manipulation",
+      "authors": [
+        "Meng-Hao Guo",
+        "Yi Zhang",
+        "Zhe-Han Mo",
+        "Han-Zheng Wang",
+        "Jia-Jun Wang"
+      ],
+      "abstract": "Recently, GPT-6 Astra demonstrates strong generalization in robot control, yet limited disclosure of its training leaves open how such capabilities can be reproduced. We introduce nanoAstra, an approach to training vision-language models (VLMs) for generalizable manipulation that combines semantic action modeling with capability-preserving supervised fine-tuning (CP-SFT). nanoAstra represents robot behavior as semantic steps composed of reusable, parameterized action primitives, guided by explicit progress descriptions. Meanwhile, CP-SFT uses an explicit robot-specific system prompt to constra",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.29338",
+      "published_at": "2026-11-22T00:00:00.000Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8429,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.827,
+        "novelty_score": 0.89,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1819.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 67.066,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30477",
+      "title": "OVOGO: Offline Value-Guided On-Policy Generative Optimization for Flow-Based Vision-Language-Action Models",
+      "authors": [
+        "Rongzheng Yang",
+        "Jiaming Guo",
+        "Yuxuan Guo",
+        "Zihao Zhang",
+        "Yunkai Gao"
+      ],
+      "abstract": "Flow-based vision-language-action models can benefit from robot experience collected during deployment, but repeatedly acquiring new physical interactions for policy improvement is costly. Offline reinforcement learning provides a natural way to reuse collected experience, while flow-based policies offer an additional opportunity because fresh generation trajectories can be cheaply resampled from the current policy at replay observations. This motivates separating offline value learning from on-policy optimization of the generative process. We propose OVOGO, an offline reinforcement learning f",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30477",
+      "published_at": "2026-11-23T11:04:04Z",
+      "updated_at": "2026-11-23T11:04:04Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8492,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.814,
+        "novelty_score": 0.868,
+        "recommendation": "highly_relevant",
+        "latency_ms": 890.4,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 66.988,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30308",
+      "title": "ConsisX: Cross-View Consistency Thinking in 3D for Vision-Language-Action Models",
+      "authors": [
+        "Yunhe Zhang",
+        "Long Gao",
+        "Yuedong Fu",
+        "Gang He",
+        "Li Xu"
+      ],
+      "abstract": "Vision-language-action (VLA) models integrate visual perception and language understanding from vision-language models (VLMs) with action prediction for robotic manipulation. Although multi-view observations provide complementary scene information, VLMs model cross-view interactions based on 2D feature similarity, which can lead to physical inconsistency in the form of cross-view incorrect association between distinct entities and cross-view information fragmentation about the same entity. To address these challenges, we propose ConsisX, a novel VLA framework that integrates cross-view associa",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30308",
+      "published_at": "2026-11-23T08:58:01Z",
+      "updated_at": "2026-11-23T08:58:01Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8204,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.892,
+        "novelty_score": 0.936,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1605.2,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 66.856,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29813",
+      "title": "Hierarchical Reasoning Action Head for Tiny Vision-Language-Action Models",
+      "authors": [
+        "Aditya Makineni",
+        "Amitesh Sahoo",
+        "Qing Tian"
+      ],
+      "abstract": "Real-time onboard robot control calls for a lightweight vision-language-action (VLA) model, yet shrinking the backbone leaves less capacity for deliberation at inference time. Chain-of-thought decoding, dual-system architectures, and larger backbones can restore deliberation but reintroduce the latency and memory costs that motivated going small. Recurrent action heads offer a lighter alternative by iterating in latent space before committing to an action, but existing designs refine a single undifferentiated state that must simultaneously encode slowly evolving task context and rapidly changi",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.29813",
+      "published_at": "2026-11-22T22:44:20Z",
+      "updated_at": "2026-11-22T22:44:20Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8215,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.905,
+        "novelty_score": 0.913,
+        "recommendation": "highly_relevant",
+        "latency_ms": 857.4,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 66.555,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30291",
+      "title": "Beyond Which: Where, How, and When in Vision-Language-Action Models",
+      "authors": [
+        "Yunhe Zhang",
+        "Long Gao",
+        "Yuedong Fu",
+        "Gang He",
+        "Li Xu"
+      ],
+      "abstract": "Vision-language-action (VLA) models typically rely on vision-language model (VLM) features as the primary perceptual source for action prediction, showing strong generalization across diverse robotic manipulation tasks. Although VLM features can identify which entities are relevant to action prediction, precise manipulation also requires understanding where task-relevant entities are located within the spatial layout, how their geometric structure constrains physical interaction, and when spatial or geometric information should make a greater contribution to action prediction. To this end, we ",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30291",
+      "published_at": "2026-11-23T08:46:20Z",
+      "updated_at": "2026-11-23T08:46:20Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8306,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.908,
+        "novelty_score": 0.888,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1593.3,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 66.54400000000001,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30490",
+      "title": "EgoStudy: How Does Scaling Egocentric Data Affect VLA and WAM Pretraining?",
+      "authors": [
+        "Puzhen Yuan",
+        "Yanjiang Guo",
+        "Yichen Liu",
+        "Xiang Zhu",
+        "Qingzhou Lu"
+      ],
+      "abstract": "Egocentric human manipulation data offer a scalable resource for training dexterous robot policies. However, how effectively robots can learn and benefit from these data remains unclear due to the embodiment gap between humans and robots. We present EgoStudy, a systematic, controlled study of egocentric data for robot learning. Holding the robot dataset fixed, we vary the scale and diversity of egocentric data, data processing strategies, and co-training configurations. We investigate three questions: (1) Which data processing and pretraining choices most effectively exploit egocentric data? (",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30490",
+      "published_at": "2026-11-23T11:12:30Z",
+      "updated_at": "2026-11-23T11:12:30Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8607,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.63,
+        "novelty_score": 0.797,
+        "recommendation": "highly_relevant",
+        "latency_ms": 909.9,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 66.383,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28839",
+      "title": "Spatially Grounded Latent Lookahead for Vision-Language-Action Models",
+      "authors": [
+        "Qihang Chen",
+        "Tengjie Li",
+        "Hongwei Lu",
+        "Jason Wu",
+        "Chyna Qu"
+      ],
+      "abstract": "Vision-language-action (VLA) models benefit from strong semantic representations that support object recognition and instruction understanding. However, precise manipulation also depends on resolving object locations and workspace relations, and on selecting actions with an estimate of how the scene will evolve. Existing geometry-aware methods make the current scene more explicit, while predictive methods model future observations or representations. Yet future information is often neither grounded in a control-relevant spatial state nor directly used to guide action generation. We introduce S",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28839",
+      "published_at": "2026-11-21T14:44:36Z",
+      "updated_at": "2026-11-21T14:44:36Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.8219,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.917,
+        "novelty_score": 0.868,
+        "recommendation": "highly_relevant",
+        "latency_ms": 2348.1,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 65.896,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30111",
+      "title": "RoboThink: Let the Agent Think, Let the Policy Act",
+      "authors": [
+        "Yunbei Zhang",
+        "Zijian Jin",
+        "Janet Wang",
+        "Xingchen Zhao",
+        "Zhenyu Zhang"
+      ],
+      "abstract": "Robot policies act in real time but fail without knowing why, whereas a reasoning agent that watches the robot can often tell what went wrong. Existing systems either hand the agent control, which takes minutes per episode, or let it send instructions. Yet a policy follows a new instruction only from a fresh start, since a half-finished task leaves it in states outside its training data. Nor can an instruction fix how the robot moves. If a drift keeps pulling the hand to the left, \"push right, slightly\" is not a task the policy has learned. We propose RoboThink, in which the agent thinks and t",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.30111",
+      "published_at": "2026-11-23T06:10:48Z",
+      "updated_at": "2026-11-23T06:10:48Z",
+      "keyword_hits": 1,
+      "search_keyword": "vision language action model",
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.7708,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.174,
+        "novelty_score": 0.914,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1701.7,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 64.542,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30597",
+      "title": "ViDiHand2: Unifying Video Diffusion Priors and Hand Geometry for 3D Hand Motion Reconstruction in the Wild",
+      "authors": [
+        "Yuxi Wang",
+        "Yufei Liu",
+        "Chengkai Jin",
+        "Qingyue Chen",
+        "Wenqi Ouyang"
+      ],
+      "abstract": "Learning robot manipulation from egocentric human videos requires accurate metric 3D hand motion. Recent methods leverage pretrained video diffusion model (VDM) priors to recover occluded hands directly from full-frame videos, but their appearance-based depth regression generalizes poorly to unseen cameras. In this work, we propose ViDiHand2, a geometry-driven framework that reformulates VDM-based hand depth estimation from direct regression into fine-grained geometric constraint solving. Specifically, we introduce Fine-Grained Geometric Lifting and Clip-Level Ray Fitting, which recover metric",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30597",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.7093,
+        "primary_category": "robot_manipulation",
+        "category_confidence": 0.742,
+        "novelty_score": 0.888,
+        "recommendation": "highly_relevant",
+        "latency_ms": 1297.2,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 61.692,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28509",
+      "title": "AlpaSafe: Risk-Aware Trajectory Selection for Vision-Language-Action Models in Autonomous Driving",
+      "authors": [
+        "Qiren Wang",
+        "Mingyu Guo",
+        "Weisong Shi"
+      ],
+      "abstract": "Reasoning-based driving vision-language-action (VLA) models propose multiple candidate trajectories at each decision, yet only one is executed. Standard evaluation scores the best candidate, assuming an oracle selector that deployment lacks, and leaves the risk of the executed candidate unexamined. Existing online evaluators typically close this gap with a purpose-trained scene or world model, often rolling out each candidate through it at inference time. We introduce AlpaSafe, a risk-aware trajectory selector that reuses the scene representation a frozen driving VLA computes while proposing i",
+      "sources": [
+        "arxiv_keyword"
+      ],
+      "url": "https://arxiv.org/abs/2611.28509",
+      "published_at": "2026-11-21T02:54:46Z",
+      "updated_at": "2026-11-21T02:54:46Z",
+      "keyword_hits": 2,
+      "search_keyword": "vision language action model",
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.6704,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.778,
+        "novelty_score": 0.887,
+        "recommendation": "interesting",
+        "latency_ms": 864.1,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 50.120999999999995,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30898",
+      "title": "World Models as Native Latent Action Models",
+      "authors": [
+        "Qinyue Li",
+        "Weijie Qiao",
+        "Qingyi Tao",
+        "Zerui Gong",
+        "Zhe Yang"
+      ],
+      "abstract": "Large and diverse video sources, such as egocentric human video and heterogeneous robot recordings, carry rich dynamics but come either without actions or without a shared action space. Latent action models (LAMs) can recover these dynamics, but they train their inverse- and forward-dynamics models (IDM, FDM) from scratch, trading off pixel reconstruction against latent capacity and accuracy. Pretrained video world models natively generate high-fidelity dynamics, yet represent them densely, entangled across all layers. Viewing the world model as a LAM, we show that these dynamics can be extrac",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30898",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.6309,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.535,
+        "novelty_score": 0.759,
+        "recommendation": "interesting",
+        "latency_ms": 1606.4,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 46.621,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.28618",
+      "title": "Distilling Visual Agents from Limited Interaction Experience",
+      "authors": [
+        "Siyu Zhou",
+        "Jing Jiang",
+        "Chengqi Zhang",
+        "Guodong Long"
+      ],
+      "abstract": "How much interaction experience is needed to distill a capable visual agent? We study learning from few tasks and recorded interaction histories. Our framework selects representative trajectories using skill-context coverage and ordered visual-decision similarity. On-policy distillation (OPD) learns through fresh interaction on selected tasks or fresh student responses at fixed histories. Across Navigation, Sokoban, and spatial mapping, even one online training task supports transfer to other tasks. Four fixed trajectories raise a 4B student's success from 49.17% to 82.08% on standard Navigati",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.28618",
+      "published_at": "2026-11-21T00:00:00.000Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.5015,
+        "primary_category": "vla_foundation_model",
+        "category_confidence": 0.705,
+        "novelty_score": 0.78,
+        "recommendation": "interesting",
+        "latency_ms": 1609.8,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 41.76,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.29619",
+      "title": "Wactorz: Self-Writing LLM Agents That Discover, Repair, and Migrate at the Edge",
+      "authors": [
+        "Panagiotis Kasnesis",
+        "Lazaros Toumanidis",
+        "Amalia Contiero Syropoulou",
+        "Christos Chatzigeorgiou"
+      ],
+      "abstract": "Most LLM agent frameworks build a crew that runs a task and exits. Physical environments (e.g., homes, labs, factory floors) need agents that stay up for months, survive their own bugs, and run on whatever hardware is already next to the sensors. We present Wactorz, an open-source runtime in which LLM-generated agents are long-lived, supervised actors: a planner turns a chat request into Python, compiles it into a new actor at runtime, and a supervisor restarts that actor alone, with its state intact, when it crashes. All coordination rides on MQTT, so agents can be spawned on, and live-migrat",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.29619",
+      "published_at": "2026-11-22T00:00:00.000Z",
+      "keyword_hits": 0,
+      "priority": 0.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.4717,
+        "primary_category": "non_embodied",
+        "category_confidence": 0.551,
+        "novelty_score": 1.019,
+        "recommendation": "skip",
+        "latency_ms": 1046.4,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 1.8868000000000003,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    },
+    {
+      "id": "2611.30573",
+      "title": "Write, Evolve, Read: Streaming Cameras into a Persistent World State for 4D Occupancy Forecasting",
+      "authors": [
+        "ZiAn Wang",
+        "Tianyi Wang",
+        "Zhihao Chen",
+        "Manni Cui",
+        "Junkai Chen"
+      ],
+      "abstract": "4D occupancy forecasting predicts the 3D semantic occupancy of a driving scene seconds ahead. Over a few seconds, the scene changes little while the vehicle moves, so most of the space ahead has already been seen. Sorting the future into unchanged, changed, and unseen space, we find that current camera-based world models fall short on the unchanged part: they fail to hold on to what they have already seen, rather than to forecast what will change. We therefore make what the model has seen its state. PersistWorld streams camera frames into a persistent 3D world state anchored in the scene, writ",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.30573",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 1,
+      "priority": 10.0,
+      "decision": {
+        "provider": "clef",
+        "relevance_prob": 0.3798,
+        "primary_category": "non_embodied",
+        "category_confidence": 0.553,
+        "novelty_score": 0.895,
+        "recommendation": "skip",
+        "latency_ms": 1125.5,
+        "model": "clef-flash",
+        "endpoint": "https://clef.create360.ai/v1/systemone"
+      },
+      "decision_score": 1.5192,
+      "first_seen_at": "2026-11-24T12:24:17.916667Z"
+    }
+  ]
+}
