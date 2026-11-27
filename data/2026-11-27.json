@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-27",
+  "topic": "embodied_ai",
+  "crawled_at": "2026-11-27T10:44:57.231153Z",
+  "stats": {
+    "sources": {
+      "huggingface": 100,
+      "arxiv_cs.RO": 318,
+      "arxiv_cs.AI": 350,
+      "arxiv_cs.CV": 350,
+      "arxiv_cs.LG": 350,
+      "arxiv_cs.SY": 0,
+      "arxiv_keyword": 31,
+      "paperswithcode": 0,
+      "alphaxiv": 0
+    },
+    "total_crawled": 1499,
+    "after_dedup": 1132,
+    "window_start": "2026-11-23",
+    "window_candidates": 1118,
+    "already_seen": 1113,
+    "new_candidates": 5,
+    "selected_papers": 1,
+    "decision_evaluated": 0,
+    "decision_accepted": 1,
+    "missing_published_at": 0,
+    "keyword_matched": 1
+  },
+  "papers": [
+    {
+      "id": "2611.29969",
+      "title": "CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes",
+      "authors": [
+        "Xiaoqian Hu",
+        "Ruihong Qiu",
+        "Yanran Tang",
+        "Sen Wang"
+      ],
+      "abstract": "Situated 3D reasoning requires embodied agents to interpret objects, scene geometry, and viewpoint dependent spatial relations. Existing methods learn grounded interactions from supervised traces, but largely imitate prescribed evidence acquisition patterns rather than optimizing the support that the returned evidence provides for the correct answer. Moreover, outcome rewards provide limited credit for intermediate tool choices and may leave infrequent tools underexplored. An effective agent should instead adaptively decide what to ground, which tool to invoke, and how to assess the utility of",
+      "sources": [
+        "huggingface"
+      ],
+      "url": "https://arxiv.org/abs/2611.29969",
+      "published_at": "2026-11-23T00:00:00.000Z",
+      "keyword_hits": 2,
+      "priority": 20.0,
+      "first_seen_at": "2026-11-27T10:44:57.231153Z"
+    }
+  ]
+}
